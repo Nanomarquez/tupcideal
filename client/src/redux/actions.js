@@ -1,19 +1,8 @@
 import axios from 'axios';
-export const GET_POKEMONS = 'GET_POKEMONS';
+import {getAllCharacters, getById}  from './Slice';
 
+export const getChars = () => (dispatch) =>{
 
-export const getPokemons = () => {
-  return function (dispatch) {
-      axios.get('/pokemons')
-      .then(response => {
-              // console.log(response.data);
-              dispatch({
-                  type: GET_POKEMONS,
-                  payload: response.data,
-              });
-          })
-          .catch(error => {
-              console.log(error);
-          });
-  };
-};
+axios("https://rickandmortyapi.com/api/character")
+.then(res => dispatch(getAllCharacters(res.data.results)))
+.catch(e => console.log(e))}
