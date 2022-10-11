@@ -1,8 +1,8 @@
 const { DataTypes } = require('sequelize');
 
 module.exports = (sequelize) => {
-    sequelize.define('Memory', {
-        name: {
+    sequelize.define('PowerSupply', {
+        name:{
             type: DataTypes.STRING,
             allowNull:false,
         },
@@ -15,23 +15,20 @@ module.exports = (sequelize) => {
         price_usd: {
             type: DataTypes.FLOAT,
         },
-        speed: {
+        form_factor: {
             type: DataTypes.STRING,
         },
-        modules: {
+        efficiency_rating: {
             type: DataTypes.STRING,
         },
-        'price_/_gb': {
+        wattage: {
+            type: DataTypes.STRING,
+        },
+        modular: {
             type: DataTypes.STRING,
         },
         color: {
             type: DataTypes.STRING,
         },
-        first_word_latency: {
-            type: DataTypes.STRING,
-        },
-        cas_latency: {
-            type: DataTypes.STRING,
-        }
     })
 };

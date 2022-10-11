@@ -1,8 +1,8 @@
 const { DataTypes } = require('sequelize');
 
 module.exports = (sequelize) => {
-    sequelize.define('Memory', {
-        name: {
+    sequelize.define('VideoCard', {
+        name:{
             type: DataTypes.STRING,
             allowNull:false,
         },
@@ -15,23 +15,23 @@ module.exports = (sequelize) => {
         price_usd: {
             type: DataTypes.FLOAT,
         },
-        speed: {
+        chipset: {
             type: DataTypes.STRING,
         },
-        modules: {
+        memory: {
             type: DataTypes.STRING,
         },
-        'price_/_gb': {
+        core_clock: {
+            type: DataTypes.STRING,
+        },
+        boost_clock: {
             type: DataTypes.STRING,
         },
         color: {
             type: DataTypes.STRING,
         },
-        first_word_latency: {
+        length: {
             type: DataTypes.STRING,
         },
-        cas_latency: {
-            type: DataTypes.STRING,
-        }
     })
 };
