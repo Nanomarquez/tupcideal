@@ -6,7 +6,7 @@ import "./Signin.css"
 function Signin() {
   return (
     <Link>
-      <button className='btn-neon bg-white items-center rounded-tl-xl rounded-br-xl rounded-tr-md px-1 pr-3 font-semibold flex relative overflow-hidden duration-300 delay-1000'>
+      <button className='btn-neon bg-white items-center rounded-tl-xl rounded-br-xl rounded-tr-md px-1 sm:pr-3 font-semibold flex relative overflow-hidden duration-300 delay-1000'>
         <span id='span1' className='bg-sky-300 absolute block top-0 left-[-100%] w-full h-[3px]'></span>
         <span id='span2' className='bg-sky-300 absolute block bottom-0 right-[-100%] w-full h-[3px]'></span>
         <span id='span3' className='bg-sky-300 absolute block top-[-100%] right-0 w-[3px] h-[100%]'></span>

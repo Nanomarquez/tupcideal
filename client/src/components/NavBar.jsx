@@ -8,7 +8,7 @@ function NavBar() {
   return (
     <nav className="h-auto flex flex-col sm:flex-row justify-around items-center p-2 bg-gradient-to-b from-gray-800 to bg-gray-600 rounded-b-md shadow-2xl">
       <img src={Logo} alt="logo" className="object-cover h-14" />
-      <div className="flex gap-32">
+      <div className="flex gap-32 items-center">
         <Search />
         <Signin />
       <div className="flex">
