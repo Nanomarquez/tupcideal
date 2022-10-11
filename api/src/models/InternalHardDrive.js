@@ -12,7 +12,7 @@ module.exports = (sequelize) => {
         type: DataTypes.INTEGER
     },
     price_usd: {
-        type: DataTypes.NUMBER
+        type: DataTypes.FLOAT
     },
     capacity: {
         type: DataTypes.STRING
