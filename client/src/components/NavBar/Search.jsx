@@ -24,7 +24,7 @@ function Search() {
 
   return (
     <div className="searchBox">
-      <div className="search hover:animate-bounce ">
+      <div className="search hover:animate-pulse">
         <ion-icon name="search-outline"></ion-icon>
       </div>
       <div className="searchInput">

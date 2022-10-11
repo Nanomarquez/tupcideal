@@ -7,7 +7,7 @@ module.exports = {
   theme: {
     extend: {
       boxShadow: {
-        'neon': '0 0px 10px #93c5fd, 0 0 40px #f472b6, 0 0 80px #93c5fd',
+        'neon': '0 0px 10px #fff, 0 0 40px #fff, 0 0 80px #fff',
       },
     },
   },
