@@ -1,7 +1,7 @@
 const { DataTypes } = require('sequelize');
 
 module.exports = (sequelize) => {
-  sequelize.define('CPU', {
+  sequelize.define('Case', {
     name: {
         type: DataTypes.STRING
     },

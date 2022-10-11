@@ -1,7 +1,7 @@
 const { DataTypes } = require('sequelize');
 
 module.exports = (sequelize) => {
-  sequelize.define('CPU', {
+  sequelize.define('InternalHardDrive', {
     name: {
       type: DataTypes.STRING
     },
