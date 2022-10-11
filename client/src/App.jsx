@@ -1,15 +1,16 @@
-import {useSelector} from 'react-redux'
+import { Route,Routes } from "react-router-dom";
+import NavBar from './components/NavBar'
+import Home from './pages/Home'
 
 function App() {
 
-  const poke = useSelector((state)=>state.pokemons)
-
-  console.log(poke)
-
   return (
-    <div className="App">
-      <h1 className="text-3xl font-bold">Hola</h1>
-    </div>
+    <>
+      <NavBar/>
+      <Routes>
+        <Route exact path='/' element={<Home/>}/>
+      </Routes>
+    </>
   );
 }
 
