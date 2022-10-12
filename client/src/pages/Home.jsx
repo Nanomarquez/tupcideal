@@ -35,7 +35,7 @@ function Home() {
           Las mejores marcas estan en <span className="font-bold tracking-tighter text-transparent bg-clip-text bg-gradient-to-br from-red-700 via-purple-800 to-green-700">TuPcIdeal</span>
         </h1>
         <div className="container">
-          <div className="swiperContainer h-32 w-full">
+          <div className="swiperContainer h-32 sm:w-full w-[115%]">
             <Swiper
               modules={[Autoplay]}
               autoplay={{
