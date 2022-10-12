@@ -34,7 +34,7 @@ function NavBar() {
         <div></div>
         <div></div>
       </button>
-      <ul className={`flex flex-col sm:flex-row items-center justify-center sm:gap-28 p-1 bg-gray-600 text-white w-full sm:relative absolute translate-x-[-300%] sm:translate-x-0 ${active?"translate-x-0":""} duration-1000 z-10 gap-5 overflow-hidden`}>
+      <ul className={`flex flex-col sm:flex-row items-center justify-center sm:gap-28 p-1 bg-gray-600 text-white w-full sm:relative absolute translate-x-[-300%] sm:translate-x-0 ${active?"translate-x-0":""} w-full duration-1000 z-10 gap-5 overflow-hidden`}>
         <li className="cursor-pointer hover:animate-bounce p-4">Te armamos tu PC</li>
         <li className="cursor-pointer hover:animate-bounce p-4">Productos</li>
         <li className="cursor-pointer hover:animate-bounce p-4">Quienes somos</li>
