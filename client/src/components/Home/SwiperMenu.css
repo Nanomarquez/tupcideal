@@ -25,5 +25,11 @@
 .swiper-slide img {
   width: 80%;
   height: 80%;
-  object-fit: fill;
+  object-fit: cover;
+}
+
+@media (max-width: 600px) {
+  .swiper-slide img{
+    object-fit: fill;
+  }
 }

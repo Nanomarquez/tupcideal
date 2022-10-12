@@ -15,7 +15,7 @@ function NavBar() {
   return (
     <>
     <nav className="h-auto flex flex-col sm:flex-row justify-between items-center px-5 p-2 bg-gradient-to-b from-gray-800 to bg-gray-600 shadow-2xl z-50">
-    <span className="font-bold text-3xl tracking-tighter text-transparent bg-clip-text bg-gradient-to-br from-red-400 via-purple-400 to-green-400">TuPcIdeal</span>
+    <span className="logo font-bold text-3xl tracking-tighter text-transparent bg-clip-text bg-gradient-to-br from-red-400 via-purple-400 to-green-400">TuPcIdeal</span>
       <div className="flex sm:gap-40 gap-10">
         <Search/>
         <Signin />
@@ -28,7 +28,7 @@ function NavBar() {
       </div>
     </nav>
     <hr />
-    <div>
+    <div className="nav">
       <button onClick={()=>handleActive()} className={`menu menu-${active} absolute top-5 left-8 sm:hidden`}>
         <div></div>
         <div></div>

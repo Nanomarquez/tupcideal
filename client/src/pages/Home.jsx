@@ -45,25 +45,25 @@ function Home() {
               slidesPerView={3}
             >
               <SwiperSlide>
-                <img src={Amd} alt="amd" />
+                <img src={Amd} alt="amd" id="swp"/>
               </SwiperSlide>
               <SwiperSlide>
-                <img src={Asus} alt="" />
+                <img src={Asus} alt="" id="swp"/>
               </SwiperSlide>
               <SwiperSlide>
-                <img src={Geforce} alt="" />
+                <img src={Geforce} alt="" id="swp"/>
               </SwiperSlide>
               <SwiperSlide>
-                <img src={Gigabyte} alt="" />
+                <img src={Gigabyte} alt="" id="swp"/>
               </SwiperSlide>
               <SwiperSlide>
-                <img src={Hyperx} alt="" />
+                <img src={Hyperx} alt="" id="swp"/>
               </SwiperSlide>
               <SwiperSlide>
-                <img src={Intel} alt="" />
+                <img src={Intel} alt="" id="swp"/>
               </SwiperSlide>
               <SwiperSlide>
-                <img src={Reddragon} alt="" />
+                <img src={Reddragon} alt="" id="swp"/>
               </SwiperSlide>
             </Swiper>
           </div>
