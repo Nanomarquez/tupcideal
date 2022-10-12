@@ -73,7 +73,6 @@ function Home() {
       <img src="https://cdn.jsdelivr.net/gh/persano/BannersWebMaximus/top-under-header/mejores-precios-main-top.webp" alt="" />
       <img src="https://cdn.jsdelivr.net/gh/persano/BannersWebMaximus/armado-pc-home/arma-tu-compu-new.webp" alt="" />
       </div>
-      <Footer/>
     </>
   );
 }
