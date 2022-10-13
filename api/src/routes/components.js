@@ -1,13 +1,14 @@
 const { Router } = require('express');
 const router = Router();
 const { Op } = require("sequelize");
-const { CPU } = require('../db.js');
-const bulkCPU = require('../data/cpu.json')
+const { CPU, VideoCard } = require('../db.js');
+const bulkCPU = require('../data/cpu.json');
+const bulkGPU = require('../data/video-card.json')
 
 router.get('/cpu', async (req, res) => {
     const brand = req.query.brand;
 
-    allCPU = await CPU.findAll();
+    const allCPU = await CPU.findAll();
     !allCPU.length ? CPU.bulkCreate(bulkCPU) : null;
     
 
@@ -26,4 +27,12 @@ router.get('/cpu', async (req, res) => {
     };
 });
 
+
+router.get('/gpu', async (req, res) => {
+    
+    const allGPU = await VideoCard.findAll();
+    !allGPU.length ? await VideoCard.bulkCreate(bulkGPU) : null;
+
+    res.send(await VideoCard.findAll());
+})
 module.exports = router;
