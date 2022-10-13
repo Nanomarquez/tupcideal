@@ -32,5 +32,7 @@ module.exports = (sequelize) => {
     smt: {
         type: DataTypes.BOOLEAN
     }
-  });
+  } , {
+    timestamps: false
+    });
 };

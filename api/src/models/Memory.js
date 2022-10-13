@@ -33,5 +33,7 @@ module.exports = (sequelize) => {
         cas_latency: {
             type: DataTypes.STRING,
         }
+    }, {
+        timestamps: false
     })
 };
