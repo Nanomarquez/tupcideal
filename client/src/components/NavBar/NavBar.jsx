@@ -41,9 +41,15 @@ function NavBar() {
         <Link to='/armatupc'>
         <li className="cursor-pointer hover:animate-bounce p-4">Te armamos tu PC</li>
         </Link>
+        <Link to='/productos'>
         <li className="cursor-pointer hover:animate-bounce p-4">Productos</li>
+        </Link>
+        <Link to='/equipo'>
         <li className="cursor-pointer hover:animate-bounce p-4">Quienes somos</li>
+        </Link>
+        <Link to='/custompc'>
         <li className="cursor-pointer hover:animate-bounce p-4">Customiza tu PC</li>
+        </Link>
       </ul>
     </div>
     </>

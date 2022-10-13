@@ -4,6 +4,7 @@ import NavBar from './components/NavBar/NavBar'
 import ArmaTuPc from "./pages/ArmaTuPc";
 import Home from './pages/Home'
 import Login from './pages/Login'
+import Productos from "./pages/Productos";
 import Register from "./pages/Register";
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
         <Route exact path='/armatupc' element={<ArmaTuPc/>}/>
         <Route exact path='/login' element={<Login/>}/>
         <Route exact path='/register' element={<Register/>}/>
+        <Route exact path='/productos' element={<Productos/>}/>
       </Routes>
       <Footer/>
     </>
