@@ -29,5 +29,7 @@ module.exports = (sequelize) => {
     color: {
         type: DataTypes.STRING
     }
+  }, {
+    timestamps: false
   });
 };
