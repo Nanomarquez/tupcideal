@@ -29,9 +29,23 @@ router.get('/cpu', async (req, res) => {
 
 
 router.get('/gpu', async (req, res) => {
+
+    const search = req.query.search;
     
     const allGPU = await VideoCard.findAll();
     !allGPU.length ? await VideoCard.bulkCreate(bulkGPU) : null;
+
+    if(search) {
+        const searchGPU = await VideoCard.findAll({
+            where: {
+                name: {
+                    [Op.iLike]: `%${search}%`
+                }
+            }
+        });
+        res.send(searchGPU);
+        return
+    } 
 
     res.send(await VideoCard.findAll());
 })
