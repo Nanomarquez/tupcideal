@@ -1,4 +1,5 @@
 import { configureStore } from "@reduxjs/toolkit";
+
 import products from "./Slice";
 
 export default configureStore({
@@ -6,4 +7,3 @@ export default configureStore({
     products: products,
   },
 });
-
