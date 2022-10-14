@@ -38,9 +38,11 @@ router.get('/gpu', async (req, res) => {
     if(search) {
         const searchGPU = await VideoCard.findAll({
             where: {
-                name: {
+                [Op.or]: [{ name: {
                     [Op.iLike]: `%${search}%`
-                }
+                } }, { chipset: {
+                    [Op.iLike]: `%${search}%`
+                } }],
             }
         });
         res.send(searchGPU);
