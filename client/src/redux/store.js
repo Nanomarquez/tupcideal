@@ -1,9 +1,9 @@
 import { configureStore } from "@reduxjs/toolkit";
-import characters from './Slice';
+import products from "./Slice";
 
 export default configureStore({
- reducer:{
-characters: characters,
+  reducer: {
+    products: products,
+  },
+});
 
-}
-})
