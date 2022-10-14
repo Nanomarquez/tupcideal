@@ -56,7 +56,7 @@ function Productos() {
           <SliderRange />
         </div>
       </section>
-      <section className="grid grid-cols-3 w-full">
+      <section className="grid grid-cols-3 w-full sm:my-10">
         {currentProducts.map((e, i) => (
           <div
             key={i}
@@ -70,7 +70,8 @@ function Productos() {
             </button>
           </div>
         ))}
-        <div className="absolute left-1/2 sm:translate-x-0 translate-x-[-50%]">
+      </section>
+        <div className="flex justify-center items-center sm:absolute right-[12%]">
           <Pagination
           productPerPage={productPerPage}
           allProducts={jsonProducts.length}
@@ -78,7 +79,6 @@ function Productos() {
           currentPage={currentPage}
           />
         </div>
-      </section>
     </div>
   );
 }
