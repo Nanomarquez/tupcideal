@@ -1,8 +1,26 @@
-import React from "react";
+import React, { useState } from "react";
 import Select from "react-select";
 import SliderRange from "../components/SliderRange";
 import { jsonProducts } from "../dbejemplo";
+import Pagination from "../components/Pagination";
 function Productos() {
+  const [currentPage, setCurrentPage] = useState(1);
+
+  const productPerPage = 6;
+
+  const lastProductOfPage = currentPage * productPerPage;
+
+  const firstProductOfPage = lastProductOfPage - productPerPage;
+
+  const currentProducts = jsonProducts.slice(
+    firstProductOfPage,
+    lastProductOfPage
+  );
+
+  const pagination = (pageNumber) => {
+    setCurrentPage(pageNumber);
+  };
+
   const set = new Set();
   jsonProducts.map((e) => set.add(e.categories[0]));
   const handleSelectChange = (event) => {
@@ -23,7 +41,7 @@ function Productos() {
               value: item,
             }))}
             onChange={handleSelectChange}
-            className="z-50"
+            className="z-50 cursor-pointer"
           />
           <Select
             placeholder="Marca"
@@ -33,20 +51,33 @@ function Productos() {
               value: item.brand,
             }))}
             onChange={handleSelectChange}
-            className="z-30"
+            className="z-30 cursor-pointer"
           />
           <SliderRange />
         </div>
       </section>
       <section className="grid grid-cols-3 w-full">
-        {jsonProducts.map((e) => (
-          <div className="h-[200px] justify-center items-center text-center my-20 mx-5 border rounded-lg flex flex-col gap-5">
-            <img src={e.image} alt="" className="w-24 object-cover"/>
+        {currentProducts.map((e, i) => (
+          <div
+            key={i}
+            className="h-[200px] justify-center items-center text-center my-20 mx-5 border rounded-lg flex flex-col gap-5"
+          >
+            <img src={e.image} alt="" className="w-24 h-24 object-contain" />
             <h1>{e.name.slice(0, 30) + "..."}</h1>
             <p>${e.price}</p>
-            <button className="bg-black p-5 text-white rounded-md">Ver mas</button>
+            <button className="bg-black p-5 text-white rounded-md">
+              Ver mas
+            </button>
           </div>
         ))}
+        <div className="absolute left-1/2 sm:translate-x-0 translate-x-[-50%]">
+          <Pagination
+          productPerPage={productPerPage}
+          allProducts={jsonProducts.length}
+          pagination={pagination}
+          currentPage={currentPage}
+          />
+        </div>
       </section>
     </div>
   );
