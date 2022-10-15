@@ -31,6 +31,12 @@ module.exports = (sequelize) => {
     },
     smt: {
         type: DataTypes.BOOLEAN
+    },
+    socket: {
+        type: DataTypes.STRING
+    },
+    image: {
+        type: DataTypes.STRING
     }
   } , {
     timestamps: false
