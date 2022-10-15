@@ -35,7 +35,7 @@ function Home() {
           Las mejores marcas estan en <span className="font-bold tracking-tighter text-transparent bg-clip-text bg-gradient-to-br from-red-700 via-purple-800 to-green-700">TuPcIdeal</span>
         </h1>
         <div className="container">
-          <div className="swiperContainer h-32 w-full">
+          <div className="swiperContainer h-32 w-full xl:w-[115%]">
             <Swiper
               modules={[Autoplay]}
               autoplay={{
@@ -45,25 +45,25 @@ function Home() {
               slidesPerView={3}
             >
               <SwiperSlide>
-                <img src={Amd} alt="amd" />
+                <img src={Amd} alt="amd" id="swp"/>
               </SwiperSlide>
               <SwiperSlide>
-                <img src={Asus} alt="" />
+                <img src={Asus} alt="" id="swp"/>
               </SwiperSlide>
               <SwiperSlide>
-                <img src={Geforce} alt="" />
+                <img src={Geforce} alt="" id="swp"/>
               </SwiperSlide>
               <SwiperSlide>
-                <img src={Gigabyte} alt="" />
+                <img src={Gigabyte} alt="" id="swp"/>
               </SwiperSlide>
               <SwiperSlide>
-                <img src={Hyperx} alt="" />
+                <img src={Hyperx} alt="" id="swp"/>
               </SwiperSlide>
               <SwiperSlide>
-                <img src={Intel} alt="" />
+                <img src={Intel} alt="" id="swp"/>
               </SwiperSlide>
               <SwiperSlide>
-                <img src={Reddragon} alt="" />
+                <img src={Reddragon} alt="" id="swp"/>
               </SwiperSlide>
             </Swiper>
           </div>
@@ -73,7 +73,6 @@ function Home() {
       <img src="https://cdn.jsdelivr.net/gh/persano/BannersWebMaximus/top-under-header/mejores-precios-main-top.webp" alt="" />
       <img src="https://cdn.jsdelivr.net/gh/persano/BannersWebMaximus/armado-pc-home/arma-tu-compu-new.webp" alt="" />
       </div>
-      <Footer/>
     </>
   );
 }

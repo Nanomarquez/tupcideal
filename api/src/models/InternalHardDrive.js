@@ -32,5 +32,7 @@ module.exports = (sequelize) => {
     interface: {
         type: DataTypes.STRING
     }
+  }, {
+    timestamps: false
   });
 };

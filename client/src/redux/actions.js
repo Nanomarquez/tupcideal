@@ -1,19 +1,33 @@
 import axios from 'axios';
-export const GET_POKEMONS = 'GET_POKEMONS';
+import {getAllProducts,getProductsFiltered, getProductDetail,
+     OrderProductsDisplayByPrice, emptyProductDetail, emptyProductDisplay} from './slice';
 
 
-export const getPokemons = () => {
-  return function (dispatch) {
-      axios.get('/pokemons')
-      .then(response => {
-              // console.log(response.data);
-              dispatch({
-                  type: GET_POKEMONS,
-                  payload: response.data,
-              });
-          })
-          .catch(error => {
-              console.log(error);
-          });
-  };
-};
+     // se definen funciones que al ser invocadas despachan las funciones ya traidas desde Slice (reducer)
+
+     export const getAll = () => (dispatch) =>{
+
+        axios("http://localhost:3001/products/")
+        .then(res => dispatch(getAllProducts(res.data)))
+        .catch(e => console.log(e))}
+
+        // trae todos los productos, sin filtros
+
+
+     export const getFiltered = (products, search, brand, compatibility) => (dispatch) =>{
+
+         axios(`http://localhost:3001/products/${products}?search=${search}?brand=${brand}?compatibility${compatibility}`)
+         .then(res => dispatch(getProductsFiltered(res.data)))
+         .catch(e => console.log(e))}
+
+         //trae de forma dinamica, segun componente (endpoint), por query busqueda por name, 
+         //o filtrado por brand o compatibility
+
+     export const getDetail = (id) => (dispatch) =>{
+
+        axios(`http://localhost:3001/products/:${id}`)
+        .then(res => dispatch(getProductDetail(res.data)))
+        .catch(e => console.log(e))}
+
+        // busqueda por id por params
+
