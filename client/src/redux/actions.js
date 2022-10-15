@@ -1,8 +1,33 @@
 import axios from 'axios';
-import {getAllCharacters, getById}  from './Slice';
+import {getAllProducts,getProductsFiltered, getProductDetail,
+     OrderProductsDisplayByPrice, emptyProductDetail, emptyProductDisplay} from './slice';
 
-export const getChars = () => (dispatch) =>{
 
-axios("https://rickandmortyapi.com/api/character")
-.then(res => dispatch(getAllCharacters(res.data.results)))
-.catch(e => console.log(e))}
+     // se definen funciones que al ser invocadas despachan las funciones ya traidas desde Slice (reducer)
+
+     export const getAll = () => (dispatch) =>{
+
+        axios("http://localhost:3001/products/")
+        .then(res => dispatch(getAllProducts(res.data)))
+        .catch(e => console.log(e))}
+
+        // trae todos los productos, sin filtros
+
+
+     export const getFiltered = (products, search, brand, compatibility) => (dispatch) =>{
+
+         axios(`http://localhost:3001/products/${products}?search=${search}?brand=${brand}?compatibility${compatibility}`)
+         .then(res => dispatch(getProductsFiltered(res.data)))
+         .catch(e => console.log(e))}
+
+         //trae de forma dinamica, segun componente (endpoint), por query busqueda por name, 
+         //o filtrado por brand o compatibility
+
+     export const getDetail = (id) => (dispatch) =>{
+
+        axios(`http://localhost:3001/products/:${id}`)
+        .then(res => dispatch(getProductDetail(res.data)))
+        .catch(e => console.log(e))}
+
+        // busqueda por id por params
+
