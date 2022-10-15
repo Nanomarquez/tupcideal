@@ -1,12 +1,13 @@
-import React, { useEffect, useState } from "react";
 import Select from "react-select";
-import SliderRange from "../components/SliderRange";
-import Pagination from "../components/Pagination";
-import { useDispatch,useSelector} from 'react-redux';
 import {getAll} from '../redux/actions'
+import Pagination from "../components/Pagination";
+import React, { useEffect, useState } from "react";
+import SliderRange from "../components/SliderRange";
+import { useDispatch,useSelector} from 'react-redux';
 
 function Productos() {
-
+  const [currentPage, setCurrentPage] = useState(1);
+  const [selectBrand, setSelectBrand] = useState("");
   const allProducts = useSelector((state)=>state.products.allProducts);
 
   const dispatch = useDispatch()
@@ -15,27 +16,32 @@ function Productos() {
     dispatch(getAll())
   },[])
 
-  const [currentPage, setCurrentPage] = useState(1);
-
   const productPerPage = 6;
-
-  const lastProductOfPage = currentPage * productPerPage;
-
-  const firstProductOfPage = lastProductOfPage - productPerPage;
-
-  const currentProducts = allProducts.slice(
-    firstProductOfPage,
-    lastProductOfPage
-  );
-
+  const cards = () => {
+    if(selectBrand) {
+      const resultBrand = allProducts.filter((f) => f.brand === selectBrand);
+      return resultBrand
+    }
+    const lastProductOfPage = currentPage * productPerPage;
+    const firstProductOfPage = lastProductOfPage - productPerPage;
+    const currentProducts = allProducts.slice(firstProductOfPage, lastProductOfPage);
+    return currentProducts
+  }
+  
   const pagination = (pageNumber) => {
     setCurrentPage(pageNumber);
   };
 
   const set = new Set();
-  allProducts.map((e) => set.add(e.categories[0]));
-  const handleSelectChange = (event) => {
-    console.log(event);
+  allProducts.map((e) => set.add(e.categories[0])); 
+
+  const findBrand = allProducts.map(p => p.brand)
+  const filteredBrand = [...new Set(findBrand)];
+
+
+  const handleSelectChange = (event) => { //modified
+    const { value } = event
+    setSelectBrand(value)    
   };
 
   return (
@@ -57,9 +63,9 @@ function Productos() {
           <Select
             placeholder="Marca"
             isClearable
-            options={allProducts.map((item) => ({
-              label: item.brand,
-              value: item.brand,
+            options={filteredBrand.map((item) => ({
+              label: item,
+              value: item,
             }))}
             onChange={handleSelectChange}
             className="z-30 cursor-pointer"
@@ -68,7 +74,7 @@ function Productos() {
         </div>
       </section>
       <section className="grid grid-cols-3 w-full sm:my-10">
-        {currentProducts.map((e, i) => (
+        {cards().map((e, i) => (
           <div
             key={i}
             className="h-[200px] justify-center items-center text-center my-20 mx-5 border rounded-lg flex flex-col gap-5"
@@ -82,14 +88,14 @@ function Productos() {
           </div>
         ))}
       </section>
-        <div className="flex justify-center items-center sm:absolute right-[12%]">
-          <Pagination
+      <div className="flex justify-center items-center sm:absolute right-[12%]">
+        <Pagination
           productPerPage={productPerPage}
           allProducts={allProducts.length}
           pagination={pagination}
           currentPage={currentPage}
-          />
-        </div>
+        />
+      </div>
     </div>
   );
 }
