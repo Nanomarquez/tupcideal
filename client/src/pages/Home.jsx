@@ -9,7 +9,6 @@ import Gigabyte from "../assets/marcas/gigabyte.png";
 import Hyperx from "../assets/marcas/hyperx.png";
 import Intel from "../assets/marcas/intel.png";
 import Reddragon from "../assets/marcas/reddragon.png";
-
 function Home() {
 
   return (
