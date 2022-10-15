@@ -1,0 +1,40 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.slider {
+  cursor: pointer;
+  width: 100%;
+}
+
+.track {
+  background-color: #e4e4e4;
+  height: 4px;
+}
+
+.track:nth-child(2) {
+  background-color: #383838;
+}
+
+.values-wrapper{
+  margin-top: 10px;
+  padding: 10px;
+}
+
+.thumb {
+  z-index: -10000;
+  width: 0.75rem;
+  height: 0.75rem;
+  background: #fff;
+  border: 2px solid #383838;
+  border-radius: 50%;
+  cursor: pointer;
+  position: absolute;
+  top: -5px;
+}
+
+
