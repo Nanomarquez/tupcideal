@@ -1,6 +1,6 @@
 import axios from 'axios';
 import {getAllProducts,getProductsFiltered, getProductDetail,
-     OrderProductsDisplayByPrice, emptyProductDetail, emptyProductDisplay} from './Slice';
+     OrderProductsDisplayByPrice, emptyProductDetail, emptyProductDisplay} from './slice';
 
 
      // se definen funciones que al ser invocadas despachan las funciones ya traidas desde Slice (reducer)
