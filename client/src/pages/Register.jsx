@@ -2,9 +2,10 @@ import React,{useState} from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import {useAuth} from '../context/authContext'
 import swal from 'sweetalert';
+import axios from 'axios';
 
 function Register() {
-  const {signUp} = useAuth()
+  const {signUp, usuario} = useAuth()
   const navigate = useNavigate();
   const [error,setError] = useState()
   const [user,setUser] = useState({
@@ -21,6 +22,9 @@ function Register() {
     setError("")
     try {
       await signUp(user.email,user.password);
+      await axios.post("http://localhost:3001/users",usuario)
+      .then(res=>console.log(res.data))
+      .catch(e=>console.log(e))
       navigate('/login')
       swal("Ok!", "Usuario creado exitosamente", "success");
     } catch (error) {

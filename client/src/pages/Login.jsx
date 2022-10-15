@@ -5,7 +5,7 @@ import swal from 'sweetalert';
 
 function Login() {
 
-  const {logIn, loginWithGoogle } = useAuth()
+  const {logIn, loginWithGoogle ,usuario } = useAuth()
   const navigate = useNavigate();
   const [error,setError] = useState()
   const [user,setUser] = useState({
@@ -16,6 +16,8 @@ function Login() {
   const handleChange = ({target: {name, value}}) => {
     setUser({...user,[name]:value})
   }
+
+  console.log(usuario)
 
   const handleSubmit = async e =>{
     e.preventDefault()
