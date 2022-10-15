@@ -44,6 +44,7 @@ function Login() {
 
   return (
 <section className="h-screen">
+<div className='absolute h-[500px] w-[500px] sm:h-[700px] sm:w-[700px] bg-gradient-to-tr from-purple-400  to-blue-500 rounded-full blur-md -z-10 -translate-y-48 -translate-x-48'></div>
   <div className="px-6 h-full text-gray-800">
     <div
       className="flex xl:justify-center lg:justify-between justify-center items-center flex-wrap h-full g-6"
@@ -52,7 +53,7 @@ function Login() {
         className="grow-0 shrink-1 md:shrink-0 basis-auto xl:w-6/12 lg:w-6/12 md:w-9/12 mb-12 md:mb-0"
       >
         <img
-          src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.webp"
+          src="https://app.enterprisedna.co/build/site/assets/login-banner-image.e4b90115.png"
           className="w-full"
           alt="Sample image"
         />

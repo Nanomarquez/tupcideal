@@ -36,6 +36,7 @@ function Register() {
 
   return (
     <section className="h-screen">
+        <div className='absolute h-[500px] w-[500px] sm:h-[700px] sm:w-[700px] bg-gradient-to-tr from-purple-400  to-blue-500 rounded-full blur-md -z-10 -translate-y-48 -translate-x-48'></div>
   <div className="px-6 h-full text-gray-800">
     <div
       className="flex xl:justify-center lg:justify-between justify-center items-center flex-wrap h-full g-6"
