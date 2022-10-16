@@ -3,6 +3,7 @@ import {useDispatch, useSelector} from "react-redux"
 import { useEffect, useState } from "react";
 import { jsonProducts } from "../../dbejemplo"
 import "./Search.css";
+import {getAllByName} from "../../redux/actions"
 
 function Search() {
  
