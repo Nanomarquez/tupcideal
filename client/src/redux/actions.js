@@ -1,5 +1,5 @@
 import axios from 'axios';
-import {getAllProducts,getProductsFiltered, getProductDetail,
+import {getAllProducts,getAllProductsByName, getProductsFiltered, getProductDetail,
      OrderProductsDisplayByPrice, emptyProductDetail, emptyProductDisplay} from './Slice';
 
 
@@ -12,6 +12,13 @@ import {getAllProducts,getProductsFiltered, getProductDetail,
         .catch(e => console.log(e))}
 
         // trae todos los productos, sin filtros
+   
+        export const getAllByName = (search) => (dispatch) =>{
+
+         axios(`http://localhost:3001/products/?search=${search}`)
+         .then(res => dispatch(getAllProductsByName(res.data)))
+         .catch(e => console.log(e))}
+ 
 
 
      export const getFiltered = (products, search, brand, compatibility) => (dispatch) =>{

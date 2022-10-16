@@ -18,6 +18,11 @@ export const productsSlice = createSlice({
     state.productsFiltered = action.payload
   },
 
+  getAllProductsByName:(state, action) => {
+    
+    state.productsFiltered = action.payload
+  },
+
   getProductsFiltered:(state, action) => {
     state.productsFiltered = action.payload
   },
@@ -42,7 +47,7 @@ emptyProductDisplay:(state) => {
 
 });
 
-export const {getAllProducts,getProductsFiltered, getProductDetail, OrderProductsDisplayByPrice, emptyProductDetail, emptyProductDisplay} = productsSlice.actions
+export const {getAllProducts,getAllProductsByName, getProductsFiltered, getProductDetail, OrderProductsDisplayByPrice, emptyProductDetail, emptyProductDisplay} = productsSlice.actions
 // se exportan las funciones que invocamos desde las actions
 
 export default productsSlice.reducer
