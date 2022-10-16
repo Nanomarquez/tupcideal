@@ -52,7 +52,7 @@ function Search() {
   dispatch(getAllByName(search))
  }
  activar cuando este listo el endpoint y agregar onClick={() => handleSearch(p.name) 
-  al <a classname "dataItem" 
+  al <a classname "dataItem"> 
  */  
 
  let handleClose = () =>{

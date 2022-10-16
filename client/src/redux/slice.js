@@ -38,6 +38,9 @@ export const productsSlice = createSlice({
 },
 emptyProductDisplay:(state) => {
   state.productsFiltered = initialState.state.productsDisplay
+},
+getComponentByCategory:(state,action)=>{
+  state.component = action.payload
 }
 
 // una diferencia entre redux y redux toolkit
@@ -47,7 +50,7 @@ emptyProductDisplay:(state) => {
 
 });
 
-export const {getAllProducts,getAllProductsByName, getProductsFiltered, getProductDetail, OrderProductsDisplayByPrice, emptyProductDetail, emptyProductDisplay} = productsSlice.actions
+export const {getAllProducts,getAllProductsByName, getProductsFiltered, getProductDetail, OrderProductsDisplayByPrice, emptyProductDetail, emptyProductDisplay,getComponentByCategory} = productsSlice.actions
 // se exportan las funciones que invocamos desde las actions
 
 export default productsSlice.reducer
