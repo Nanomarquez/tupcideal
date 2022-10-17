@@ -1,9 +1,13 @@
 import axios from 'axios';
+
 import {getAllProducts,getAllProductsByName, getProductsFiltered, getProductDetail,
-     OrderProductsDisplayByPrice, emptyProductDetail, emptyProductDisplay} from './slice';
+     OrderProductsDisplayByPrice, emptyProductDetail, emptyProductDisplay, getComponentByCategory} from './slice';
 
 
      // se definen funciones que al ser invocadas despachan las funciones ya traidas desde Slice (reducer)
+
+
+     
 
      export const getComponent = (component) => (dispatch) => {
       axios(`http://localhost:3001/components/${component}`)
@@ -16,8 +20,7 @@ import {getAllProducts,getAllProductsByName, getProductsFiltered, getProductDeta
       .then(res=>dispatch(sliceNewUser(res.data)))
       .catch(e => console.log(e))
      }
-    
-    
+
      export const getAll = () => (dispatch) =>{
 
         axios("http://localhost:3001/products/")

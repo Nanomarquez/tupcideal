@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 import Search from "./Search";
 import Signin from "./Signin";
+import SignOut from "./SignOut";
 import Carrito from "../../assets/carrito.png";
 import './Menu.css'
 import { Link } from "react-router-dom";
+import { useAuth } from '../../context/authContext'
 
 function NavBar() {
 
@@ -13,6 +15,9 @@ function NavBar() {
     active?setActive(""):setActive("active")
   }
 
+  const { usuario } = useAuth()
+
+
   return (
     <>
     <nav className="h-auto flex flex-col sm:flex-row justify-between items-center px-5 p-2 bg-gradient-to-b from-gray-800 to bg-gray-600 shadow-2xl z-50">
@@ -21,7 +26,7 @@ function NavBar() {
       </Link>
       <div className="flex sm:gap-40 gap-10">
         <Search/>
-        <Signin />
+        {usuario ? <SignOut/> : <Signin/>}
       </div>
       <div className="flex right-10 sm:relative absolute">
         <img src={Carrito} alt="carrito" className="object-cover h-14 p-2" />

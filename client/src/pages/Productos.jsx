@@ -1,9 +1,22 @@
-import React, { useState } from "react";
-import Select from "react-select";
+import React, { useEffect, useState } from "react";
+import Select, { components } from "react-select";
 import SliderRange from "../components/SliderRange";
-import { jsonProducts } from "../dbejemplo";
 import Pagination from "../components/Pagination";
+import { useDispatch,useSelector} from 'react-redux';
+import {getAll,getComponent} from '../redux/actions'
+
 function Productos() {
+
+  const allProducts = useSelector((state)=>state.products.allProducts);
+  const component = useSelector((state)=>state.products.component)
+  const dispatch = useDispatch()
+  useEffect(()=>{
+    dispatch(getAll())
+    dispatch(getComponent("gpu"))
+  },[])
+
+  console.log(component)
+
   const [currentPage, setCurrentPage] = useState(1);
 
   const productPerPage = 6;
@@ -12,7 +25,7 @@ function Productos() {
 
   const firstProductOfPage = lastProductOfPage - productPerPage;
 
-  const currentProducts = jsonProducts.slice(
+  const currentProducts = allProducts.slice(
     firstProductOfPage,
     lastProductOfPage
   );
@@ -22,7 +35,7 @@ function Productos() {
   };
 
   const set = new Set();
-  jsonProducts.map((e) => set.add(e.categories[0]));
+  allProducts.map((e) => set.add(e.categories[0]));
   const handleSelectChange = (event) => {
     console.log(event);
   };
@@ -46,7 +59,7 @@ function Productos() {
           <Select
             placeholder="Marca"
             isClearable
-            options={jsonProducts.map((item) => ({
+            options={allProducts.map((item) => ({
               label: item.brand,
               value: item.brand,
             }))}
@@ -56,7 +69,7 @@ function Productos() {
           <SliderRange />
         </div>
       </section>
-      <section className="grid grid-cols-3 w-full">
+      <section className="grid grid-cols-3 w-full sm:my-10">
         {currentProducts.map((e, i) => (
           <div
             key={i}
@@ -70,15 +83,15 @@ function Productos() {
             </button>
           </div>
         ))}
-        <div className="absolute left-1/2 sm:translate-x-0 translate-x-[-50%]">
+      </section>
+        <div className="flex justify-center items-center sm:absolute right-[12%]">
           <Pagination
           productPerPage={productPerPage}
-          allProducts={jsonProducts.length}
+          allProducts={allProducts.length}
           pagination={pagination}
           currentPage={currentPage}
           />
         </div>
-      </section>
     </div>
   );
 }

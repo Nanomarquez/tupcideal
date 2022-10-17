@@ -5,7 +5,8 @@ export const productsSlice = createSlice({
  initialState:{
        allProducts:[],
        productsFiltered:[],
-       details:{}
+       details:{},
+       component:[],
  // la idea es tener siempre todos los productos cargados para los selects o busqueda por name
   // por otra parte tener los productos filtrados para el display y/o sus selects 
   // los ordenamientos se harian sobre productsFiltered, tengan todos los productos o los filtrados
@@ -50,7 +51,9 @@ getComponentByCategory:(state,action)=>{
 
 });
 
+
 export const {getAllProducts,getAllProductsByName, getProductsFiltered, getProductDetail, OrderProductsDisplayByPrice, emptyProductDetail, emptyProductDisplay,getComponentByCategory} = productsSlice.actions
+
 // se exportan las funciones que invocamos desde las actions
 
 export default productsSlice.reducer
