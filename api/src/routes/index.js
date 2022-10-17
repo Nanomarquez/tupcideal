@@ -16,7 +16,6 @@ router.use("/products", productsRouter);
 router.use("/users", usersRouter);
 router.use("/sellers", sellersRouter);
 
-
 router.use("/", (req, res) => {
   res.send("TU PC IDEAL");
 });
