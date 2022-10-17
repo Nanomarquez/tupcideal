@@ -6,22 +6,25 @@ import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Productos from "./pages/Productos";
 import Register from "./pages/Register";
-import { AuthProvider } from "./context/authContext";
+import { useAuth } from "./context/authContext";
+
 
 function App() {
+  
+  const { usuario } = useAuth();
+
+
   return (
     <>
-      <AuthProvider>
-        <NavBar />
-        <Routes>
-          <Route exact path="/" element={<Home />} />
-          <Route exact path="/armatupc" element={<ArmaTuPc />} />
-          <Route exact path="/login" element={<Login />} />
-          <Route exact path="/register" element={<Register />} />
-          <Route exact path="/productos" element={<Productos />} />
-        </Routes>
-        <Footer />
-      </AuthProvider>
+      <NavBar/>
+      <Routes>
+        <Route exact path="/" element={<Home />} />
+        <Route exact path="/armatupc" element={<ArmaTuPc />} />
+        <Route exact path="/login" element={<Login />} />
+        <Route exact path="/register" element={<Register />} />
+        <Route exact path="/productos" element={<Productos />} />
+      </Routes>
+      <Footer />
     </>
   );
 }

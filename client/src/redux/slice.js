@@ -5,7 +5,8 @@ export const productsSlice = createSlice({
  initialState:{
        allProducts:[],
        productsFiltered:[],
-       details:{}
+       details:{},
+       component:[],
  // la idea es tener siempre todos los productos cargados para los selects o busqueda por name
   // por otra parte tener los productos filtrados para el display y/o sus selects 
   // los ordenamientos se harian sobre productsFiltered, tengan todos los productos o los filtrados
@@ -15,6 +16,11 @@ export const productsSlice = createSlice({
   reducers: {
  getAllProducts:(state, action) => {
     state.allProducts = action.payload,
+    state.productsFiltered = action.payload
+  },
+
+  getAllProductsByName:(state, action) => {
+    
     state.productsFiltered = action.payload
   },
 
@@ -33,6 +39,9 @@ export const productsSlice = createSlice({
 },
 emptyProductDisplay:(state) => {
   state.productsFiltered = initialState.state.productsDisplay
+},
+getComponentByCategory:(state,action)=>{
+  state.component = action.payload
 }
 
 // una diferencia entre redux y redux toolkit
@@ -42,7 +51,9 @@ emptyProductDisplay:(state) => {
 
 });
 
-export const {getAllProducts,getProductsFiltered, getProductDetail, OrderProductsDisplayByPrice, emptyProductDetail, emptyProductDisplay} = productsSlice.actions
+
+export const {getAllProducts,getAllProductsByName, getProductsFiltered, getProductDetail, OrderProductsDisplayByPrice, emptyProductDetail, emptyProductDisplay,getComponentByCategory} = productsSlice.actions
+
 // se exportan las funciones que invocamos desde las actions
 
 export default productsSlice.reducer

@@ -1,19 +1,21 @@
 import React, { useEffect, useState } from "react";
-import Select from "react-select";
+import Select, { components } from "react-select";
 import SliderRange from "../components/SliderRange";
 import Pagination from "../components/Pagination";
 import { useDispatch,useSelector} from 'react-redux';
-import {getAll} from '../redux/actions'
+import {getAll,getComponent} from '../redux/actions'
 
 function Productos() {
 
   const allProducts = useSelector((state)=>state.products.allProducts);
-
+  const component = useSelector((state)=>state.products.component)
   const dispatch = useDispatch()
-
   useEffect(()=>{
     dispatch(getAll())
+    dispatch(getComponent("gpu"))
   },[])
+
+  console.log(component)
 
   const [currentPage, setCurrentPage] = useState(1);
 

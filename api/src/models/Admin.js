@@ -22,14 +22,46 @@ module.exports = (sequelize) => {
         allowNull: false,
       },
 
+      password: {
+        type: DataTypes.STRING,
+        allowNull: false,
+        validate: {
+          len: {
+            args: [6, 12],
+            msg: "La contraseña debe tener entre 6 y 12 caracteres",
+          },
+        },
+      },
+
+      initial_date: {
+        type: DataTypes.STRING,
+        allowNull: false,
+      },
+
       email: {
         type: DataTypes.STRING,
         allowNull: true,
         unique: true,
+        validate: {
+          isEmail: {
+            args: true,
+            msg: "Ingresa un email valido",
+          },
+        },
       },
       phone_number: {
-        type: DataTypes.STRING,
+        type: DataTypes.INTEGER,
         unique: true,
+        validate: {
+          isInt: {
+            args: true,
+            msg: "El número telefónico solo debe contener números",
+          },
+        },
+      },
+      admin: {
+        type: DataTypes.INTEGER,
+        defaultValue: 1,
       },
     },
     {
