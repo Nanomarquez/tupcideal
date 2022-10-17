@@ -2,9 +2,10 @@ import React,{useState} from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import {useAuth} from '../context/authContext'
 import swal from 'sweetalert';
+import axios from 'axios';
 
 function Register() {
-  const {signUp} = useAuth()
+  const {signUp, usuario} = useAuth()
   const navigate = useNavigate();
   const [error,setError] = useState()
   const [user,setUser] = useState({
@@ -21,6 +22,9 @@ function Register() {
     setError("")
     try {
       await signUp(user.email,user.password);
+      await axios.post("http://localhost:3001/users",usuario)
+      .then(res=>console.log(res.data))
+      .catch(e=>console.log(e))
       navigate('/login')
       swal("Ok!", "Usuario creado exitosamente", "success");
     } catch (error) {
@@ -36,6 +40,7 @@ function Register() {
 
   return (
     <section className="h-screen">
+        <div className='absolute h-[500px] w-[500px] sm:h-[700px] sm:w-[700px] bg-gradient-to-tr from-purple-400  to-blue-500 rounded-full blur-md -z-10 -translate-y-48 -translate-x-48'></div>
   <div className="px-6 h-full text-gray-800">
     <div
       className="flex xl:justify-center lg:justify-between justify-center items-center flex-wrap h-full g-6"

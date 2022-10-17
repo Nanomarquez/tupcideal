@@ -1,10 +1,9 @@
-const { urlencoded } = require("express");
 const { DataTypes } = require("sequelize");
 // Exportamos una funcion que define el modelo y le injectamos la conexion a sequelize.
 module.exports = (sequelize) => {
   // defino el modelo
   sequelize.define(
-    "User",
+    "Seller",
     {
       id: {
         type: DataTypes.UUID,
@@ -12,40 +11,16 @@ module.exports = (sequelize) => {
         primaryKey: true,
       },
 
-      name: {
+      store_name: {
         type: DataTypes.STRING,
         allowNull: false,
-        validate: {
-          isAlpha: {
-            args: true,
-            msg: "El nombre solo puede contener letras",
-          },
-          len: {
-            args: [2, 50],
-            msg: "El nombre debe tener entre 2 y 50 letras",
-          },
-        },
-      },
-
-      last_name: {
-        type: DataTypes.STRING,
-        allowNull: false,
-        validate: {
-          isAlpha: {
-            args: true,
-            msg: "El apellido solo puede contener letras",
-          },
-          len: {
-            args: [2, 50],
-            msg: "El apellido debe tener entre 2 y 50 letras",
-          },
-        },
       },
 
       adress: {
         type: DataTypes.STRING,
-        allowNull: true,
+        allowNull: false,
       },
+
       email: {
         type: DataTypes.STRING,
         allowNull: true,
@@ -57,6 +32,7 @@ module.exports = (sequelize) => {
           },
         },
       },
+      
       phone_number: {
         type: DataTypes.INTEGER,
         unique: true,

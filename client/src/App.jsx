@@ -6,18 +6,17 @@ import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Productos from "./pages/Productos";
 import Register from "./pages/Register";
-
 import { useAuth } from "./context/authContext";
 
-function App() {
-  const { usuario } = useAuth();
 
-  console.log(usuario);
+function App() {
+  
+  const { usuario } = useAuth();
 
 
   return (
     <>
-      <NavBar />
+      <NavBar/>
       <Routes>
         <Route exact path="/" element={<Home />} />
         <Route exact path="/armatupc" element={<ArmaTuPc />} />
