@@ -3,7 +3,7 @@ const router = Router();
 const { User } = require("../db.js");
 
 
-//------- Pedir todos los usuario(individual) a la BD--------
+//------- Pedir usuario(individual) a la BD--------
 router.get("/:email", async (req, res) => {
   const { email } = req.params;
   console.log("este es el email" + email);
@@ -24,7 +24,6 @@ router.get("/:email", async (req, res) => {
 });
 
 //------- Pedir todos los usuario(general) a la BD--------
-
 router.get("/", async (req, res) => {
 
   try {
@@ -43,7 +42,7 @@ router.get("/", async (req, res) => {
   }
 });
 
-//Create User
+//------- Create User -------
 router.post("/", async (req, res) => {
   const { name, last_name, adress, email, phone_number } = req.body;
   try {
@@ -66,6 +65,7 @@ router.post("/", async (req, res) => {
     res.status(500).json(err);
   }
 });
+
 
 
 module.exports = router;

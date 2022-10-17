@@ -8,7 +8,6 @@ router.get("/", async (req, res) => {
   try {
     let respuestabd;
     respuestabd = await Seller.findAll();
-    // console.log("lo que traigo es:" + respuestabd);
     if (respuestabd === null) {
       return res
         .status(404)
@@ -24,11 +23,9 @@ router.get("/", async (req, res) => {
 //------- PEDIR POR EMAIL UN SELLER A LA BD--------
 router.get("/:email", async (req, res) => {
   const { email } = req.params;
-  // console.log("este es el correo" + email);
   try {
     let respuestabd;
     respuestabd = await Seller.findOne({ where: { email: email } });
-    // console.log("lo que traigo es:" + respuestabd);
     if (respuestabd === null) {
       return res
         .status(404)
@@ -69,10 +66,6 @@ router.put("/:email", async (req, res) => {
   try {
     const { email } = req.params;
     const { store_name, adress, phone_number } = req.body;
-    // console.log("/n"+email);
-    // console.log(store_name);
-    // console.log(adress);
-    // console.log(phone_number);
     const editdUser = await Seller.update(
       {
         store_name: store_name,
@@ -94,9 +87,7 @@ router.put("/:email", async (req, res) => {
 router.delete("/:email", async (req, res) => {
   try {
     const { email } = req.params;
-    // console.log("este es el correo" + email);
     const deleteuser = await Seller.findOne({ where: { email: email } });
-    // console.log(deleteuser);
     await deleteuser.destroy();
     res.status(200).send({ message: "The seller was deleted successfully" });
   } catch (err) {
