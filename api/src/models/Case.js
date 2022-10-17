@@ -41,8 +41,9 @@ module.exports = (sequelize) => {
       'internal_3.5"_bays': {
         type: DataTypes.STRING,
       },
-         image: {
+      image: {
         type: DataTypes.STRING
+      },
     },
     {
       timestamps: false,
