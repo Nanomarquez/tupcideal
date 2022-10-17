@@ -8,12 +8,6 @@ module.exports = (sequelize) => {
       name: {
         type: DataTypes.STRING,
       },
-      id: {
-        type: DataTypes.UUID, //alfanumerico random
-        defaultValue: DataTypes.UUIDV4,
-        primaryKey: true,
-        allowNull: false, // allowNull = Permite un vacio ----> seteamos en falso
-      },
       rating: {
         type: DataTypes.INTEGER,
       },
