@@ -2,14 +2,21 @@ import React from 'react'
 import Avatar from '../../assets/avatar.png'
 import "./Signin.css"
 import {useAuth} from '../../context/authContext'
-import { Link } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
+import swal from 'sweetalert';
 
 function SignOut() {
-
+  const navigate = useNavigate()
   const { logOut } = useAuth()
 
   const handleLogout = async () => {
-    await logOut()
+    try {
+      await logOut()
+      swal("Hasta luego", "Sesion cerrada con exito", "success");
+      navigate('/')
+    } catch (error) {
+      console.error(error)
+    }
   }
 
   return (

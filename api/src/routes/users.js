@@ -23,8 +23,6 @@ router.get("/:email", async (req, res) => {
   }
 });
 
-
-
 //------- Pedir todos los usuario(general) a la BD--------
 
 router.get("/", async (req, res) => {
@@ -44,12 +42,6 @@ router.get("/", async (req, res) => {
     res.status(500).json(err);
   }
 });
-
-
-
-
-
-
 
 //Create User
 router.post("/", async (req, res) => {
@@ -74,5 +66,6 @@ router.post("/", async (req, res) => {
     res.status(500).json(err);
   }
 });
+
 
 module.exports = router;

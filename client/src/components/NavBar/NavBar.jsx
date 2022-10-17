@@ -15,9 +15,8 @@ function NavBar() {
     active?setActive(""):setActive("active")
   }
 
-  const { user } = useAuth()
+  const { usuario } = useAuth()
 
-  console.log(user)
 
   return (
     <>
@@ -27,7 +26,7 @@ function NavBar() {
       </Link>
       <div className="flex sm:gap-40 gap-10">
         <Search/>
-        {user ? <SignOut/> : <Signin/>}
+        {usuario ? <SignOut/> : <Signin/>}
       </div>
       <div className="flex right-10 sm:relative absolute">
         <img src={Carrito} alt="carrito" className="object-cover h-14 p-2" />

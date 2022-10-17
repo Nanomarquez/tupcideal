@@ -39,11 +39,12 @@ module.exports = (sequelize) => {
           type: DataTypes.STRING,
         },
         cas_latency: {
-          type: DataTypes.STRING,
+            type: DataTypes.STRING,
         },
-      },
-      {
-        timestamps: false,
-      }
-    );
+        image: {
+            type: DataTypes.STRING,
+        }
+    }, {
+        timestamps: false
+    })
 };
