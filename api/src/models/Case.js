@@ -10,6 +10,7 @@ module.exports = (sequelize) => {
       id: {
         type: DataTypes.UUID, //alfanumerico random
         defaultValue: DataTypes.UUIDV4,
+        primaryKey: true,
         allowNull: false, // allowNull = Permite un vacio ----> seteamos en falso
       },
       rating: {
