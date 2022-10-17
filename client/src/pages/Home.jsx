@@ -9,9 +9,8 @@ import Gigabyte from "../assets/marcas/gigabyte.png";
 import Hyperx from "../assets/marcas/hyperx.png";
 import Intel from "../assets/marcas/intel.png";
 import Reddragon from "../assets/marcas/reddragon.png";
-import Footer from '../components/Home/Footer'
-
 function Home() {
+
   return (
     <>
       <div className="flex flex-col sm:flex-row h-[400px] bg-gradient-to-br bg-gray-900">
