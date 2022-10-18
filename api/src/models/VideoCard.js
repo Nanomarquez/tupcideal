@@ -8,12 +8,6 @@ module.exports = (sequelize) => {
           type: DataTypes.STRING,
           allowNull: false,
         },
-        id: {
-          type: DataTypes.UUID, //alfanumerico random
-          defaultValue: DataTypes.UUIDV4,
-          allowNull: false, // allowNull = Permite un vacio ----> seteamos en falso
-          primaryKey: true,
-        },
         rating: {
           type: DataTypes.INTEGER,
         },
@@ -42,7 +36,7 @@ module.exports = (sequelize) => {
           type: DataTypes.STRING,
         },
         image: {
-            type: DataTypes.STRING,
+          type: DataTypes.STRING,
         }
     }, {
         timestamps: false
