@@ -1,21 +1,23 @@
 import React, { useEffect, useState } from "react";
-import Select, { components } from "react-select";
+import Select from "react-select";
 import SliderRange from "../components/SliderRange";
 import Pagination from "../components/Pagination";
 import { useDispatch,useSelector} from 'react-redux';
-import {getAll,getComponent} from '../redux/actions'
+import {getAll,getFiltered} from '../redux/actions'
+import {Link} from 'react-router-dom'
 
 function Productos() {
 
   const allProducts = useSelector((state)=>state.products.allProducts);
-  const component = useSelector((state)=>state.products.component)
+  const productsFiltered = useSelector((state)=>state.products.productsFiltered)
   const dispatch = useDispatch()
   useEffect(()=>{
     dispatch(getAll())
-    dispatch(getComponent("gpu"))
   },[])
-
-  console.log(component)
+  const [filters,setFilters] = useState({
+    category:"",
+    brand:""
+  })
 
   const [currentPage, setCurrentPage] = useState(1);
 
@@ -25,7 +27,7 @@ function Productos() {
 
   const firstProductOfPage = lastProductOfPage - productPerPage;
 
-  const currentProducts = allProducts.slice(
+  const currentProducts = productsFiltered.slice(
     firstProductOfPage,
     lastProductOfPage
   );
@@ -34,11 +36,51 @@ function Productos() {
     setCurrentPage(pageNumber);
   };
 
-  const set = new Set();
-  allProducts.map((e) => set.add(e.categories[0]));
-  const handleSelectChange = (event) => {
-    console.log(event);
-  };
+  const setCategory = new Set();
+  allProducts.map((e) => setCategory.add(e.categories[0]));
+
+  const setBrand = new Set();
+  allProducts.map((e) => setBrand.add(e.brand));
+  
+  // const handleChange = (e) =>{
+  //   if(e !== null) 
+  //   setFilters({...filters,[e.name]:e.value})
+  //   else{
+  //     setFilters({
+  //       category:"",
+  //       brand:""
+  //     })
+  //   }
+  // }
+  
+  useEffect(() => {
+    dispatch(getFiltered(filters.brand,filters.category))
+  }, [filters])
+  
+  const handleChangeCategory = (e) => {
+    if(e !== null){
+      setFilters({...filters,[e.name]:e.value})
+    }
+    else{
+      setFilters({
+        ...filters,
+        category: ""
+      })
+    }
+  }
+
+  const handleChangeBrand = (e) => {
+    if(e !== null){
+      setFilters({...filters,[e.name]:e.value})
+    }
+    else{
+      setFilters({
+        ...filters,
+        brand: ""
+      })
+    }
+  }
+
 
   return (
     <div className="flex sm:flex-row flex-col">
@@ -49,21 +91,25 @@ function Productos() {
           <Select
             placeholder="Categoria"
             isClearable
-            options={Array.from(set).map((item) => ({
+            options={Array.from(setCategory).map((item) => ({
+              name: "category",
               label: item,
               value: item,
             }))}
-            onChange={handleSelectChange}
+            name='category'
+            onChange={handleChangeCategory}
             className="z-50 cursor-pointer"
           />
           <Select
             placeholder="Marca"
             isClearable
-            options={allProducts.map((item) => ({
-              label: item.brand,
-              value: item.brand,
+            options={Array.from(setBrand).map((item) => ({
+              name: "brand",
+              label: item,
+              value: item,
             }))}
-            onChange={handleSelectChange}
+            name='brand'
+            onChange={handleChangeBrand}
             className="z-30 cursor-pointer"
           />
           <SliderRange />
@@ -78,16 +124,18 @@ function Productos() {
             <img src={e.image} alt="" className="w-24 h-24 object-contain" />
             <h1>{e.name.slice(0, 30) + "..."}</h1>
             <p>${e.price}</p>
-            <button className="bg-black p-5 text-white rounded-md">
-              Ver mas
-            </button>
+            <Link to={`/productos/search/${e.id}`} >
+              <button className="bg-black p-5 text-white rounded-md">
+                Ver mas
+              </button>
+            </Link>
           </div>
         ))}
       </section>
         <div className="flex justify-center items-center sm:absolute right-[12%]">
           <Pagination
           productPerPage={productPerPage}
-          allProducts={allProducts.length}
+          allProducts={productsFiltered.length}
           pagination={pagination}
           currentPage={currentPage}
           />

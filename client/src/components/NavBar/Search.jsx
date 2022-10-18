@@ -1,19 +1,22 @@
 import React from "react";
-import {useDispatch, useSelector} from "react-redux"
 import { useEffect, useState } from "react";
-import { jsonProducts } from "../../dbejemplo"
+import { useSelector,useDispatch } from "react-redux";
+import { Link, useNavigate } from "react-router-dom";
 import "./Search.css";
-import {getAllByName} from "../../redux/actions"
+import { getAll, getAllById } from '../../redux/actions'
 
 function Search() {
  
- let dispatch = useDispatch();
+ const dispatch = useDispatch()
 
- //const {allProducts} = useSelector(state => state.products) activar cuando este el endpoint
+ const navigate = useNavigate()
  
- const [filteredData, setFilteredData] = useState([]);
  const [wordEntered, setWordEntered] = useState("")
  
+ const [filteredData, setFilteredData] = useState([]);
+
+ const {allProducts} = useSelector(state => state.products)
+
   useEffect(() => {
     let search = document.querySelector(".search");
     let close = document.querySelector(".close");
@@ -33,11 +36,19 @@ function Search() {
     });
   }, []);
 
+//  let handleFilter = (e) => {
+//   const searchword = e.target.value;
+//   setWordEntered(searchword);
+//  }
+
+  useEffect(() => {
+    dispatch(getAll())
+  },[])
 
  let handleFilter = (e) => {
   const searchword = e.target.value;
   setWordEntered(searchword);
-  const newValue = jsonProducts.filter((product) => {
+  const newValue = allProducts.filter((product) => {
     return product.name.toLowerCase().includes(searchword.toLowerCase())
     //reemplazar jsonProducts por allProducts cunado el endpoint este listo
   })
@@ -48,42 +59,31 @@ function Search() {
   }
  }
 
-/* let handleSearch = (search) => {
-  dispatch(getAllByName(search))
- }
- activar cuando este listo el endpoint y agregar onClick={() => handleSearch(p.name) 
-  al <a classname "dataItem"> 
- */  
-
  let handleClose = () =>{
   setFilteredData([]);
   setWordEntered("")
  }
 
-
   return (
-    <div>
+      <form>
     <div className="searchBox">
       <div className="search hover:animate-pulse">
         <ion-icon name="search-outline"></ion-icon>
       </div>
       <div className="searchInput">
-        <input type="text" placeholder="Buscar componente..." value={wordEntered} onChange={handleFilter} />
+        <input type="text" placeholder="Buscar componente..." value={wordEntered} onChange={handleFilter}  />
       </div>
       <div className="close">
         <ion-icon name="close-outline" onClick={() => handleClose()}></ion-icon>
       </div>
-     
-  
-    </div>
-    {filteredData.length != 0 && ( 
-        <div className="searchResult">
-           {filteredData.slice(0,7).map((p) => <a className="dataItem" key={p.name}> <p>{p.name}</p>
-
-           </a>)}
+      </div>
+      {filteredData.length != 0 && (
+        <div className="searchResult z-[10000]">
+           {filteredData.slice(0,10).map((p) => <a  href={`http://localhost:3000/productos/search/${p.id}`}><p className="hover:bg-blue-200">{p.name.slice(0,25)}</p>
+           </a> )}
 
         </div>)}
-    </div>
+    </form>
   );
 }
 

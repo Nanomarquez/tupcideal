@@ -33,13 +33,14 @@
   width: 35px;
 }
 
-.nav ul li:hover{
+div ul li:hover{
   padding: 14px;
   font-weight: 900;
   background: linear-gradient(90deg, rgb(101, 254, 183) 0%, rgba(27,228,183,1) 35%, rgba(2,152,182,1) 100%);
   background-size: 400%;
-  -webkit-text-fill-color: transparent;
-  -webkit-background-clip: text;
+  color: transparent;
+  background-clip: text;
+  animation: animar 5g infinite alternate-reverse;
 }
 
 .logo{

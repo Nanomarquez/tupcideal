@@ -34,6 +34,9 @@ module.exports = (sequelize) => {
       interface: {
         type: DataTypes.STRING,
       },
+      image: {
+        type: DataTypes.STRING,
+      }
     },
     {
       timestamps: false,
