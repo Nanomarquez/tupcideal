@@ -2,23 +2,23 @@ import React from 'react'
 import { useParams } from 'react-router-dom'
 import { useSelector , useDispatch} from 'react-redux';
 import { useEffect } from 'react';
-import { getAllByName } from '../redux/actions';
+import { getAllById } from '../redux/actions';
 function ProductosSearch() {
 
-  const {name} = useParams()
+  const {id} = useParams()
   const dispatch = useDispatch()
-  const productsFiltered = useSelector((state)=>state.products.productsFiltered)
+  const {productsFilterById} = useSelector((state)=>state.products)
 
-  console.log(productsFiltered)
+  console.log(productsFilterById)
 
   useEffect(()=>{
-    dispatch(getAllByName(name))
+    dispatch(getAllById(id))
   },[])
 
 
   return (
-    <div>{name}</div>
-  )
+    <div>{productsFilterById && productsFilterById.name}</div>
+    )
 }
 
 export default ProductosSearch

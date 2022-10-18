@@ -1,20 +1,22 @@
 import React, { useEffect, useState } from "react";
-import Select, { components } from "react-select";
+import Select from "react-select";
 import SliderRange from "../components/SliderRange";
 import Pagination from "../components/Pagination";
 import { useDispatch,useSelector} from 'react-redux';
-import {getAll,getFilterByCategory,getFilterByBrand} from '../redux/actions'
+import {getAll,getFiltered} from '../redux/actions'
 
 function Productos() {
 
   const allProducts = useSelector((state)=>state.products.allProducts);
-  const productByCategory = useSelector((state)=>state.products.productFilteredByCategory)
+  const productsFiltered = useSelector((state)=>state.products.productsFiltered)
   const dispatch = useDispatch()
   useEffect(()=>{
     dispatch(getAll())
   },[])
-
-  console.log(productByCategory)
+  const [filters,setFilters] = useState({
+    category:"",
+    brand:""
+  })
 
   const [currentPage, setCurrentPage] = useState(1);
 
@@ -24,7 +26,7 @@ function Productos() {
 
   const firstProductOfPage = lastProductOfPage - productPerPage;
 
-  const currentProducts = allProducts.slice(
+  const currentProducts = productsFiltered.slice(
     firstProductOfPage,
     lastProductOfPage
   );
@@ -38,15 +40,46 @@ function Productos() {
 
   const setBrand = new Set();
   allProducts.map((e) => setBrand.add(e.brand));
-
-
-  const handleFilterByCategory = (event) => {
-    dispatch(getFilterByCategory(event.value))
-  };
-
-  const handleFilterByBrand = (event) => {
-    dispatch(getFilterByBrand(event.value))
+  
+  // const handleChange = (e) =>{
+  //   if(e !== null) 
+  //   setFilters({...filters,[e.name]:e.value})
+  //   else{
+  //     setFilters({
+  //       category:"",
+  //       brand:""
+  //     })
+  //   }
+  // }
+  
+  useEffect(() => {
+    dispatch(getFiltered(filters.brand,filters.category))
+  }, [filters])
+  
+  const handleChangeCategory = (e) => {
+    if(e !== null){
+      setFilters({...filters,[e.name]:e.value})
+    }
+    else{
+      setFilters({
+        ...filters,
+        category: ""
+      })
+    }
   }
+
+  const handleChangeBrand = (e) => {
+    if(e !== null){
+      setFilters({...filters,[e.name]:e.value})
+    }
+    else{
+      setFilters({
+        ...filters,
+        brand: ""
+      })
+    }
+  }
+
 
   return (
     <div className="flex sm:flex-row flex-col">
@@ -58,20 +91,24 @@ function Productos() {
             placeholder="Categoria"
             isClearable
             options={Array.from(setCategory).map((item) => ({
+              name: "category",
               label: item,
               value: item,
             }))}
-            onChange={handleFilterByCategory}
+            name='category'
+            onChange={handleChangeCategory}
             className="z-50 cursor-pointer"
           />
           <Select
             placeholder="Marca"
             isClearable
             options={Array.from(setBrand).map((item) => ({
+              name: "brand",
               label: item,
               value: item,
             }))}
-            onChange={handleFilterByBrand}
+            name='brand'
+            onChange={handleChangeBrand}
             className="z-30 cursor-pointer"
           />
           <SliderRange />
@@ -95,7 +132,7 @@ function Productos() {
         <div className="flex justify-center items-center sm:absolute right-[12%]">
           <Pagination
           productPerPage={productPerPage}
-          allProducts={allProducts.length}
+          allProducts={productsFiltered.length}
           pagination={pagination}
           currentPage={currentPage}
           />
