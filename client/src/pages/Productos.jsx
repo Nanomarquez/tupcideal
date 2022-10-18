@@ -3,19 +3,18 @@ import Select, { components } from "react-select";
 import SliderRange from "../components/SliderRange";
 import Pagination from "../components/Pagination";
 import { useDispatch,useSelector} from 'react-redux';
-import {getAll,getComponent} from '../redux/actions'
+import {getAll,getFilterByCategory,getFilterByBrand} from '../redux/actions'
 
 function Productos() {
 
   const allProducts = useSelector((state)=>state.products.allProducts);
-  const component = useSelector((state)=>state.products.component)
+  const productByCategory = useSelector((state)=>state.products.productFilteredByCategory)
   const dispatch = useDispatch()
   useEffect(()=>{
     dispatch(getAll())
-    dispatch(getComponent("gpu"))
   },[])
 
-  console.log(component)
+  console.log(productByCategory)
 
   const [currentPage, setCurrentPage] = useState(1);
 
@@ -34,11 +33,20 @@ function Productos() {
     setCurrentPage(pageNumber);
   };
 
-  const set = new Set();
-  allProducts.map((e) => set.add(e.categories[0]));
-  const handleSelectChange = (event) => {
-    console.log(event);
+  const setCategory = new Set();
+  allProducts.map((e) => setCategory.add(e.categories[0]));
+
+  const setBrand = new Set();
+  allProducts.map((e) => setBrand.add(e.brand));
+
+
+  const handleFilterByCategory = (event) => {
+    dispatch(getFilterByCategory(event.value))
   };
+
+  const handleFilterByBrand = (event) => {
+    dispatch(getFilterByBrand(event.value))
+  }
 
   return (
     <div className="flex sm:flex-row flex-col">
@@ -49,21 +57,21 @@ function Productos() {
           <Select
             placeholder="Categoria"
             isClearable
-            options={Array.from(set).map((item) => ({
+            options={Array.from(setCategory).map((item) => ({
               label: item,
               value: item,
             }))}
-            onChange={handleSelectChange}
+            onChange={handleFilterByCategory}
             className="z-50 cursor-pointer"
           />
           <Select
             placeholder="Marca"
             isClearable
-            options={allProducts.map((item) => ({
-              label: item.brand,
-              value: item.brand,
+            options={Array.from(setBrand).map((item) => ({
+              label: item,
+              value: item,
             }))}
-            onChange={handleSelectChange}
+            onChange={handleFilterByBrand}
             className="z-30 cursor-pointer"
           />
           <SliderRange />

@@ -5,6 +5,8 @@ export const productsSlice = createSlice({
  initialState:{
        allProducts:[],
        productsFiltered:[],
+       productFilteredByCategory:[],
+       productFilteredByBrand:[],
        details:{},
        component:[],
  // la idea es tener siempre todos los productos cargados para los selects o busqueda por name
@@ -14,6 +16,12 @@ export const productsSlice = createSlice({
       },
  
   reducers: {
+    getBrand:(state,action)=>{
+      state.productFilteredByBrand = action.payload
+    },
+ getCategory:(state,action)=>{
+  state.productFilteredByCategory = action.payload
+ },
  getAllProducts:(state, action) => {
     state.allProducts = action.payload,
     state.productsFiltered = action.payload
@@ -52,7 +60,7 @@ getComponentByCategory:(state,action)=>{
 });
 
 
-export const {getAllProducts,getAllProductsByName, getProductsFiltered, getProductDetail, OrderProductsDisplayByPrice, emptyProductDetail, emptyProductDisplay,getComponentByCategory} = productsSlice.actions
+export const {getAllProducts,getAllProductsByName, getProductsFiltered, getProductDetail, OrderProductsDisplayByPrice, emptyProductDetail, emptyProductDisplay,getComponentByCategory,getCategory} = productsSlice.actions
 
 // se exportan las funciones que invocamos desde las actions
 
