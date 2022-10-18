@@ -1,36 +1,51 @@
-import React, { useEffect, useState } from "react";
 import Select from "react-select";
-import SliderRange from "../components/SliderRange";
 import Pagination from "../components/Pagination";
-import { useDispatch,useSelector} from 'react-redux';
-import {getAll,getFiltered} from '../redux/actions'
+import React, { useEffect, useState } from "react";
+import {getAll,getFiltered} from '../redux/actions';
+import SliderRange from "../components/SliderRange";
+import { useDispatch, useSelector} from 'react-redux';
 
 function Productos() {
-
+  const [currentPage, setCurrentPage] = useState(1);
   const allProducts = useSelector((state)=>state.products.allProducts);
+  const productByPrice = useSelector((state) => state.products.filterByPrice);
   const productsFiltered = useSelector((state)=>state.products.productsFiltered)
+
   const dispatch = useDispatch()
   useEffect(()=>{
     dispatch(getAll())
   },[])
+
   const [filters,setFilters] = useState({
     category:"",
     brand:""
-  })
+  })  
 
-  const [currentPage, setCurrentPage] = useState(1);
-
+    const order = (array) => {
+    let result = array.sort((a, b) => {
+      if (a.price < b.price) return -1;
+      if (a.price > b.price) return 1;
+      return 0;
+    })
+    return result
+  }
+  
   const productPerPage = 6;
-
   const lastProductOfPage = currentPage * productPerPage;
-
   const firstProductOfPage = lastProductOfPage - productPerPage;
-
-  const currentProducts = productsFiltered.slice(
-    firstProductOfPage,
-    lastProductOfPage
-  );
-
+  
+  let filteredPorductPrice
+  const byPrice = () =>{
+    if(productByPrice.length > 0) {
+      const currentProducts = productByPrice.slice(firstProductOfPage, lastProductOfPage)
+      filteredPorductPrice = productByPrice.length;
+      return order(currentProducts);
+    } else {
+      const currentProducts = productsFiltered.slice(firstProductOfPage, lastProductOfPage)
+      filteredPorductPrice = productsFiltered.length;
+      return currentProducts
+    }
+  }
   const pagination = (pageNumber) => {
     setCurrentPage(pageNumber);
   };
@@ -95,7 +110,7 @@ function Productos() {
               label: item,
               value: item,
             }))}
-            name='category'
+            name="category"
             onChange={handleChangeCategory}
             className="z-50 cursor-pointer"
           />
@@ -107,7 +122,7 @@ function Productos() {
               label: item,
               value: item,
             }))}
-            name='brand'
+            name="brand"
             onChange={handleChangeBrand}
             className="z-30 cursor-pointer"
           />
@@ -115,7 +130,7 @@ function Productos() {
         </div>
       </section>
       <section className="grid grid-cols-3 w-full sm:my-10">
-        {currentProducts.map((e, i) => (
+        {byPrice().map((e, i) => (
           <div
             key={i}
             className="h-[200px] justify-center items-center text-center my-20 mx-5 border rounded-lg flex flex-col gap-5"
@@ -129,14 +144,14 @@ function Productos() {
           </div>
         ))}
       </section>
-        <div className="flex justify-center items-center sm:absolute right-[12%]">
-          <Pagination
+      <div className="flex justify-center items-center sm:absolute right-[12%]">
+        <Pagination
           productPerPage={productPerPage}
-          allProducts={productsFiltered.length}
+          allProducts={filteredPorductPrice}
           pagination={pagination}
           currentPage={currentPage}
-          />
-        </div>
+        />
+      </div>
     </div>
   );
 }

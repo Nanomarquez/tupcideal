@@ -17,8 +17,10 @@ function ProductosSearch() {
 
 
   return (
-    <div>{productsFilterById && productsFilterById.name}</div>
-    )
+    <div className="h-[200px] justify-center items-center text-center my-20 mx-5 border rounded-lg flex flex-col gap-5">
+      {productsFilterById && productsFilterById.name}
+    </div>
+  );
 }
 
 export default ProductosSearch

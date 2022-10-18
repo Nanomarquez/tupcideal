@@ -8,6 +8,7 @@ export const productsSlice = createSlice({
        productsFilterById:{},
        details:{},
        component:[],
+       filterByPrice: []
  // la idea es tener siempre todos los productos cargados para los selects o busqueda por name
   // por otra parte tener los productos filtrados para el display y/o sus selects 
   // los ordenamientos se harian sobre productsFiltered, tengan todos los productos o los filtrados
@@ -28,7 +29,7 @@ export const productsSlice = createSlice({
     state.productsFiltered = action.payload
   },
   OrderProductsDisplayByPrice:(state, action) => {
-    state.productsFiltered = action.payload
+    state.filterByPrice = action.payload;
   },
   
   getProductDetail:(state, action) => {

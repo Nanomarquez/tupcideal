@@ -51,6 +51,11 @@ import {getAllProducts,getAllProductsById, getProductsFiltered, getProductDetail
         axios(`http://localhost:3001/products/:${id}`)
         .then(res => dispatch(getProductDetail(res.data)))
         .catch(e => console.log(e))}
+       
+       export const orderByPrice = (array) => (dispatch) => {
+          dispatch( OrderProductsDisplayByPrice(array))
+         
+        }
 
         // busqueda por id por params
 
