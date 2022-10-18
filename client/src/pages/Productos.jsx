@@ -4,6 +4,7 @@ import SliderRange from "../components/SliderRange";
 import Pagination from "../components/Pagination";
 import { useDispatch,useSelector} from 'react-redux';
 import {getAll,getFiltered} from '../redux/actions'
+import {Link} from 'react-router-dom'
 
 function Productos() {
 
@@ -123,9 +124,11 @@ function Productos() {
             <img src={e.image} alt="" className="w-24 h-24 object-contain" />
             <h1>{e.name.slice(0, 30) + "..."}</h1>
             <p>${e.price}</p>
-            <button className="bg-black p-5 text-white rounded-md">
-              Ver mas
-            </button>
+            <Link to={`/productos/search/${e.id}`} >
+              <button className="bg-black p-5 text-white rounded-md">
+                Ver mas
+              </button>
+            </Link>
           </div>
         ))}
       </section>
