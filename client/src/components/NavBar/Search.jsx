@@ -1,17 +1,12 @@
 import React from "react";
-import {useDispatch, useSelector} from "react-redux"
 import { useEffect, useState } from "react";
-import { jsonProducts } from "../../dbejemplo"
+import { useNavigate } from "react-router-dom";
 import "./Search.css";
-import {getAllByName} from "../../redux/actions"
 
 function Search() {
  
- let dispatch = useDispatch();
-
- //const {allProducts} = useSelector(state => state.products) activar cuando este el endpoint
+ const navigate = useNavigate()
  
- const [filteredData, setFilteredData] = useState([]);
  const [wordEntered, setWordEntered] = useState("")
  
   useEffect(() => {
@@ -33,57 +28,35 @@ function Search() {
     });
   }, []);
 
-
  let handleFilter = (e) => {
   const searchword = e.target.value;
   setWordEntered(searchword);
-  const newValue = jsonProducts.filter((product) => {
-    return product.name.toLowerCase().includes(searchword.toLowerCase())
-    //reemplazar jsonProducts por allProducts cunado el endpoint este listo
-  })
-  if (searchword === "") {
-    setFilteredData([])
-  }else{
-    setFilteredData(newValue)
-  }
  }
-
-/* let handleSearch = (search) => {
-  dispatch(getAllByName(search))
- }
- activar cuando este listo el endpoint y agregar onClick={() => handleSearch(p.name) 
-  al <a classname "dataItem"> 
- */  
 
  let handleClose = () =>{
   setFilteredData([]);
   setWordEntered("")
  }
-
+ const handleSubmit = () => {
+  navigate(`/productos/search/${wordEntered}`)
+ }
 
   return (
-    <div>
+    <form onSubmit={handleSubmit}>
     <div className="searchBox">
       <div className="search hover:animate-pulse">
         <ion-icon name="search-outline"></ion-icon>
       </div>
       <div className="searchInput">
-        <input type="text" placeholder="Buscar componente..." value={wordEntered} onChange={handleFilter} />
+        <input type="text" placeholder="Buscar componente..." value={wordEntered} onChange={handleFilter}  />
       </div>
       <div className="close">
         <ion-icon name="close-outline" onClick={() => handleClose()}></ion-icon>
       </div>
+      </div>
      
-  
-    </div>
-    {filteredData.length != 0 && ( 
-        <div className="searchResult">
-           {filteredData.slice(0,7).map((p) => <a className="dataItem" key={p.name}> <p>{p.name}</p>
-
-           </a>)}
-
-        </div>)}
-    </div>
+    
+    </form>
   );
 }
 
