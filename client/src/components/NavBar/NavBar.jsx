@@ -36,7 +36,7 @@ function NavBar() {
       </div>
     </nav>
     <hr />
-    <div className="nav">
+    <div className="z-10">
       <button onClick={()=>handleActive()} className={`menu menu-${active} absolute top-5 left-8 sm:hidden`}>
         <div></div>
         <div></div>

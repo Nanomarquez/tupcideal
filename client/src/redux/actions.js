@@ -1,10 +1,14 @@
 import axios from 'axios';
-import {getAllProducts,getProductsFiltered, getProductDetail,
-     OrderProductsDisplayByPrice, emptyProductDetail, emptyProductDisplay,getComponentByCategory} from './slice';
+
+import {getAllProducts,getAllProductsById, getProductsFiltered, getProductDetail,
+     OrderProductsDisplayByPrice, emptyProductDetail, emptyProductDisplay, getComponentByCategory, getCategory,getBrand} from './slice';
 
 
      // se definen funciones que al ser invocadas despachan las funciones ya traidas desde Slice (reducer)
+
+
      
+
      export const getComponent = (component) => (dispatch) => {
       axios(`http://localhost:3001/components/${component}`)
       .then(res => dispatch(getComponentByCategory(res.data)))
@@ -16,7 +20,7 @@ import {getAllProducts,getProductsFiltered, getProductDetail,
       .then(res=>dispatch(sliceNewUser(res.data)))
       .catch(e => console.log(e))
      }
-     
+
      export const getAll = () => (dispatch) =>{
 
         axios("http://localhost:3001/products/")
@@ -24,12 +28,19 @@ import {getAllProducts,getProductsFiltered, getProductDetail,
         .catch(e => console.log(e))}
 
         // trae todos los productos, sin filtros
+   
+        export const getAllById = (id) => (dispatch) =>{
+
+         axios(`http://localhost:3001/products/${id}`)
+         .then(res => dispatch(getAllProductsById(res.data)))
+         .catch(e => console.log(e))}
+ 
 
 
-     export const getFiltered = (products, search, brand, compatibility) => (dispatch) =>{
+     export const getFiltered = ( brand, category) => (dispatch) =>{
 
-         axios(`http://localhost:3001/products/${products}?search=${search}?brand=${brand}?compatibility${compatibility}`)
-         .then(res => dispatch(getProductsFiltered(res.data)))
+         axios(`http://localhost:3001/products?brand=${brand}&category=${category}`)
+         .then(res =>   dispatch(getProductsFiltered(res.data)))
          .catch(e => console.log(e))}
 
          //trae de forma dinamica, segun componente (endpoint), por query busqueda por name, 
@@ -43,3 +54,14 @@ import {getAllProducts,getProductsFiltered, getProductDetail,
 
         // busqueda por id por params
 
+    // export const getFilterByCategory = (category) => (dispatch) => {
+    //     axios(`http://localhost:3001/products?category=${category}`)
+    //     .then(res => dispatch(getCategory(res.data)))
+    //     .catch(e => console.log(e))
+    // }
+
+    // export const getFilterByBrand = (brand) => (dispatch) => {
+    //     axios(`http://localhost:3001/products?brand=${brand}`)
+    //     .then(res => dispatch(getBrand(res.data)))
+    //     .catch(e => console.log(e))
+    // }

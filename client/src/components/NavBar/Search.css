@@ -60,3 +60,41 @@
   outline: none;
   font-size: 1em;
 }
+.searchResult{
+  position: absolute;
+  margin-top: 5px;
+  width: 260px;
+  height: 200px;
+  background-color:#ffffff;
+  overflow: hidden;
+  overflow-y: auto;
+  box-shadow: rgba(0,0,0,0.35)0px, 5px, 15px;
+  z-index: 20;
+  border:solid 2px #4b5563;
+  border-radius: 6px;
+  
+}
+.dataItem{
+  width: 100%;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  color: #4b5563;
+  font-size: 12px;
+  border-bottom:solid 1px  #4b5563;
+  overflow: hidden;
+  white-space: break-word;
+ 
+}
+
+.dataItem p {
+  margin-left: 10px;
+
+}
+
+a{
+  text-decoration: none;
+}
+a:hover{
+  cursor: pointer;
+}
