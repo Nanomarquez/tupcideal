@@ -6,12 +6,9 @@ import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Productos from "./pages/Productos";
 import Register from "./pages/Register";
-import { useAuth } from "./context/authContext";
-
+import ProductosSearch from './pages/ProductosSearch'
 
 function App() {
-  
-  const { usuario } = useAuth();
 
 
   return (
@@ -23,6 +20,7 @@ function App() {
         <Route exact path="/login" element={<Login />} />
         <Route exact path="/register" element={<Register />} />
         <Route exact path="/productos" element={<Productos />} />
+        <Route exact path="/productos/search/:name" element={<ProductosSearch />} />
       </Routes>
       <Footer />
     </>
