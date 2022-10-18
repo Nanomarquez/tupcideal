@@ -3,7 +3,7 @@ import Select from "react-select";
 import SliderRange from "../components/SliderRange";
 import Pagination from "../components/Pagination";
 import { useDispatch,useSelector} from 'react-redux';
-import {getAll,getFiltered} from '../redux/actions'
+import {getAll,getFiltered, orderProducts} from '../redux/actions'
 import {Link} from 'react-router-dom'
 
 function Productos() {
@@ -67,6 +67,7 @@ function Productos() {
         category: ""
       })
     }
+    setCurrentPage(1)
   }
 
   const handleChangeBrand = (e) => {
@@ -79,8 +80,12 @@ function Productos() {
         brand: ""
       })
     }
+    setCurrentPage(1)
   }
 
+  const handleSort = (e) => {
+    dispatch(orderProducts(e.target.value))
+  };
 
   return (
     <div className="flex sm:flex-row flex-col">
@@ -112,7 +117,11 @@ function Productos() {
             onChange={handleChangeBrand}
             className="z-30 cursor-pointer"
           />
-          <SliderRange />
+          <label>Ordenar por precio: </label>
+          <select name="Ordenar" onChange={handleSort}>
+            <option value="Ascendente">Ascendente: </option>
+            <option value="Descendente">Descendente: </option>
+          </select>
         </div>
       </section>
       <section className="grid grid-cols-3 w-full sm:my-10">
