@@ -57,6 +57,10 @@ import {getAllProducts,getAllProductsById, getProductsFiltered, getProductDetail
          
         }
 
+    export const orderProducts = (order) => (dispatch) => {
+        dispatch(OrderProductsDisplayByPrice(order))
+    }
+
         // busqueda por id por params
 
     // export const getFilterByCategory = (category) => (dispatch) => {

@@ -1,9 +1,8 @@
 import Select from "react-select";
 import Pagination from "../components/Pagination";
-import React, { useEffect, useState } from "react";
-import {getAll,getFiltered} from '../redux/actions';
-import SliderRange from "../components/SliderRange";
-import { useDispatch, useSelector} from 'react-redux';
+import { useDispatch,useSelector} from 'react-redux';
+import {getAll,getFiltered, orderProducts} from '../redux/actions'
+import {Link} from 'react-router-dom'
 
 function Productos() {
   const [currentPage, setCurrentPage] = useState(1);
@@ -81,6 +80,7 @@ function Productos() {
         category: ""
       })
     }
+    setCurrentPage(1)
   }
 
   const handleChangeBrand = (e) => {
@@ -93,8 +93,12 @@ function Productos() {
         brand: ""
       })
     }
+    setCurrentPage(1)
   }
 
+  const handleSort = (e) => {
+    dispatch(orderProducts(e.target.value))
+  };
 
   return (
     <div className="flex sm:flex-row flex-col">
@@ -126,7 +130,11 @@ function Productos() {
             onChange={handleChangeBrand}
             className="z-30 cursor-pointer"
           />
-          <SliderRange />
+          <label>Ordenar por precio: </label>
+          <select name="Ordenar" onChange={handleSort}>
+            <option value="Ascendente">Ascendente: </option>
+            <option value="Descendente">Descendente: </option>
+          </select>
         </div>
       </section>
       <section className="grid grid-cols-3 w-full sm:my-10">
@@ -138,9 +146,11 @@ function Productos() {
             <img src={e.image} alt="" className="w-24 h-24 object-contain" />
             <h1>{e.name.slice(0, 30) + "..."}</h1>
             <p>${e.price}</p>
-            <button className="bg-black p-5 text-white rounded-md">
-              Ver mas
-            </button>
+            <Link to={`/productos/search/${e.id}`} >
+              <button className="bg-black p-5 text-white rounded-md">
+                Ver mas
+              </button>
+            </Link>
           </div>
         ))}
       </section>

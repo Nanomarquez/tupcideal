@@ -29,7 +29,17 @@ export const productsSlice = createSlice({
     state.productsFiltered = action.payload
   },
   OrderProductsDisplayByPrice:(state, action) => {
-    state.filterByPrice = action.payload;
+    //state.productsFiltered = action.payload
+    switch(action.payload) {
+      case "Ascendente": {
+        state.productsFiltered= [...state.productsFiltered].sort((a,b)=>(a.price-b.price))
+        break      
+      };
+      case "Descendente": {
+        state.productsFiltered= [...state.productsFiltered].sort((a,b)=>(b.price-a.price))
+        break      
+      };
+    }
   },
   
   getProductDetail:(state, action) => {
