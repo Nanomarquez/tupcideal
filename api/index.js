@@ -13,12 +13,19 @@ const bulkInternalHardDrive = require('./src/data/internal-hard-drive.json')
 conn.sync({ force: true }).then(() => {
   server.listen(3001, async () => {
     await CPU.bulkCreate(bulkCPU);
+    console.log("✓ Se llenó la tabla CPU con la data del json");
     await Memory.bulkCreate(bulkMemory);
+    console.log("✓ Se llenó la tabla Memory con la data del json");
     await PowerSupply.bulkCreate(bulkPowerSupply);
+    console.log("✓ Se llenó la tabla PowerSupply con la data del json");
     await Motherboard.bulkCreate(bulkMotherboard);
+    console.log("✓ Se llenó la tabla Motherboard con la data del json");
     await Case.bulkCreate(bulkCase);
+    console.log("✓ Se llenó la tabla Case con la data del json");
     await InternalHardDrive.bulkCreate(bulkInternalHardDrive);
+    console.log("✓ Se llenó la tabla InternalHardDrive con la data del json");
     await VideoCard.bulkCreate(bulkGPU);
-    console.log("%s listening at 3001"); // eslint-disable-line no-console
+    console.log("✓ Se llenó la tabla VideoCard con la data del json");
+    console.log("⇒ listening at port 3001"); // eslint-disable-line no-console
   });
 });
