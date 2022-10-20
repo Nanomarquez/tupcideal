@@ -1,9 +1,16 @@
 import React, { useEffect, useState } from "react";
 import Select from "react-select";
 import SliderRange from "../components/SliderRange";
+<<<<<<< HEAD
 import Pagination from "../components/Pagination/Pagination";
 import { useDispatch, useSelector } from "react-redux";
 import { getAll, getFiltered } from "../redux/actions";
+=======
+import Pagination from "../components/Pagination";
+import { useDispatch,useSelector} from 'react-redux';
+import {getAll,getFiltered, orderProducts} from '../redux/actions'
+import {Link} from 'react-router-dom'
+>>>>>>> 60bcb1c0d2c14cacc1790b54dbe7e56abd55c466
 
 function Productos() {
   const allProducts = useSelector((state) => state.products.allProducts);
@@ -66,7 +73,12 @@ function Productos() {
         category: "",
       });
     }
+<<<<<<< HEAD
   };
+=======
+    setCurrentPage(1)
+  }
+>>>>>>> 60bcb1c0d2c14cacc1790b54dbe7e56abd55c466
 
   const handleChangeBrand = (e) => {
     if (e !== null) {
@@ -77,10 +89,20 @@ function Productos() {
         brand: "",
       });
     }
+<<<<<<< HEAD
   };
   if (productsFiltered.length === 0) {
     return <h1>Loading</h1>;
   }
+=======
+    setCurrentPage(1)
+  }
+
+  const handleSort = (e) => {
+    dispatch(orderProducts(e.target.value))
+  };
+
+>>>>>>> 60bcb1c0d2c14cacc1790b54dbe7e56abd55c466
   return (
     <div className="flex sm:flex-row flex-col">
       <section className="p-2 sm:px-5 border-b-2 sm:border-b-0 sm:border-r-2 rounded-xl w-full sm:w-2/6">
@@ -111,7 +133,11 @@ function Productos() {
             onChange={handleChangeBrand}
             className="z-30 cursor-pointer"
           />
-          <SliderRange />
+          <label>Ordenar por precio: </label>
+          <select name="Ordenar" onChange={handleSort}>
+            <option value="Ascendente">Ascendente: </option>
+            <option value="Descendente">Descendente: </option>
+          </select>
         </div>
       </section>
       <section className="flex flex-col w-full p-5">
@@ -128,6 +154,7 @@ function Productos() {
             key={i}
             className="flex w-full mt-5 rounded-lg flex-col sm:flex-row p-5 shadow-xl overflow-hidden"
           >
+<<<<<<< HEAD
             {" "}
             <div className="flex items-center justify-center">
               <img
@@ -169,6 +196,16 @@ function Productos() {
               </p>
               </div>
             </div>
+=======
+            <img src={e.image} alt="" className="w-24 h-24 object-contain" />
+            <h1>{e.name.slice(0, 30) + "..."}</h1>
+            <p>${e.price}</p>
+            <Link to={`/productos/search/${e.id}`} >
+              <button className="bg-black p-5 text-white rounded-md">
+                Ver mas
+              </button>
+            </Link>
+>>>>>>> 60bcb1c0d2c14cacc1790b54dbe7e56abd55c466
           </div>
         ))}
       </section>
