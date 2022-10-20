@@ -1,16 +1,8 @@
 import React, { useEffect, useState } from "react";
 import Select from "react-select";
-import SliderRange from "../components/SliderRange";
-<<<<<<< HEAD
 import Pagination from "../components/Pagination/Pagination";
 import { useDispatch, useSelector } from "react-redux";
-import { getAll, getFiltered } from "../redux/actions";
-=======
-import Pagination from "../components/Pagination";
-import { useDispatch,useSelector} from 'react-redux';
-import {getAll,getFiltered, orderProducts} from '../redux/actions'
-import {Link} from 'react-router-dom'
->>>>>>> 60bcb1c0d2c14cacc1790b54dbe7e56abd55c466
+import { getAll, getFiltered, orderProducts } from "../redux/actions";
 
 function Productos() {
   const allProducts = useSelector((state) => state.products.allProducts);
@@ -49,17 +41,6 @@ function Productos() {
   const setBrand = new Set();
   allProducts.map((e) => setBrand.add(e.brand));
 
-  // const handleChange = (e) =>{
-  //   if(e !== null)
-  //   setFilters({...filters,[e.name]:e.value})
-  //   else{
-  //     setFilters({
-  //       category:"",
-  //       brand:""
-  //     })
-  //   }
-  // }
-
   useEffect(() => {
     dispatch(getFiltered(filters.brand, filters.category));
   }, [filters]);
@@ -73,12 +54,8 @@ function Productos() {
         category: "",
       });
     }
-<<<<<<< HEAD
+    setCurrentPage(1);
   };
-=======
-    setCurrentPage(1)
-  }
->>>>>>> 60bcb1c0d2c14cacc1790b54dbe7e56abd55c466
 
   const handleChangeBrand = (e) => {
     if (e !== null) {
@@ -89,20 +66,16 @@ function Productos() {
         brand: "",
       });
     }
-<<<<<<< HEAD
+    setCurrentPage(1);
   };
+
+  const handleSort = (e) => {
+    dispatch(orderProducts(e.target.value));
+  };
+
   if (productsFiltered.length === 0) {
     return <h1>Loading</h1>;
   }
-=======
-    setCurrentPage(1)
-  }
-
-  const handleSort = (e) => {
-    dispatch(orderProducts(e.target.value))
-  };
-
->>>>>>> 60bcb1c0d2c14cacc1790b54dbe7e56abd55c466
   return (
     <div className="flex sm:flex-row flex-col">
       <section className="p-2 sm:px-5 border-b-2 sm:border-b-0 sm:border-r-2 rounded-xl w-full sm:w-2/6">
@@ -154,7 +127,6 @@ function Productos() {
             key={i}
             className="flex w-full mt-5 rounded-lg flex-col sm:flex-row p-5 shadow-xl overflow-hidden"
           >
-<<<<<<< HEAD
             {" "}
             <div className="flex items-center justify-center">
               <img
@@ -180,32 +152,22 @@ function Productos() {
               </div>
               <div className="flex flex-col sm:flex-row gap-10 mt-5">
                 <div className="flex gap-10 justify-center items-center">
-                <button className="bg-gray-600 hover:bg-gray-800 duration-500 font-medium px-6 py-2 tracking-wider transition text-white rounded-md">
-                  Añadir al carrito
-                </button>
-                <button className="flex justify-center items-center bg-gray-300/30 w-10 hover:bg-gray-300/90 transition rounded-md">
-                  <img
-                    src="https://cdn.pixabay.com/photo/2017/06/26/20/33/icon-2445095_960_720.png"
-                    className="opacity-50 object-cover"
-                    alt=""
-                  />
-                </button>
+                  <button className="bg-gray-600 hover:bg-gray-800 duration-500 font-medium px-6 py-2 tracking-wider transition text-white rounded-md">
+                    Añadir al carrito
+                  </button>
+                  <button className="flex justify-center items-center bg-gray-300/30 w-10 hover:bg-gray-300/90 transition rounded-md">
+                    <img
+                      src="https://cdn.pixabay.com/photo/2017/06/26/20/33/icon-2445095_960_720.png"
+                      className="opacity-50 object-cover"
+                      alt=""
+                    />
+                  </button>
                 </div>
                 <p className="flex flex-col text-3xl font-bold text-center sm:text-start">
-                ${e.price}
-              </p>
+                  ${e.price}
+                </p>
               </div>
             </div>
-=======
-            <img src={e.image} alt="" className="w-24 h-24 object-contain" />
-            <h1>{e.name.slice(0, 30) + "..."}</h1>
-            <p>${e.price}</p>
-            <Link to={`/productos/search/${e.id}`} >
-              <button className="bg-black p-5 text-white rounded-md">
-                Ver mas
-              </button>
-            </Link>
->>>>>>> 60bcb1c0d2c14cacc1790b54dbe7e56abd55c466
           </div>
         ))}
       </section>
