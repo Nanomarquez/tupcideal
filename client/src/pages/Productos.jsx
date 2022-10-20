@@ -1,3 +1,4 @@
+import React, { useEffect, useState } from "react";
 import Select from "react-select";
 import Pagination from "../components/Pagination";
 import { useDispatch,useSelector} from 'react-redux';
@@ -6,9 +7,9 @@ import {Link} from 'react-router-dom'
 
 function Productos() {
   const [currentPage, setCurrentPage] = useState(1);
-  const allProducts = useSelector((state)=>state.products.allProducts);
+  const allProducts = useSelector((state) => state.products.allProducts);
   const productByPrice = useSelector((state) => state.products.filterByPrice);
-  const productsFiltered = useSelector((state)=>state.products.productsFiltered)
+  const productsFiltered = useSelector((state) => state.products.productsFiltered)
 
   const dispatch = useDispatch()
   useEffect(()=>{
@@ -20,14 +21,14 @@ function Productos() {
     brand:""
   })  
 
-    const order = (array) => {
-    let result = array.sort((a, b) => {
-      if (a.price < b.price) return -1;
-      if (a.price > b.price) return 1;
-      return 0;
-    })
-    return result
-  }
+    // const order = (array) => {
+    // let result = array.sort((a, b) => {
+    //   if (a.price < b.price) return -1;
+    //   if (a.price > b.price) return 1;
+    //   return 0;
+    // })
+    // return result
+  // }
   
   const productPerPage = 6;
   const lastProductOfPage = currentPage * productPerPage;
