@@ -88,7 +88,7 @@ function Productos() {
       <section className="p-2 sm:px-5 border-b-2 sm:border-b-0 sm:border-r-2 rounded-xl w-full sm:w-2/6">
         <h1 className="text-xl sm:text-2xl mb-2">Filtrar por:</h1>
         <hr />
-        <div className="flex flex-col gap-5 p-5">
+        <div className="flex flex-col gap-5 p-2">
           <Select
             placeholder="Categoria"
             isClearable

@@ -8,17 +8,17 @@ import { orderByPrice } from "../redux/actions"
 function SliderRange() {
   const dispatch = useDispatch()
 
-  const { productsFiltered } = useSelector(state=>state.products)
+  const { productsFiltered , allProducts } = useSelector(state=>state.products)
 
-  const priceMaxOfProducts = Math.max(...productsFiltered.map(e=>e.price))
+  const priceMaxOfProducts = Math.max(...allProducts.map(e=>e.price))
 
-  const priceMinOfProducts = Math.min(...productsFiltered.map(e=>e.price))
+  const priceMinOfProducts = Math.min(...allProducts.map(e=>e.price))
 
 
-  const [min, setMin] = useState(0);
-  const [max, setMax] = useState(500000);
+  const [min, setMin] = useState(priceMinOfProducts);
+  const [max, setMax] = useState(priceMaxOfProducts);
 
-  const filterByRange = productsFiltered.filter(product=>product.price >= min && product.price <= max)
+  const filterByRange = allProducts.filter(product=>product.price >= min && product.price <= max)
 
 
   const handleSlide = (e) => {
@@ -28,13 +28,13 @@ function SliderRange() {
   }
 
   return (
-    <div className="container">
+    <div className="text-center mt-7 flex flex-col gap-5 text-lg">
             <ReactSlider
               defaultValue={[min, max]}
               className="slider"
               trackClassName="tracker"
-              min={0}
-              max={500000}
+              min={priceMinOfProducts}
+              max={priceMaxOfProducts}
               minDistance={0}
               step={200}
               withTracks={true}
@@ -47,12 +47,12 @@ function SliderRange() {
               }}
               onChange={handleSlide}
             />
-            <div className="values-wrapper">
+            <div className="flex gap-5 flex-col">
               <p>
-                Precio minimo: <span>{min}</span>
+                Minimo: <span className='font-bold'>$ {min}</span>
               </p>
               <p>
-                Precio maximo: <span>{max}</span>
+                Maximo: <span className='font-bold'>$ {max}</span>
               </p>
             </div>
           </div>
