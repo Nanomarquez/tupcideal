@@ -1,12 +1,22 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import './SliderRange.css'
 import ReactSlider from "react-slider";
+import { useSelector, useDispatch } from "react-redux"
+import { orderByPrice } from "../redux/actions"
 
 
 function SliderRange() {
+  const dispatch = useDispatch()
+ const allP = useSelector((state) => state.products.productsFiltered);
 
-  const [min, setMin] = useState(100000);
+  const [min, setMin] = useState(10000);
   const [max, setMax] = useState(500000);
+  const filterPrice = allP.filter(f => f.price >= min && f.price <= max)
+  const handleSlide = (e) => {
+    setMin(e[0]);
+    setMax(e[1]);
+    dispatch(orderByPrice(filterPrice))
+  }
 
   return (
     <div className="container">
@@ -14,7 +24,7 @@ function SliderRange() {
               defaultValue={[min, max]}
               className="slider"
               trackClassName="tracker"
-              min={100000}
+              min={10000}
               max={500000}
               minDistance={25000}
               step={25000}
@@ -26,10 +36,7 @@ function SliderRange() {
               renderTrack={(props) => {
                 return <div {...props} className="track"></div>;
               }}
-              onChange={([min, max]) => {
-                setMin(min);
-                setMax(max);
-              }}
+              onChange={handleSlide}
             />
             <div className="values-wrapper">
               <p>

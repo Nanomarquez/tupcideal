@@ -1,7 +1,18 @@
 import axios from 'axios';
 
-import {getAllProducts,getAllProductsById, getProductsFiltered, getProductDetail,
-     OrderProductsDisplayByPrice, emptyProductDetail, emptyProductDisplay, getComponentByCategory, getCategory,getBrand} from './slice';
+import {
+  getAllProducts,
+  getAllProductsById,
+  getProductsFiltered,
+  getProductDetail,
+  OrderProductsDisplayByPrice,
+  emptyProductDetail,
+  emptyProductDisplay,
+  getComponentByCategory,
+  getCategory,
+  getBrand,
+  addProductToCart,
+} from "./slice";
 
 
      // se definen funciones que al ser invocadas despachan las funciones ya traidas desde Slice (reducer)
@@ -51,10 +62,19 @@ import {getAllProducts,getAllProductsById, getProductsFiltered, getProductDetail
         axios(`http://localhost:3001/products/:${id}`)
         .then(res => dispatch(getProductDetail(res.data)))
         .catch(e => console.log(e))}
+       
+       export const orderByPrice = (array) => (dispatch) => {
+          dispatch( OrderProductsDisplayByPrice(array))
+         
+        }
 
     export const orderProducts = (order) => (dispatch) => {
         dispatch(OrderProductsDisplayByPrice(order))
     }
+
+    export const addProductToShoppingCart = (product) => (dispatch) => { 
+      dispatch(addProductToCart(product));
+    };
 
         // busqueda por id por params
 
