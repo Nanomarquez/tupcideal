@@ -1,51 +1,38 @@
 import React, { useEffect, useState } from "react";
 import Select from "react-select";
+import SliderRange from "../components/SliderRange";
 import Pagination from "../components/Pagination";
-import { useDispatch,useSelector} from 'react-redux';
-import {getAll,getFiltered, orderProducts} from '../redux/actions'
-import {Link} from 'react-router-dom'
+import { useDispatch, useSelector } from "react-redux";
+import { getAll, getFiltered, orderProducts } from "../redux/actions";
+import { Link } from "react-router-dom";
 
 function Productos() {
-  const [currentPage, setCurrentPage] = useState(1);
   const allProducts = useSelector((state) => state.products.allProducts);
-  const productByPrice = useSelector((state) => state.products.filterByPrice);
-  const productsFiltered = useSelector((state) => state.products.productsFiltered)
+  const productsFiltered = useSelector(
+    (state) => state.products.productsFiltered
+  );
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(getAll());
+  }, []);
+  const [filters, setFilters] = useState({
+    category: "",
+    brand: "",
+  });
 
-  const dispatch = useDispatch()
-  useEffect(()=>{
-    dispatch(getAll())
-  },[])
+  const [currentPage, setCurrentPage] = useState(1);
 
-  const [filters,setFilters] = useState({
-    category:"",
-    brand:""
-  })  
-
-    // const order = (array) => {
-    // let result = array.sort((a, b) => {
-    //   if (a.price < b.price) return -1;
-    //   if (a.price > b.price) return 1;
-    //   return 0;
-    // })
-    // return result
-  // }
-  
   const productPerPage = 6;
+
   const lastProductOfPage = currentPage * productPerPage;
+
   const firstProductOfPage = lastProductOfPage - productPerPage;
-  
-  let filteredPorductPrice
-  const byPrice = () =>{
-    if(productByPrice.length > 0) {
-      const currentProducts = productByPrice.slice(firstProductOfPage, lastProductOfPage)
-      filteredPorductPrice = productByPrice.length;
-      return order(currentProducts);
-    } else {
-      const currentProducts = productsFiltered.slice(firstProductOfPage, lastProductOfPage)
-      filteredPorductPrice = productsFiltered.length;
-      return currentProducts
-    }
-  }
+
+  const currentProducts = productsFiltered.slice(
+    firstProductOfPage,
+    lastProductOfPage
+  );
+
   const pagination = (pageNumber) => {
     setCurrentPage(pageNumber);
   };
@@ -55,9 +42,9 @@ function Productos() {
 
   const setBrand = new Set();
   allProducts.map((e) => setBrand.add(e.brand));
-  
+
   // const handleChange = (e) =>{
-  //   if(e !== null) 
+  //   if(e !== null)
   //   setFilters({...filters,[e.name]:e.value})
   //   else{
   //     setFilters({
@@ -66,39 +53,37 @@ function Productos() {
   //     })
   //   }
   // }
-  
+
   useEffect(() => {
-    dispatch(getFiltered(filters.brand,filters.category))
-  }, [filters])
-  
+    dispatch(getFiltered(filters.brand, filters.category));
+  }, [filters]);
+
   const handleChangeCategory = (e) => {
-    if(e !== null){
-      setFilters({...filters,[e.name]:e.value})
-    }
-    else{
+    if (e !== null) {
+      setFilters({ ...filters, [e.name]: e.value });
+    } else {
       setFilters({
         ...filters,
-        category: ""
-      })
+        category: "",
+      });
     }
-    setCurrentPage(1)
-  }
+    setCurrentPage(1);
+  };
 
   const handleChangeBrand = (e) => {
-    if(e !== null){
-      setFilters({...filters,[e.name]:e.value})
-    }
-    else{
+    if (e !== null) {
+      setFilters({ ...filters, [e.name]: e.value });
+    } else {
       setFilters({
         ...filters,
-        brand: ""
-      })
+        brand: "",
+      });
     }
-    setCurrentPage(1)
-  }
+    setCurrentPage(1);
+  };
 
   const handleSort = (e) => {
-    dispatch(orderProducts(e.target.value))
+    dispatch(orderProducts(e.target.value));
   };
 
   return (
@@ -139,7 +124,7 @@ function Productos() {
         </div>
       </section>
       <section className="grid grid-cols-3 w-full sm:my-10">
-        {byPrice().map((e, i) => (
+        {currentProducts.map((e, i) => (
           <div
             key={i}
             className="h-[200px] justify-center items-center text-center my-20 mx-5 border rounded-lg flex flex-col gap-5"
@@ -147,7 +132,7 @@ function Productos() {
             <img src={e.image} alt="" className="w-24 h-24 object-contain" />
             <h1>{e.name.slice(0, 30) + "..."}</h1>
             <p>${e.price}</p>
-            <Link to={`/productos/search/${e.id}`} >
+            <Link to={`/productos/search/${e.id}`}>
               <button className="bg-black p-5 text-white rounded-md">
                 Ver mas
               </button>
@@ -158,7 +143,7 @@ function Productos() {
       <div className="flex justify-center items-center sm:absolute right-[12%]">
         <Pagination
           productPerPage={productPerPage}
-          allProducts={filteredPorductPrice}
+          allProducts={productsFiltered.length}
           pagination={pagination}
           currentPage={currentPage}
         />
