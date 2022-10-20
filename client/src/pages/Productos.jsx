@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Select from "react-select";
 import SliderRange from "../components/SliderRange";
-import Pagination from "../components/Pagination";
+import Pagination from "../components/Pagination/Pagination";
 import { useDispatch, useSelector } from "react-redux";
 import {
   getAll,
@@ -113,11 +113,14 @@ function Productos() {
             onChange={handleChangeBrand}
             className="z-30 cursor-pointer"
           />
+          <div className="flex flex-col gap-2 border p-2">
           <label>Ordenar por precio: </label>
-          <select name="Ordenar" onChange={handleSort}>
-            <option value="Ascendente">Ascendente: </option>
-            <option value="Descendente">Descendente: </option>
+          <select className="outline-none" name="Ordenar" onChange={handleSort}>
+            <option value="Ascendente">Ascendente </option>
+            <option value="Descendente">Descendente </option>
           </select>
+          </div>
+          <SliderRange/>
         </div>
       </section>
       <section className="flex flex-col w-full p-5">

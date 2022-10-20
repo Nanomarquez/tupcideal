@@ -1,21 +1,30 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import './SliderRange.css'
 import ReactSlider from "react-slider";
-import { useSelector, useDispatch } from "react-redux"
+import {useSelector, useDispatch } from "react-redux"
 import { orderByPrice } from "../redux/actions"
 
 
 function SliderRange() {
   const dispatch = useDispatch()
- const allP = useSelector((state) => state.products.productsFiltered);
 
-  const [min, setMin] = useState(10000);
+  const { productsFiltered } = useSelector(state=>state.products)
+
+  const priceMaxOfProducts = Math.max(...productsFiltered.map(e=>e.price))
+
+  const priceMinOfProducts = Math.min(...productsFiltered.map(e=>e.price))
+
+
+  const [min, setMin] = useState(0);
   const [max, setMax] = useState(500000);
-  const filterPrice = allP.filter(f => f.price >= min && f.price <= max)
+
+  const filterByRange = productsFiltered.filter(product=>product.price >= min && product.price <= max)
+
+
   const handleSlide = (e) => {
     setMin(e[0]);
     setMax(e[1]);
-    dispatch(orderByPrice(filterPrice))
+    dispatch(orderByPrice(filterByRange))
   }
 
   return (
@@ -24,10 +33,10 @@ function SliderRange() {
               defaultValue={[min, max]}
               className="slider"
               trackClassName="tracker"
-              min={10000}
+              min={0}
               max={500000}
-              minDistance={25000}
-              step={25000}
+              minDistance={0}
+              step={200}
               withTracks={true}
               pearling={true}
               renderThumb={(props) => {
