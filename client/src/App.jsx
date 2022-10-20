@@ -7,12 +7,12 @@ import Login from "./pages/Login";
 import Productos from "./pages/Productos";
 import Register from "./pages/Register";
 import ProductosSearch from './pages/ProductosSearch'
-
 function App() {
 
 
   return (
     <>
+
       <NavBar/>
       <Routes>
         <Route exact path="/" element={<Home />} />

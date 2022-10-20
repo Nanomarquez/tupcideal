@@ -9,6 +9,7 @@ import {
   orderProducts,
   addProductToShoppingCart,
 } from "../redux/actions";
+import Loading from "../components/Loading/Loading";
 import { Link } from "react-router-dom";
 
 function Productos() {
@@ -80,9 +81,6 @@ function Productos() {
     dispatch(orderProducts(e.target.value));
   };
 
-  if (productsFiltered.length === 0) {
-    return <h1>Loading</h1>;
-  }
   return (
     <div className="flex sm:flex-row flex-col">
       <section className="p-2 sm:px-5 border-b-2 sm:border-b-0 sm:border-r-2 rounded-xl w-full sm:w-2/6">
@@ -114,13 +112,17 @@ function Productos() {
             className="z-30 cursor-pointer"
           />
           <div className="flex flex-col gap-2 border p-2">
-          <label>Ordenar por precio: </label>
-          <select className="outline-none" name="Ordenar" onChange={handleSort}>
-            <option value="Ascendente">Ascendente </option>
-            <option value="Descendente">Descendente </option>
-          </select>
+            <label>Ordenar por precio: </label>
+            <select
+              className="outline-none"
+              name="Ordenar"
+              onChange={handleSort}
+            >
+              <option value="Ascendente">Ascendente </option>
+              <option value="Descendente">Descendente </option>
+            </select>
           </div>
-          <SliderRange/>
+          <SliderRange setCurrentPage={setCurrentPage} />
         </div>
       </section>
       <section className="flex flex-col w-full p-5">
@@ -139,11 +141,14 @@ function Productos() {
           >
             {" "}
             <div className="flex items-center justify-center">
-              <img
-                src={e.image}
-                alt=""
-                className="h-36 w-36 shadow-lg object-contain rounded-md border-b-[2px] border-l-[2px] duration-200 hover:scale-105"
-              />
+            <Link to={`/productos/search/${e.id}`}>  
+              <div className="text-white duration-500 rounded bg-gray-700/50 text-2xl flex hover:opacity-100 cursor-pointer opacity-0 justify-center items-center z-50 h-36 w-36 absolute">Ver Mas</div>
+                <img
+                  src={e.image}
+                  alt=""
+                  className="h-36 w-36 shadow-lg object-contain rounded-md border-b-[2px] border-l-[2px] duration-200 hover:scale-105"
+                />
+              </Link>  
             </div>
             <div className="m-2 ml-10">
               <h1 className="text-2xl font-semibold overflow-ellipsis overflow-hidden whitespace-nowrap">
