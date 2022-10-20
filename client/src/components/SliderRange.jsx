@@ -5,7 +5,7 @@ import {useSelector, useDispatch } from "react-redux"
 import { orderByPrice } from "../redux/actions"
 
 
-function SliderRange() {
+function SliderRange({setCurrentPage}) {
   const dispatch = useDispatch()
 
   const { productsFiltered , allProducts } = useSelector(state=>state.products)
@@ -25,10 +25,11 @@ function SliderRange() {
     setMin(e[0]);
     setMax(e[1]);
     dispatch(orderByPrice(filterByRange))
+    setCurrentPage(1)
   }
 
   return (
-    <div className="text-center mt-7 flex flex-col gap-5 text-lg">
+    <div className="text-center mt-7   flex flex-col gap-5 text-lg">
             <ReactSlider
               defaultValue={[min, max]}
               className="slider"

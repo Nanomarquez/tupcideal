@@ -1,24 +1,37 @@
-import './Menu.css'
+import "./Menu.css";
 import Search from "./Search";
 import Signin from "./Signin";
 import SignOut from "./SignOut";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import React, { useState } from "react";
 import { useSelector } from "react-redux";
 import Carrito from "../../assets/carrito.png";
-import { useAuth } from '../../context/authContext'
-
+import { useAuth } from "../../context/authContext";
+import { motion, AnimatePresence } from "framer-motion";
+import Modal from "../../components/Modal/Modal";
 function NavBar() {
+  const [modalOpen, setModalOpen] = useState(false);
 
-  const [active, setActive] = useState("")
+  const close = () => setModalOpen(false);
+  const open = () => setModalOpen(true);
+  
+  const [active, setActive] = useState("");
   const addCartLength = useSelector((state) => state.products.addProductToCart);
+  const navigate = useNavigate()
+  const handleModal = () => {
+    if (usuario) {
+      modalOpen ? close() : open();
+    }
+    else{
+      navigate('/login')
+    }
+  };
 
-  function handleActive(){
-    active?setActive(""):setActive("active")
+  function handleActive() {
+    active ? setActive("") : setActive("active");
   }
 
-  const { usuario } = useAuth()
-
+  const { usuario } = useAuth();
 
   return (
     <>
@@ -33,13 +46,18 @@ function NavBar() {
           {usuario ? <SignOut /> : <Signin />}
         </div>
         <div className="flex right-10 sm:relative absolute">
-          <Link to={"/cart"}>
+          <motion.button
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+            onClick={handleModal}
+          >
             <img
               src={Carrito}
               alt="carrito"
               className="object-cover h-14 p-2"
             />
-          </Link>
+          </motion.button>
+
           <span className="bg-white rounded-full absolute w-6 h-6 text-center">
             {addCartLength.length}
           </span>
@@ -82,6 +100,13 @@ function NavBar() {
           </Link>
         </ul>
       </div>
+      <AnimatePresence
+        initial={true}
+        exitBeforeEnter={true}
+        onExitComplete={() => null}
+      >
+        {modalOpen && <Modal modalOpen={modalOpen} handleClose={close} />}
+      </AnimatePresence>
     </>
   );
 }
