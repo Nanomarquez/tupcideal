@@ -1,0 +1,25 @@
+.pagination-container{
+    @apply
+    flex justify-center items-center w-full font-medium text-base mt-5
+  }
+.pagination-container button{
+  @apply
+  rounded-t-lg
+  flex justify-center items-center text-black h-10 w-10 cursor-pointer
+}
+.pagination-container button.active{
+  @apply
+  duration-500
+  transition-transform
+  transition-all
+  -translate-y-4
+  bg-gray-400 text-white
+  scale-150
+}
+.pagination-container button{
+  box-shadow: 0 1px 10px black;
+  transition: background-color .2s;
+}
+.pagination-container button:hover:not(.active) {
+  background-color: rgb(238,238,238);
+}
