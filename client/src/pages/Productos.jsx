@@ -3,7 +3,12 @@ import Select from "react-select";
 import SliderRange from "../components/SliderRange";
 import Pagination from "../components/Pagination";
 import { useDispatch, useSelector } from "react-redux";
-import { getAll, getFiltered, orderProducts } from "../redux/actions";
+import {
+  getAll,
+  getFiltered,
+  orderProducts,
+  addProductToShoppingCart,
+} from "../redux/actions";
 import { Link } from "react-router-dom";
 
 function Productos() {
@@ -136,7 +141,14 @@ function Productos() {
               <button className="bg-black p-5 text-white rounded-md">
                 Ver mas
               </button>
+              <br />
             </Link>
+            <button
+              className="bg-black p-1 text-white rounded-md"
+              onClick={() => dispatch(addProductToShoppingCart(e))}
+            >
+              agregar al carrito
+            </button>
           </div>
         ))}
       </section>
