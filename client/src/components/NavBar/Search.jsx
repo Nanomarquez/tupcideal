@@ -92,7 +92,7 @@ function Search() {
                 <p className="hover:bg-blue-200">{p.name.slice(0, 25)}</p>
               </a>
             ) : (
-              <a href={`https://tupcideal.vercel.app//productos/search/${p.id}`}>
+              <a href={`https://tupcideal.vercel.app/productos/search/${p.id}`}>
                 <p className="hover:bg-blue-200">{p.name.slice(0, 25)}</p>
               </a>
             )
