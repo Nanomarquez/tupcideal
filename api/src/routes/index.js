@@ -7,6 +7,7 @@ const productsRouter = require("./products");
 const usersRouter = require("./users.js");
 const sellersRouter = require("./sellers.js");
 const adminsRouter = require("./admins.js");
+const reviewRouter = require('./review.js')
 
 const router = Router();
 
@@ -19,6 +20,7 @@ router.use("/products", productsRouter);
 router.use("/users", usersRouter);
 router.use("/sellers", sellersRouter);
 router.use("/admins", adminsRouter);
+router.use('/review', reviewRouter);
 
 router.use("/", (req, res) => {
   res.send("TU PC IDEAL");
