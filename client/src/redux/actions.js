@@ -18,20 +18,20 @@ import {
 // se definen funciones que al ser invocadas despachan las funciones ya traidas desde Slice (reducer)
 
 export const getComponent = (component) => (dispatch) => {
-  axios(`http://localhost:3001/components/${component}`)
+  axios(`/components/${component}`)
     .then((res) => dispatch(getComponentByCategory(res.data)))
     .catch((e) => console.log(e));
 };
 
 export const newUser = (user) => (dispatch) => {
   axios
-    .post("http://localhost:3001/user", user)
+    .post("/user", user)
     .then((res) => dispatch(sliceNewUser(res.data)))
     .catch((e) => console.log(e));
 };
 
 export const getAll = () => (dispatch) => {
-  axios("http://localhost:3001/products/")
+  axios("/products")
     .then((res) => dispatch(getAllProducts(res.data)))
     .catch((e) => console.log(e));
 };
@@ -39,13 +39,13 @@ export const getAll = () => (dispatch) => {
 // trae todos los productos, sin filtros
 
 export const getAllById = (id) => (dispatch) => {
-  axios(`http://localhost:3001/products/${id}`)
+  axios(`/products/${id}`)
     .then((res) => dispatch(getAllProductsById(res.data)))
     .catch((e) => console.log(e));
 };
 
 export const getFiltered = (brand, category) => (dispatch) => {
-  axios(`http://localhost:3001/products?brand=${brand}&category=${category}`)
+  axios(`/products?brand=${brand}&category=${category}`)
     .then((res) => dispatch(getProductsFiltered(res.data)))
     .catch((e) => console.log(e));
 };
@@ -54,7 +54,7 @@ export const getFiltered = (brand, category) => (dispatch) => {
 //o filtrado por brand o compatibility
 
 export const getDetail = (id) => (dispatch) => {
-  axios(`http://localhost:3001/products/:${id}`)
+  axios(`/products/:${id}`)
     .then((res) => dispatch(getProductDetail(res.data)))
     .catch((e) => console.log(e));
 };

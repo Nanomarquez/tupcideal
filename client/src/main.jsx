@@ -7,6 +7,9 @@ import store from "./redux/store";
 import { BrowserRouter } from "react-router-dom";
 import "swiper/css/bundle";
 import { AuthProvider } from "./context/authContext";
+import axios from 'axios';
+
+axios.defaults.baseURL = import.meta.env.VITE_API_URL || 'http://localhost:3001';
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
