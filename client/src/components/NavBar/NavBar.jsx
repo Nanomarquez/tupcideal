@@ -51,11 +51,13 @@ function NavBar() {
             whileTap={{ scale: 0.9 }}
             onClick={handleModal}
           >
-            <img
-              src={Carrito}
-              alt="carrito"
-              className="object-cover h-14 p-2"
-            />
+            <Link to={"/cart"}>
+              <img
+                src={Carrito}
+                alt="carrito"
+                className="object-cover h-14 p-2"
+              />
+            </Link>
           </motion.button>
 
           <span className="bg-white rounded-full absolute w-6 h-6 text-center">
