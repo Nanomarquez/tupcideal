@@ -34,6 +34,9 @@ const sequelize = process.env.NODE_ENV === "production"
     native: false, // lets Sequelize know we can use pg-native for ~30% more speed
   }
 );
+
+//postgres://tupcideal_api_user:KFHE3ZJeeTdvfEcBS14GUrEwYtAzsv3E@dpg-cd8u5lqrrk0a86rqejpg-a/tupcideal_api
+
 const basename = path.basename(__filename);
 
 const modelDefiners = [];
