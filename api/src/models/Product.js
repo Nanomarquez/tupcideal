@@ -10,13 +10,16 @@ module.exports = (sequelize) => {
         defaultValue: DataTypes.UUIDV4,
         primaryKey: true,
       },
-      name: {
-        type: DataTypes.STRING,
-      },
       type: {
         type: DataTypes.STRING,
       },
-      componentId: {
+      name: {
+        type: DataTypes.STRING,
+      },
+      image: {
+        type: DataTypes.STRING,
+      },
+      id_table:{
         type: DataTypes.INTEGER,
       }
     },
