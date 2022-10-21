@@ -78,9 +78,12 @@ function Search() {
       </div>
       </div>
       {filteredData.length != 0 && (
-        <div className="searchResult z-[10000]">
-           {filteredData.slice(0,10).map((p) => <a  href={`http://localhost:3000/productos/search/${p.id}`}><p className="hover:bg-blue-200">{p.name.slice(0,25)}</p>
-           </a> )}
+        <div className="searchResult z-[1000000000]">
+           {filteredData.slice(0,10).map((p) => 
+            <Link to={`/productos/search/${p.id}`}>
+            <p className="hover:bg-blue-200">{p.name.slice(0,25)}</p>
+            </Link>
+        )}
 
         </div>)}
     </form>

@@ -1,3 +1,4 @@
+require("dotenv").config();
 const server = require("./src/app.js");
 const { conn } = require("./src/db.js");
 const fillProduct = require("../api/src/funciones/fillProducts");
@@ -35,6 +36,7 @@ conn.sync({ force: true }).then(() => {
     console.log("✓ Se llenó la tabla InternalHardDrive con la data del json");
     await VideoCard.bulkCreate(bulkGPU);
     console.log("✓ Se llenó la tabla VideoCard con la data del json");
+
     fillProduct();
     console.log("✓ Se llenó la tabla Products");
     console.log(`⇒ listening at port ${process.env.PORT}`); // eslint-disable-line no-console
