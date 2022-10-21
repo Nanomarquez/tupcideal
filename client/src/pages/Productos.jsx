@@ -9,7 +9,6 @@ import {
   orderProducts,
   addProductToShoppingCart,
 } from "../redux/actions";
-import Loading from "../components/Loading/Loading";
 import { Link } from "react-router-dom";
 
 function Productos() {
@@ -44,10 +43,10 @@ function Productos() {
   };
 
   const setCategory = new Set();
-  allProducts.map((e) => setCategory.add(e.categories[0]));
+  allProducts?.map((e) => setCategory.add(e.type));
 
   const setBrand = new Set();
-  allProducts.map((e) => setBrand.add(e.brand));
+  allProducts?.map((e) => setBrand.add(e.name.split(" ")[0]));
 
   useEffect(() => {
     dispatch(getFiltered(filters.brand, filters.category));
