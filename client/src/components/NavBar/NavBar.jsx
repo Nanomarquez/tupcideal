@@ -51,11 +51,13 @@ function NavBar() {
             whileTap={{ scale: 0.9 }}
             onClick={handleModal}
           >
-            <img
-              src={Carrito}
-              alt="carrito"
-              className="object-cover h-14 p-2"
-            />
+            <Link to={"/cart"}>
+              <img
+                src={Carrito}
+                alt="carrito"
+                className="object-cover h-14 p-2"
+              />
+            </Link>
           </motion.button>
 
           <span className="bg-white rounded-full absolute w-6 h-6 text-center">
@@ -74,7 +76,7 @@ function NavBar() {
           <div></div>
         </button>
         <ul
-          className={`flex flex-col sm:flex-row items-center justify-center sm:gap-28 p-1 bg-gray-600 text-white w-full sm:relative absolute translate-x-[-300%] sm:translate-x-0 ${
+          className={`flex flex-col sm:flex-row items-center justify-center sm:gap-28 p-1 bg-gray-600 text-white w-full sm:relative absolute z-[100000] translate-x-[-300%] sm:translate-x-0 ${
             active ? "translate-x-0" : ""
           } w-full duration-1000 z-10 gap-5 overflow-hidden`}
         >

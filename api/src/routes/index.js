@@ -7,6 +7,7 @@ const productsRouter = require("./products");
 const usersRouter = require("./users.js");
 const sellersRouter = require("./sellers.js");
 const adminsRouter = require("./admins.js");
+const reviewRouter = require("./review.js");
 const casesRouter = require("./case.js");
 const cpuRouter = require("./cpu.js");
 const warehouseRouter = require("./warehouse.js");
@@ -22,6 +23,7 @@ router.use("/products", productsRouter);
 router.use("/sellers", sellersRouter);
 router.use("/admins", adminsRouter);
 router.use("/users", usersRouter);
+router.use("/review", reviewRouter);
 router.use("/cases", casesRouter);
 router.use("/cpu", cpuRouter);
 

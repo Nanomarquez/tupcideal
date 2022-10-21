@@ -7,6 +7,7 @@ import Login from "./pages/Login";
 import Productos from "./pages/Productos";
 import Register from "./pages/Register";
 import ProductosSearch from './pages/ProductosSearch'
+import Cart from "./pages/Cart"
 function App() {
 
 
@@ -21,6 +22,7 @@ function App() {
         <Route exact path="/register" element={<Register />} />
         <Route exact path="/productos" element={<Productos />} />
         <Route exact path="/productos/search/:id" element={<ProductosSearch />} />
+        <Route exact path="/cart" element={<Cart />}/>
       </Routes>
       <Footer />
     </>

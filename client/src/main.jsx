@@ -9,7 +9,15 @@ import "swiper/css/bundle";
 import { AuthProvider } from "./context/authContext";
 import axios from 'axios';
 
-axios.defaults.baseURL = import.meta.env.VITE_API_URL || 'http://localhost:3001';
+if(import.meta.env.MODE === 'development'){
+  axios.defaults.baseURL = 'http://localhost:3001';
+}
+if(import.meta.env.MODE === 'production'){
+  axios.defaults.baseURL = 'https://tupcideal-production-5005.up.railway.app/'
+}
+
+
+console.log(import.meta.env.MODE)
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
