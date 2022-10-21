@@ -36,8 +36,7 @@ conn.sync({ force: true }).then(() => {
     await VideoCard.bulkCreate(bulkGPU);
     console.log("✓ Se llenó la tabla VideoCard con la data del json");
     fillProduct();
-    console.log("⇒ listening at port 3001"); // eslint-disable-line no-console
+    console.log("✓ Se llenó la tabla Products");
     console.log(`⇒ listening at port ${process.env.PORT}`); // eslint-disable-line no-console
-
   });
 });
