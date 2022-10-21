@@ -57,11 +57,11 @@ const {
 // Seller.belongsToMany(Product, { through: "Seller_Product" });
 // Product.belongsToMany(Seller, { through: "Seller_Product" });
 
-Product.hasMany(Case, { as: "case", foreignKey: "produId" });
-Case.belongsTo(Product, { as: "produ" });
+// Product.hasMany(Case, { as: "case", foreignKey: "produId" });
+// Case.belongsTo(Product, { as: "produ" });
 
-Product.hasMany(CPU, { as: "cpu", foreignKey: "produId" });
-CPU.belongsTo(Product, { as: "produ" });
+// Product.hasMany(CPU, { as: "cpu", foreignKey: "produId" });
+// CPU.belongsTo(Product, { as: "produ" });
 
 module.exports = {
   ...sequelize.models, // para poder importar los modelos así: const { Product, User } = require('./db.js');

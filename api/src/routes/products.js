@@ -9,15 +9,7 @@ const bulkProducts = require("../data/products.json");
 router.get("/", async (req, res) => {
   try {
     let product;
-    product = await Product.findAll({
-      include: [
-        {
-          model: Case,
-          as: "case",
-          attributes: ["name", "image"],
-        },
-      ],
-    });
+    product = await Product.findAll();
     console.log(product);
     res.status(200).json(product);
   } catch (err) {
