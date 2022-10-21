@@ -73,6 +73,7 @@ const {
   Payment,
   PowerSupply,
   VideoCard,
+  WareHouse,
 } = sequelize.models;
 
 // Aca vendrian las relaciones
