@@ -69,7 +69,7 @@
   overflow: hidden;
   overflow-y: auto;
   box-shadow: rgba(0,0,0,0.35)0px, 5px, 15px;
-  z-index: 20;
+  z-index: 50;
   border:solid 2px #4b5563;
   border-radius: 6px;
   
@@ -84,7 +84,6 @@
   border-bottom:solid 1px  #4b5563;
   overflow: hidden;
   white-space: break-word;
- 
 }
 
 .dataItem p {
