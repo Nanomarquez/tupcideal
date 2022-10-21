@@ -62,6 +62,9 @@ export const productsSlice = createSlice({
     addProductToCart: (state, action) => {
       state.addProductToCart = [...state.addProductToCart, action.payload];
     },
+    deleteProductToCart: (state, action) => {
+      state.addProductToCart = [...state.addProductToCart.filter(f => f.id !== action.payload)];
+    }
 
     // una diferencia entre redux y redux toolkit
     // es que aca no hay switch, son funciones que se invocan desde las actions
@@ -80,6 +83,7 @@ export const {
   getCategory,
   getBrand,
   addProductToCart,
+  deleteProductToCart,
   orderProductInRangeOfPrice
 } = productsSlice.actions;
 
