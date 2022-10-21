@@ -12,6 +12,7 @@ import {
   getCategory,
   getBrand,
   addProductToCart,
+  deleteProductToCart,
   orderProductInRangeOfPrice
 } from "./slice";
 
@@ -69,6 +70,9 @@ export const orderProducts = (order) => (dispatch) => {
 
 export const addProductToShoppingCart = (product) => (dispatch) => {
   dispatch(addProductToCart(product));
+};
+export const deleteProductToShoppingCart = (id) => (dispatch) => {
+  dispatch(deleteProductToCart(id));
 };
 
 // busqueda por id por params
