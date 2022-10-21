@@ -15,12 +15,23 @@ async function fillProduct() {
       id: e.id,
       name: e.name,
       image: e.image,
+      rating: e.rating,
+      rating_count: e.rating_count,
+      price_usd: e.price_usd,
     };
   });
   //--------Llenado de la tabla--------
   cases.forEach(async (e) => {
     await Product.findOrCreate({
-      where: { name: e.name, image: e.image, type: "cases", id_table: e.id },
+      where: {
+        name: e.name,
+        image: e.image,
+        categories: "cases",
+        price_usd: e.price_usd,
+        rating: e.rating,
+        rating_count: e.rating_count,
+        id_table: e.id,
+      },
     });
   });
 
@@ -30,12 +41,23 @@ async function fillProduct() {
       id: e.id,
       name: e.name,
       image: e.image,
+      rating: e.rating,
+      rating_count: e.rating_count,
+      price_usd: e.price_usd,
     };
   });
-  //--------Llenado de la tabla--------
+  //   //--------Llenado de la tabla--------
   cpus.forEach(async (e) => {
     await Product.findOrCreate({
-      where: { name: e.name, image: e.image, type: "cpu", id_table: e.id },
+      where: {
+        name: e.name,
+        image: e.image,
+        categories: "cpu",
+        rating: e.rating,
+        rating_count: e.rating_count,
+        price_usd: e.price_usd,
+        id_table: e.id,
+      },
     });
   });
 
@@ -45,12 +67,23 @@ async function fillProduct() {
       id: e.id,
       name: e.name,
       image: e.image,
+      rating: e.rating,
+      rating_count: e.rating_count,
+      price_usd: e.price_usd,
     };
   });
   //--------Llenado de la tabla--------
   internal.forEach(async (e) => {
     await Product.findOrCreate({
-      where: { name: e.name, image: e.image, type: "internal", id_table: e.id },
+      where: {
+        name: e.name,
+        image: e.image,
+        categories: "internal",
+        rating: e.rating,
+        rating_count: e.rating_count,
+        price_usd: e.price_usd,
+        id_table: e.id,
+      },
     });
   });
 
@@ -60,12 +93,23 @@ async function fillProduct() {
       id: e.id,
       name: e.name,
       image: e.image,
+      rating: e.rating,
+      rating_count: e.rating_count,
+      price_usd: e.price_usd,
     };
   });
   //--------Llenado de la tabla--------
   memory.forEach(async (e) => {
     await Product.findOrCreate({
-      where: { name: e.name, image: e.image, type: "memory", id_table: e.id },
+      where: {
+        name: e.name,
+        image: e.image,
+        categories: "memory",
+        rating: e.rating,
+        rating_count: e.rating_count,
+        price_usd: e.price_usd,
+        id_table: e.id,
+      },
     });
   });
 
@@ -75,12 +119,23 @@ async function fillProduct() {
       id: e.id,
       name: e.name,
       image: e.image,
+      rating: e.rating,
+      rating_count: e.rating_count,
+      price_usd: e.price_usd,
     };
   });
   //--------Llenado de la tabla--------
   mother.forEach(async (e) => {
     await Product.findOrCreate({
-      where: { name: e.name, image: e.image, type: "mother", id_table: e.id },
+      where: {
+        name: e.name,
+        image: e.image,
+        categories: "mother",
+        rating: e.rating,
+        rating_count: e.rating_count,
+        price_usd: e.price_usd,
+        id_table: e.id,
+      },
     });
   });
 
@@ -90,12 +145,23 @@ async function fillProduct() {
       id: e.id,
       name: e.name,
       image: e.image,
+      rating: e.rating,
+      rating_count: e.rating_count,
+      price_usd: e.price_usd,
     };
   });
   //--------Llenado de la tabla--------
   power.forEach(async (e) => {
     await Product.findOrCreate({
-      where: { name: e.name, image: e.image, type: "power", id_table: e.id },
+      where: {
+        name: e.name,
+        image: e.image,
+        categories: "power",
+        rating: e.rating,
+        rating_count: e.rating_count,
+        price_usd: e.price_usd,
+        id_table: e.id,
+      },
     });
   });
 
@@ -105,12 +171,23 @@ async function fillProduct() {
       id: e.id,
       name: e.name,
       image: e.image,
+      rating: e.rating,
+      rating_count: e.rating_count,
+      price_usd: e.price_usd,
     };
   });
   //--------Llenado de la tabla--------
   video.forEach(async (e) => {
     await Product.findOrCreate({
-      where: { name: e.name, image: e.image, type: "video", id_table: e.id },
+      where: {
+        name: e.name,
+        image: e.image,
+        categories: "video",
+        rating: e.rating,
+        rating_count: e.rating_count,
+        price_usd: e.price_usd,
+        id_table: e.id,
+      },
     });
   });
 }
