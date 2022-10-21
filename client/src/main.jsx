@@ -13,7 +13,7 @@ if(import.meta.env.MODE === 'development'){
   axios.defaults.baseURL = 'http://localhost:3001';
 }
 if(import.meta.env.MODE === 'production'){
-  axios.defaults.baseURL = 'https://tupcideal-6erosi2li-nanomarquez.vercel.app/'
+  axios.defaults.baseURL = 'https://tupcideal-production-5005.up.railway.app/'
 }
 
 
