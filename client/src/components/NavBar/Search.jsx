@@ -1,20 +1,21 @@
 import React from "react";
 import { useEffect, useState } from "react";
-import { useSelector, useDispatch } from "react-redux";
+import { useSelector,useDispatch } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
 import "./Search.css";
-import { getAll, getAllById } from "../../redux/actions";
+import { getAll, getAllById } from '../../redux/actions'
 
 function Search() {
-  const dispatch = useDispatch();
+ 
+ const dispatch = useDispatch()
 
-  const navigate = useNavigate();
+ const navigate = useNavigate()
+ 
+ const [wordEntered, setWordEntered] = useState("")
+ 
+ const [filteredData, setFilteredData] = useState([]);
 
-  const [wordEntered, setWordEntered] = useState("");
-
-  const [filteredData, setFilteredData] = useState([]);
-
-  const { allProducts } = useSelector((state) => state.products);
+ const {allProducts} = useSelector(state => state.products)
 
   useEffect(() => {
     let search = document.querySelector(".search");
@@ -25,7 +26,7 @@ function Search() {
     });
     close.addEventListener("click", () => {
       searchBox.classList.remove("active");
-    });
+     });
 
     close.addEventListener("mouseover", () => {
       close.style.transform = "rotate(180deg)";
@@ -35,70 +36,56 @@ function Search() {
     });
   }, []);
 
-  //  let handleFilter = (e) => {
-  //   const searchword = e.target.value;
-  //   setWordEntered(searchword);
-  //  }
+//  let handleFilter = (e) => {
+//   const searchword = e.target.value;
+//   setWordEntered(searchword);
+//  }
 
   useEffect(() => {
-    dispatch(getAll());
-  }, []);
+    dispatch(getAll())
+  },[])
 
-  let handleFilter = (e) => {
-    const searchword = e.target.value;
-    setWordEntered(searchword);
-    const newValue = allProducts.filter((product) => {
-      return product.name.toLowerCase().includes(searchword.toLowerCase());
-      //reemplazar jsonProducts por allProducts cunado el endpoint este listo
-    });
-    if (searchword === "") {
-      setFilteredData([]);
-    } else {
-      setFilteredData(newValue);
-    }
-  };
+ let handleFilter = (e) => {
+  const searchword = e.target.value;
+  setWordEntered(searchword);
+  const newValue = allProducts.filter((product) => {
+    return product.name.toLowerCase().includes(searchword.toLowerCase())
+    //reemplazar jsonProducts por allProducts cunado el endpoint este listo
+  })
+  if (searchword === "") {
+    setFilteredData([])
+  }else{
+    setFilteredData(newValue)
+  }
+ }
 
-  let handleClose = () => {
-    setFilteredData([]);
-    setWordEntered("");
-  };
+ let handleClose = () =>{
+  setFilteredData([]);
+  setWordEntered("")
+ }
 
   return (
-    <form>
-      <div className="searchBox">
-        <div className="search hover:animate-pulse">
-          <ion-icon name="search-outline"></ion-icon>
-        </div>
-        <div className="searchInput">
-          <input
-            type="text"
-            placeholder="Buscar componente..."
-            value={wordEntered}
-            onChange={handleFilter}
-          />
-        </div>
-        <div className="close">
-          <ion-icon
-            name="close-outline"
-            onClick={() => handleClose()}
-          ></ion-icon>
-        </div>
+      <form>
+    <div className="searchBox">
+      <div className="search hover:animate-pulse">
+        <ion-icon name="search-outline"></ion-icon>
+      </div>
+      <div className="searchInput">
+        <input type="text" placeholder="Buscar componente..." value={wordEntered} onChange={handleFilter}  />
+      </div>
+      <div className="close">
+        <ion-icon name="close-outline" onClick={() => handleClose()}></ion-icon>
+      </div>
       </div>
       {filteredData.length != 0 && (
         <div className="searchResult z-[1000000000]">
-          {filteredData.slice(0, 10).map((p) =>
-            import.meta.env.MODE === "development" ? (
-              <a href={`http://localhost:3000/productos/search/${p.id}`}>
-                <p className="hover:bg-blue-200">{p.name.slice(0, 25)}</p>
-              </a>
-            ) : (
-              <a href={`https://tupcideal.vercel.app/productos/search/${p.id}`}>
-                <p className="hover:bg-blue-200">{p.name.slice(0, 25)}</p>
-              </a>
-            )
-          )}
-        </div>
-      )}
+           {filteredData.slice(0,10).map((p) => 
+            <Link to={`/productos/search/${p.id}`}>
+            <p className="hover:bg-blue-200">{p.name.slice(0,25)}</p>
+            </Link>
+        )}
+
+        </div>)}
     </form>
   );
 }
