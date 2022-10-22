@@ -2,7 +2,6 @@ const { Router } = require("express");
 const router = Router();
 const { User } = require("../db.js");
 
-
 //------- Pedir usuario(individual) a la BD--------
 router.get("/:email", async (req, res) => {
   const { email } = req.params;
@@ -25,11 +24,10 @@ router.get("/:email", async (req, res) => {
 
 //------- Pedir todos los usuario(general) a la BD--------
 router.get("/", async (req, res) => {
-
   try {
     let respuestabd;
     respuestabd = await User.findAll();
-    
+
     if (respuestabd === null) {
       return res
         .status(404)
@@ -66,6 +64,41 @@ router.post("/", async (req, res) => {
   }
 });
 
+//--------------------PUT UN USER--------------------
+router.put("/:email", async (req, res) => {
+  try {
+    const { email } = req.params;
+    const { name, last_name, adress, phone_number } = req.body;
+    const editdUser = await User.update(
+      {
+        name: name,
+        last_name: last_name,
+        adress: adress,
+        phone_number: phone_number,
+      },
+      { where: { email: email } }
+    );
+    res.json(editdUser);
+  } catch (err) {
+    res.status(500).send({
+      message: "User not found",
+    });
+  }
+});
 
+//--------------------DELETE UN SELLER--------------------
+
+router.delete("/:email", async (req, res) => {
+  try {
+    const { email } = req.params;
+    const deleteuser = await User.findOne({ where: { email: email } });
+    await deleteuser.destroy();
+    res.status(200).send({ message: "The user was deleted successfully" });
+  } catch (err) {
+    res.status(500).send({
+      message: "The user can´t be deleted",
+    });
+  }
+});
 
 module.exports = router;
