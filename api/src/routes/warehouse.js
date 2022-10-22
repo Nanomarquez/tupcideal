@@ -7,7 +7,9 @@ const { Seller, Product, WareHouse } = require("../db.js");
 router.get("/", async (req, res) => {
   try {
     let ware;
-    ware = await WareHouse.findAll();
+    ware = await WareHouse.findAll({
+      include: [Seller, Product],
+    });
     // console.log(ware);
     res.status(200).json(ware);
   } catch (err) {
@@ -44,7 +46,7 @@ router.put("/:id", async (req, res) => {
     const { cantidad, precio } = req.body;
     const editedProduct = await WareHouse.update(
       {
-        cantidad: cantidad, 
+        cantidad: cantidad,
         precio: precio,
       },
       { where: { id: id } }

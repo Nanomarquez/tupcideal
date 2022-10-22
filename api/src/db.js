@@ -79,6 +79,7 @@ const {
   Purchase,
   PowerSupply,
   VideoCard,
+  WareHouse,
 } = sequelize.models;
 
 // Aca vendrian las relaciones
@@ -91,6 +92,13 @@ Review.belongsTo(Product);
 
 Purchase.hasMany(User);
 User.belongsTo(Purchase);
+
+Seller.hasMany(WareHouse);
+WareHouse.belongsTo(Seller);
+
+Product.hasMany(WareHouse);
+WareHouse.belongsTo(Product);
+
 
 // Seller.belongsToMany(Product, { through: "Seller_Product" });
 // Product.belongsToMany(Seller, { through: "Seller_Product" });
