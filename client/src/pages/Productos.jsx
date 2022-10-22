@@ -9,7 +9,6 @@ import {
   orderProducts,
   addProductToShoppingCart,
 } from "../redux/actions";
-import Loading from "../components/Loading/Loading";
 import { Link } from "react-router-dom";
 
 function Productos() {
@@ -25,10 +24,10 @@ function Productos() {
     category: "",
     brand: "",
   });
-
+  console.log(productsFiltered)
   const [currentPage, setCurrentPage] = useState(1);
 
-  const productPerPage = 10;
+  const productPerPage = 50;
 
   const lastProductOfPage = currentPage * productPerPage;
 
@@ -44,10 +43,10 @@ function Productos() {
   };
 
   const setCategory = new Set();
-  allProducts.map((e) => setCategory.add(e.categories[0]));
+  allProducts?.map((e) => setCategory.add(e.categories));
 
   const setBrand = new Set();
-  allProducts.map((e) => setBrand.add(e.brand));
+  allProducts?.map((e) => setBrand.add(e.name.split(" ")[0]));
 
   useEffect(() => {
     dispatch(getFiltered(filters.brand, filters.category));
@@ -141,7 +140,7 @@ function Productos() {
           >
             {" "}
             <div className="flex items-center justify-center">
-              <Link to={`/productos/search/${e.id}`}>
+              <Link to={`/productos/search/${e.id_table}&${e.categories}`}>
                 <div className="text-white duration-500 rounded bg-gray-700/50 text-2xl flex hover:opacity-100 cursor-pointer opacity-0 justify-center items-center z-50 h-36 w-36 absolute">
                   Ver Mas
                 </div>
@@ -158,12 +157,12 @@ function Productos() {
               </h1>
               <div className="flex gap-5">
                 <div className="flex items-center justify-center rounded-full text-xs bg-gray-100 w-20 px-3 py-1">
-                  Stock:<p className="font-extrabold ml-1">{e.quantity}</p>
+                  Stock:<p className="font-extrabold ml-1">{e.rating_count}</p>
                 </div>
                 <span className="flex bg-gray-100 py-1 rounded-full items-center justify-center w-36">
                   Rating:{" "}
                   <p className="ml-1 text-lg">
-                    {"★".repeat(e.calification).padEnd(5, "☆")}
+                    {"★".repeat(e.rating).padEnd(5, "☆")}
                   </p>
                 </span>
               </div>
@@ -184,7 +183,7 @@ function Productos() {
                   </button>
                 </div>
                 <p className="flex flex-col text-3xl font-bold text-center sm:text-start">
-                  ${e.price}
+                  ${e.price_usd}
                 </p>
               </div>
             </div>

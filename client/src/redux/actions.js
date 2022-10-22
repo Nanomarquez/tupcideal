@@ -39,8 +39,8 @@ export const getAll = () => (dispatch) => {
 
 // trae todos los productos, sin filtros
 
-export const getAllById = (id) => (dispatch) => {
-  axios(`/products/${id}`)
+export const getAllById = (id_table,categories) => (dispatch) => {
+  axios(`/${categories}/${id_table}`)
     .then((res) => dispatch(getAllProductsById(res.data)))
     .catch((e) => console.log(e));
 };
