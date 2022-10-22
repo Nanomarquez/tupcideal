@@ -24,7 +24,6 @@ function Productos() {
     category: "",
     brand: "",
   });
-  console.log(productsFiltered)
   const [currentPage, setCurrentPage] = useState(1);
 
   const productPerPage = 50;
