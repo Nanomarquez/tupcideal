@@ -7,10 +7,19 @@ const { CPU } = require("../db.js");
 const bulkProducts = require("../data/products.json");
 
 router.get("/", async (req, res) => {
+  const { brand, category } = req.query;
   try {
     let product;
-    product = await Product.findAll();
-    res.status(200).json(product);
+    if (brand) {
+      product = await Product.findAll({
+        where: {
+          name: {[Op.iLike] : `${brand}%`}
+        }
+      });
+    } else {
+      product = await Product.findAll();
+    }
+    category ? res.send(product.filter(p => p.categories == category)) : res.status(200).json(product);
   } catch (err) {
     res.status(500).json(err);
   }
