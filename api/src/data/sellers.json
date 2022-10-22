@@ -1,0 +1,20 @@
+[
+    {
+        "store_name": "Henry1",
+        "address": "Henry Street 1",
+        "email": "HenryEmail1@gmail.com",
+        "phone_number": 974116804
+    },
+    {
+        "store_name": "Henry2",
+        "address": "Henry Street 2",
+        "email": "HenryEmail2@gmail.com",
+        "phone_number": 974116805
+    },
+     {
+        "store_name": "Henry3",
+        "address": "Henry Street 3",
+        "email": "HenryEmail3@gmail.com",
+        "phone_number": 974116806
+    }
+]

@@ -1,0 +1,10 @@
+[ 
+    {
+        "precio": 100,
+        "cantidad" : 1
+    },
+     {
+        "precio": 200,
+        "cantidad" : 2
+    }
+]
