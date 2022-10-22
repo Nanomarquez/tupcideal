@@ -2,13 +2,33 @@ const { Router } = require("express");
 const router = Router();
 const { Seller, Product, WareHouse } = require("../db.js");
 
+
+
+
 //Create User
 //------- PEDIR TODOS LOS PRODUCTOS Y VENDEDORES A LA BD--------
 router.get("/", async (req, res) => {
   try {
     let ware;
     ware = await WareHouse.findAll({
-      include: [Seller, Product],
+      include: [
+        {
+          model: Seller,
+          attributes: ["store_name", "adress", "id", "email", "adress"],
+        },
+        {
+          model: Product,
+          attributes: [
+            "categories",
+            "name",
+            "rating",
+            "rating_count",
+            "image",
+            "id_table",
+          ],
+        },
+      ],
+      attributes: ["precio", "cantidad", "id"],
     });
     // console.log(ware);
     res.status(200).json(ware);

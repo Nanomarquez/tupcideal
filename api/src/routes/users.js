@@ -42,7 +42,7 @@ router.get("/", async (req, res) => {
 
 //------- Create User -------
 router.post("/", async (req, res) => {
-  const { name, last_name, adress, phone_number } = req.body;
+  const { name, last_name, adress, email, phone_number } = req.body;
   console.log(req.body)
   try {
     const [usuario, created] = await User.findOrCreate({
@@ -51,6 +51,7 @@ router.post("/", async (req, res) => {
         last_name: last_name,
         adress: adress,
         phone_number: phone_number,
+        email: email,
       },
     });
     if (created) {
