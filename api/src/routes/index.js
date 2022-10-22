@@ -11,6 +11,7 @@ const reviewRouter = require("./review.js");
 const casesRouter = require("./case.js");
 const cpuRouter = require("./cpu.js");
 const warehouseRouter = require("./warehouse.js");
+const purchaseRouter = require("./purchase.js");
 
 const router = Router();
 
@@ -26,6 +27,7 @@ router.use("/users", usersRouter);
 router.use("/review", reviewRouter);
 router.use("/cases", casesRouter);
 router.use("/cpu", cpuRouter);
+router.use("/purchase", purchaseRouter);
 
 router.use("/", (req, res) => {
   res.send("TU PC IDEAL");

@@ -89,8 +89,11 @@ Review.belongsTo(User);
 Product.hasMany(Review);
 Review.belongsTo(Product);
 
-Purchase.hasMany(User);
-User.belongsTo(Purchase);
+User.hasMany(Purchase);
+Purchase.belongsTo(User);
+
+Purchase.belongsToMany(Product, {through: 'Purchase_Products'});
+Product.belongsToMany(Purchase, {through: 'Purchase_Products'});
 
 // Seller.belongsToMany(Product, { through: "Seller_Product" });
 // Product.belongsToMany(Seller, { through: "Seller_Product" });
