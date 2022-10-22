@@ -2,35 +2,31 @@ import "./Menu.css";
 import Search from "./Search";
 import Signin from "./Signin";
 import SignOut from "./SignOut";
-import { Link, useNavigate } from "react-router-dom";
-import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import React, { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import Carrito from "../../assets/carrito.png";
 import { useAuth } from "../../context/authContext";
 import { motion, AnimatePresence } from "framer-motion";
 import Modal from "../../components/Modal/Modal";
+import Avatar from './Avatar'
 function NavBar() {
   const [modalOpen, setModalOpen] = useState(false);
 
   const close = () => setModalOpen(false);
   const open = () => setModalOpen(true);
-  
+  const { cart } = useSelector(state=>state.products)
   const [active, setActive] = useState("");
-  const addCartLength = useSelector((state) => state.products.addProductToCart);
-  const navigate = useNavigate()
-  const handleModal = () => {
-    if (usuario) {
-      modalOpen ? close() : open();
-    }
-    else{
-      navigate('/login')
-    }
-  };
 
   function handleActive() {
     active ? setActive("") : setActive("active");
   }
 
+  useEffect(()=>{
+    cart.length === 0 ? localStorage.setItem("cart","") :
+    localStorage.setItem("cart",JSON.stringify(cart))
+  },[cart])
+  
   const { usuario } = useAuth();
 
   return (
@@ -44,24 +40,25 @@ function NavBar() {
         <div className="flex sm:gap-40 gap-10">
           <Search />
           {usuario ? <SignOut /> : <Signin />}
+          {usuario ? <Avatar/> : ""}
         </div>
         <div className="flex right-10 sm:relative absolute">
           <motion.button
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
-            onClick={handleModal}
+            onClick={()=>{modalOpen ? close() : open()}}
           >
-            <Link to={"/cart"}>
+            {/* <Link to={"/cart"}> */}
               <img
                 src={Carrito}
                 alt="carrito"
                 className="object-cover h-14 p-2"
               />
-            </Link>
+            {/* </Link> */}
           </motion.button>
 
           <span className="bg-white rounded-full absolute w-6 h-6 text-center">
-            {addCartLength.length}
+            {cart.length}
           </span>
         </div>
       </nav>

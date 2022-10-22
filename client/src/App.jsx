@@ -6,10 +6,10 @@ import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Productos from "./pages/Productos";
 import Register from "./pages/Register";
+import Mp from "./pages/Mp";
 import ProductosSearch from './pages/ProductosSearch'
-import Cart from "./pages/Cart"
+import User from "./pages/User";
 function App() {
-
 
   return (
     <>
@@ -21,8 +21,9 @@ function App() {
         <Route exact path="/login" element={<Login />} />
         <Route exact path="/register" element={<Register />} />
         <Route exact path="/productos" element={<Productos />} />
-        <Route exact path="/productos/search/:id" element={<ProductosSearch />} />
-        <Route exact path="/cart" element={<Cart />}/>
+        <Route exact path="/mp" element={<Mp />} />
+        <Route exact path="/user" element={<User/>} />
+        <Route exact path="/productos/search/:id_table&:categories" element={<ProductosSearch />} />
       </Routes>
       <Footer />
     </>

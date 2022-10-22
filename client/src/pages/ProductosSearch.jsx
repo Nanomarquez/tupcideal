@@ -8,6 +8,7 @@ function ProductosSearch() {
   const {id_table,categories} = useParams()
   const dispatch = useDispatch()
   const {productsFilterById} = useSelector((state)=>state.products)
+  console.log(productsFilterById);
   useEffect(()=>{
     dispatch(getAllById(id_table,categories))
   },[])
