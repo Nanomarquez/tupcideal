@@ -10,15 +10,17 @@ function SliderRange({setCurrentPage}) {
 
   const { productsFiltered , allProducts } = useSelector(state=>state.products)
 
-  const priceMaxOfProducts = Math.max(...allProducts.map(e=>e.price))
+  console.log(productsFiltered)
 
-  const priceMinOfProducts = Math.min(...allProducts.map(e=>e.price))
+  const priceMaxOfProducts = Math.max(...allProducts.map(e=>e.price_usd))
+
+  const priceMinOfProducts = Math.min(...allProducts.map(e=>e.price_usd))
 
 
   const [min, setMin] = useState(priceMinOfProducts);
   const [max, setMax] = useState(priceMaxOfProducts);
 
-  const filterByRange = allProducts.filter(product=>product.price >= min && product.price <= max)
+  const filterByRange = allProducts.filter(product=>product.price_usd >= min && product.price_usd <= max)
 
 
   const handleSlide = (e) => {
