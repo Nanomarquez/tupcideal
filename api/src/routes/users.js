@@ -42,14 +42,14 @@ router.get("/", async (req, res) => {
 
 //------- Create User -------
 router.post("/", async (req, res) => {
-  const { name, last_name, adress, email, phone_number } = req.body;
+  const { name, last_name, adress, phone_number } = req.body;
+  console.log(req.body)
   try {
     const [usuario, created] = await User.findOrCreate({
       where: {
         name: name,
         last_name: last_name,
         adress: adress,
-        email: email,
         phone_number: phone_number,
       },
     });
@@ -60,6 +60,7 @@ router.post("/", async (req, res) => {
       res.status(200).json("El Usuario ya existe.");
     }
   } catch (err) {
+    console.log(err)
     res.status(500).json(err);
   }
 });
