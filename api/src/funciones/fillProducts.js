@@ -1,5 +1,5 @@
 const { Router } = require("express");
-const { Case, Product } = require("../db");
+const { Seller, Product,WareHouse } = require("../db");
 const caseData = require("../data/case.json");
 const cpuData = require("../data/cpu.json");
 const internalData = require("../data/internal-hard-drive.json");
@@ -7,6 +7,8 @@ const memoryData = require("../data/memory.json");
 const motherData = require("../data/motherboard.json");
 const powerData = require("../data/power-supply.json");
 const videoData = require("../data/video-card.json");
+const sellers = require("../data/sellers.json");
+const ware = require("../data/warehouse.json");
 
 async function fillProduct() {
   // ------------ MAPEO CASES -------------
@@ -190,6 +192,50 @@ async function fillProduct() {
       },
     });
   });
+
+  // ------------ MAPEO Seller -------------
+  const seller = sellers.map((e) => {
+    return {
+      store_name: e.store_name,
+      address: e.address,
+      email: e.email,
+      phone_number: e.phone_number,
+    };
+  });
+  //--------Llenado de la tabla--------
+  seller.forEach(async (e) => {
+    await Seller.findOrCreate({
+      where: {
+        store_name: e.store_name,
+        adress: e.address,
+        email: e.email,
+        phone_number: e.phone_number,
+      },
+    });
+  });
+
+  // ------------ MAPEO Warehouse -------------
+  const Warehouses = ware.map((e) => {
+    return {
+      precio: e.precio,
+      cantidad: e.cantidad,
+    };
+  });
+  //--------Llenado de la tabla--------
+  Warehouses.forEach(async (e) => {
+    await WareHouse.findOrCreate({
+      where: {
+        precio: e.precio,
+        cantidad: e.cantidad,
+      },
+    });
+  });
 }
+
+
+
+
+
+
 
 module.exports = fillProduct;
