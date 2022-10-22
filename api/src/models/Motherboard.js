@@ -18,9 +18,11 @@ module.exports = (sequelize) => {
       },
       "socket_/_cpu": {
         type: DataTypes.STRING,
+        default:null,
       },
       form_factor: {
         type: DataTypes.STRING,
+        
       },
       memory_max: {
         type: DataTypes.STRING,

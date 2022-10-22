@@ -21,7 +21,7 @@ const bulkInternalHardDrive = require("./src/data/internal-hard-drive.json");
 
 // Syncing all the models at once.
 conn.sync({ force: true }).then(() => {
-  server.listen(process.env.PORT, async () => {
+  server.listen(3001, async () => {
     await CPU.bulkCreate(bulkCPU);
     console.log("✓ Se llenó la tabla CPU con la data del json");
     await Memory.bulkCreate(bulkMemory);

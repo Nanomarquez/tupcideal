@@ -21,6 +21,7 @@ module.exports = (sequelize) => {
       },
       "price_/_gb": {
         type: DataTypes.STRING,
+        default:null,
       },
       type: {
         type: DataTypes.STRING,
