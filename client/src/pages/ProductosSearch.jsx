@@ -5,11 +5,11 @@ import { useEffect } from 'react';
 import { getAllById, addProductToShoppingCart } from "../redux/actions";
 function ProductosSearch() {
 
-  const {id} = useParams()
+  const {id_table,categories} = useParams()
   const dispatch = useDispatch()
   const {productsFilterById} = useSelector((state)=>state.products)
   useEffect(()=>{
-    dispatch(getAllById(id))
+    dispatch(getAllById(id_table,categories))
   },[])
 
 
