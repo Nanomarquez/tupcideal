@@ -2,7 +2,6 @@ const { Router } = require("express");
 const router = Router();
 const { Memory } = require("../db.js");
 
-//Create User
 //------- PEDIR TODOS LOS MEMORY A LA BD--------
 router.get("/", async (req, res) => {
   try {
@@ -21,6 +20,45 @@ router.get("/:id", async (req, res) => {
     let memoryId;
     memoryId = await Memory.findByPk(id);
     res.status(200).json(memoryId);
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
+//--------------------POST UNA MEMORY--------------------
+router.post("/", async (req, res) => {
+  const {
+    name,
+    rating,
+    rating_count,
+    price_usd,
+    speed,
+    modules,
+    color,
+    first_word_latency,
+    cas_latency,
+    image,
+  } = req.body;
+  try {
+    const [memory, created] = await Memory.findOrCreate({
+      where: {
+        name: name,
+        rating: rating,
+        rating_count: rating_count,
+        price_usd: price_usd,
+        speed: speed,
+        modules: modules,
+        color: color,
+        first_word_latency: first_word_latency,
+        cas_latency: cas_latency,
+        image: image,
+      },
+    });
+    if (created) {
+      res.status(200).json(memory);
+    } else {
+      res.status(200).json("The Memory exist previusly");
+    }
   } catch (err) {
     res.status(500).json(err);
   }

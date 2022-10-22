@@ -1,74 +1,72 @@
 const { Router } = require("express");
 const router = Router();
-const { CPU } = require("../db.js");
+const { VideoCard } = require("../db.js");
 
-//------- PEDIR TODOS LOS CPU A LA BD--------
+//------- PEDIR TODOS LOS VIDEO CARD A LA BD--------
 router.get("/", async (req, res) => {
   try {
-    let cpu;
-    cpu = await CPU.findAll();
-    res.status(200).json(cpu);
+    let video;
+    video = await VideoCard.findAll();
+    res.status(200).json(video);
   } catch (err) {
     res.status(500).json(err);
   }
 });
 
-//------- PEDIR TODOS LOS CPU A LA BD POR ID--------
+//------- PEDIR TODOS LOS VIDEO CARD A LA BD POR ID--------
 router.get("/:id", async (req, res) => {
   const { id } = req.params;
   try {
-    let cpuId;
-    cpuId = await CPU.findByPk(id);
-    res.status(200).json(cpuId);
+    let videoId;
+    videoId = await VideoCard.findByPk(id);
+    res.status(200).json(videoId);
   } catch (err) {
     res.status(500).json(err);
   }
 });
 
-//--------------------POST UN CPU--------------------
+//--------------------POST UNA POWER SUPPLY--------------------
 router.post("/", async (req, res) => {
   const {
     name,
     rating,
     rating_count,
     price_usd,
-    core_count,
+    chipset,
+    memory,
     core_clock,
     boost_clock,
-    tdp,
-    integrated_graphics,
-    smt,
-    socket,
+    color,
+    length,
     image,
   } = req.body;
   try {
-    const [cpu, created] = await CPU.findOrCreate({
+    const [power, created] = await VideoCard.findOrCreate({
       where: {
         name: name,
         rating: rating,
         rating_count: rating_count,
         price_usd: price_usd,
-        core_count: core_count,
+        chipset,
+        memory: memory,
         core_clock: core_clock,
         boost_clock: boost_clock,
-        tdp: tdp,
-        integrated_graphics: integrated_graphics,
-        smt: smt,
-        socket: socket,
+        color: color,
+        length: length,
         image: image,
       },
     });
     if (created) {
-      res.status(200).json(cpu);
+      res.status(200).json(power);
     } else {
-      res.status(200).json("The CPU exist previusly");
+      res.status(200).json("The Power Supply exist previusly");
     }
   } catch (err) {
     res.status(500).json(err);
   }
 });
 
-//--------------------PUT UN CPU--------------------
+//--------------------PUT UN VIDEO CARD--------------------
 router.put("/:id", async (req, res) => {
   try {
     const { id } = req.params;
@@ -77,52 +75,52 @@ router.put("/:id", async (req, res) => {
       rating,
       rating_count,
       price_usd,
-      core_count,
+      chipset,
+      memory,
       core_clock,
       boost_clock,
-      tdp,
-      integrated_graphics,
-      smt,
-      socket,
+      color,
+      length,
       image,
     } = req.body;
 
-    const editdCPU = await CPU.update(
+    const editdVideoCard = await VideoCard.update(
       {
         name: name,
         rating: rating,
         rating_count: rating_count,
         price_usd: price_usd,
-        core_count: core_count,
+        chipset,
+        memory: memory,
         core_clock: core_clock,
         boost_clock: boost_clock,
-        tdp: tdp,
-        integrated_graphics: integrated_graphics,
-        smt: smt,
-        socket: socket,
+        color: color,
+        length: length,
         image: image,
       },
       { where: { id: id } }
     );
-    res.json(editdCPU);
+    res.json(editdVideoCard);
   } catch (err) {
     res.status(500).send({
-      message: "CPU not found",
+      message: "Video Card not found",
     });
   }
 });
 
-//--------------------DELETE UN CPU--------------------
+//--------------------DELETE UN VIDEO CARD--------------------
 
 router.delete("/:id", async (req, res) => {
   try {
     const { id } = req.params;
-    const deleteCPU = await CPU.findOne({ where: { id: id } });
-    await deleteCPU.destroy();
-    res.status(200).send({ message: "The CPU was deleted successfully" });
+    const deleteVideoCard = await VideoCard.findOne({ where: { id: id } });
+    await deleteVideoCard.destroy();
+    res
+      .status(200)
+      .send({ message: "The Video Card was deleted successfully" });
   } catch (err) {
     res.status(500).send({
-      message: "The CPU can´t be deleted",
+      message: "The Video Card can´t be deleted",
     });
   }
 });

@@ -2,7 +2,6 @@ const { Router } = require("express");
 const router = Router();
 const { Motherboard } = require("../db.js");
 
-//Create User
 //------- PEDIR TODOS LOS MOTHER BOARD A LA BD--------
 router.get("/", async (req, res) => {
   try {
@@ -21,6 +20,43 @@ router.get("/:id", async (req, res) => {
     let motherId;
     motherId = await Motherboard.findByPk(id);
     res.status(200).json(motherId);
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
+//--------------------POST UNA MOTHER BOARD--------------------
+router.post("/", async (req, res) => {
+  const {
+    name,
+    rating,
+    rating_count,
+    price_usd,
+    form_factor,
+    memory_max,
+    memory_slots,
+    color,
+    image,
+  } = req.body;
+  try {
+    const [mother, created] = await Motherboard.findOrCreate({
+      where: {
+        name: name,
+        rating: rating,
+        rating_count: rating_count,
+        price_usd: price_usd,
+        form_factor: form_factor,
+        memory_max: memory_max,
+        memory_slots: memory_slots,
+        color: color,
+        image: image,
+      },
+    });
+    if (created) {
+      res.status(200).json(mother);
+    } else {
+      res.status(200).json("The Mother Board exist previusly");
+    }
   } catch (err) {
     res.status(500).json(err);
   }
@@ -59,7 +95,7 @@ router.put("/:id", async (req, res) => {
     res.json(editdMother);
   } catch (err) {
     res.status(500).send({
-      message: "Mother not found",
+      message: "Mother Board not found",
     });
   }
 });
@@ -71,10 +107,10 @@ router.delete("/:id", async (req, res) => {
     const { id } = req.params;
     const deleteMother = await Motherboard.findOne({ where: { id: id } });
     await deleteMother.destroy();
-    res.status(200).send({ message: "The Mother was deleted successfully" });
+    res.status(200).send({ message: "The Mother Board was deleted successfully" });
   } catch (err) {
     res.status(500).send({
-      message: "The Mother can´t be deleted",
+      message: "The Mother Board can´t be deleted",
     });
   }
 });

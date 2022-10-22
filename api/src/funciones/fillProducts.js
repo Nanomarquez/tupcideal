@@ -184,7 +184,7 @@ async function fillProduct() {
       where: {
         name: e.name,
         image: e.image,
-        categories: "video",
+        categories: "videocard",
         rating: e.rating,
         rating_count: e.rating_count,
         price_usd: e.price_usd,
