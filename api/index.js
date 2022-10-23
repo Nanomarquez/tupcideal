@@ -26,9 +26,9 @@ const bulkWareHouse = require("./src/data/warehouse.json");
 const bulkProducts = require("./src/data/products.json")
 
 // Syncing all the models at once.
-conn.sync({ force: true }).then(() => {
+conn.sync({ force: false }).then(() => {
   server.listen(3001, async () => {
-    await CPU.bulkCreate(bulkCPU);
+   /* await CPU.bulkCreate(bulkCPU);
     console.log("✓ Se llenó la tabla CPU con la data del json");
     await Memory.bulkCreate(bulkMemory);
     console.log("✓ Se llenó la tabla Memory con la data del json");
@@ -49,7 +49,7 @@ conn.sync({ force: true }).then(() => {
     await Seller.bulkCreate(bulkSellers);
     console.log("✓ Se llenó la tabla Seller con la data del json");
     await WareHouse.bulkCreate(bulkWareHouse);
-    console.log("✓ Se llenó la tabla WareHouse con la data del json");
+    console.log("✓ Se llenó la tabla WareHouse con la data del json");*/
     console.log(`⇒ listening at port ${process.env.PORT}`); // eslint-disable-line no-console
   });
 });
