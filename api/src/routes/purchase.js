@@ -22,19 +22,32 @@ router.get('/:id', async (req, res) => {
 
 // Una ruta para agregar una nueva compra a la tabla
 router.post('/', async (req, res) => {
-    const { totalprice, status, UserId } = req.query;
-    const { products } = req.body; // Array de id de warehouse
+    const { totalprice, UserId } = req.query;
+    const { cart } = req.body.data; 
     try {
         const newPurchase = await Purchase.Create({
             totalprice: totalprice,
-            status: status,
             UserId: UserId
         });
-        products && products.forEach(p => newPurchase.addWareHouses(p));
+        cart && cart.forEach(async p => await newPurchase.addWareHouses(p.id));
         res.send(newPurchase);
     } catch (err) {
         res.status(500).send({error: err.message})
     };
+});
+
+// Una ruta para modificar la compra (modificar el estado "pending" --> "pagado / cancelado")
+router.put('/:id', async (req, res) => {
+    const { id } = req.params;
+    const {status} = req.query
+    try {
+        const purchase = await Purchase.findByPk(id);
+        purchase.status = status;
+        await purchase.save();
+        res.send(purchase);
+    } catch (err) {
+        res.status(500).send({error: err.message})
+    }
 });
 
 module.exports = router;
