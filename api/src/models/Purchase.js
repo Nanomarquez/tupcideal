@@ -14,7 +14,8 @@ module.exports = (sequelize) => {
       type: DataTypes.INTEGER,
     },
     status: {
-      type: DataTypes.STRING,
+      type: DataTypes.ENUM('Pending', 'Canceled', 'Paid'),
+      defaultValue: 'Pending',
     },
   });
 };
