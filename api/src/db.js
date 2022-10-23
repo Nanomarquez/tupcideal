@@ -93,8 +93,8 @@ Review.belongsTo(Product);
 User.hasMany(Purchase);
 Purchase.belongsTo(User);
 
-Purchase.belongsToMany(Product, {through: 'Purchase_Products'});
-Product.belongsToMany(Purchase, {through: 'Purchase_Products'});
+Purchase.belongsToMany(WareHouse, {through: 'Purchase_WareHouse'});
+WareHouse.belongsToMany(Purchase, {through: 'Purchase_WareHouse'});
 
 Seller.hasMany(WareHouse);
 WareHouse.belongsTo(Seller);

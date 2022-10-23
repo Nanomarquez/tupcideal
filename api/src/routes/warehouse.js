@@ -45,17 +45,18 @@ router.post("/", async (req, res) => {
       where: {
         precio: precio,
         cantidad: cantidad,
+        SellerId: id_vendedor,
+        ProductId: id_producto
       },
     });
-    console.log(product);
     if (created) {
       console.log("Product created successfully");
       res.status(200).json(product);
     } else {
-      res.status(200).json("The product can´t be created");
+      res.status(200).json([{error:"The product can't be created"}]);
     }
   } catch (err) {
-    res.status(500).json(err);
+    res.status(500).json({error: err.message});
   }
 });
 
