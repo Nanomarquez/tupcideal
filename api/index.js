@@ -25,10 +25,22 @@ const bulkSellers = require("./src/data/sellers.json");
 const bulkWareHouse = require("./src/data/warehouse.json");
 const bulkProducts = require("./src/data/products.json")
 
+const user =  CPU.findAll();
+var setter ;
+if(user === []){
+  setter = true
+} else{
+  setter = false
+}
+
 // Syncing all the models at once.
-conn.sync({ force: true }).then(() => {
+
+conn.sync({ force: setter }).then(() => {
   server.listen(3001, async () => {
-   await CPU.bulkCreate(bulkCPU);
+   
+    if (setter === true){
+    await CPU.bulkCreate(bulkCPU);
+
     console.log("✓ Se llenó la tabla CPU con la data del json");
     await Memory.bulkCreate(bulkMemory);
     console.log("✓ Se llenó la tabla Memory con la data del json");
@@ -51,5 +63,10 @@ conn.sync({ force: true }).then(() => {
     await WareHouse.bulkCreate(bulkWareHouse);
     console.log("✓ Se llenó la tabla WareHouse con la data del json");
     console.log(`⇒ listening at port ${process.env.PORT}`); // eslint-disable-line no-console
-  });
+}
+else{
+  console.log(`⇒ listening at port ${process.env.PORT}`); // eslint-disable-line no-console
+}
+});
+  
 });
