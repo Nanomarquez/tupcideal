@@ -16,6 +16,11 @@ function Productos() {
   const productsFiltered = useSelector(
     (state) => state.products.productsFiltered
   );
+
+  const { cart } = useSelector(state=>state.products)
+
+  const productNotNull = productsFiltered.filter(p=>p.price_usd !== null)
+
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(getAll());
@@ -32,7 +37,7 @@ function Productos() {
 
   const firstProductOfPage = lastProductOfPage - productPerPage;
 
-  const currentProducts = productsFiltered.slice(
+  const currentProducts = productNotNull.slice(
     firstProductOfPage,
     lastProductOfPage
   );
@@ -177,7 +182,9 @@ function Productos() {
                 <div className="flex gap-10 justify-center items-center">
                   <button
                     className="bg-gray-600 hover:bg-gray-800 duration-500 font-medium px-6 py-2 tracking-wider transition text-white rounded-md"
-                    onClick={() => dispatch(addProductToShoppingCart(e))}
+                    onClick={() => {
+                      localStorage.setItem('cart', JSON.stringify(...cart,e))
+                      dispatch(addProductToShoppingCart(e))}}
                   >
                     Añadir al carrito
                   </button>

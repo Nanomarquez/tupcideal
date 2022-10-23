@@ -40,7 +40,7 @@ export const productsSlice = createSlice({
         }
         case "Descendente": {
           state.productsFiltered = [...state.productsFiltered].sort(
-            (a, b) => b.price - a.price
+            (a, b) => b.price_usd - a.price_usd
           );
           break;
         }

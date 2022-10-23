@@ -9,15 +9,12 @@ function SliderRange({setCurrentPage}) {
   const dispatch = useDispatch()
 
   const { productsFiltered , allProducts } = useSelector(state=>state.products)
-
-  const priceMaxOfProducts = Math.max(...allProducts.map(e=>e.price_usd))
-
-  const priceMinOfProducts = Math.min(...allProducts.map(e=>e.price_usd))
-
   
-  const [min, setMin] = useState(priceMinOfProducts);
-  const [max, setMax] = useState(priceMaxOfProducts);
-  const filterByRange = allProducts.filter(product=>product.price_usd >= min && product.price_usd <= max)
+  const [min, setMin] = useState(0);
+  const [max, setMax] = useState(50000);
+
+  const productNotNull = allProducts.filter(p=>p.price_usd !== null)
+  const filterByRange = productNotNull.filter(product=>product.price_usd >= min && product.price_usd <= max)
   
 
   const handleSlide = (e) => {
@@ -33,8 +30,8 @@ function SliderRange({setCurrentPage}) {
               defaultValue={[min, max]}
               className="slider"
               trackClassName="tracker"
-              min={priceMinOfProducts}
-              max={priceMaxOfProducts}
+              min={0}
+              max={50000}
               minDistance={0}
               step={200}
               withTracks={true}
