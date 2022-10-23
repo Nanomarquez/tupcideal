@@ -34,11 +34,13 @@ if(user === []){
 }
 
 // Syncing all the models at once.
+
 conn.sync({ force: setter }).then(() => {
   server.listen(3001, async () => {
    
     if (setter === true){
     await CPU.bulkCreate(bulkCPU);
+
     console.log("✓ Se llenó la tabla CPU con la data del json");
     await Memory.bulkCreate(bulkMemory);
     console.log("✓ Se llenó la tabla Memory con la data del json");
