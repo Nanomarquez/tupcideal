@@ -16,6 +16,7 @@ const powerRouter = require("./power.js");
 const usersRouter = require("./users.js");
 const casesRouter = require("./case.js");
 const cpuRouter = require("./cpu.js");
+const purchaseRouter = require("./purchase.js");
 
 const router = Router();
 
@@ -25,7 +26,7 @@ const router = Router();
 router.use("/components", componentsRouter);
 router.use("/videocard", videocardRouter);
 router.use("/warehouse", warehouseRouter);
-// router.use("/purchase", purchaseRouter);
+router.use("/purchase", purchaseRouter);
 router.use("/internal", internalRouter);
 router.use("/products", productsRouter);
 router.use("/sellers", sellersRouter);
