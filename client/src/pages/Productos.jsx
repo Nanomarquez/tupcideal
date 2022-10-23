@@ -41,11 +41,20 @@ function Productos() {
     setCurrentPage(pageNumber);
   };
 
-  const setCategory = new Set();
-  allProducts?.map((e) => setCategory.add(e.categories));
-
   const setBrand = new Set();
-  allProducts?.map((e) => setBrand.add(e.name.split(" ")[0]));
+  const setCategory = new Set();
+
+  if(filters.brand) {
+    currentProducts?.map((e) => setCategory.add(e.categories));
+  }else {
+    allProducts?.map((e) => setCategory.add(e.categories));
+  }
+
+  if (filters.category) {
+    currentProducts?.map((e) => setBrand.add(e.name.split(" ")[0]));
+  }else {
+    allProducts?.map((e) => setBrand.add(e.name.split(" ")[0]));
+  }
 
   useEffect(() => {
     dispatch(getFiltered(filters.brand, filters.category));
@@ -78,7 +87,6 @@ function Productos() {
   const handleSort = (e) => {
     dispatch(orderProducts(e.target.value));
   };
-
   return (
     <div className="flex sm:flex-row flex-col">
       <section className="p-2 sm:px-5 border-b-2 sm:border-b-0 sm:border-r-2 rounded-xl w-full sm:w-2/6">
