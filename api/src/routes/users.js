@@ -5,15 +5,12 @@ const { User } = require("../db.js");
 //------- Pedir usuario(individual) a la BD--------
 router.get("/:email", async (req, res) => {
   const { email } = req.params;
-  console.log("este es el email" + email);
   try {
     let respuestabd;
     respuestabd = await User.findOne({ where: { email: email } });
-    console.log("lo que traigo es:" + respuestabd);
     if (respuestabd === null) {
       return res
-        .status(404)
-        .send(`No se encontraron coincidencias con el usuario: ${email}`);
+        .send({error:'Usuario no encontrado'})
     } else {
       res.status(200).json(respuestabd);
     }
