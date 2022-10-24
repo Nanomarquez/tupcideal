@@ -34,13 +34,13 @@ export const productsSlice = createSlice({
       switch (action.payload) {
         case "Ascendente": {
           state.productsFiltered = [...state.productsFiltered].sort(
-            (a, b) => a.price_usd - b.price_usd
+            (a, b) => a.precio - b.precio
           );
           break;
         }
         case "Descendente": {
           state.productsFiltered = [...state.productsFiltered].sort(
-            (a, b) => b.price_usd - a.price_usd
+            (a, b) => b.precio - a.precio
           );
           break;
         }

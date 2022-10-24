@@ -20,8 +20,10 @@ function Productos() {
   const { cart } = useSelector((state) => state.products);
 
   const productNotNull = productsFiltered.filter(
-    (p) => p.price_usd !== null && p.image !== null
+    (p) => p.precio !== null && p.image !== null
   );
+
+  console.log(productNotNull)
 
   const dispatch = useDispatch();
   useEffect(() => {
@@ -52,15 +54,15 @@ function Productos() {
   const setCategory = new Set();
 
   if (filters.brand) {
-    currentProducts?.map((e) => setCategory.add(e.categories));
+    currentProducts?.map((e) => setCategory.add(e.Product.categories));
   } else {
-    allProducts?.map((e) => setCategory.add(e.categories));
+    allProducts?.map((e) => setCategory.add(e.Product.categories));
   }
 
   if (filters.category) {
-    currentProducts?.map((e) => setBrand.add(e.name.split(" ")[0]));
+    currentProducts?.map((e) => setBrand.add(e.Product.name.split(" ")[0]));
   } else {
-    allProducts?.map((e) => setBrand.add(e.name.split(" ")[0]));
+    allProducts?.map((e) => setBrand.add(e.Product.name.split(" ")[0]));
   }
 
   useEffect(() => {
@@ -90,7 +92,6 @@ function Productos() {
     }
     setCurrentPage(1);
   };
-
   const handleSort = (e) => {
     dispatch(orderProducts(e.target.value));
   };
@@ -155,14 +156,14 @@ function Productos() {
             >
               {" "}
               <div className="flex items-center justify-center">
-                  <Link to={`/productos/search/${e.id_table}&${e.categories}`}>
+                  <Link to={`/productos/search/${e.id_table}&${e.categories}&${e.id}`}>
                   <div className="text-white duration-500 rounded bg-gray-700/50 text-2xl flex hover:opacity-100 cursor-pointer opacity-0 justify-center items-center z-50 h-36 w-36 absolute">
                     Ver Mas
                   </div>
                   <img
                     src={
-                      e.image !== null
-                        ? e.image
+                      e.Product.image !== null
+                        ? e.Product.image
                         : "https://www.google.com/url?sa=i&url=https%3A%2F%2Ffreefrontend.com%2Fhtml-funny-404-pages%2F&psig=AOvVaw2uVY0F2x1P5v4BYUCQYcbR&ust=1666665878730000&source=images&cd=vfe&ved=0CA0QjRxqFwoTCNDRoq_s9_oCFQAAAAAdAAAAABAE"
                     }
                     alt=""
@@ -172,23 +173,23 @@ function Productos() {
               </div>
               <div className="m-2 ml-10">
                 <h1 className="text-2xl font-semibold overflow-ellipsis overflow-hidden whitespace-nowrap">
-                  {e.name.slice(0, 35) + "..."}
+                  {e.Product.name.slice(0, 35) + "..."}
                 </h1>
                 <div className="flex gap-5">
                   <div className="flex items-center justify-center rounded-full text-xs bg-gray-100 w-20 px-3 py-1">
                     Stock:
-                    <p className="font-extrabold ml-1">{e.rating_count}</p>
+                    <p className="font-extrabold ml-1">{e.Product.rating_count}</p>
                   </div>
                   <span className="flex bg-gray-100 py-1 rounded-full items-center justify-center w-36">
                     Rating:{" "}
                     <p className="ml-1 text-lg">
-                      {"★".repeat(e.rating).padEnd(5, "☆")}
+                      {"★".repeat(e.Product.rating).padEnd(5, "☆")}
                     </p>
                   </span>
                 </div>
                 <div className="flex flex-col sm:flex-row gap-10 mt-5">
                   <div className="flex gap-10 justify-center items-center">
-                  <Link to={`/productos/search/${e.id_table}&${e.categories}`}>
+                  <Link to={`/productos/search/${e.Product.id_table}&${e.Product.categories}`}>
                     <button
                       className="bg-gray-600 hover:bg-gray-800 duration-500 font-medium px-6 py-2 tracking-wider transition text-white rounded-md"
                       
@@ -205,7 +206,7 @@ function Productos() {
                     </button>
                   </div>
                   <p className="flex flex-col text-3xl font-bold text-center sm:text-start">
-                    ${e.price_usd}
+                    ${e.precio}
                   </p>
                 </div>
               </div>

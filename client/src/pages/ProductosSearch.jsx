@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useParams } from 'react-router-dom'
 import { useSelector , useDispatch} from 'react-redux';
 import { useEffect } from 'react';
@@ -8,7 +8,6 @@ function ProductosSearch() {
   const {id_table,categories} = useParams()
   const dispatch = useDispatch()
   const {productsFilterById} = useSelector((state)=>state.products)
-  console.log(productsFilterById);
   useEffect(()=>{
     dispatch(getAllById(id_table,categories))
   },[])

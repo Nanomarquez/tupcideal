@@ -33,7 +33,7 @@ if (user === []) {
 } else {
   setter = false;
 }
-// setter=true;
+
 // Syncing all the models at once.
 
 conn.sync({ force: setter }).then(() => {
