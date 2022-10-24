@@ -1,6 +1,6 @@
 [
     {
-        "id": 1,
+        "id_table": 1,
         "name": "ASRock A320M-HDV R4.0",
         "rating": 4,
         "rating_count": 4,
@@ -13,7 +13,7 @@
         "image": null
     },
     {
-        "id": 2,
+        "id_table": 2,
         "name": "ASRock B450 Pro4",
         "rating": 4,
         "rating_count": 38,
@@ -26,7 +26,7 @@
         "image": "https://www.deffo.com.ar/wp-content/uploads/2022/09/B560M-PRO4-3.webp"
     },
     {
-        "id": 3,
+        "id_table": 3,
         "name": "ASRock B450 Steel Legend",
         "rating": 4,
         "rating_count": 38,
@@ -39,7 +39,7 @@
         "image": "https://katech.com.ar/wp-content/uploads/MOT523_2.jpg"
     },
     {
-        "id": 4,
+        "id_table": 4,
         "name": "ASRock B450M Pro4",
         "rating": 4,
         "rating_count": 123,
@@ -52,7 +52,7 @@
         "image": "https://www.deffo.com.ar/wp-content/uploads/2022/09/B560M-PRO4-3.webp"
     },
     {
-        "id": 5,
+        "id_table": 5,
         "name": "ASRock B450M Steel Legend",
         "rating": 4,
         "rating_count": 67,
@@ -65,7 +65,7 @@
         "image": "https://katech.com.ar/wp-content/uploads/MOT523_2.jpg"
     },
     {
-        "id": 6,
+        "id_table": 6,
         "name": "ASRock B450M-HDV R4.0",
         "rating": 4,
         "rating_count": 30,
@@ -78,7 +78,7 @@
         "image": "https://www.dxshop.com.ar/wp-content/uploads/2022/06/Motherboard-Asrock-B450m-Pro4-Usb3.1-Gen3-M.2-Am4-128gb3.png"
     },
     {
-        "id": 7,
+        "id_table": 7,
         "name": "ASRock B550 Phantom Gaming 4",
         "rating": 4,
         "rating_count": 14,
@@ -91,7 +91,7 @@
         "image": "https://katech.com.ar/wp-content/uploads/MOT509_3.jpg"
     },
     {
-        "id": 8,
+        "id_table": 8,
         "name": "ASRock B550M Pro4",
         "rating": 4,
         "rating_count": 17,
@@ -104,7 +104,7 @@
         "image": "https://www.deffo.com.ar/wp-content/uploads/2022/09/B560M-PRO4-3.webp"
     },
     {
-        "id": 9,
+        "id_table": 9,
         "name": "ASRock B550M-ITX/ac",
         "rating": 4,
         "rating_count": 14,
@@ -117,7 +117,7 @@
         "image": null
     },
     {
-        "id": 10,
+        "id_table": 10,
         "name": "ASRock B560M Pro4",
         "rating": 4,
         "rating_count": 2,
@@ -130,7 +130,7 @@
         "image": "https://www.deffo.com.ar/wp-content/uploads/2022/09/B560M-PRO4-3.webp"
     },
     {
-        "id": 11,
+        "id_table": 11,
         "name": "ASRock B560M-HDV",
         "rating": 4,
         "rating_count": 2,
@@ -143,7 +143,7 @@
         "image": null
     },
     {
-        "id": 12,
+        "id_table": 12,
         "name": "Asus PRIME A320M-K",
         "rating": 4,
         "rating_count": 12,
@@ -156,7 +156,7 @@
         "image": "https://www.maximus.com.ar/Temp/App_WebSite/App_PictureFiles/ItemImages/16021_800.jpg"
     },
     {
-        "id": 13,
+        "id_table": 13,
         "name": "Asus PRIME B460-PLUS",
         "rating": 4,
         "rating_count": 3,
@@ -169,7 +169,7 @@
         "image": "https://www.maximus.com.ar/Temp/App_WebSite/App_PictureFiles/ItemImages/16021_800.jpg"
     },
     {
-        "id": 14,
+        "id_table": 14,
         "name": "Asus PRIME B460M-A",
         "rating": 4,
         "rating_count": 1,
@@ -182,7 +182,7 @@
         "image": "https://www.maximus.com.ar/Temp/App_WebSite/App_PictureFiles/ItemImages/16021_800.jpg"
     },
     {
-        "id": 15,
+        "id_table": 15,
         "name": "Asus PRIME B550M-A (WI-FI)",
         "rating": 4,
         "rating_count": 7,
@@ -195,7 +195,7 @@
         "image": "https://www.maximus.com.ar/Temp/App_WebSite/App_PictureFiles/ItemImages/16021_800.jpg"
     },
     {
-        "id": 16,
+        "id_table": 16,
         "name": "Asus PRIME B560-PLUS",
         "rating": 5,
         "rating_count": 1,
@@ -208,7 +208,7 @@
         "image": "https://www.maximus.com.ar/Temp/App_WebSite/App_PictureFiles/ItemImages/16021_800.jpg"
     },
     {
-        "id": 17,
+        "id_table": 17,
         "name": "Asus PRIME B560M-A",
         "rating": 5,
         "rating_count": 2,
@@ -221,7 +221,7 @@
         "image": "https://www.maximus.com.ar/Temp/App_WebSite/App_PictureFiles/ItemImages/16021_800.jpg"
     },
     {
-        "id": 18,
+        "id_table": 18,
         "name": "Asus PRIME H410M-E",
         "rating": 2,
         "rating_count": 1,
@@ -234,7 +234,7 @@
         "image": "https://www.maximus.com.ar/Temp/App_WebSite/App_PictureFiles/ItemImages/16021_800.jpg"
     },
     {
-        "id": 19,
+        "id_table": 19,
         "name": "Asus PRIME X570-PRO",
         "rating": 4,
         "rating_count": 44,
@@ -247,7 +247,7 @@
         "image": "https://www.maximus.com.ar/Temp/App_WebSite/App_PictureFiles/ItemImages/16021_800.jpg"
     },
     {
-        "id": 20,
+        "id_table": 20,
         "name": "Asus PRIME Z390-A",
         "rating": 4,
         "rating_count": 61,
@@ -260,7 +260,7 @@
         "image": "https://www.maximus.com.ar/Temp/App_WebSite/App_PictureFiles/ItemImages/16021_800.jpg"
     },
     {
-        "id": 21,
+        "id_table": 21,
         "name": "Asus PRIME Z490-A",
         "rating": 4,
         "rating_count": 16,
@@ -273,7 +273,7 @@
         "image": "https://www.maximus.com.ar/Temp/App_WebSite/App_PictureFiles/ItemImages/16021_800.jpg"
     },
     {
-        "id": 22,
+        "id_table": 22,
         "name": "Asus PRIME Z490-P",
         "rating": 5,
         "rating_count": 1,
@@ -286,7 +286,7 @@
         "image": "https://www.maximus.com.ar/Temp/App_WebSite/App_PictureFiles/ItemImages/16021_800.jpg"
     },
     {
-        "id": 23,
+        "id_table": 23,
         "name": "Asus ROG Crosshair VIII Dark Hero",
         "rating": 4,
         "rating_count": 23,
@@ -299,7 +299,7 @@
         "image": "https://mexx-img-2019.s3.amazonaws.com/Motherboard-Am4-Asus-Rog-Strix-B550-F-GAMING-WIFI-II_43255_3.jpeg"
     },
     {
-        "id": 24,
+        "id_table": 24,
         "name": "Asus ROG Crosshair VIII Formula",
         "rating": 4,
         "rating_count": 5,
@@ -312,7 +312,7 @@
         "image": "https://mexx-img-2019.s3.amazonaws.com/Motherboard-Am4-Asus-Rog-Strix-B550-F-GAMING-WIFI-II_43255_3.jpeg"
     },
     {
-        "id": 25,
+        "id_table": 25,
         "name": "Asus ROG Crosshair VIII Hero",
         "rating": 4,
         "rating_count": 18,
@@ -325,7 +325,7 @@
         "image": "https://mexx-img-2019.s3.amazonaws.com/Motherboard-Am4-Asus-Rog-Strix-B550-F-GAMING-WIFI-II_43255_3.jpeg"
     },
     {
-        "id": 26,
+        "id_table": 26,
         "name": "Asus ROG Crosshair VIII Hero (WI-FI)",
         "rating": 4,
         "rating_count": 39,
@@ -338,7 +338,7 @@
         "image": "https://mexx-img-2019.s3.amazonaws.com/Motherboard-Am4-Asus-Rog-Strix-B550-F-GAMING-WIFI-II_43255_3.jpeg"
     },
     {
-        "id": 27,
+        "id_table": 27,
         "name": "Asus ROG MAXIMUS XIII HERO",
         "rating": 5,
         "rating_count": 1,
@@ -351,7 +351,7 @@
         "image": "https://mexx-img-2019.s3.amazonaws.com/Motherboard-Am4-Asus-Rog-Strix-B550-F-GAMING-WIFI-II_43255_3.jpeg"
     },
     {
-        "id": 28,
+        "id_table": 28,
         "name": "Asus ROG STRIX B450-F GAMING",
         "rating": 4,
         "rating_count": 157,
@@ -364,7 +364,7 @@
         "image": "https://mexx-img-2019.s3.amazonaws.com/Motherboard-Am4-Asus-Rog-Strix-B550-F-GAMING-WIFI-II_43255_3.jpeg"
     },
     {
-        "id": 29,
+        "id_table": 29,
         "name": "Asus ROG STRIX B450-F GAMING II",
         "rating": 4,
         "rating_count": 10,
@@ -377,7 +377,7 @@
         "image": "https://mexx-img-2019.s3.amazonaws.com/Motherboard-Am4-Asus-Rog-Strix-B550-F-GAMING-WIFI-II_43255_3.jpeg"
     },
     {
-        "id": 30,
+        "id_table": 30,
         "name": "Asus ROG STRIX B550-A GAMING",
         "rating": 4,
         "rating_count": 20,
@@ -390,7 +390,7 @@
         "image": "https://mexx-img-2019.s3.amazonaws.com/Motherboard-Am4-Asus-Rog-Strix-B550-F-GAMING-WIFI-II_43255_3.jpeg"
     },
     {
-        "id": 31,
+        "id_table": 31,
         "name": "Asus ROG STRIX B550-E GAMING",
         "rating": 4,
         "rating_count": 19,
@@ -403,7 +403,7 @@
         "image": "https://mexx-img-2019.s3.amazonaws.com/Motherboard-Am4-Asus-Rog-Strix-B550-F-GAMING-WIFI-II_43255_3.jpeg"
     },
     {
-        "id": 32,
+        "id_table": 32,
         "name": "Asus ROG STRIX B550-F GAMING",
         "rating": 4,
         "rating_count": 35,
@@ -416,7 +416,7 @@
         "image": "https://mexx-img-2019.s3.amazonaws.com/Motherboard-Am4-Asus-Rog-Strix-B550-F-GAMING-WIFI-II_43255_3.jpeg"
     },
     {
-        "id": 33,
+        "id_table": 33,
         "name": "Asus ROG STRIX B550-F GAMING (WI-FI)",
         "rating": 4,
         "rating_count": 67,
@@ -429,7 +429,7 @@
         "image": "https://mexx-img-2019.s3.amazonaws.com/Motherboard-Am4-Asus-Rog-Strix-B550-F-GAMING-WIFI-II_43255_3.jpeg"
     },
     {
-        "id": 34,
+        "id_table": 34,
         "name": "Asus ROG STRIX B550-I GAMING",
         "rating": 4,
         "rating_count": 28,
@@ -442,7 +442,7 @@
         "image": "https://mexx-img-2019.s3.amazonaws.com/Motherboard-Am4-Asus-Rog-Strix-B550-F-GAMING-WIFI-II_43255_3.jpeg"
     },
     {
-        "id": 35,
+        "id_table": 35,
         "name": "Asus ROG STRIX B560-A GAMING WIFI",
         "rating": 5,
         "rating_count": 1,
@@ -455,7 +455,7 @@
         "image": "https://mexx-img-2019.s3.amazonaws.com/Motherboard-Am4-Asus-Rog-Strix-B550-F-GAMING-WIFI-II_43255_3.jpeg"
     },
     {
-        "id": 36,
+        "id_table": 36,
         "name": "Asus ROG Strix X570-E Gaming",
         "rating": 4,
         "rating_count": 59,
@@ -468,7 +468,7 @@
         "image": "https://mexx-img-2019.s3.amazonaws.com/Motherboard-Am4-Asus-Rog-Strix-B550-F-GAMING-WIFI-II_43255_3.jpeg"
     },
     {
-        "id": 37,
+        "id_table": 37,
         "name": "Asus ROG Strix X570-F Gaming",
         "rating": 4,
         "rating_count": 11,
@@ -481,7 +481,7 @@
         "image": "https://mexx-img-2019.s3.amazonaws.com/Motherboard-Am4-Asus-Rog-Strix-B550-F-GAMING-WIFI-II_43255_3.jpeg"
     },
     {
-        "id": 38,
+        "id_table": 38,
         "name": "Asus ROG Strix X570-I Gaming",
         "rating": 4,
         "rating_count": 46,
@@ -494,7 +494,7 @@
         "image": "https://mexx-img-2019.s3.amazonaws.com/Motherboard-Am4-Asus-Rog-Strix-B550-F-GAMING-WIFI-II_43255_3.jpeg"
     },
     {
-        "id": 39,
+        "id_table": 39,
         "name": "Asus ROG STRIX Z490-E GAMING",
         "rating": 4,
         "rating_count": 40,
@@ -507,7 +507,7 @@
         "image": "https://mexx-img-2019.s3.amazonaws.com/Motherboard-Am4-Asus-Rog-Strix-B550-F-GAMING-WIFI-II_43255_3.jpeg"
     },
     {
-        "id": 40,
+        "id_table": 40,
         "name": "Asus ROG STRIX Z590-A GAMING WIFI",
         "rating": 5,
         "rating_count": 1,
@@ -520,7 +520,7 @@
         "image": "https://mexx-img-2019.s3.amazonaws.com/Motherboard-Am4-Asus-Rog-Strix-B550-F-GAMING-WIFI-II_43255_3.jpeg"
     },
     {
-        "id": 41,
+        "id_table": 41,
         "name": "Asus ROG STRIX Z590-E GAMING WIFI",
         "rating": 4,
         "rating_count": 3,
@@ -533,7 +533,7 @@
         "image": "https://mexx-img-2019.s3.amazonaws.com/Motherboard-Am4-Asus-Rog-Strix-B550-F-GAMING-WIFI-II_43255_3.jpeg"
     },
     {
-        "id": 42,
+        "id_table": 42,
         "name": "Asus ROG ZENITH II EXTREME ALPHA",
         "rating": 4,
         "rating_count": 4,
@@ -546,7 +546,7 @@
         "image": "https://mexx-img-2019.s3.amazonaws.com/Motherboard-Am4-Asus-Rog-Strix-B550-F-GAMING-WIFI-II_43255_3.jpeg"
     },
     {
-        "id": 43,
+        "id_table": 43,
         "name": "Asus TUF GAMING B450M-PLUS II",
         "rating": 4,
         "rating_count": 2,
@@ -559,7 +559,7 @@
         "image": "https://mexx-img-2019.s3.amazonaws.com/Motherboard-AM4-Asus-tuf-B550M-GAMING-PLUS-WIFI-II_43473_4.jpeg"
     },
     {
-        "id": 44,
+        "id_table": 44,
         "name": "Asus TUF GAMING B550-PLUS",
         "rating": 4,
         "rating_count": 15,
@@ -572,7 +572,7 @@
         "image": "https://mexx-img-2019.s3.amazonaws.com/Motherboard-AM4-Asus-tuf-B550M-GAMING-PLUS-WIFI-II_43473_4.jpeg"
     },
     {
-        "id": 45,
+        "id_table": 45,
         "name": "Asus TUF GAMING B550-PLUS (WI-FI)",
         "rating": 4,
         "rating_count": 3,
@@ -585,7 +585,7 @@
         "image": "https://mexx-img-2019.s3.amazonaws.com/Motherboard-AM4-Asus-tuf-B550M-GAMING-PLUS-WIFI-II_43473_4.jpeg"
     },
     {
-        "id": 46,
+        "id_table": 46,
         "name": "Asus TUF GAMING B550M-PLUS (WI-FI)",
         "rating": 4,
         "rating_count": 14,
@@ -598,7 +598,7 @@
         "image": "https://mexx-img-2019.s3.amazonaws.com/Motherboard-AM4-Asus-tuf-B550M-GAMING-PLUS-WIFI-II_43473_4.jpeg"
     },
     {
-        "id": 47,
+        "id_table": 47,
         "name": "Asus TUF GAMING B560M-PLUS WIFI",
         "rating": 5,
         "rating_count": 3,
@@ -611,7 +611,7 @@
         "image": "https://mexx-img-2019.s3.amazonaws.com/Motherboard-AM4-Asus-tuf-B550M-GAMING-PLUS-WIFI-II_43473_4.jpeg"
     },
     {
-        "id": 48,
+        "id_table": 48,
         "name": "Asus TUF GAMING X570-PLUS (WI-FI)",
         "rating": 4,
         "rating_count": 207,
@@ -624,7 +624,7 @@
         "image": "https://mexx-img-2019.s3.amazonaws.com/Motherboard-AM4-Asus-tuf-B550M-GAMING-PLUS-WIFI-II_43473_4.jpeg"
     },
     {
-        "id": 49,
+        "id_table": 49,
         "name": "Asus TUF GAMING X570-PRO (WI-FI)",
         "rating": 4,
         "rating_count": 19,
@@ -637,7 +637,7 @@
         "image": "https://mexx-img-2019.s3.amazonaws.com/Motherboard-AM4-Asus-tuf-B550M-GAMING-PLUS-WIFI-II_43473_4.jpeg"
     },
     {
-        "id": 50,
+        "id_table": 50,
         "name": "Asus TUF Gaming Z590-PLUS WIFI",
         "rating": 4,
         "rating_count": 2,
@@ -650,7 +650,7 @@
         "image": "https://mexx-img-2019.s3.amazonaws.com/Motherboard-AM4-Asus-tuf-B550M-GAMING-PLUS-WIFI-II_43473_4.jpeg"
     },
     {
-        "id": 51,
+        "id_table": 51,
         "name": "Gigabyte B365M DS3H",
         "rating": 4,
         "rating_count": 14,
@@ -663,7 +663,7 @@
         "image": null
     },
     {
-        "id": 52,
+        "id_table": 52,
         "name": "Gigabyte B450 AORUS ELITE V2",
         "rating": 4,
         "rating_count": 5,
@@ -676,7 +676,7 @@
         "image": "https://c1.neweggimages.com/ProductImage/13-145-092-V01.jpg"
     },
     {
-        "id": 53,
+        "id_table": 53,
         "name": "Gigabyte B450 AORUS M",
         "rating": 4,
         "rating_count": 47,
@@ -689,7 +689,7 @@
         "image": null
     },
     {
-        "id": 54,
+        "id_table": 54,
         "name": "Gigabyte B450 AORUS PRO WIFI (rev. 1.0)",
         "rating": 4,
         "rating_count": 71,
@@ -702,7 +702,7 @@
         "image": "https://hard-digital.com.ar/public/files/MOTHERBOARD%20GIGABYTE%20B450%20AORUS%20PRO%20WIFI%20AM4/2.jpg"
     },
     {
-        "id": 55,
+        "id_table": 55,
         "name": "Gigabyte B450 I AORUS PRO WIFI",
         "rating": 4,
         "rating_count": 64,
@@ -715,7 +715,7 @@
         "image": "https://hard-digital.com.ar/public/files/MOTHERBOARD%20GIGABYTE%20B450%20AORUS%20PRO%20WIFI%20AM4/2.jpg"
     },
     {
-        "id": 56,
+        "id_table": 56,
         "name": "Gigabyte B450M DS3H V2",
         "rating": 3,
         "rating_count": 6,
@@ -728,7 +728,7 @@
         "image": null
     },
     {
-        "id": 57,
+        "id_table": 57,
         "name": "Gigabyte B460M DS3H",
         "rating": 4,
         "rating_count": 3,
@@ -741,7 +741,7 @@
         "image": null
     },
     {
-        "id": 58,
+        "id_table": 58,
         "name": "Gigabyte B550 AORUS ELITE AX V2",
         "rating": 4,
         "rating_count": 6,
@@ -754,7 +754,7 @@
         "image": "https://c1.neweggimages.com/ProductImage/13-145-092-V01.jpg"
     },
     {
-        "id": 59,
+        "id_table": 59,
         "name": "Gigabyte B550 AORUS PRO AC",
         "rating": 4,
         "rating_count": 18,
@@ -767,7 +767,7 @@
         "image": "https://hard-digital.com.ar/public/files/MOTHERBOARD%20GIGABYTE%20B450%20AORUS%20PRO%20WIFI%20AM4/2.jpg"
     },
     {
-        "id": 60,
+        "id_table": 60,
         "name": "Gigabyte B550 VISION D-P",
         "rating": 5,
         "rating_count": 3,
@@ -780,7 +780,7 @@
         "image": "https://www.gigabyte.com/FileUpload/Global/KeyFeature/1487/innergigabyteimages/ledimage.png"
     },
     {
-        "id": 61,
+        "id_table": 61,
         "name": "Gigabyte B550I AORUS PRO AX",
         "rating": 4,
         "rating_count": 46,
@@ -793,7 +793,7 @@
         "image": "https://hard-digital.com.ar/public/files/MOTHERBOARD%20GIGABYTE%20B450%20AORUS%20PRO%20WIFI%20AM4/2.jpg"
     },
     {
-        "id": 62,
+        "id_table": 62,
         "name": "Gigabyte B550M DS3H",
         "rating": 4,
         "rating_count": 14,
@@ -806,7 +806,7 @@
         "image": null
     },
     {
-        "id": 63,
+        "id_table": 63,
         "name": "Gigabyte B560M DS3H",
         "rating": 0,
         "rating_count": 0,
@@ -819,7 +819,7 @@
         "image": null
     },
     {
-        "id": 64,
+        "id_table": 64,
         "name": "Gigabyte TRX40 AORUS XTREME",
         "rating": 0,
         "rating_count": 0,
@@ -832,7 +832,7 @@
         "image": "https://www.precio-calidad.com.ar/wp-content/uploads/2021/02/Z490-AORUS-XTREME-3.jpg"
     },
     {
-        "id": 65,
+        "id_table": 65,
         "name": "Gigabyte X570 AORUS ELITE",
         "rating": 4,
         "rating_count": 50,
@@ -845,7 +845,7 @@
         "image": "https://c1.neweggimages.com/ProductImage/13-145-092-V01.jpg"
     },
     {
-        "id": 66,
+        "id_table": 66,
         "name": "Gigabyte X570 AORUS ELITE WIFI",
         "rating": 4,
         "rating_count": 49,
@@ -858,7 +858,7 @@
         "image": "https://c1.neweggimages.com/ProductImage/13-145-092-V01.jpg"
     },
     {
-        "id": 67,
+        "id_table": 67,
         "name": "Gigabyte X570 AORUS MASTER",
         "rating": 4,
         "rating_count": 39,
@@ -871,7 +871,7 @@
         "image": "https://mla-s1-p.mlstatic.com/652055-MLA48169680876_112021-F.jpg"
     },
     {
-        "id": 68,
+        "id_table": 68,
         "name": "Gigabyte X570 AORUS XTREME",
         "rating": 4,
         "rating_count": 10,
@@ -884,7 +884,7 @@
         "image": "https://www.precio-calidad.com.ar/wp-content/uploads/2021/02/Z490-AORUS-XTREME-3.jpg"
     },
     {
-        "id": 69,
+        "id_table": 69,
         "name": "Gigabyte X570 I AORUS PRO WIFI",
         "rating": 4,
         "rating_count": 45,
@@ -897,7 +897,7 @@
         "image": "https://hard-digital.com.ar/public/files/MOTHERBOARD%20GIGABYTE%20B450%20AORUS%20PRO%20WIFI%20AM4/2.jpg"
     },
     {
-        "id": 70,
+        "id_table": 70,
         "name": "Gigabyte Z390 AORUS PRO WIFI",
         "rating": 4,
         "rating_count": 48,
@@ -910,7 +910,7 @@
         "image": "https://hard-digital.com.ar/public/files/MOTHERBOARD%20GIGABYTE%20B450%20AORUS%20PRO%20WIFI%20AM4/2.jpg"
     },
     {
-        "id": 71,
+        "id_table": 71,
         "name": "Gigabyte Z490 VISION G",
         "rating": 4,
         "rating_count": 13,
@@ -923,7 +923,7 @@
         "image": "https://www.gigabyte.com/FileUpload/Global/KeyFeature/1487/innergigabyteimages/ledimage.png"
     },
     {
-        "id": 72,
+        "id_table": 72,
         "name": "MSI A320M-A PRO",
         "rating": 4,
         "rating_count": 2,
@@ -936,7 +936,7 @@
         "image": "https://mauricomputacion.com.ar/images/productos/galerias/23379/1003_708880236.webp"
     },
     {
-        "id": 73,
+        "id_table": 73,
         "name": "MSI B450 Gaming Plus MAX",
         "rating": 4,
         "rating_count": 32,
@@ -949,7 +949,7 @@
         "image": null
     },
     {
-        "id": 74,
+        "id_table": 74,
         "name": "MSI B450 GAMING PRO CARBON MAX WIFI",
         "rating": 4,
         "rating_count": 19,
@@ -962,7 +962,7 @@
         "image": "https://www.bhphotovideo.com/images/images750x750/msi_h370_gaming_pro_carbon_1402547.jpg"
     },
     {
-        "id": 75,
+        "id_table": 75,
         "name": "MSI B450 TOMAHAWK MAX",
         "rating": 4,
         "rating_count": 216,
@@ -975,7 +975,7 @@
         "image": "https://www.venex.com.ar/products_images/1585344017_msi_tomahawk_b450_am4_1.jpg"
     },
     {
-        "id": 76,
+        "id_table": 76,
         "name": "MSI B450 TOMAHAWK MAX II",
         "rating": 4,
         "rating_count": 2,
@@ -988,7 +988,7 @@
         "image": "https://www.venex.com.ar/products_images/1585344017_msi_tomahawk_b450_am4_1.jpg"
     },
     {
-        "id": 77,
+        "id_table": 77,
         "name": "MSI B450-A PRO MAX",
         "rating": 4,
         "rating_count": 30,
@@ -1001,7 +1001,7 @@
         "image": "https://mauricomputacion.com.ar/images/productos/galerias/23379/1003_708880236.webp"
     },
     {
-        "id": 78,
+        "id_table": 78,
         "name": "MSI B450M BAZOOKA MAX WIFI",
         "rating": 4,
         "rating_count": 25,
@@ -1014,7 +1014,7 @@
         "image": "https://gorilagames.com/img/Public/1019-producto-motherboard-mag-b660m-bazooka-ddr4-3-6691.jpg"
     },
     {
-        "id": 79,
+        "id_table": 79,
         "name": "MSI B450M PRO-VDH MAX",
         "rating": 4,
         "rating_count": 29,
@@ -1027,7 +1027,7 @@
         "image": null
     },
     {
-        "id": 80,
+        "id_table": 80,
         "name": "MSI B460M PRO-VDH WIFI",
         "rating": 4,
         "rating_count": 3,
@@ -1040,7 +1040,7 @@
         "image": null
     },
     {
-        "id": 81,
+        "id_table": 81,
         "name": "MSI B550-A PRO",
         "rating": 4,
         "rating_count": 53,
@@ -1053,7 +1053,7 @@
         "image": "https://mauricomputacion.com.ar/images/productos/galerias/23379/1003_708880236.webp"
     },
     {
-        "id": 82,
+        "id_table": 82,
         "name": "MSI B550M PRO-VDH WIFI",
         "rating": 4,
         "rating_count": 46,
@@ -1066,7 +1066,7 @@
         "image": null
     },
     {
-        "id": 83,
+        "id_table": 83,
         "name": "MSI B560M PRO-VDH WIFI",
         "rating": 4,
         "rating_count": 2,
@@ -1079,7 +1079,7 @@
         "image": null
     },
     {
-        "id": 84,
+        "id_table": 84,
         "name": "MSI MAG B550 TOMAHAWK",
         "rating": 4,
         "rating_count": 74,
@@ -1092,7 +1092,7 @@
         "image": "https://www.venex.com.ar/products_images/1585344017_msi_tomahawk_b450_am4_1.jpg"
     },
     {
-        "id": 85,
+        "id_table": 85,
         "name": "MSI MAG B550M MORTAR WIFI",
         "rating": 4,
         "rating_count": 32,
@@ -1105,7 +1105,7 @@
         "image": "https://www.venex.com.ar/products_images/1620413900_product_0_20200514143125_5ebce5bd0c3a0.png"
     },
     {
-        "id": 86,
+        "id_table": 86,
         "name": "MSI MAG X570 TOMAHAWK WIFI",
         "rating": 4,
         "rating_count": 79,
@@ -1118,7 +1118,7 @@
         "image": "https://www.venex.com.ar/products_images/1585344017_msi_tomahawk_b450_am4_1.jpg"
     },
     {
-        "id": 87,
+        "id_table": 87,
         "name": "MSI MEG X570 UNIFY",
         "rating": 4,
         "rating_count": 42,
@@ -1131,7 +1131,7 @@
         "image": null
     },
     {
-        "id": 88,
+        "id_table": 88,
         "name": "MSI MPG B550 GAMING CARBON WIFI",
         "rating": 4,
         "rating_count": 17,
@@ -1144,7 +1144,7 @@
         "image": null
     },
     {
-        "id": 89,
+        "id_table": 89,
         "name": "MSI MPG B550 GAMING EDGE WIFI",
         "rating": 4,
         "rating_count": 47,
@@ -1157,7 +1157,7 @@
         "image": "https://www.cclonline.com/images/avante/msi-mpg_b550_gaming_edge_wifi-3d1.jpg?width=1600&height=1600&scale=canvas&trim.threshold=80"
     },
     {
-        "id": 90,
+        "id_table": 90,
         "name": "MSI MPG B550 GAMING PLUS",
         "rating": 4,
         "rating_count": 37,
@@ -1170,7 +1170,7 @@
         "image": "https://mauricomputacion.com.ar/images/productos/galerias/21947/1480920830.jpg"
     },
     {
-        "id": 91,
+        "id_table": 91,
         "name": "MSI MPG X570 GAMING EDGE WIFI",
         "rating": 4,
         "rating_count": 77,
@@ -1183,7 +1183,7 @@
         "image": "https://www.cclonline.com/images/avante/msi-mpg_b550_gaming_edge_wifi-3d1.jpg?width=1600&height=1600&scale=canvas&trim.threshold=80"
     },
     {
-        "id": 92,
+        "id_table": 92,
         "name": "MSI MPG X570 GAMING PLUS",
         "rating": 4,
         "rating_count": 30,
@@ -1196,7 +1196,7 @@
         "image": "https://mauricomputacion.com.ar/images/productos/galerias/21947/1480920830.jpg"
     },
     {
-        "id": 93,
+        "id_table": 93,
         "name": "MSI MPG X570 GAMING PRO CARBON WIFI",
         "rating": 4,
         "rating_count": 23,
@@ -1209,7 +1209,7 @@
         "image": "https://www.bhphotovideo.com/images/images750x750/msi_h370_gaming_pro_carbon_1402547.jpg"
     },
     {
-        "id": 94,
+        "id_table": 94,
         "name": "MSI MPG Z490 GAMING EDGE WIFI",
         "rating": 4,
         "rating_count": 27,
@@ -1222,7 +1222,7 @@
         "image": "https://www.cclonline.com/images/avante/msi-mpg_b550_gaming_edge_wifi-3d1.jpg?width=1600&height=1600&scale=canvas&trim.threshold=80"
     },
     {
-        "id": 95,
+        "id_table": 95,
         "name": "MSI MPG Z490 GAMING PLUS",
         "rating": 4,
         "rating_count": 7,
@@ -1235,7 +1235,7 @@
         "image": "https://mauricomputacion.com.ar/images/productos/galerias/21947/1480920830.jpg"
     },
     {
-        "id": 96,
+        "id_table": 96,
         "name": "MSI X470 GAMING PLUS MAX",
         "rating": 4,
         "rating_count": 11,
@@ -1248,7 +1248,7 @@
         "image": "https://mauricomputacion.com.ar/images/productos/galerias/21947/1480920830.jpg"
     },
     {
-        "id": 97,
+        "id_table": 97,
         "name": "MSI Z390-A PRO",
         "rating": 4,
         "rating_count": 37,
@@ -1261,7 +1261,7 @@
         "image": "https://mauricomputacion.com.ar/images/productos/galerias/23379/1003_708880236.webp"
     },
     {
-        "id": 98,
+        "id_table": 98,
         "name": "MSI Z490-A PRO",
         "rating": 4,
         "rating_count": 15,
@@ -1274,7 +1274,7 @@
         "image": "https://mauricomputacion.com.ar/images/productos/galerias/23379/1003_708880236.webp"
     },
     {
-        "id": 99,
+        "id_table": 99,
         "name": "MSI Z590-A PRO",
         "rating": 0,
         "rating_count": 0,
@@ -1287,7 +1287,7 @@
         "image": "https://mauricomputacion.com.ar/images/productos/galerias/23379/1003_708880236.webp"
     },
     {
-        "id": 100,
+        "id_table": 100,
         "name": "NZXT N7 B550",
         "rating": 0,
         "rating_count": 0,
