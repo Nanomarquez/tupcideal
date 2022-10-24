@@ -1,0 +1,59 @@
+[
+    {
+        "id": "2b1e4cd7-1ef8-415f-98d3-39d3c5833ce7",
+        "name": "Noel",
+        "last_name": "Calivar",
+        "password": 1234567,
+        "email": "Noel@gmail.com"
+    },
+    {
+        "id": "30efd036-5b9d-40e4-b8fb-78a469df926f",
+        "name": "Nano",
+        "last_name": "Marquez",
+        "password": 2345678,
+        "email": "Nano@gmail.com"
+    },
+    {
+        "id": "e5022892-91be-4db5-8473-93bb6e058b46",
+        "name": "Fede",
+        "last_name": "Huertas",
+        "password": 3456789,
+        "email": "Fede@gmail.com"
+    },
+    {
+        "id": "8e328290-e77c-4847-b11a-18df6d62d788",
+        "name": "Roberto",
+        "last_name": "Martinez",
+        "password": 4567891,
+        "email": "Roberto@gmail.com"
+    },
+    {
+        "id": "7ed66a5e-164c-43f1-9141-c4e1d9401d45",
+        "name": "Franco",
+        "last_name": "Costamagna",
+        "password": 5678912,
+        "email": "Franco@gmail.com"
+    },
+    {
+        "id": "7176d085-ae3b-4edd-a4bf-7a55679d5e4c",
+        "name": "Dionicio",
+        "last_name": "Hurtado",
+        "password": 6789123,
+        "email": "Dionicio@gmail.com"
+    },
+    {
+        "id": "7a26a174-851e-4eb4-a669-7d41ded07976",
+        "name": "Luis",
+        "last_name": "Baldassari",
+        "password": 7891234,
+        "email": "Luis@gmail.com"
+    },
+    {
+        "id": "f852877c-8eb3-45fc-a555-39fa3622fcd2",
+        "name": "Super",
+        "last_name": "Admin",
+        "password": 8912345,
+        "email": "SuperAdmin@gmail.com",
+        "isSuperAdmin": "true"
+    }
+]
