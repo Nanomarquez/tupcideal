@@ -49,7 +49,7 @@ function Modal({ handleClose }) {
         {productsCart.length === 0 ? (
           <h2 className="text-center">Carrito de compras vacio</h2>
         ) : (
-          productsCart.map((p, i) => (
+          [...new Set(productsCart)].map((p, i) => (
             <div key={i} className='flex p-5 gap-5 justify-center items-center border-2 m-5'>
               <img className="object-contain h-36 w-36" src={p.image} alt={p.name} />
               <h3 className="text-2xl">Name {p.name}</h3>
