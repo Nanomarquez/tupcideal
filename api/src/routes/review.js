@@ -1,8 +1,8 @@
 const { Router } = require('express');
 const router = Router();
-const { Review, Product} = require('../db.js');
+const { Review, Product, User} = require('../db.js');
 
-router.get('/:productId', async (req,res) => {
+router.get('/product/:productId', async (req,res) => {
     const { productId } = req.params;
     const productReview = await Review.findAll({
         include: [{
@@ -11,6 +11,17 @@ router.get('/:productId', async (req,res) => {
         }]
     })
     res.send(productReview)
+});
+
+router.get('/user/:userId', async (req,res) => {
+    const { userId } = req.params;
+    const userReview = await Review.findAll({
+        include: [{
+            model: User,
+            where: { id : [userId] }
+        }]
+    })
+    res.send(userReview)
 });
 
 router.post('/', async (req,res) => {
