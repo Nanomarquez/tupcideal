@@ -65,7 +65,7 @@ function NavBar() {
           </motion.button>
 
           <span className="bg-white rounded-full absolute w-6 h-6 text-center">
-            {cart.length}
+            {cart?.length}
           </span>
         </div>
       </nav>

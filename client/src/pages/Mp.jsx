@@ -9,7 +9,10 @@ function Mp() {
   const {cart} = useSelector(state=>state.products)
 
   const {usuario} = useAuth();
-  usuario.cart = cart
+
+  if(usuario){
+    usuario.cart = cart;
+  }
   
   
   const[button, setButton] = useState("")
@@ -44,7 +47,6 @@ function Mp() {
     
   }
   console.log(button);
-  console.log(input);
   return (
     <div className='h-screen flex'>
         <form onSubmit={handleSubmit}>
@@ -76,7 +78,8 @@ function Mp() {
                
           </div>     
         </form>
-        {button.length && <a href={button} > PAGAR CON MERCADOPAGO</a> }
+        {button.length && <a href={button} > PAGAR CON MERCADOPAGO</a>}
+        
     </div>
   )
 }

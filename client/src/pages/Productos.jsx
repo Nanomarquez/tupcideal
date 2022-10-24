@@ -155,7 +155,6 @@ function Productos() {
             >
               {" "}
               <div className="flex items-center justify-center">
-                <Link to={`/productos/search/${e.id_table}&${e.categories}`}>
                   <div className="text-white duration-500 rounded bg-gray-700/50 text-2xl flex hover:opacity-100 cursor-pointer opacity-0 justify-center items-center z-50 h-36 w-36 absolute">
                     Ver Mas
                   </div>
@@ -168,7 +167,6 @@ function Productos() {
                     alt=""
                     className="h-36 w-36 shadow-lg object-contain rounded-md border-b-[2px] border-l-[2px] duration-200 hover:scale-105"
                   />
-                </Link>
               </div>
               <div className="m-2 ml-10">
                 <h1 className="text-2xl font-semibold overflow-ellipsis overflow-hidden whitespace-nowrap">
@@ -188,6 +186,7 @@ function Productos() {
                 </div>
                 <div className="flex flex-col sm:flex-row gap-10 mt-5">
                   <div className="flex gap-10 justify-center items-center">
+                  <Link to={`/productos/search/${e.id_table}&${e.categories}`}>
                     <button
                       className="bg-gray-600 hover:bg-gray-800 duration-500 font-medium px-6 py-2 tracking-wider transition text-white rounded-md"
                       onClick={() => {
@@ -198,8 +197,9 @@ function Productos() {
                         dispatch(addProductToShoppingCart(e));
                       }}
                     >
-                      Añadir al carrito
+                      Ver mas
                     </button>
+                    </Link>
                     <button className="flex justify-center items-center bg-gray-300/30 w-10 hover:bg-gray-300/90 transition rounded-md">
                       <img
                         src="https://cdn.pixabay.com/photo/2017/06/26/20/33/icon-2445095_960_720.png"

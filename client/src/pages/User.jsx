@@ -1,8 +1,11 @@
 import React, { useState } from "react";
 import { useAuth } from "../context/authContext";
 import axios from "axios";
+import {useNavigate} from 'react-router-dom';
 function User() {
   const { usuario } = useAuth();
+
+  const navigate = useNavigate();
 
   const [input, setInput] = useState({
     name: "",
@@ -23,12 +26,7 @@ function User() {
     try {
       axios.put(`/users/${usuario.email}`,input)
       .then(res=>console.log(res))
-      setInput({
-        name: "",
-        last_name: "",
-        adress: "",
-        phone_number: "",
-      })
+      navigate('/')
     } catch (error) {
       console.log(error);
     }

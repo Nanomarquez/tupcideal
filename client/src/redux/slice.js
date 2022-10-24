@@ -63,7 +63,7 @@ export const productsSlice = createSlice({
       state.cart = [...state.cart, action.payload];
     },
     deleteProductToCart: (state, action) => {
-      state.cart = [...state.cart.filter(f => f.id !== action.payload)];
+      state.cart = state.cart.slice(0,state.cart.indexOf(action.payload))
     }
 
     // una diferencia entre redux y redux toolkit
