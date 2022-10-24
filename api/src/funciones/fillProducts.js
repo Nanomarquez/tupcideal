@@ -1,5 +1,5 @@
 const { Router } = require("express");
-const { Seller, Product,WareHouse } = require("../db");
+const { Seller, Product, WareHouse } = require("../db");
 const caseData = require("../data/case.json");
 const cpuData = require("../data/cpu.json");
 const internalData = require("../data/internal-hard-drive.json");
@@ -14,7 +14,7 @@ async function fillProduct() {
   // ------------ MAPEO CASES -------------
   const cases = caseData.map((e) => {
     return {
-      id: e.id_table,
+      id: e.id,
       name: e.name,
       image: e.image,
       rating: e.rating,
@@ -40,7 +40,7 @@ async function fillProduct() {
   // ------------ MAPEO CPU -------------
   const cpus = cpuData.map((e) => {
     return {
-      id: e.id_table,
+      id: e.id,
       name: e.name,
       image: e.image,
       rating: e.rating,
@@ -66,7 +66,7 @@ async function fillProduct() {
   // ------------ MAPEO INTERNAL-HARD-DRIVE -------------
   const internal = internalData.map((e) => {
     return {
-      id: e.id_table,
+      id: e.id,
       name: e.name,
       image: e.image,
       rating: e.rating,
@@ -92,7 +92,7 @@ async function fillProduct() {
   // ------------ MAPEO MEMORY -------------
   const memory = memoryData.map((e) => {
     return {
-      id: e.id_table,
+      id: e.id,
       name: e.name,
       image: e.image,
       rating: e.rating,
@@ -118,7 +118,7 @@ async function fillProduct() {
   // ------------ MAPEO MOTHER BOARD -------------
   const mother = motherData.map((e) => {
     return {
-      id: e.id_table,
+      id: e.id,
       name: e.name,
       image: e.image,
       rating: e.rating,
@@ -144,7 +144,7 @@ async function fillProduct() {
   // ------------ MAPEO POER SUPPLY -------------
   const power = powerData.map((e) => {
     return {
-      id: e.id_table,
+      id: e.id,
       name: e.name,
       image: e.image,
       rating: e.rating,
@@ -170,7 +170,7 @@ async function fillProduct() {
   // ------------ MAPEO VIDEO CARD -------------
   const video = videoData.map((e) => {
     return {
-      id: e.id_table,
+      id: e.id,
       name: e.name,
       image: e.image,
       rating: e.rating,
@@ -231,11 +231,5 @@ async function fillProduct() {
     });
   });
 }
-
-
-
-
-
-
 
 module.exports = fillProduct;

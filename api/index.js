@@ -10,9 +10,6 @@ const {
   Case,
   InternalHardDrive,
   VideoCard,
-  Seller,
-  WareHouse,
-  Product
 } = require("./src/db");
 const bulkCPU = require("./src/data/cpu.json");
 const bulkGPU = require("./src/data/video-card.json");
@@ -21,25 +18,10 @@ const bulkPowerSupply = require("./src/data/power-supply.json");
 const bulkMotherboard = require("./src/data/motherboard.json");
 const bulkCase = require("./src/data/case.json");
 const bulkInternalHardDrive = require("./src/data/internal-hard-drive.json");
-const bulkSellers = require("./src/data/sellers.json");
-const bulkWareHouse = require("./src/data/WareHouses.json")
-//const bulkWareHouse = require("./src/data/warehouse.json");
-const bulkProducts = require("./src/data/products.json");
-
-const user =  CPU.findAll();
-var setter ;
-if(user === []){
-  setter = true
-} else{
-  setter = false
-}
 
 // Syncing all the models at once.
-
-conn.sync({ force: setter }).then(() => {
+conn.sync({ force: true }).then(() => {
   server.listen(3001, async () => {
-   
-    if (setter === true){
     await CPU.bulkCreate(bulkCPU);
     console.log("✓ Se llenó la tabla CPU con la data del json");
     await Memory.bulkCreate(bulkMemory);
@@ -55,18 +37,8 @@ conn.sync({ force: setter }).then(() => {
     await VideoCard.bulkCreate(bulkGPU);
     console.log("✓ Se llenó la tabla VideoCard con la data del json");
 
-    await Product.bulkCreate(bulkProducts);
+    fillProduct();
     console.log("✓ Se llenó la tabla Products");
-
-    await Seller.bulkCreate(bulkSellers);
-    console.log("✓ Se llenó la tabla Seller con la data del json");
-    await WareHouse.bulkCreate(bulkWareHouse);
-    console.log("✓ Se llenó la tabla WareHouse con la data del json");
     console.log(`⇒ listening at port ${process.env.PORT}`); // eslint-disable-line no-console
-}
-else{
-  console.log(`⇒ listening at port ${process.env.PORT}`); // eslint-disable-line no-console
-}
-});
-  
+  });
 });
