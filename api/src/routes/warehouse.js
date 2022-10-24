@@ -31,7 +31,7 @@ router.get("/", async (req, res) => {
       ],
       attributes: ["precio", "cantidad", "id"],
     });
-    // console.log(ware);
+    console.log(ware);
     if (ProductId) {
       res.send(ware.filter((w) => w.Product.id === ProductId));
     } else {
