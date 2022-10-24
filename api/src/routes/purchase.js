@@ -59,15 +59,32 @@ router.put('/:id', async (req, res) => {
                 const product = await WareHouse.findByPk(id);
                 product.cantidad = product.cantidad - 1;
                 await product.save();
-            })
+            })   
+        };
 
-            
-        }
         await purchase.save();
+        
         res.send(purchase);
     } catch (err) {
         res.status(500).send({error: err.message})
     }
+});
+
+
+// Una ruta para ver todas las compras de un usuario
+router.get('/user/:id', async (req, res) => {
+    const {id} = req.params;
+
+    try {
+        const userPurchases = Purchase.finAll({
+            where: {
+                UserId: [id]
+            }
+        });
+        res.send(userPurchases);
+    } catch (err) {
+        res.send({error: err.message})
+    };
 });
 
 module.exports = router;
