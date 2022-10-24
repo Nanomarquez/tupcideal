@@ -1,6 +1,6 @@
 [
     {
-        "id_table": 1,
+        "id": 1,
         "name": "ADATA SU635",
         "rating": 4,
         "rating_count": 12,
@@ -14,7 +14,7 @@
         "image": "https://ar-media.hptiendaenlinea.com/wysiwyg/Qu_es_una_unidad_de_estado_s_lido_SSD_1.png"
     },
     {
-        "id_table": 2,
+        "id": 2,
         "name": "ADATA XPG SX8200 Pro",
         "rating": 4,
         "rating_count": 97,
@@ -28,7 +28,7 @@
         "image": "https://m.media-amazon.com/images/I/51mCttXUOiL._AC_SY450_.jpg"
     },
     {
-        "id_table": 3,
+        "id": 3,
         "name": "Angelbird ED381",
         "rating": 0,
         "rating_count": 0,
@@ -42,7 +42,7 @@
         "image": "https://ar-media.hptiendaenlinea.com/wysiwyg/Qu_es_una_unidad_de_estado_s_lido_SSD_1.png"
     },
     {
-        "id_table": 4,
+        "id": 4,
         "name": "Corsair MP400",
         "rating": 0,
         "rating_count": 0,
@@ -56,7 +56,7 @@
         "image": "https://m.media-amazon.com/images/I/51mCttXUOiL._AC_SY450_.jpg"
     },
     {
-        "id_table": 5,
+        "id": 5,
         "name": "Corsair MP600 Force Series Gen4",
         "rating": 4,
         "rating_count": 40,
@@ -70,7 +70,7 @@
         "image": "https://m.media-amazon.com/images/I/51mCttXUOiL._AC_SY450_.jpg"
     },
     {
-        "id_table": 6,
+        "id": 6,
         "name": "Crucial BX500",
         "rating": 4,
         "rating_count": 12,
@@ -84,7 +84,7 @@
         "image": "https://ar-media.hptiendaenlinea.com/wysiwyg/Qu_es_una_unidad_de_estado_s_lido_SSD_1.png"
     },
     {
-        "id_table": 7,
+        "id": 7,
         "name": "Crucial MX500",
         "rating": 4,
         "rating_count": 94,
@@ -98,7 +98,7 @@
         "image": "https://ar-media.hptiendaenlinea.com/wysiwyg/Qu_es_una_unidad_de_estado_s_lido_SSD_1.png"
     },
     {
-        "id_table": 8,
+        "id": 8,
         "name": "Crucial P1",
         "rating": 4,
         "rating_count": 85,
@@ -112,7 +112,7 @@
         "image": "https://m.media-amazon.com/images/I/51mCttXUOiL._AC_SY450_.jpg"
     },
     {
-        "id_table": 9,
+        "id": 9,
         "name": "Crucial P2 ",
         "rating": 4,
         "rating_count": 48,
@@ -126,7 +126,7 @@
         "image": "https://m.media-amazon.com/images/I/51mCttXUOiL._AC_SY450_.jpg"
     },
     {
-        "id_table": 10,
+        "id": 10,
         "name": "Crucial P5",
         "rating": 4,
         "rating_count": 13,
@@ -140,7 +140,7 @@
         "image": "https://m.media-amazon.com/images/I/51mCttXUOiL._AC_SY450_.jpg"
     },
     {
-        "id_table": 11,
+        "id": 11,
         "name": "Intel 660p Series",
         "rating": 4,
         "rating_count": 123,
@@ -154,7 +154,7 @@
         "image": "https://m.media-amazon.com/images/I/51mCttXUOiL._AC_SY450_.jpg"
     },
     {
-        "id_table": 12,
+        "id": 12,
         "name": "Intel DC P3608",
         "rating": 0,
         "rating_count": 0,
@@ -168,7 +168,7 @@
         "image": "https://server-x.by/images/thumbnails/288/288/detailed/21/3bb07051-d578-11e5-8bb0-001e6709076d_92ebe0c1-d64d-11e5-8bb0-001e6709076d.jpg"
     },
     {
-        "id_table": 13,
+        "id": 13,
         "name": "Intel SSDPEDMD020T401",
         "rating": 0,
         "rating_count": 0,
@@ -182,7 +182,7 @@
         "image": "https://server-x.by/images/thumbnails/288/288/detailed/21/3bb07051-d578-11e5-8bb0-001e6709076d_92ebe0c1-d64d-11e5-8bb0-001e6709076d.jpg"
     },
     {
-        "id_table": 14,
+        "id": 14,
         "name": "Kingston A2000",
         "rating": 4,
         "rating_count": 36,
@@ -196,7 +196,7 @@
         "image": "https://m.media-amazon.com/images/I/51mCttXUOiL._AC_SY450_.jpg"
     },
     {
-        "id_table": 15,
+        "id": 15,
         "name": "Kingston A400",
         "rating": 4,
         "rating_count": 98,
@@ -210,7 +210,7 @@
         "image": "https://ar-media.hptiendaenlinea.com/wysiwyg/Qu_es_una_unidad_de_estado_s_lido_SSD_1.png"
     },
     {
-        "id_table": 16,
+        "id": 16,
         "name": "Mushkin Enhanced Helix-L",
         "rating": 5,
         "rating_count": 3,
@@ -224,7 +224,7 @@
         "image": "https://m.media-amazon.com/images/I/51mCttXUOiL._AC_SY450_.jpg"
     },
     {
-        "id_table": 17,
+        "id": 17,
         "name": "Sabrent Rocket 4 Plus",
         "rating": 0,
         "rating_count": 0,
@@ -238,7 +238,7 @@
         "image": "https://m.media-amazon.com/images/I/51mCttXUOiL._AC_SY450_.jpg"
     },
     {
-        "id_table": 18,
+        "id": 18,
         "name": "Sabrent Rocket 4.0",
         "rating": 4,
         "rating_count": 82,
@@ -252,7 +252,7 @@
         "image": "https://m.media-amazon.com/images/I/51mCttXUOiL._AC_SY450_.jpg"
     },
     {
-        "id_table": 19,
+        "id": 19,
         "name": "Sabrent Rocket Q",
         "rating": 5,
         "rating_count": 1,
@@ -266,7 +266,7 @@
         "image": "https://m.media-amazon.com/images/I/51mCttXUOiL._AC_SY450_.jpg"
     },
     {
-        "id_table": 20,
+        "id": 20,
         "name": "Samsung 860 Evo",
         "rating": 4,
         "rating_count": 268,
@@ -280,7 +280,7 @@
         "image": "https://ar-media.hptiendaenlinea.com/wysiwyg/Qu_es_una_unidad_de_estado_s_lido_SSD_1.png"
     },
     {
-        "id_table": 21,
+        "id": 21,
         "name": "Samsung 870 Evo",
         "rating": 5,
         "rating_count": 3,
@@ -294,7 +294,7 @@
         "image": "https://ar-media.hptiendaenlinea.com/wysiwyg/Qu_es_una_unidad_de_estado_s_lido_SSD_1.png"
     },
     {
-        "id_table": 22,
+        "id": 22,
         "name": "Samsung 870 QVO",
         "rating": 0,
         "rating_count": 0,
@@ -308,7 +308,7 @@
         "image": "https://ar-media.hptiendaenlinea.com/wysiwyg/Qu_es_una_unidad_de_estado_s_lido_SSD_1.png"
     },
     {
-        "id_table": 23,
+        "id": 23,
         "name": "Samsung 960 Pro",
         "rating": 5,
         "rating_count": 3,
@@ -322,7 +322,7 @@
         "image": "https://m.media-amazon.com/images/I/51mCttXUOiL._AC_SY450_.jpg"
     },
     {
-        "id_table": 24,
+        "id": 24,
         "name": "Samsung 970 Evo",
         "rating": 4,
         "rating_count": 405,
@@ -336,7 +336,7 @@
         "image": "https://m.media-amazon.com/images/I/51mCttXUOiL._AC_SY450_.jpg"
     },
     {
-        "id_table": 25,
+        "id": 25,
         "name": "Samsung 970 Evo Plus",
         "rating": 4,
         "rating_count": 176,
@@ -350,7 +350,7 @@
         "image": "https://m.media-amazon.com/images/I/51mCttXUOiL._AC_SY450_.jpg"
     },
     {
-        "id_table": 26,
+        "id": 26,
         "name": "Samsung 970 EVO Plus",
         "rating": 4,
         "rating_count": 44,
@@ -364,7 +364,7 @@
         "image": "https://m.media-amazon.com/images/I/51mCttXUOiL._AC_SY450_.jpg"
     },
     {
-        "id_table": 27,
+        "id": 27,
         "name": "Samsung 970 Evo Plus",
         "rating": 4,
         "rating_count": 154,
@@ -378,7 +378,7 @@
         "image": "https://m.media-amazon.com/images/I/51mCttXUOiL._AC_SY450_.jpg"
     },
     {
-        "id_table": 28,
+        "id": 28,
         "name": "Samsung 980",
         "rating": 4,
         "rating_count": 6,
@@ -392,7 +392,7 @@
         "image": "https://m.media-amazon.com/images/I/51mCttXUOiL._AC_SY450_.jpg"
     },
     {
-        "id_table": 29,
+        "id": 29,
         "name": "Samsung 980 Pro",
         "rating": 4,
         "rating_count": 43,
@@ -406,7 +406,7 @@
         "image": "https://m.media-amazon.com/images/I/51mCttXUOiL._AC_SY450_.jpg"
     },
     {
-        "id_table": 30,
+        "id": 30,
         "name": "Seagate Barracuda",
         "rating": 4,
         "rating_count": 1020,
@@ -420,7 +420,7 @@
         "image": "https://m.media-amazon.com/images/I/41a3Z3TYGKL._SL500_.jpg"
     },
     {
-        "id_table": 31,
+        "id": 31,
         "name": "Seagate Barracuda Compute",
         "rating": 4,
         "rating_count": 516,
@@ -434,7 +434,7 @@
         "image": "https://m.media-amazon.com/images/I/41a3Z3TYGKL._SL500_.jpg"
     },
     {
-        "id_table": 32,
+        "id": 32,
         "name": "Seagate Enterprise Capacity",
         "rating": 4,
         "rating_count": 1,
@@ -448,7 +448,7 @@
         "image": "https://m.media-amazon.com/images/I/41a3Z3TYGKL._SL500_.jpg"
     },
     {
-        "id_table": 33,
+        "id": 33,
         "name": "Seagate IronWolf NAS",
         "rating": 5,
         "rating_count": 2,
@@ -462,7 +462,7 @@
         "image": "https://m.media-amazon.com/images/I/41a3Z3TYGKL._SL500_.jpg"
     },
     {
-        "id_table": 34,
+        "id": 34,
         "name": "Seagate IronWolf Pro",
         "rating": 0,
         "rating_count": 0,
@@ -476,7 +476,7 @@
         "image": "https://m.media-amazon.com/images/I/41a3Z3TYGKL._SL500_.jpg"
     },
     {
-        "id_table": 35,
+        "id": 35,
         "name": "SK hynix Gold P31",
         "rating": 4,
         "rating_count": 18,
@@ -490,7 +490,7 @@
         "image": "https://m.media-amazon.com/images/I/51mCttXUOiL._AC_SY450_.jpg"
     },
     {
-        "id_table": 36,
+        "id": 36,
         "name": "Team GX2",
         "rating": 4,
         "rating_count": 18,
@@ -504,7 +504,7 @@
         "image": "https://ar-media.hptiendaenlinea.com/wysiwyg/Qu_es_una_unidad_de_estado_s_lido_SSD_1.png"
     },
     {
-        "id_table": 37,
+        "id": 37,
         "name": "Team MP33",
         "rating": 4,
         "rating_count": 9,
@@ -518,7 +518,7 @@
         "image": "https://m.media-amazon.com/images/I/51mCttXUOiL._AC_SY450_.jpg"
     },
     {
-        "id_table": 38,
+        "id": 38,
         "name": "Team QX",
         "rating": 0,
         "rating_count": 0,
@@ -532,7 +532,7 @@
         "image": "https://ar-media.hptiendaenlinea.com/wysiwyg/Qu_es_una_unidad_de_estado_s_lido_SSD_1.png"
     },
     {
-        "id_table": 39,
+        "id": 39,
         "name": "Western Digital Black",
         "rating": 4,
         "rating_count": 19,
@@ -546,7 +546,7 @@
         "image": "https://m.media-amazon.com/images/I/41a3Z3TYGKL._SL500_.jpg"
     },
     {
-        "id_table": 40,
+        "id": 40,
         "name": "Western Digital BLACK SERIES",
         "rating": 4,
         "rating_count": 163,
@@ -560,7 +560,7 @@
         "image": "https://m.media-amazon.com/images/I/41a3Z3TYGKL._SL500_.jpg"
     },
     {
-        "id_table": 41,
+        "id": 41,
         "name": "Western Digital Black SN850",
         "rating": 4,
         "rating_count": 16,
@@ -574,7 +574,7 @@
         "image": "https://m.media-amazon.com/images/I/51mCttXUOiL._AC_SY450_.jpg"
     },
     {
-        "id_table": 42,
+        "id": 42,
         "name": "Western Digital Blue",
         "rating": 4,
         "rating_count": 124,
@@ -588,7 +588,7 @@
         "image": "https://m.media-amazon.com/images/I/51mCttXUOiL._AC_SY450_.jpg"
     },
     {
-        "id_table": 43,
+        "id": 43,
         "name": "Western Digital Blue SN550",
         "rating": 4,
         "rating_count": 139,
@@ -602,7 +602,7 @@
         "image": "https://m.media-amazon.com/images/I/51mCttXUOiL._AC_SY450_.jpg"
     },
     {
-        "id_table": 44,
+        "id": 44,
         "name": "Western Digital Caviar Blue",
         "rating": 4,
         "rating_count": 2332,
@@ -616,7 +616,7 @@
         "image": "https://m.media-amazon.com/images/I/41a3Z3TYGKL._SL500_.jpg"
     },
     {
-        "id_table": 45,
+        "id": 45,
         "name": "Western Digital Gold",
         "rating": 5,
         "rating_count": 1,
@@ -630,7 +630,7 @@
         "image": "https://m.media-amazon.com/images/I/41a3Z3TYGKL._SL500_.jpg"
     },
     {
-        "id_table": 46,
+        "id": 46,
         "name": "Western Digital SN750",
         "rating": 4,
         "rating_count": 99,
@@ -644,7 +644,7 @@
         "image": "https://m.media-amazon.com/images/I/51mCttXUOiL._AC_SY450_.jpg"
     },
     {
-        "id_table": 47,
+        "id": 47,
         "name": "Western Digital WD Blue",
         "rating": 5,
         "rating_count": 5,
