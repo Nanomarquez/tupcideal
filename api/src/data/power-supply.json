@@ -1,6 +1,6 @@
 [
     {
-        "id_table": 1,
+        "id": 1,
         "name": "Aerocool Integrator",
         "rating": 4,
         "rating_count": 6,
@@ -13,7 +13,7 @@
         "image": "https://rmsonline.com.ar/2628-large_default/fuente-pc-750w-nox-urano-80-plus-bronze-gamer.jpg"
     },
     {
-        "id_table": 2,
+        "id": 2,
         "name": "Antec High Current Gamer Gold",
         "rating": 4,
         "rating_count": 5,
@@ -26,7 +26,7 @@
         "image": "https://rmsonline.com.ar/2628-large_default/fuente-pc-750w-nox-urano-80-plus-bronze-gamer.jpg"
     },
     {
-        "id_table": 3,
+        "id": 3,
         "name": "ARESGAME AGV",
         "rating": 4,
         "rating_count": 7,
@@ -39,7 +39,7 @@
         "image": "https://rmsonline.com.ar/2628-large_default/fuente-pc-750w-nox-urano-80-plus-bronze-gamer.jpg"
     },
     {
-        "id_table": 4,
+        "id": 4,
         "name": "Asus ROG Strix",
         "rating": 3,
         "rating_count": 2,
@@ -52,7 +52,7 @@
         "image": "https://rmsonline.com.ar/2628-large_default/fuente-pc-750w-nox-urano-80-plus-bronze-gamer.jpg"
     },
     {
-        "id_table": 5,
+        "id": 5,
         "name": "Asus ROG STRIX G",
         "rating": 5,
         "rating_count": 1,
@@ -65,7 +65,7 @@
         "image": "https://rmsonline.com.ar/2628-large_default/fuente-pc-750w-nox-urano-80-plus-bronze-gamer.jpg"
     },
     {
-        "id_table": 6,
+        "id": 6,
         "name": "Asus ROG Thor 1200P",
         "rating": 5,
         "rating_count": 8,
@@ -78,7 +78,7 @@
         "image": "https://rmsonline.com.ar/2628-large_default/fuente-pc-750w-nox-urano-80-plus-bronze-gamer.jpg"
     },
     {
-        "id_table": 7,
+        "id": 7,
         "name": "Asus ROG Thor 850",
         "rating": 4,
         "rating_count": 14,
@@ -91,7 +91,7 @@
         "image": "https://rmsonline.com.ar/2628-large_default/fuente-pc-750w-nox-urano-80-plus-bronze-gamer.jpg"
     },
     {
-        "id_table": 8,
+        "id": 8,
         "name": "be quiet! Dark Power Pro 12",
         "rating": 0,
         "rating_count": 0,
@@ -104,7 +104,7 @@
         "image": "https://rmsonline.com.ar/2628-large_default/fuente-pc-750w-nox-urano-80-plus-bronze-gamer.jpg"
     },
     {
-        "id_table": 9,
+        "id": 9,
         "name": "be quiet! Straight Power 11",
         "rating": 5,
         "rating_count": 9,
@@ -117,7 +117,7 @@
         "image": "https://rmsonline.com.ar/2628-large_default/fuente-pc-750w-nox-urano-80-plus-bronze-gamer.jpg"
     },
     {
-        "id_table": 10,
+        "id": 10,
         "name": "Cooler Master MWE Gold",
         "rating": 4,
         "rating_count": 29,
@@ -130,7 +130,7 @@
         "image": "https://rmsonline.com.ar/2628-large_default/fuente-pc-750w-nox-urano-80-plus-bronze-gamer.jpg"
     },
     {
-        "id_table": 11,
+        "id": 11,
         "name": "Cooler Master V Gold V2",
         "rating": 5,
         "rating_count": 1,
@@ -143,7 +143,7 @@
         "image": "https://rmsonline.com.ar/2628-large_default/fuente-pc-750w-nox-urano-80-plus-bronze-gamer.jpg"
     },
     {
-        "id_table": 12,
+        "id": 12,
         "name": "Cooler Master V SFX Gold",
         "rating": 4,
         "rating_count": 2,
@@ -156,7 +156,7 @@
         "image": "https://rmsonline.com.ar/2628-large_default/fuente-pc-750w-nox-urano-80-plus-bronze-gamer.jpg"
     },
     {
-        "id_table": 13,
+        "id": 13,
         "name": "Corsair AXi",
         "rating": 5,
         "rating_count": 4,
@@ -169,7 +169,7 @@
         "image": "https://rmsonline.com.ar/2628-large_default/fuente-pc-750w-nox-urano-80-plus-bronze-gamer.jpg"
     },
     {
-        "id_table": 14,
+        "id": 14,
         "name": "Corsair CV",
         "rating": 4,
         "rating_count": 10,
@@ -182,7 +182,7 @@
         "image": "https://rmsonline.com.ar/2628-large_default/fuente-pc-750w-nox-urano-80-plus-bronze-gamer.jpg"
     },
     {
-        "id_table": 15,
+        "id": 15,
         "name": "Corsair CXF",
         "rating": 5,
         "rating_count": 1,
@@ -195,7 +195,7 @@
         "image": "https://rmsonline.com.ar/2628-large_default/fuente-pc-750w-nox-urano-80-plus-bronze-gamer.jpg"
     },
     {
-        "id_table": 16,
+        "id": 16,
         "name": "Corsair CXM",
         "rating": 4,
         "rating_count": 139,
@@ -208,7 +208,7 @@
         "image": "https://rmsonline.com.ar/2628-large_default/fuente-pc-750w-nox-urano-80-plus-bronze-gamer.jpg"
     },
     {
-        "id_table": 17,
+        "id": 17,
         "name": "Corsair CXM (2015)",
         "rating": 4,
         "rating_count": 143,
@@ -221,7 +221,7 @@
         "image": "https://rmsonline.com.ar/2628-large_default/fuente-pc-750w-nox-urano-80-plus-bronze-gamer.jpg"
     },
     {
-        "id_table": 18,
+        "id": 18,
         "name": "Corsair HX Platinum",
         "rating": 4,
         "rating_count": 16,
@@ -234,7 +234,7 @@
         "image": "https://rmsonline.com.ar/2628-large_default/fuente-pc-750w-nox-urano-80-plus-bronze-gamer.jpg"
     },
     {
-        "id_table": 19,
+        "id": 19,
         "name": "Corsair RM (2019)",
         "rating": 4,
         "rating_count": 195,
@@ -247,7 +247,7 @@
         "image": "https://rmsonline.com.ar/2628-large_default/fuente-pc-750w-nox-urano-80-plus-bronze-gamer.jpg"
     },
     {
-        "id_table": 20,
+        "id": 20,
         "name": "Corsair RMx",
         "rating": 4,
         "rating_count": 24,
@@ -260,7 +260,7 @@
         "image": "https://rmsonline.com.ar/2628-large_default/fuente-pc-750w-nox-urano-80-plus-bronze-gamer.jpg"
     },
     {
-        "id_table": 21,
+        "id": 21,
         "name": "Corsair RMx (2018)",
         "rating": 4,
         "rating_count": 135,
@@ -273,7 +273,7 @@
         "image": "https://rmsonline.com.ar/2628-large_default/fuente-pc-750w-nox-urano-80-plus-bronze-gamer.jpg"
     },
     {
-        "id_table": 22,
+        "id": 22,
         "name": "Corsair RMx (2021)",
         "rating": 5,
         "rating_count": 1,
@@ -286,7 +286,7 @@
         "image": "https://rmsonline.com.ar/2628-large_default/fuente-pc-750w-nox-urano-80-plus-bronze-gamer.jpg"
     },
     {
-        "id_table": 23,
+        "id": 23,
         "name": "Corsair RMx White (2018)",
         "rating": 4,
         "rating_count": 49,
@@ -299,7 +299,7 @@
         "image": "https://rmsonline.com.ar/2628-large_default/fuente-pc-750w-nox-urano-80-plus-bronze-gamer.jpg"
     },
     {
-        "id_table": 24,
+        "id": 24,
         "name": "Corsair SF",
         "rating": 4,
         "rating_count": 98,
@@ -312,7 +312,7 @@
         "image": "https://rmsonline.com.ar/2628-large_default/fuente-pc-750w-nox-urano-80-plus-bronze-gamer.jpg"
     },
     {
-        "id_table": 25,
+        "id": 25,
         "name": "Corsair TXM Gold",
         "rating": 4,
         "rating_count": 61,
@@ -325,7 +325,7 @@
         "image": "https://rmsonline.com.ar/2628-large_default/fuente-pc-750w-nox-urano-80-plus-bronze-gamer.jpg"
     },
     {
-        "id_table": 26,
+        "id": 26,
         "name": "EVGA 100-N1-0400-L1",
         "rating": 4,
         "rating_count": 33,
@@ -338,7 +338,7 @@
         "image": "https://rmsonline.com.ar/2628-large_default/fuente-pc-750w-nox-urano-80-plus-bronze-gamer.jpg"
     },
     {
-        "id_table": 27,
+        "id": 27,
         "name": "EVGA 100-W1-0500-KR",
         "rating": 4,
         "rating_count": 178,
@@ -351,7 +351,7 @@
         "image": "https://rmsonline.com.ar/2628-large_default/fuente-pc-750w-nox-urano-80-plus-bronze-gamer.jpg"
     },
     {
-        "id_table": 28,
+        "id": 28,
         "name": "EVGA 100-W1-0600-K1",
         "rating": 4,
         "rating_count": 38,
@@ -364,7 +364,7 @@
         "image": "https://rmsonline.com.ar/2628-large_default/fuente-pc-750w-nox-urano-80-plus-bronze-gamer.jpg"
     },
     {
-        "id_table": 29,
+        "id": 29,
         "name": "EVGA 210-GQ-0650-V1",
         "rating": 4,
         "rating_count": 96,
@@ -377,7 +377,7 @@
         "image": "https://rmsonline.com.ar/2628-large_default/fuente-pc-750w-nox-urano-80-plus-bronze-gamer.jpg"
     },
     {
-        "id_table": 30,
+        "id": 30,
         "name": "EVGA B5",
         "rating": 4,
         "rating_count": 12,
@@ -390,7 +390,7 @@
         "image": "https://rmsonline.com.ar/2628-large_default/fuente-pc-750w-nox-urano-80-plus-bronze-gamer.jpg"
     },
     {
-        "id_table": 31,
+        "id": 31,
         "name": "EVGA BA",
         "rating": 4,
         "rating_count": 6,
@@ -403,7 +403,7 @@
         "image": "https://rmsonline.com.ar/2628-large_default/fuente-pc-750w-nox-urano-80-plus-bronze-gamer.jpg"
     },
     {
-        "id_table": 32,
+        "id": 32,
         "name": "EVGA BQ",
         "rating": 4,
         "rating_count": 109,
@@ -416,7 +416,7 @@
         "image": "https://rmsonline.com.ar/2628-large_default/fuente-pc-750w-nox-urano-80-plus-bronze-gamer.jpg"
     },
     {
-        "id_table": 33,
+        "id": 33,
         "name": "EVGA BR",
         "rating": 4,
         "rating_count": 61,
@@ -429,7 +429,7 @@
         "image": "https://rmsonline.com.ar/2628-large_default/fuente-pc-750w-nox-urano-80-plus-bronze-gamer.jpg"
     },
     {
-        "id_table": 34,
+        "id": 34,
         "name": "EVGA G3",
         "rating": 4,
         "rating_count": 185,
@@ -442,7 +442,7 @@
         "image": "https://rmsonline.com.ar/2628-large_default/fuente-pc-750w-nox-urano-80-plus-bronze-gamer.jpg"
     },
     {
-        "id_table": 35,
+        "id": 35,
         "name": "EVGA G5",
         "rating": 4,
         "rating_count": 17,
@@ -455,7 +455,7 @@
         "image": "https://rmsonline.com.ar/2628-large_default/fuente-pc-750w-nox-urano-80-plus-bronze-gamer.jpg"
     },
     {
-        "id_table": 36,
+        "id": 36,
         "name": "EVGA GD (2019)",
         "rating": 4,
         "rating_count": 8,
@@ -468,7 +468,7 @@
         "image": "https://rmsonline.com.ar/2628-large_default/fuente-pc-750w-nox-urano-80-plus-bronze-gamer.jpg"
     },
     {
-        "id_table": 37,
+        "id": 37,
         "name": "EVGA GQ",
         "rating": 4,
         "rating_count": 44,
@@ -481,7 +481,7 @@
         "image": "https://rmsonline.com.ar/2628-large_default/fuente-pc-750w-nox-urano-80-plus-bronze-gamer.jpg"
     },
     {
-        "id_table": 38,
+        "id": 38,
         "name": "EVGA SuperNOVA GA",
         "rating": 4,
         "rating_count": 27,
@@ -494,7 +494,7 @@
         "image": "https://rmsonline.com.ar/2628-large_default/fuente-pc-750w-nox-urano-80-plus-bronze-gamer.jpg"
     },
     {
-        "id_table": 39,
+        "id": 39,
         "name": "EVGA SuperNOVA GM",
         "rating": 4,
         "rating_count": 22,
@@ -507,7 +507,7 @@
         "image": "https://rmsonline.com.ar/2628-large_default/fuente-pc-750w-nox-urano-80-plus-bronze-gamer.jpg"
     },
     {
-        "id_table": 40,
+        "id": 40,
         "name": "EVGA SuperNOVA GT",
         "rating": 0,
         "rating_count": 0,
@@ -520,7 +520,7 @@
         "image": "https://rmsonline.com.ar/2628-large_default/fuente-pc-750w-nox-urano-80-plus-bronze-gamer.jpg"
     },
     {
-        "id_table": 41,
+        "id": 41,
         "name": "Gigabyte P GM",
         "rating": 4,
         "rating_count": 16,
@@ -533,7 +533,7 @@
         "image": "https://rmsonline.com.ar/2628-large_default/fuente-pc-750w-nox-urano-80-plus-bronze-gamer.jpg"
     },
     {
-        "id_table": 42,
+        "id": 42,
         "name": "Gigabyte P-B",
         "rating": 4,
         "rating_count": 5,
@@ -546,7 +546,7 @@
         "image": "https://rmsonline.com.ar/2628-large_default/fuente-pc-750w-nox-urano-80-plus-bronze-gamer.jpg"
     },
     {
-        "id_table": 43,
+        "id": 43,
         "name": "MSI MPG A-GF",
         "rating": 0,
         "rating_count": 0,
@@ -559,7 +559,7 @@
         "image": "https://rmsonline.com.ar/2628-large_default/fuente-pc-750w-nox-urano-80-plus-bronze-gamer.jpg"
     },
     {
-        "id_table": 44,
+        "id": 44,
         "name": "MSI MPG A650GF",
         "rating": 5,
         "rating_count": 4,
@@ -572,7 +572,7 @@
         "image": "https://rmsonline.com.ar/2628-large_default/fuente-pc-750w-nox-urano-80-plus-bronze-gamer.jpg"
     },
     {
-        "id_table": 45,
+        "id": 45,
         "name": "NZXT C",
         "rating": 4,
         "rating_count": 15,
@@ -585,7 +585,7 @@
         "image": "https://rmsonline.com.ar/2628-large_default/fuente-pc-750w-nox-urano-80-plus-bronze-gamer.jpg"
     },
     {
-        "id_table": 46,
+        "id": 46,
         "name": "SeaSonic FOCUS Plus Gold",
         "rating": 4,
         "rating_count": 69,
@@ -598,7 +598,7 @@
         "image": "https://rmsonline.com.ar/2628-large_default/fuente-pc-750w-nox-urano-80-plus-bronze-gamer.jpg"
     },
     {
-        "id_table": 47,
+        "id": 47,
         "name": "SeaSonic FOCUS Plus Platinum",
         "rating": 5,
         "rating_count": 10,
@@ -611,7 +611,7 @@
         "image": "https://rmsonline.com.ar/2628-large_default/fuente-pc-750w-nox-urano-80-plus-bronze-gamer.jpg"
     },
     {
-        "id_table": 48,
+        "id": 48,
         "name": "SeaSonic PRIME Ultra Titanium",
         "rating": 5,
         "rating_count": 5,
@@ -624,7 +624,7 @@
         "image": "https://rmsonline.com.ar/2628-large_default/fuente-pc-750w-nox-urano-80-plus-bronze-gamer.jpg"
     },
     {
-        "id_table": 49,
+        "id": 49,
         "name": "SeaSonic S12III",
         "rating": 4,
         "rating_count": 19,
@@ -637,7 +637,7 @@
         "image": "https://rmsonline.com.ar/2628-large_default/fuente-pc-750w-nox-urano-80-plus-bronze-gamer.jpg"
     },
     {
-        "id_table": 50,
+        "id": 50,
         "name": "Thermaltake Smart",
         "rating": 4,
         "rating_count": 51,
@@ -650,7 +650,7 @@
         "image": "https://rmsonline.com.ar/2628-large_default/fuente-pc-750w-nox-urano-80-plus-bronze-gamer.jpg"
     },
     {
-        "id_table": 51,
+        "id": 51,
         "name": "Thermaltake Toughpower DPS G RGB Titanium",
         "rating": 0,
         "rating_count": 0,

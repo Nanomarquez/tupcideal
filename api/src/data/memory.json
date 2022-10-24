@@ -1,6 +1,6 @@
 [
     {
-        "id_table": 1,
+        "id": 1,
         "name": "ADATA XPG SPECTRIX D60G 16 GB",
         "rating": 5,
         "rating_count": 16,
@@ -14,7 +14,7 @@
         "image": "https://arrichetta.com.ar/wp-content/uploads/2020/09/AX4U3200316G16A-ST60_2.png"
     },
     {
-        "id_table": 2,
+        "id": 2,
         "name": "Corsair Dominator Platinum RGB 32 GB",
         "rating": 4,
         "rating_count": 5,
@@ -28,7 +28,7 @@
         "image": "https://www.corsair.com/medias/sys_master/images/images/h3a/hae/9180683468830/-CMT16GX4M2C3000C15-Gallery-DOMINATOR-PLAT-RGB-01.png"
     },
     {
-        "id_table": 3,
+        "id": 3,
         "name": "Corsair Vengeance 16 GB",
         "rating": 4,
         "rating_count": 91,
@@ -42,7 +42,7 @@
         "image": "https://www.fullh4rd.com.ar/img/productos/Pics_Prod/memoria-16gb-2x8gb-ddr4-3200-corsair-vengeance-rgb-pro-sl-0.jpg"
     },
     {
-        "id_table": 4,
+        "id": 4,
         "name": "Corsair Vengeance LPX 128 GB",
         "rating": 0,
         "rating_count": 0,
@@ -56,7 +56,7 @@
         "image": "https://www.fullh4rd.com.ar/img/productos/Pics_Prod/memoria-corsair-16gb-2x8gb-ddr4-4500mhz--vengeance-lpx-bla-0.jpg"
     },
     {
-        "id_table": 5,
+        "id": 5,
         "name": "Corsair Vengeance LPX 16 GB",
         "rating": 4,
         "rating_count": 338,
@@ -70,7 +70,7 @@
         "image": "https://www.fullh4rd.com.ar/img/productos/Pics_Prod/memoria-corsair-16gb-2x8gb-ddr4-4500mhz--vengeance-lpx-bla-0.jpg"
     },
     {
-        "id_table": 6,
+        "id": 6,
         "name": "Corsair Vengeance LPX 32 GB",
         "rating": 4,
         "rating_count": 23,
@@ -84,7 +84,7 @@
         "image": "https://www.fullh4rd.com.ar/img/productos/Pics_Prod/memoria-corsair-16gb-2x8gb-ddr4-4500mhz--vengeance-lpx-bla-0.jpg"
     },
     {
-        "id_table": 7,
+        "id": 7,
         "name": "Corsair Vengeance LPX 8 GB",
         "rating": 4,
         "rating_count": 10,
@@ -98,7 +98,7 @@
         "image": "https://www.fullh4rd.com.ar/img/productos/Pics_Prod/memoria-corsair-16gb-2x8gb-ddr4-4500mhz--vengeance-lpx-bla-0.jpg"
     },
     {
-        "id_table": 8,
+        "id": 8,
         "name": "Corsair Vengeance RGB Pro 16 GB",
         "rating": 4,
         "rating_count": 287,
@@ -112,7 +112,7 @@
         "image": "https://mexx-img-2019.s3.amazonaws.com/memoria-rgb_40889_2.jpeg"
     },
     {
-        "id_table": 9,
+        "id": 9,
         "name": "Corsair Vengeance RGB Pro 32 GB",
         "rating": 4,
         "rating_count": 97,
@@ -126,7 +126,7 @@
         "image": "https://mexx-img-2019.s3.amazonaws.com/memoria-rgb_40889_2.jpeg"
     },
     {
-        "id_table": 10,
+        "id": 10,
         "name": "Corsair Vengeance RGB Pro 64 GB",
         "rating": 5,
         "rating_count": 2,
@@ -140,7 +140,7 @@
         "image": "https://mexx-img-2019.s3.amazonaws.com/memoria-rgb_40889_2.jpeg"
     },
     {
-        "id_table": 11,
+        "id": 11,
         "name": "Corsair Vengeance RGB Pro SL 16 GB",
         "rating": 5,
         "rating_count": 2,
@@ -154,7 +154,7 @@
         "image": "https://mexx-img-2019.s3.amazonaws.com/memoria-rgb_40889_2.jpeg"
     },
     {
-        "id_table": 12,
+        "id": 12,
         "name": "Corsair Vengeance RGB Pro SL 32 GB",
         "rating": 0,
         "rating_count": 0,
@@ -168,7 +168,7 @@
         "image": "https://mexx-img-2019.s3.amazonaws.com/memoria-rgb_40889_2.jpeg"
     },
     {
-        "id_table": 13,
+        "id": 13,
         "name": "Crucial Ballistix 16 GB",
         "rating": 4,
         "rating_count": 57,
@@ -182,7 +182,7 @@
         "image": "https://img.overclockers.co.uk/media/image/MY20KCR_286086.jpg"
     },
     {
-        "id_table": 14,
+        "id": 14,
         "name": "Crucial Ballistix 32 GB",
         "rating": 4,
         "rating_count": 12,
@@ -196,7 +196,7 @@
         "image": "https://img.overclockers.co.uk/media/image/MY20KCR_286086.jpg"
     },
     {
-        "id_table": 15,
+        "id": 15,
         "name": "Crucial Ballistix 64 GB",
         "rating": 4,
         "rating_count": 3,
@@ -210,7 +210,7 @@
         "image": "https://img.overclockers.co.uk/media/image/MY20KCR_286086.jpg"
     },
     {
-        "id_table": 16,
+        "id": 16,
         "name": "Crucial Ballistix MAX 16 GB",
         "rating": 5,
         "rating_count": 1,
@@ -224,7 +224,7 @@
         "image": "https://www.rhaegon.com.ar//wp-content/uploads/2021/11/Ballistix-MAX-Kit-16GB-2x8gb-4000Mhz.png"
     },
     {
-        "id_table": 17,
+        "id": 17,
         "name": "Crucial Ballistix RGB 16 GB",
         "rating": 4,
         "rating_count": 22,
@@ -238,7 +238,7 @@
         "image": "https://mauricomputacion.com.ar/images/productos/22394.webp"
     },
     {
-        "id_table": 18,
+        "id": 18,
         "name": "Crucial Ballistix RGB 32 GB",
         "rating": 5,
         "rating_count": 1,
@@ -252,7 +252,7 @@
         "image": "https://mauricomputacion.com.ar/images/productos/22394.webp"
     },
     {
-        "id_table": 19,
+        "id": 19,
         "name": "Crucial CT64G4LFQ424A 64 GB",
         "rating": 0,
         "rating_count": 0,
@@ -266,7 +266,7 @@
         "image": "https://www.bhphotovideo.com/images/images1500x1500/crucial_ct4k8g4rfs4266_32gb_ddr4_2666_pc4_21300_1308214.jpg"
     },
     {
-        "id_table": 20,
+        "id": 20,
         "name": "G.Skill Aegis 16 GB",
         "rating": 4,
         "rating_count": 67,
@@ -280,7 +280,7 @@
         "image": "https://image1280.macovi.de/images/product_images/1280/1111126_0__8729263.jpg"
     },
     {
-        "id_table": 21,
+        "id": 21,
         "name": "G.Skill Aegis 4 GB",
         "rating": 0,
         "rating_count": 0,
@@ -294,7 +294,7 @@
         "image": "https://image1280.macovi.de/images/product_images/1280/1111126_0__8729263.jpg"
     },
     {
-        "id_table": 22,
+        "id": 22,
         "name": "G.Skill Aegis 8 GB",
         "rating": 4,
         "rating_count": 28,
@@ -308,7 +308,7 @@
         "image": "https://image1280.macovi.de/images/product_images/1280/1111126_0__8729263.jpg"
     },
     {
-        "id_table": 23,
+        "id": 23,
         "name": "G.Skill Ripjaws Series 8 GB",
         "rating": 4,
         "rating_count": 110,
@@ -322,7 +322,7 @@
         "image": "http://img.pccomponentes.com/articles/5/50260/g-skill-ripjaws-x-ddr3-1600-pc3-12800-16gb-2x8gb-cl9.jpg"
     },
     {
-        "id_table": 24,
+        "id": 24,
         "name": "G.Skill Ripjaws V 16 GB",
         "rating": 4,
         "rating_count": 171,
@@ -336,7 +336,7 @@
         "image": "https://m.media-amazon.com/images/I/515AemXA3LS.jpg"
     },
     {
-        "id_table": 25,
+        "id": 25,
         "name": "G.Skill Ripjaws V 32 GB",
         "rating": 4,
         "rating_count": 68,
@@ -350,7 +350,7 @@
         "image": "https://m.media-amazon.com/images/I/515AemXA3LS.jpg"
     },
     {
-        "id_table": 26,
+        "id": 26,
         "name": "G.Skill Ripjaws V 64 GB",
         "rating": 4,
         "rating_count": 9,
@@ -364,7 +364,7 @@
         "image": "https://m.media-amazon.com/images/I/515AemXA3LS.jpg"
     },
     {
-        "id_table": 27,
+        "id": 27,
         "name": "G.Skill Ripjaws V Series 16 GB",
         "rating": 4,
         "rating_count": 176,
@@ -378,7 +378,7 @@
         "image": "https://m.media-amazon.com/images/I/515AemXA3LS.jpg"
     },
     {
-        "id_table": 28,
+        "id": 28,
         "name": "G.Skill Ripjaws V Series 32 GB",
         "rating": 4,
         "rating_count": 81,
@@ -392,7 +392,7 @@
         "image": "https://m.media-amazon.com/images/I/515AemXA3LS.jpg"
     },
     {
-        "id_table": 29,
+        "id": 29,
         "name": "G.Skill Ripjaws V Series 8 GB",
         "rating": 5,
         "rating_count": 5,
@@ -406,7 +406,7 @@
         "image": "https://m.media-amazon.com/images/I/515AemXA3LS.jpg"
     },
     {
-        "id_table": 30,
+        "id": 30,
         "name": "G.Skill Trident Z Neo 16 GB",
         "rating": 4,
         "rating_count": 83,
@@ -420,7 +420,7 @@
         "image": "https://app.contabilium.com/files/explorer/7026/Productos-Servicios/concepto-4852671.jpg"
     },
     {
-        "id_table": 31,
+        "id": 31,
         "name": "G.Skill Trident Z Neo 32 GB",
         "rating": 4,
         "rating_count": 120,
@@ -434,7 +434,7 @@
         "image": "https://app.contabilium.com/files/explorer/7026/Productos-Servicios/concepto-4852671.jpg"
     },
     {
-        "id_table": 32,
+        "id": 32,
         "name": "G.Skill Trident Z Neo 64 GB",
         "rating": 4,
         "rating_count": 14,
@@ -448,7 +448,7 @@
         "image": "https://app.contabilium.com/files/explorer/7026/Productos-Servicios/concepto-4852671.jpg"
     },
     {
-        "id_table": 33,
+        "id": 33,
         "name": "G.Skill Trident Z RGB 128 GB",
         "rating": 5,
         "rating_count": 2,
@@ -462,7 +462,7 @@
         "image": "https://nissei.com/media/catalog/product/cache/16a9529cefd63504739dab4fc3414065/t/r/trident_z_rgb.png_2_2.png"
     },
     {
-        "id_table": 34,
+        "id": 34,
         "name": "G.Skill Trident Z RGB 16 GB",
         "rating": 4,
         "rating_count": 92,
@@ -476,7 +476,7 @@
         "image": "https://nissei.com/media/catalog/product/cache/16a9529cefd63504739dab4fc3414065/t/r/trident_z_rgb.png_2_2.png"
     },
     {
-        "id_table": 35,
+        "id": 35,
         "name": "G.Skill Trident Z RGB 32 GB",
         "rating": 4,
         "rating_count": 24,
@@ -490,7 +490,7 @@
         "image": "https://nissei.com/media/catalog/product/cache/16a9529cefd63504739dab4fc3414065/t/r/trident_z_rgb.png_2_2.png"
     },
     {
-        "id_table": 36,
+        "id": 36,
         "name": "G.Skill Trident Z RGB 64 GB",
         "rating": 4,
         "rating_count": 6,
@@ -504,7 +504,7 @@
         "image": "https://nissei.com/media/catalog/product/cache/16a9529cefd63504739dab4fc3414065/t/r/trident_z_rgb.png_2_2.png"
     },
     {
-        "id_table": 37,
+        "id": 37,
         "name": "G.Skill Trident Z Royal 128 GB",
         "rating": 5,
         "rating_count": 1,
@@ -518,7 +518,7 @@
         "image": "https://http2.mlstatic.com/D_NQ_NP_682409-MLA49183916214_022022-O.jpg"
     },
     {
-        "id_table": 38,
+        "id": 38,
         "name": "G.Skill Trident Z Royal 256 GB",
         "rating": 0,
         "rating_count": 0,
@@ -532,7 +532,7 @@
         "image": "https://http2.mlstatic.com/D_NQ_NP_682409-MLA49183916214_022022-O.jpg"
     },
     {
-        "id_table": 39,
+        "id": 39,
         "name": "G.Skill Trident Z Royal 32 GB",
         "rating": 5,
         "rating_count": 11,
@@ -546,7 +546,7 @@
         "image": "https://http2.mlstatic.com/D_NQ_NP_682409-MLA49183916214_022022-O.jpg"
     },
     {
-        "id_table": 40,
+        "id": 40,
         "name": "Gigabyte AORUS RGB 16 GB",
         "rating": 5,
         "rating_count": 2,
@@ -560,7 +560,7 @@
         "image": "https://lezamapc.com.ar/35967-large_default/memoria-ram-gigabyte-aorus-rgb-ddr4-16gb-2x8gb-3333mhz.jpg"
     },
     {
-        "id_table": 41,
+        "id": 41,
         "name": "Kingston HyperX Fury 16 GB",
         "rating": 4,
         "rating_count": 27,
@@ -574,7 +574,7 @@
         "image": "http://img.pccomponentes.com/articles/9/98326/kingston-hyperx-fury-ddr4-2133-pc4-17000-16gb-2x8gb-cl14.jpg"
     },
     {
-        "id_table": 42,
+        "id": 42,
         "name": "Kingston HyperX Fury 8 GB",
         "rating": 0,
         "rating_count": 0,
@@ -588,7 +588,7 @@
         "image": "http://img.pccomponentes.com/articles/9/98326/kingston-hyperx-fury-ddr4-2133-pc4-17000-16gb-2x8gb-cl14.jpg"
     },
     {
-        "id_table": 43,
+        "id": 43,
         "name": "Kingston HyperX Fury RGB 16 GB",
         "rating": 4,
         "rating_count": 15,
@@ -602,7 +602,7 @@
         "image": "http://img.pccomponentes.com/articles/9/98326/kingston-hyperx-fury-ddr4-2133-pc4-17000-16gb-2x8gb-cl14.jpg"
     },
     {
-        "id_table": 44,
+        "id": 44,
         "name": "OLOy MD4U083016BGDA 16 GB",
         "rating": 4,
         "rating_count": 12,
@@ -616,7 +616,7 @@
         "image": "https://img.terabyteshop.com.br/produto/g/memoria-ddr4-oloy-owl-black-16gb-2x8gb-3000mhz-md4u083016bgda-imp_124265.jpg"
     },
     {
-        "id_table": 45,
+        "id": 45,
         "name": "OLOy MD4U083216BJDA 16 GB",
         "rating": 5,
         "rating_count": 5,
@@ -630,7 +630,7 @@
         "image": "https://img.terabyteshop.com.br/produto/g/memoria-ddr4-oloy-owl-black-16gb-2x8gb-3000mhz-md4u083016bgda-imp_124265.jpg"
     },
     {
-        "id_table": 46,
+        "id": 46,
         "name": "Patriot Signature 1 GB",
         "rating": 0,
         "rating_count": 0,
@@ -644,7 +644,7 @@
         "image": "https://www.infinit.com.uy/imgs/productos/productos35_15912.jpg"
     },
     {
-        "id_table": 47,
+        "id": 47,
         "name": "Patriot Signature Premium 8 GB",
         "rating": 4,
         "rating_count": 3,
@@ -658,7 +658,7 @@
         "image": "https://www.profesionalreview.com/wp-content/uploads/2019/05/Patriot-revela-sus-nuevas-memorias-Signature-Premium-DDR4.jpg"
     },
     {
-        "id_table": 48,
+        "id": 48,
         "name": "Patriot Viper Steel 16 GB",
         "rating": 4,
         "rating_count": 13,
@@ -672,7 +672,7 @@
         "image": "https://s3-sa-east-1.amazonaws.com/saasargentina/BdBSBBthjCJxMWm8AFcK/imagen"
     },
     {
-        "id_table": 49,
+        "id": 49,
         "name": "Patriot Viper Steel 8 GB",
         "rating": 5,
         "rating_count": 2,
@@ -686,7 +686,7 @@
         "image": "https://s3-sa-east-1.amazonaws.com/saasargentina/BdBSBBthjCJxMWm8AFcK/imagen"
     },
     {
-        "id_table": 50,
+        "id": 50,
         "name": "Silicon Power SP016GXLZU320BDAJ5 16 GB",
         "rating": 0,
         "rating_count": 0,
@@ -700,7 +700,7 @@
         "image": "https://cdn.mwave.com.au/images/400/silicon_power_16gb_2x_8gb_ddr4_3200mhz_memory_ac51387.jpg"
     },
     {
-        "id_table": 51,
+        "id": 51,
         "name": "Silicon Power XPOWER Turbine 16 GB",
         "rating": 5,
         "rating_count": 7,
@@ -714,7 +714,7 @@
         "image": "https://m.media-amazon.com/images/I/91JHhnxnylL.jpg"
     },
     {
-        "id_table": 52,
+        "id": 52,
         "name": "Team Elite 8 GB",
         "rating": 0,
         "rating_count": 0,
@@ -728,7 +728,7 @@
         "image": "https://media.pangoly.com/img/2/d/7/6/2d76b70f-20bb-481e-a240-2419817b1c28.jpg"
     },
     {
-        "id_table": 53,
+        "id": 53,
         "name": "Team T-Force Delta RGB 16 GB",
         "rating": 4,
         "rating_count": 42,
@@ -742,7 +742,7 @@
         "image": "https://app.contabilium.com/files/explorer/7026/Productos-Servicios/concepto-5609907.jpg"
     },
     {
-        "id_table": 54,
+        "id": 54,
         "name": "Team T-Force Delta RGB 32 GB",
         "rating": 4,
         "rating_count": 4,
@@ -756,7 +756,7 @@
         "image": "https://app.contabilium.com/files/explorer/7026/Productos-Servicios/concepto-5609907.jpg"
     },
     {
-        "id_table": 55,
+        "id": 55,
         "name": "Team T-FORCE VULCAN Z 16 GB",
         "rating": 4,
         "rating_count": 57,
@@ -770,7 +770,7 @@
         "image": "https://cdna.pcpartpicker.com/static/forever/images/product/e34fd6fab366ca03f96fcd702939a2ab.1600.jpg"
     },
     {
-        "id_table": 56,
+        "id": 56,
         "name": "Team T-FORCE VULCAN Z 32 GB",
         "rating": 0,
         "rating_count": 0,
