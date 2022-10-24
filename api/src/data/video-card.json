@@ -1,6 +1,6 @@
 [
     {
-        "id": 1,
+        "id_table": 1,
         "name": "ASRock Phantom Gaming D",
         "rating": 4,
         "rating_count": 11,
@@ -14,7 +14,7 @@
         "image": "https://www.asrock.com/Graphics-Card/photo/Phantom%20Gaming%20D%20Radeon%20RX570%208G%20OC(M1).png"
     },
     {
-        "id": 2,
+        "id_table": 2,
         "name": "Asus DUAL",
         "rating": 4,
         "rating_count": 80,
@@ -28,7 +28,7 @@
         "image": "https://www.asus.com/media/global/products/gdO3Gfjah8uWeavq/P_setting_xxx_0_90_end_692.png"
     },
     {
-        "id": 3,
+        "id_table": 3,
         "name": "Asus DUAL EVO OC",
         "rating": 4,
         "rating_count": 15,
@@ -42,7 +42,7 @@
         "image": "https://www.asus.com/media/global/products/uBzJy7xKuG3euuHa/P_setting_xxx_0_90_end_692.png"
     },
     {
-        "id": 4,
+        "id_table": 4,
         "name": "Asus GT1030-2G-CSM",
         "rating": 4,
         "rating_count": 8,
@@ -56,7 +56,7 @@
         "image": "https://http2.mlstatic.com/D_NQ_NP_889104-MLA32007499076_082019-O.jpg"
     },
     {
-        "id": 5,
+        "id_table": 5,
         "name": "Asus KO Gaming OC",
         "rating": 4,
         "rating_count": 6,
@@ -70,7 +70,7 @@
         "image": "https://dlcdnwebimgs.asus.com/gain/e0002a68-56dc-4ff5-a3f7-617f8666e46b/w800"
     },
     {
-        "id": 6,
+        "id_table": 6,
         "name": "Asus Phoenix",
         "rating": 4,
         "rating_count": 12,
@@ -84,7 +84,7 @@
         "image": "https://www.asus.com/media/global/products/ntgkgXMOjxn09o3c/P_setting_xxx_0_90_end_692.png"
     },
     {
-        "id": 7,
+        "id_table": 7,
         "name": "Asus Phoenix Fan OC",
         "rating": 4,
         "rating_count": 3,
@@ -98,7 +98,7 @@
         "image": "https://www.asus.com/media/global/products/ItDsYmA7eQYlnX99/P_setting_xxx_0_90_end_692.png"
     },
     {
-        "id": 8,
+        "id_table": 8,
         "name": "Asus Phoenix OC",
         "rating": 4,
         "rating_count": 4,
@@ -112,7 +112,7 @@
         "image": "https://www.asus.com/media/global/products/RwoUyQPVfXyR46u8/P_setting_xxx_0_90_end_500.png"
     },
     {
-        "id": 9,
+        "id_table": 9,
         "name": "Asus ROG STRIX GAMING OC",
         "rating": 5,
         "rating_count": 3,
@@ -126,7 +126,7 @@
         "image": "https://www.precio-calidad.com.ar/wp-content/uploads/2021/05/ROG-STRIX-RTX3070-O8G-GAMING-1.jpg"
     },
     {
-        "id": 10,
+        "id_table": 10,
         "name": "Asus ROG STRIX WHITE OC",
         "rating": 4,
         "rating_count": 1,
@@ -140,7 +140,7 @@
         "image": "https://mexx-img-2019.s3.amazonaws.com/Placa-De-Video-GeForce-RTX-3090-24Gb-Asus-Rog-Strix-Gaming-Oc-Blanco_43111_1.jpeg?v954"
     },
     {
-        "id": 11,
+        "id_table": 11,
         "name": "Asus STRIX GAMING",
         "rating": 5,
         "rating_count": 33,
@@ -154,7 +154,7 @@
         "image": "https://images.fravega.com/f1000/606229bb8a4c7bdd25852a54fedb74d1.jpg"
     },
     {
-        "id": 12,
+        "id_table": 12,
         "name": "Asus STRIX GAMING OC",
         "rating": 5,
         "rating_count": 5,
@@ -168,7 +168,7 @@
         "image": "https://http2.mlstatic.com/D_NQ_NP_864962-MLA45035376148_022021-O.webp"
     },
     {
-        "id": 13,
+        "id_table": 13,
         "name": "Asus STRIX OC",
         "rating": 0,
         "rating_count": 0,
@@ -182,7 +182,7 @@
         "image": "https://img.themyshop.com/307.asus_geforce_rtx_3070_rog_strix_gaming_oc_8gb_gddr6_rog-strix-rtx3070-o8g-gaming_90yv0fr1-m0na00.jpg"
     },
     {
-        "id": 14,
+        "id_table": 14,
         "name": "Asus TUF GAMING OC",
         "rating": 4,
         "rating_count": 14,
@@ -196,7 +196,7 @@
         "image": "https://www.fullh4rd.com.ar/img/productos/Pics_Prod/video-geforce-gtx-1660-super-6gb-asus-tuf-gaming-oc-0.jpg"
     },
     {
-        "id": 15,
+        "id_table": 15,
         "name": "EVGA FTW3 ULTRA GAMING",
         "rating": 5,
         "rating_count": 14,
@@ -210,7 +210,7 @@
         "image": "https://www.fullh4rd.com.ar/img/productos/Pics_Prod/video-geforce-rtx-3080-12gb-evga-ftw3-ultra-gaming-lhr-0.jpg"
     },
     {
-        "id": 16,
+        "id_table": 16,
         "name": "EVGA FTW3 ULTRA GAMING LE iCX3",
         "rating": 0,
         "rating_count": 0,
@@ -224,7 +224,7 @@
         "image": "https://images.evga.com/products/gallery/04G-P4-1357-KR_XL_1.jpg"
     },
     {
-        "id": 17,
+        "id_table": 17,
         "name": "EVGA SC ULTRA GAMING",
         "rating": 4,
         "rating_count": 15,
@@ -238,7 +238,7 @@
         "image": "https://images.evga.com/products/gallery/png/12G-P5-3657-KR_LG_1.png"
     },
     {
-        "id": 18,
+        "id_table": 18,
         "name": "EVGA XC GAMING",
         "rating": 4,
         "rating_count": 19,
@@ -252,7 +252,7 @@
         "image": "https://images.evga.com/products/gallery/png/08G-P5-3755-KL_LG_1.png"
     },
     {
-        "id": 19,
+        "id_table": 19,
         "name": "EVGA XC3 BLACK GAMING",
         "rating": 5,
         "rating_count": 8,
@@ -266,7 +266,7 @@
         "image": "https://http2.mlstatic.com/D_NQ_NP_876081-MLA48557535691_122021-W.jpg"
     },
     {
-        "id": 20,
+        "id_table": 20,
         "name": "EVGA XC3 ULTRA GAMING",
         "rating": 4,
         "rating_count": 33,
@@ -280,7 +280,7 @@
         "image": "https://images.evga.com/products/gallery/10G-P5-3885-KR_XL_1.jpg"
     },
     {
-        "id": 21,
+        "id_table": 21,
         "name": "Gigabyte AORUS MASTER",
         "rating": 4,
         "rating_count": 12,
@@ -294,7 +294,7 @@
         "image": "https://arrichetta.com.ar/wp-content/uploads/2022/08/gigabyte-tarjeta-grafica-nvidia-rtx-3070-aorus-master-8gb-gddr6.jpg"
     },
     {
-        "id": 22,
+        "id_table": 22,
         "name": "Gigabyte AORUS XTREME",
         "rating": 5,
         "rating_count": 2,
@@ -308,7 +308,7 @@
         "image": "https://media.ldlc.com/r1600/ld/products/00/05/72/96/LD0005729674_1.jpg"
     },
     {
-        "id": 23,
+        "id_table": 23,
         "name": "Gigabyte GAMING",
         "rating": 4,
         "rating_count": 44,
@@ -322,7 +322,7 @@
         "image": "https://m.media-amazon.com/images/I/51bpp6rWCmL._AC_.jpg"
     },
     {
-        "id": 24,
+        "id_table": 24,
         "name": "Gigabyte GAMING OC",
         "rating": 4,
         "rating_count": 20,
@@ -336,7 +336,7 @@
         "image": "https://app.contabilium.com/files/explorer/7026/Productos-Servicios/concepto-4617556.png"
     },
     {
-        "id": 25,
+        "id_table": 25,
         "name": "Gigabyte GV-N105TOC-4GD",
         "rating": 4,
         "rating_count": 19,
@@ -350,7 +350,7 @@
         "image": "https://static.gigabyte.com/StaticFile/Image/Global/129edae2f6a0e931b72da144a316c903/Product/16002/png/1000"
     },
     {
-        "id": 26,
+        "id_table": 26,
         "name": "Gigabyte GV-N3060GAMINGOC12GD",
         "rating": 4,
         "rating_count": 5,
@@ -364,7 +364,7 @@
         "image": "https://http2.mlstatic.com/D_NQ_NP_823665-MLA51653786302_092022-O.jpg"
     },
     {
-        "id": 27,
+        "id_table": 27,
         "name": "Gigabyte OC",
         "rating": 4,
         "rating_count": 51,
@@ -378,7 +378,7 @@
         "image": "https://static.gigabyte.com/StaticFile/Image/Global/d0413db7abb9561146c6edc3b1c2f708/Product/23929/Png"
     },
     {
-        "id": 28,
+        "id_table": 28,
         "name": "Gigabyte Vision OC",
         "rating": 4,
         "rating_count": 23,
@@ -392,7 +392,7 @@
         "image": "https://static.gigabyte.com/StaticFile/Image/Global/dad06b71f10426d066dcbacd221eb8fe/Product/26238/Png"
     },
     {
-        "id": 29,
+        "id_table": 29,
         "name": "Gigabyte WINDFORCE OC",
         "rating": 3,
         "rating_count": 4,
@@ -406,7 +406,7 @@
         "image": "https://static.gigabyte.com/StaticFile/Image/Global/9282581600c6a4d92f2e742d518a0ea2/Product/23654/Png"
     },
     {
-        "id": 30,
+        "id_table": 30,
         "name": "MSI D6 VENTUS XS OC",
         "rating": 0,
         "rating_count": 0,
@@ -420,7 +420,7 @@
         "image": "https://asset.msi.com/resize/image/global/product/product_8_20200317155243_5e7081cb9206e.png62405b38c58fe0f07fcef2367d8a9ba1/1024.png"
     },
     {
-        "id": 31,
+        "id_table": 31,
         "name": "MSI GAMING",
         "rating": 4,
         "rating_count": 171,
@@ -434,7 +434,7 @@
         "image": "https://m.media-amazon.com/images/I/51uI1khXouL._AC_.jpg"
     },
     {
-        "id": 32,
+        "id_table": 32,
         "name": "MSI GAMING X",
         "rating": 4,
         "rating_count": 2,
@@ -448,7 +448,7 @@
         "image": "https://m.media-amazon.com/images/I/811sBakp3+L._SL1500_.jpg"
     },
     {
-        "id": 33,
+        "id_table": 33,
         "name": "MSI GAMING X TRIO",
         "rating": 4,
         "rating_count": 20,
@@ -462,7 +462,7 @@
         "image": "https://www.notebookcheck.org/fileadmin/Notebooks/NVIDIA/MSI_RTX_3070_Gaming_X_Trio/MSI_GeForce_RTX_3070_Gaming_X_Trio_18.png"
     },
     {
-        "id": 34,
+        "id_table": 34,
         "name": "MSI GT 1030 2G LP OC",
         "rating": 5,
         "rating_count": 2,
@@ -476,7 +476,7 @@
         "image": "https://infoservice-cba.com.ar/wp-content/uploads/2021/04/PLACA-MSI-GEFORCE-GT-1030-2GB-LP-OC-DDR4-HDMI-DP.jpg"
     },
     {
-        "id": 35,
+        "id_table": 35,
         "name": "MSI GT 1030 2GH LP OC",
         "rating": 4,
         "rating_count": 5,
@@ -490,7 +490,7 @@
         "image": "https://infoservice-cba.com.ar/wp-content/uploads/2021/04/PLACA-MSI-GEFORCE-GT-1030-2GB-LP-OC-DDR4-HDMI-DP.jpg"
     },
     {
-        "id": 36,
+        "id_table": 36,
         "name": "MSI GT 710 1GD3H LP",
         "rating": 4,
         "rating_count": 8,
@@ -504,7 +504,7 @@
         "image": "https://asset.msi.com/resize/image/global/product/product_3_20180416144107_5ad44583983f6.png62405b38c58fe0f07fcef2367d8a9ba1/1024.png"
     },
     {
-        "id": 37,
+        "id_table": 37,
         "name": "MSI GTX 1050 TI 4GT LP",
         "rating": 5,
         "rating_count": 3,
@@ -518,7 +518,7 @@
         "image": "https://http2.mlstatic.com/D_NQ_NP_989426-MLA46664778038_072021-O.jpg"
     },
     {
-        "id": 38,
+        "id_table": 38,
         "name": "MSI GTX 1050 Ti 4GT OC",
         "rating": 4,
         "rating_count": 22,
@@ -532,7 +532,7 @@
         "image": "https://asset.msi.com/resize/image/global/product/product_6_20180411114412_5acd848c49500.png62405b38c58fe0f07fcef2367d8a9ba1/1024.png"
     },
     {
-        "id": 39,
+        "id_table": 39,
         "name": "MSI SUPRIM",
         "rating": 5,
         "rating_count": 4,
@@ -546,7 +546,7 @@
         "image": "https://elchapuzasinformatico.com/wp-content/uploads/2021/02/MSI-GeForce-RTX-3090-Suprim-X-Oficial-740x486.png"
     },
     {
-        "id": 40,
+        "id_table": 40,
         "name": "MSI VENTUS 2X",
         "rating": 0,
         "rating_count": 0,
@@ -560,7 +560,7 @@
         "image": "https://asset.msi.com/resize/image/global/product/product_16104292045f772b9d6d9708c3becfeaa03e3261fb.png62405b38c58fe0f07fcef2367d8a9ba1/1024.png"
     },
     {
-        "id": 41,
+        "id_table": 41,
         "name": "MSI VENTUS 2X OC",
         "rating": 4,
         "rating_count": 9,
@@ -574,7 +574,7 @@
         "image": "https://asset.msi.com/resize/image/global/product/product_10_20200902133542_5f4f2f2e0af1d.png62405b38c58fe0f07fcef2367d8a9ba1/1024.png"
     },
     {
-        "id": 42,
+        "id_table": 42,
         "name": "MSI VENTUS 3X OC",
         "rating": 4,
         "rating_count": 21,
@@ -588,7 +588,7 @@
         "image": "https://www.fullh4rd.com.ar/img/productos/Pics_Prod/video-geforce-rtx-3070-8gb-msi-ventus-3x-plus-oc-lhr-0.jpg"
     },
     {
-        "id": 43,
+        "id_table": 43,
         "name": "MSI VENTUS XS OC",
         "rating": 4,
         "rating_count": 22,
@@ -602,7 +602,7 @@
         "image": "https://www.fullh4rd.com.ar/img/productos/Pics_Prod/video-geforce-gtx-1660-super-6gb-msi-ventus-xs-oc-0.jpg"
     },
     {
-        "id": 44,
+        "id_table": 44,
         "name": "NVIDIA Founders Edition",
         "rating": 4,
         "rating_count": 64,
@@ -616,7 +616,7 @@
         "image": "https://http2.mlstatic.com/D_NQ_NP_615998-MLA50318274894_062022-O.webp"
     },
     {
-        "id": 45,
+        "id_table": 45,
         "name": "PNY VCQGV100-PB",
         "rating": 0,
         "rating_count": 0,
@@ -630,7 +630,7 @@
         "image": "https://media.pangoly.com/img/6/2/5/9/62595d58-09ef-4233-a883-0d03380842f2.jpg"
     },
     {
-        "id": 46,
+        "id_table": 46,
         "name": "PowerColor Hellhound Spectral",
         "rating": 4,
         "rating_count": 1,
@@ -644,7 +644,7 @@
         "image": "https://www.profesionalreview.com/wp-content/uploads/2021/03/PowerColor-RX-6700-XT-Hellhound-primeras-imagenes-de-esta-GPU.jpg"
     },
     {
-        "id": 47,
+        "id_table": 47,
         "name": "PowerColor Red Dragon",
         "rating": 5,
         "rating_count": 1,
@@ -658,7 +658,7 @@
         "image": "https://s3-sa-east-1.amazonaws.com/saasargentina/Mfnuvjdpa2Jntw9TfyyE/imagen"
     },
     {
-        "id": 48,
+        "id_table": 48,
         "name": "Sapphire NITRO+",
         "rating": 4,
         "rating_count": 6,
@@ -672,7 +672,7 @@
         "image": "https://m.media-amazon.com/images/I/61lvNsSWbvL.jpg"
     },
     {
-        "id": 49,
+        "id_table": 49,
         "name": "Sapphire PULSE",
         "rating": 4,
         "rating_count": 39,
@@ -686,7 +686,7 @@
         "image": "https://tarjetasgraficaspc.com/wp-content/uploads/2021/05/Sapphire-RX-580-PULSE.jpg"
     },
     {
-        "id": 50,
+        "id_table": 50,
         "name": "XFX Speedster MERC 319 Black",
         "rating": 5,
         "rating_count": 2,
@@ -700,7 +700,7 @@
         "image": "https://m.media-amazon.com/images/I/61O87BwJr7S.jpg"
     },
     {
-        "id": 51,
+        "id_table": 51,
         "name": "Zotac GAMING",
         "rating": 4,
         "rating_count": 11,
@@ -714,7 +714,7 @@
         "image": "https://www.xt-pc.com.ar/img/productos/Pics_Prod/VGA2303.jpg"
     },
     {
-        "id": 52,
+        "id_table": 52,
         "name": "Zotac GAMING AMP",
         "rating": 5,
         "rating_count": 1,
@@ -728,7 +728,7 @@
         "image": "https://www.zotac.com/download/files/styles/w1024/public/product_gallery/graphics_cards/zt-a30600h-10m-image01_1.jpg?itok=fJqgwiFh"
     },
     {
-        "id": 53,
+        "id_table": 53,
         "name": "Zotac GAMING Twin Edge OC",
         "rating": 5,
         "rating_count": 2,
@@ -742,7 +742,7 @@
         "image": "https://www.zotac.com/download/files/styles/w1024/public/product_gallery/graphics_cards/zt-a30600h-10m-image01_1.jpg?itok=fJqgwiFh"
     },
     {
-        "id": 54,
+        "id_table": 54,
         "name": "Zotac GAMING Twin Fan",
         "rating": 5,
         "rating_count": 2,
@@ -756,7 +756,7 @@
         "image": "https://www.zotac.com/download/files/styles/w1024/public/product_gallery/graphics_cards/zt-a30600h-10m-image01_1.jpg?itok=fJqgwiFh"
     },
     {
-        "id": 55,
+        "id_table": 55,
         "name": "Zotac MINI",
         "rating": 4,
         "rating_count": 31,
