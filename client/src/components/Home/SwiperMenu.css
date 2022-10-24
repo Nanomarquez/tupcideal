@@ -27,6 +27,12 @@
   object-fit: cover;
 }
 
+@media (min-width:1720px) {
+  .swiper-slide img {
+    width: 40%;
+  }
+}
+
 @media (max-width: 600px) {
   .swiper-slide img{
     object-fit: fill;

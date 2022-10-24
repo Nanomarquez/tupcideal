@@ -40,7 +40,7 @@ export const productsSlice = createSlice({
         }
         case "Descendente": {
           state.productsFiltered = [...state.productsFiltered].sort(
-            (a, b) => b.price - a.price
+            (a, b) => b.price_usd - a.price_usd
           );
           break;
         }
@@ -63,7 +63,7 @@ export const productsSlice = createSlice({
       state.cart = [...state.cart, action.payload];
     },
     deleteProductToCart: (state, action) => {
-      state.cart = [...state.cart.filter(f => f.id !== action.payload)];
+      state.cart = state.cart.slice(0,state.cart.indexOf(action.payload))
     }
 
     // una diferencia entre redux y redux toolkit

@@ -31,27 +31,23 @@ function ProductosSearch() {
             </h1>
             <div className="flex gap-10 text-xl">
               <p className="bg-gray-500 px-3 rounded-md text-xl text-white">
-                Categoria: {productsFilterById.categories}
+                Categoria: {categories.toString()[0].toUpperCase()+categories.toString().slice(1)}
               </p>
-              {productsFilterById.quantity > 0 ? (
+              {productsFilterById.rating_count > 0 ? (
                 <p className="bg-green-500 px-3 rounded-md text-white text-xl">
-                  Stock: {productsFilterById.quantity}
+                  Stock: {productsFilterById.rating_count}
                 </p>
               ) : (
                 <p className="bg-red-500 px-3 rounded-md text-white text-xl">
-                  Stock: {productsFilterById.quantity}
+                  Stock: {productsFilterById.rating_count}
                 </p>
               )}
             </div>
             <p className="text-xl">
               Rating:{" "}
-              {"★".repeat(productsFilterById.calification).padEnd(5, "☆")}
+              {"★".repeat(productsFilterById.rating).padEnd(5, "☆")}
             </p>
-            <h2 className="text-2xl">Marca: {productsFilterById.brand}</h2>
-            <p>
-              Description:{" "}
-              {productsFilterById.description?.slice(0, 300) + "..."}
-            </p>
+            <h2 className="text-2xl">Marca: {productsFilterById.name?.split(" ")[0]}</h2>
             <button
               className="bg-yellow-300 text-black rounded-md text-2xl p-2 shadow-lg hover:text-white hover:bg-yellow-500 duration-500"
               onClick={() =>

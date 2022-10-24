@@ -5,15 +5,12 @@ const { User } = require("../db.js");
 //------- Pedir usuario(individual) a la BD--------
 router.get("/:email", async (req, res) => {
   const { email } = req.params;
-  console.log("este es el email" + email);
   try {
     let respuestabd;
     respuestabd = await User.findOne({ where: { email: email } });
-    console.log("lo que traigo es:" + respuestabd);
     if (respuestabd === null) {
       return res
-        .status(404)
-        .send(`No se encontraron coincidencias con el usuario: ${email}`);
+        .send({error:'Usuario no encontrado'})
     } else {
       res.status(200).json(respuestabd);
     }
@@ -42,7 +39,7 @@ router.get("/", async (req, res) => {
 
 //------- Create User -------
 router.post("/", async (req, res) => {
-  const { name, last_name, adress, phone_number } = req.body;
+  const { name, last_name, adress, email, phone_number } = req.body;
   console.log(req.body)
   try {
     const [usuario, created] = await User.findOrCreate({
@@ -51,6 +48,7 @@ router.post("/", async (req, res) => {
         last_name: last_name,
         adress: adress,
         phone_number: phone_number,
+        email: email,
       },
     });
     if (created) {

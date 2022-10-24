@@ -16,6 +16,8 @@ const powerRouter = require("./power.js");
 const usersRouter = require("./users.js");
 const casesRouter = require("./case.js");
 const cpuRouter = require("./cpu.js");
+const purchaseRouter = require("./purchase.js");
+const paymentRouter = require("./payment.js")
 
 const router = Router();
 
@@ -29,6 +31,7 @@ router.use("/warehouse", warehouseRouter);
 router.use("/internal", internalRouter);
 router.use("/products", productsRouter);
 router.use("/sellers", sellersRouter);
+router.use("/payment", paymentRouter);
 router.use("/admins", adminsRouter);
 router.use("/review", reviewRouter);
 router.use("/memory", memoryRouter);
@@ -37,6 +40,7 @@ router.use("/users", usersRouter);
 router.use("/power", powerRouter);
 router.use("/cases", casesRouter);
 router.use("/cpu", cpuRouter);
+
 
 router.use("/", (req, res) => {
   res.send("TU PC IDEAL");

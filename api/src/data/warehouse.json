@@ -1,10 +1,20 @@
 [ 
     {
         "precio": 100,
-        "cantidad" : 1
+        "cantidad": 1,
+        "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
+        "ProductId": "b9ee0106-cc8b-4422-bb59-2aa25c50b255"
     },
      {
         "precio": 200,
-        "cantidad" : 2
+        "cantidad": 2,
+        "SellerId":"45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
+        "ProductId": "8e2c008b-eaf7-4bde-af00-a97d420b9122"
+    },
+    {
+        "precio": 50,
+        "cantidad": 5,
+        "SellerId":"b76670e2-01be-42ec-861a-2601e2485271",
+        "ProductId": "8e2c008b-eaf7-4bde-af00-a97d420b9122"
     }
 ]

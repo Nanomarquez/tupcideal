@@ -2,16 +2,41 @@ const { Router } = require("express");
 const router = Router();
 const { Seller, Product, WareHouse } = require("../db.js");
 
+
+
+
 //Create User
 //------- PEDIR TODOS LOS PRODUCTOS Y VENDEDORES A LA BD--------
 router.get("/", async (req, res) => {
+  const {SellerId} = req.query
   try {
     let ware;
     ware = await WareHouse.findAll({
-      include: [Seller, Product],
+      include: [
+        {
+          model: Seller,
+          attributes: ["store_name", "adress", "id", "email", "adress"],
+        },
+        {
+          model: Product,
+          attributes: [
+            "categories",
+            "name",
+            "rating",
+            "rating_count",
+            "image",
+            "id_table",
+          ],
+        },
+      ],
+      attributes: ["precio", "cantidad", "id"],
     });
     // console.log(ware);
-    res.status(200).json(ware);
+    if (SellerId) {
+      res.send(ware.filter(w => w.Seller.id == SellerId))
+    } else {
+      res.status(200).json(ware);
+    }
   } catch (err) {
     res.status(500).json(err);
   }
@@ -25,17 +50,18 @@ router.post("/", async (req, res) => {
       where: {
         precio: precio,
         cantidad: cantidad,
+        SellerId: id_vendedor,
+        ProductId: id_producto
       },
     });
-    console.log(product);
     if (created) {
       console.log("Product created successfully");
       res.status(200).json(product);
     } else {
-      res.status(200).json("The product can´t be created");
+      res.status(200).json([{error:"The product can't be created"}]);
     }
   } catch (err) {
-    res.status(500).json(err);
+    res.status(500).json({error: err.message});
   }
 });
 
