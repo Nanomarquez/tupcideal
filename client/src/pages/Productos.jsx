@@ -8,6 +8,7 @@ import {
   getFiltered,
   orderProducts,
   addProductToShoppingCart,
+  addFavorites
 } from "../redux/actions";
 import { Link } from "react-router-dom";
 
@@ -193,6 +194,12 @@ function Productos() {
                       src="https://cdn.pixabay.com/photo/2017/06/26/20/33/icon-2445095_960_720.png"
                       className="opacity-50 object-cover"
                       alt=""
+                      onClick={() => {
+                        localStorage.setItem(
+                          "favorites",
+                          JSON.stringify(e)
+                        );
+                        dispatch(addFavorites(e))}}
                     />
                   </button>
                 </div>

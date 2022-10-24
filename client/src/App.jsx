@@ -9,6 +9,7 @@ import Register from "./pages/Register";
 import Mp from "./pages/Mp";
 import ProductosSearch from './pages/ProductosSearch'
 import User from "./pages/User";
+import Favorites from "./components/NavBar/Favorites";
 function App() {
 
   return (
@@ -24,6 +25,7 @@ function App() {
         <Route exact path="/mp" element={<Mp />} />
         <Route exact path="/user" element={<User/>} />
         <Route exact path="/productos/search/:id_table&:categories" element={<ProductosSearch />} />
+        <Route exact path="/favorites" element={<Favorites />} />
       </Routes>
       <Footer />
     </>

@@ -8,6 +8,7 @@ export const productsSlice = createSlice({
     details: {},
     component: [],
     filterByPrice: [],
+    favorites: [],
     cart: localStorage.cart !== "" ? JSON.parse(localStorage.getItem('cart')) : [] ,
     // la idea es tener siempre todos los productos cargados para los selects o busqueda por name
     // por otra parte tener los productos filtrados para el display y/o sus selects
@@ -64,7 +65,13 @@ export const productsSlice = createSlice({
     },
     deleteProductToCart: (state, action) => {
       state.cart = [...state.cart.filter(f => f.id !== action.payload)];
-    }
+    },
+    favorites: (state, action) => {
+      state.favorites = [...state.favorites, action.payload]
+    },
+    deleteFavorites: (state, action) => {
+      state.favorites = [...state.favorites.filter(f => f.id !== action.payload)];
+    },
 
     // una diferencia entre redux y redux toolkit
     // es que aca no hay switch, son funciones que se invocan desde las actions
@@ -84,7 +91,9 @@ export const {
   getBrand,
   addProductToCart,
   deleteProductToCart,
-  orderProductInRangeOfPrice
+  orderProductInRangeOfPrice,
+  favorites,
+  deleteFavorites,
 } = productsSlice.actions;
 
 // se exportan las funciones que invocamos desde las actions

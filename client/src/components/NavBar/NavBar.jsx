@@ -4,7 +4,7 @@ import Signin from "./Signin";
 import SignOut from "./SignOut";
 import { Link } from "react-router-dom";
 import React, { useEffect, useState } from "react";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import Carrito from "../../assets/carrito.png";
 import { useAuth } from "../../context/authContext";
 import { motion, AnimatePresence } from "framer-motion";
@@ -21,7 +21,7 @@ function NavBar() {
   function handleActive() {
     active ? setActive("") : setActive("active");
   }
-
+  const dispatch = useDispatch()
   useEffect(()=>{
     cart.length === 0 ? localStorage.setItem("cart","") :
     localStorage.setItem("cart",JSON.stringify(cart))
@@ -48,22 +48,34 @@ function NavBar() {
         <div className="flex sm:gap-40 gap-10">
           <Search />
           {usuario ? <SignOut /> : <Signin />}
-          {usuario ? <Avatar/> : ""}
+          {usuario ? <Avatar /> : ""}
         </div>
         <div className="flex right-10 sm:relative absolute">
           <motion.button
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
-            onClick={()=>{modalOpen ? close() : open()}}
+            onClick={() => {
+              modalOpen ? close() : open();
+            }}
           >
             {/* <Link to={"/cart"}> */}
-              <img
-                src={Carrito}
-                alt="carrito"
-                className="object-cover h-14 p-2"
-              />
+            <img
+              src={Carrito}
+              alt="carrito"
+              className="object-cover h-14 p-2"
+            />
             {/* </Link> */}
           </motion.button>
+            
+             <button className="flex justify-center items-center bg-yellow-100/30 w-10 hover:bg-gray-300/90 transition rounded-md">
+              <Link to={"/favorites"}>
+                <img
+                  src="https://cdn.pixabay.com/photo/2017/06/26/20/33/icon-2445095_960_720.png"
+                  className="opacity-50 object-cover"
+                  alt=""
+                />
+              </Link>
+            </button>
 
           <span className="bg-white rounded-full absolute w-6 h-6 text-center">
             {cart.length}

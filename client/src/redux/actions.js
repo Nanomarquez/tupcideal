@@ -13,7 +13,9 @@ import {
   getBrand,
   addProductToCart,
   deleteProductToCart,
-  orderProductInRangeOfPrice
+  orderProductInRangeOfPrice,
+  favorites,
+  deleteFavorites
 } from "./slice";
 
 // se definen funciones que al ser invocadas despachan las funciones ya traidas desde Slice (reducer)
@@ -73,6 +75,12 @@ export const addProductToShoppingCart = (product) => (dispatch) => {
 };
 export const deleteProductToShoppingCart = (id) => (dispatch) => {
   dispatch(deleteProductToCart(id));
+};
+export const addFavorites = (product) => (dispatch) => {
+  dispatch(favorites(product));
+};
+export const deleteFavoritesList = (id) => (dispatch) => {
+  dispatch(deleteFavorites(id));
 };
 
 // busqueda por id por params
