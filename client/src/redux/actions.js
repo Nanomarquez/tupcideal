@@ -54,11 +54,11 @@ export const getFiltered = (brand, category) => (dispatch) => {
 //trae de forma dinamica, segun componente (endpoint), por query busqueda por name,
 //o filtrado por brand o compatibility
 
-export const getDetail = (id) => (dispatch) => {
+/* export const getDetail = (id) => (dispatch) => {
   axios(`/products/:${id}`)
     .then((res) => dispatch(getProductDetail(res.data)))
     .catch((e) => console.log(e));
-};
+}; */
 
 export const orderByPrice = (array) => (dispatch) => {
   dispatch(orderProductInRangeOfPrice(array));

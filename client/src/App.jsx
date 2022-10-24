@@ -25,7 +25,7 @@ function App() {
         <Route exact path="/mp" element={<Mp />} />
         <Route exact path="/completarform" element={<CompletarForm />} />
         <Route exact path="/user" element={<User/>} />
-        <Route exact path="/productos/search/:id_table&:categories" element={<ProductosSearch />} />
+        <Route exact path="/productos/search/:id" element={<ProductosSearch />} />
       </Routes>
       <Footer />
     </>

@@ -5,8 +5,8 @@ const { Seller, Product, WareHouse } = require("../db.js");
 //Create User
 //------- PEDIR TODOS LOS PRODUCTOS Y VENDEDORES A LA BD--------
 router.get("/", async (req, res) => {
-  const { ProductId } = req.query;
-
+  const { brand, category } = req.query;
+  let response = []
   try {
     let ware;
     console.log("estoy dentro");
@@ -31,16 +31,80 @@ router.get("/", async (req, res) => {
       ],
       attributes: ["precio", "cantidad", "id"],
     });
-    console.log(ware);
-    if (ProductId) {
-      res.send(ware.filter((w) => w.Product.id === ProductId));
-    } else {
-      res.status(200).json(ware);
-    }
+    response = ware;
+    brand ? response = response.filter(p => p.Product.name.includes(brand)) : null;
+    category ? response = response.filter(p => p.Product.categories === category): null;
+    res.send(response);
   } catch (err) {
-    res.status(500).json(err);
+    res.status(500).json({error: err.message});
   }
 });
+
+router.get('/product/:Product_id', async (req, res) => {
+  const {Product_id} = req.params;
+
+  try {
+    const products = await WareHouse.findAll({
+      where: {ProductId :[Product_id]},
+      include: [
+        {
+          model: Seller,
+          attributes: ["store_name", "adress", "id", "email", "adress"],
+        },
+        {
+          model: Product,
+          attributes: [
+            "id",
+            "categories",
+            "name",
+            "rating",
+            "rating_count",
+            "image",
+            "id_table",
+          ],
+        },
+      ],
+      attributes: ["precio", "cantidad", "id"],
+    })
+    res.send(products);
+  } catch (err) {
+    res.send({error: err.message})
+  }
+});
+
+router.get('/:id', async (req, res) => {
+  const {id} = req.params;
+
+  try {
+    const product = await WareHouse.findByPk(id,{
+    include: [
+      {
+        model: Seller,
+        attributes: ["store_name", "adress", "id", "email", "adress"],
+      },
+      {
+        model: Product,
+        attributes: [
+          "id",
+          "categories",
+          "name",
+          "rating",
+          "rating_count",
+          "image",
+          "id_table",
+        ],
+      },
+    ],
+    attributes: ["precio", "cantidad", "id"]
+    });
+   res.send(product);
+  } catch (err) {
+    res.status(500).send({error: err.message});
+  };
+}); 
+
+router.get('/')
+
 
 //------- POST A ALMACEN--------
 router.post("/", async (req, res) => {
