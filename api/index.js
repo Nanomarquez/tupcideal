@@ -22,13 +22,14 @@ const bulkMotherboard = require("./src/data/motherboard.json");
 const bulkCase = require("./src/data/case.json");
 const bulkInternalHardDrive = require("./src/data/internal-hard-drive.json");
 const bulkSellers = require("./src/data/sellers.json");
-const bulkWareHouse = require("./src/data/warehouse.json");
-const bulkProducts = require("./src/data/products.json")
+const bulkWareHouse = require("./src/data/WareHouses.json")
+//const bulkWareHouse = require("./src/data/warehouse.json");
+const bulkProducts = require("./src/data/products.json");
 
 // Syncing all the models at once.
-conn.sync({ force: false }).then(() => {
+conn.sync({ force: true }).then(() => {
   server.listen(3001, async () => {
-   /* await CPU.bulkCreate(bulkCPU);
+    await CPU.bulkCreate(bulkCPU);
     console.log("✓ Se llenó la tabla CPU con la data del json");
     await Memory.bulkCreate(bulkMemory);
     console.log("✓ Se llenó la tabla Memory con la data del json");
@@ -49,7 +50,7 @@ conn.sync({ force: false }).then(() => {
     await Seller.bulkCreate(bulkSellers);
     console.log("✓ Se llenó la tabla Seller con la data del json");
     await WareHouse.bulkCreate(bulkWareHouse);
-    console.log("✓ Se llenó la tabla WareHouse con la data del json");*/
+    console.log("✓ Se llenó la tabla WareHouse con la data del json");
     console.log(`⇒ listening at port ${process.env.PORT}`); // eslint-disable-line no-console
   });
 });
