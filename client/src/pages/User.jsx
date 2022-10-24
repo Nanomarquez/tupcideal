@@ -2,16 +2,28 @@ import React, { useState } from "react";
 import { useAuth } from "../context/authContext";
 import axios from "axios";
 import {useNavigate} from 'react-router-dom';
+import { useEffect } from "react";
 function User() {
   const { usuario } = useAuth();
 
   const navigate = useNavigate();
 
+  const [user, setUser] = useState({})
+
+ useEffect(()=>{
+  if(usuario){
+    axios.get(`/users/${usuario.email}`)
+    .then(res=>{
+      setUser(res.data)
+    })
+  }
+ },[usuario])
+
   const [input, setInput] = useState({
-    name: "",
-    last_name: "",
-    adress: "",
-    phone_number: "",
+    name: user.name,
+    last_name: user.last_name,
+    adress: user.adress,
+    phone_number: user.phone_number,
   });
 
   let handleChange = (e) => {

@@ -189,13 +189,7 @@ function Productos() {
                   <Link to={`/productos/search/${e.id_table}&${e.categories}`}>
                     <button
                       className="bg-gray-600 hover:bg-gray-800 duration-500 font-medium px-6 py-2 tracking-wider transition text-white rounded-md"
-                      onClick={() => {
-                        localStorage.setItem(
-                          "cart",
-                          JSON.stringify(...cart, e)
-                        );
-                        dispatch(addProductToShoppingCart(e));
-                      }}
+                      
                     >
                       Ver mas
                     </button>

@@ -23,8 +23,10 @@ function NavBar() {
     active ? setActive("") : setActive("active");
   }
 
+  
+
   useEffect(()=>{
-    cart.length === 0 ? localStorage.setItem("cart","") :
+    !localStorage.hasOwnProperty('cart') ? localStorage.setItem("cart","") :
     localStorage.setItem("cart",JSON.stringify(cart))
   },[cart])
   

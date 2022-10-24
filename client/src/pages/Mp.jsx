@@ -79,7 +79,6 @@ function Mp() {
           </div>     
         </form>
         {button.length && <a href={button} > PAGAR CON MERCADOPAGO</a>}
-        
     </div>
   )
 }
