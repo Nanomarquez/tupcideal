@@ -10,7 +10,6 @@ import { useAuth } from "../../context/authContext";
 import { motion, AnimatePresence } from "framer-motion";
 import Modal from "../../components/Modal/Modal";
 import Avatar from './Avatar'
-import axios from "axios";
 function NavBar() {
   const [modalOpen, setModalOpen] = useState(false);
 

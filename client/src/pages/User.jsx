@@ -45,43 +45,53 @@ function User() {
   };
 
   return (
-    <div className="h-screen flex justify-center items-center flex-col gap-10">
-      <h1 className="text-center text-2xl">Quieres modificar algun dato?</h1>
-      <form
+    <div className="h-screen w-full flex flex-col justify-center items-center gap-10">
+           <h1 className="text-3xl text-center tracking-tighter font-bold">Quieres modificar algun dato?</h1>
+           <form
         onSubmit={onSubmit}
-        className="flex flex-col justify-center w-80 h-80 bg-gray-200 items-center"
+        className="flex flex-col justify-center w-[400px] h-[400px] bg-gray-200 rounded-md shadow-black shadow-lg items-center gap-4"
       >
-        <label>Nombre</label>
+        <div className="flex flex-col">
+        <label className="font-bold">Nombre</label>
         <input
           onChange={handleChange}
           type="text"
           name="name"
           value={input.name}
+          className="outline-none p-1 rounded-md"
         />
-        <label>Apellido</label>
+        </div>
+        <div className="flex flex-col">
+        <label className="font-bold">Apellido</label>
         <input
           onChange={handleChange}
           type="text"
           name="last_name"
           value={input.last_name}
+          className="outline-none p-1 rounded-md"
         />
-        <label>Direccion</label>
+        </div>
+        <div className="flex flex-col">
+        <label className="font-bold">Direccion</label>
         <input
           onChange={handleChange}
           type="text"
           name="adress"
-          className="text-center"
           value={input.adress}
+          className="outline-none p-1 rounded-md"
         />
-        <label>Telefono</label>
+        </div>
+        <div className="flex flex-col">
+        <label className="font-bold">Telefono</label>
         <input
           onChange={handleChange}
           type="number"
           name="phone_number"
           value={input.phone_number}
-          className="text-center"
+          className="outline-none p-1 rounded-md"
         />
-        <button type="submit">Enviar</button>
+        </div>
+        <button className="bg-white px-10 py-2 rounded-md text-2xl hover:text-white hover:bg-black duration-300 shadow-black shadow" type="submit">Modificar</button>
       </form>
     </div>
   );
