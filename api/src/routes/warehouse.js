@@ -80,7 +80,7 @@ router.put("/:id", async (req, res) => {
     res.json(editedProduct);
   } catch (err) {
     res.status(500).send({
-      message: "Product not found",
+      message: err.message,
     });
   }
 });
