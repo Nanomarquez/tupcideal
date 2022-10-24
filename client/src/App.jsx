@@ -9,6 +9,7 @@ import Register from "./pages/Register";
 import Mp from "./pages/Mp";
 import ProductosSearch from './pages/ProductosSearch'
 import User from "./pages/User";
+import CompletarForm from "./pages/CompletarForm";
 function App() {
 
   return (
@@ -22,6 +23,7 @@ function App() {
         <Route exact path="/register" element={<Register />} />
         <Route exact path="/productos" element={<Productos />} />
         <Route exact path="/mp" element={<Mp />} />
+        <Route exact path="/completarform" element={<CompletarForm />} />
         <Route exact path="/user" element={<User/>} />
         <Route exact path="/productos/search/:id_table&:categories" element={<ProductosSearch />} />
       </Routes>
