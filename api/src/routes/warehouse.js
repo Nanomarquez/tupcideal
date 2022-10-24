@@ -8,6 +8,7 @@ const { Seller, Product, WareHouse } = require("../db.js");
 //Create User
 //------- PEDIR TODOS LOS PRODUCTOS Y VENDEDORES A LA BD--------
 router.get("/", async (req, res) => {
+  const {SellerId} = req.query
   try {
     let ware;
     ware = await WareHouse.findAll({
@@ -31,7 +32,11 @@ router.get("/", async (req, res) => {
       attributes: ["precio", "cantidad", "id"],
     });
     // console.log(ware);
-    res.status(200).json(ware);
+    if (SellerId) {
+      res.send(ware.filter(w => w.Seller.id == SellerId))
+    } else {
+      res.status(200).json(ware);
+    }
   } catch (err) {
     res.status(500).json(err);
   }
