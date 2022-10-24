@@ -27,10 +27,9 @@ function Modal({ handleClose }) {
   const dispatch = useDispatch();
   const productsCart = useSelector((state) => state.products.cart);
   let totalPrice = 0;
-  productsCart.map((p) => (totalPrice = totalPrice + p.price_usd));
+  productsCart.map((p) => (totalPrice = totalPrice + p.precio));
   const { usuario } = useAuth();
 
-  console.log(usuario);
 
   return (
     <Backdrop onClick={handleClose}>
@@ -60,16 +59,16 @@ function Modal({ handleClose }) {
           productsCart.map((p, i) => (
             <div
               key={i}
-              className="flex p-5 gap-5 justify-center items-center border-2 m-5"
+              className="flex p-5 gap-5 justify-center items-center border-2 m-5 text-center shadow-md rounded-lg"
             >
               <img
                 className="object-contain h-36 w-36"
-                src={p.image}
-                alt={p.name}
+                src={p.Product.image}
+                alt={p.Product.name}
               />
-              <h3 className="text-2xl">Name {p.name}</h3>
-              <span>Precio {p.price_usd}</span>
-              <button
+              <h3 className="text-2xl">Name {p.Product.name}</h3>
+              <span className="text-center text-xl">Precio ${p.precio}</span>
+              <button className="bg-gray-300 px-3 py-1 rounded-md shadow-md shadow-black"
                 onClick={() => dispatch(deleteProductToShoppingCart(p.id))}
               >
                 Eliminar
@@ -86,8 +85,10 @@ function Modal({ handleClose }) {
         ) : null}
         {(productsCart.length && usuario !== null) ? (
           <Link to="/mp">
-            <button onClick={handleClose} className="p-5 bg-gray-400 text-3xl">Comprar</button>
-          </Link> ) : null
+            <button onClick={handleClose} className="p-5 bg-gray-400 text-3xl rounded-md shadow-md shadow-black mb-5 text-white">Comprar</button>
+          </Link> ) :           <Link to="/login">
+            <button onClick={handleClose} className="p-5 bg-gray-400 text-3xl rounded-md shadow-md shadow-black mb-5 text-white">Logeate para comprar</button>
+          </Link>
         }
       </motion.div>
     </Backdrop>

@@ -15,9 +15,9 @@ const payProducts = async (req, res) => {
 
   data.cart.map((p) => {
     productos.push({
-      picture_url: p.image,
-      title: p.name,
-      unit_price: p.price_usd,
+      picture_url: p.Product.image,
+      title: p.Product.name,
+      unit_price: p.precio,
       quantity: 1,
     });
   });

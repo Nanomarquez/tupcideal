@@ -27,7 +27,7 @@ function CompletarForm() {
     try {
       input.email = usuario.email;
       axios.post("/users",input);
-      navigate('/login')
+      navigate('/')
     } catch (error) {
       console.log(error.message);
     }

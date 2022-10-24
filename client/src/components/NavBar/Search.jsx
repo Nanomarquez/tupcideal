@@ -49,7 +49,7 @@ function Search() {
   const searchword = e.target.value;
   setWordEntered(searchword);
   const newValue = allProducts.filter((product) => {
-    return product.name.toLowerCase().includes(searchword.toLowerCase())
+    return product.Product.name.toLowerCase().includes(searchword.toLowerCase())
     //reemplazar jsonProducts por allProducts cunado el endpoint este listo
   })
   if (searchword === "") {
@@ -80,8 +80,8 @@ function Search() {
       {filteredData.length != 0 && (
         <div className="searchResult z-[1000000000]">
            {filteredData.slice(0,10).map((p) => 
-            <Link to={`/productos/search/${p.id_table}&${p.categories}`}>
-            <p className="hover:bg-blue-200">{p.name.slice(0,25)}</p>
+            <Link to={`/productos/search/${p.id}`}>
+            <p className="hover:bg-blue-200">{p.Product.name.slice(0,25)}</p>
             </Link>
         )}
 

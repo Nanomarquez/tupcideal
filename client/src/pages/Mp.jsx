@@ -21,8 +21,6 @@ function Mp() {
     pais: "",
     provincia: "",
     ciudad: "",
-    email: usuario.email,
-    cart: usuario.cart,
     zip_code: "",
     street_number: "",
     street_name: "",
@@ -42,6 +40,8 @@ function Mp() {
  
   let handleSubmit = async (e) => {
     e.preventDefault();
+    input.email = usuario.email;
+    input.cart = usuario.cart;
     await axios.post("/payment", input)
     .then(response => setButton(response.data) )
     
