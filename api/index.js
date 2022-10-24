@@ -23,7 +23,7 @@ const bulkCase = require("./src/data/case.json");
 const bulkInternalHardDrive = require("./src/data/internal-hard-drive.json");
 const bulkSellers = require("./src/data/sellers.json");
 const bulkWareHouse = require("./src/data/WareHouses.json");
-//const bulkWareHouse = require("./src/data/warehouse.json");
+// const bulkWareHouse = require("./src/data/warehouse.json");
 const bulkProducts = require("./src/data/products.json");
 
 const user = CPU.findAll();
@@ -33,7 +33,7 @@ if (user === []) {
 } else {
   setter = false;
 }
-
+// setter=true;
 // Syncing all the models at once.
 
 conn.sync({ force: setter }).then(() => {
