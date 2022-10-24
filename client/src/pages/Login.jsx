@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link, Navigate, useNavigate } from "react-router-dom";
 import { useAuth } from "../context/authContext";
 import swal from "sweetalert";
+import axios from "axios";
 
 function Login() {
   const { logIn, loginWithGoogle, usuario } = useAuth();
@@ -34,17 +35,20 @@ function Login() {
     }
   };
 
+
+
   const handleGoogleSignIn = async () => {
-    try {
-      await loginWithGoogle();
-      navigate("/");
-    } catch (error) {
-      setError(error.message);
-    }
-  };
+      try {
+        await loginWithGoogle()
+        navigate('/')
+      } catch (error) {
+        setError(error)
+      }
+      };
 
   return (
-    <>{usuario && <Navigate to='/'/>}
+    <>
+      {usuario && <Navigate to="/" />}
       <section className="h-screen">
         <div className="absolute h-[500px] w-[500px] sm:h-[700px] sm:w-[700px] bg-gradient-to-tr from-purple-400  to-blue-500 rounded-full blur-md -z-10 -translate-y-48 -translate-x-48"></div>
         <div className="px-6 h-full text-gray-800">

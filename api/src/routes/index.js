@@ -27,7 +27,7 @@ const router = Router();
 router.use("/components", componentsRouter);
 router.use("/videocard", videocardRouter);
 router.use("/warehouse", warehouseRouter);
-router.use("/purchase", purchaseRouter);
+// router.use("/purchase", purchaseRouter);
 router.use("/internal", internalRouter);
 router.use("/products", productsRouter);
 router.use("/sellers", sellersRouter);

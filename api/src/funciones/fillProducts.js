@@ -1,5 +1,5 @@
 const { Router } = require("express");
-const { Seller, Product,WareHouse } = require("../db");
+const { Seller, Product, WareHouse } = require("../db");
 const caseData = require("../data/case.json");
 const cpuData = require("../data/cpu.json");
 const internalData = require("../data/internal-hard-drive.json");
@@ -231,11 +231,5 @@ async function fillProduct() {
     });
   });
 }
-
-
-
-
-
-
 
 module.exports = fillProduct;

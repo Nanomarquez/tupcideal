@@ -1,6 +1,6 @@
 .pagination-container{
     @apply
-    flex justify-center items-center w-full font-medium text-base mt-5
+    flex gap-1 justify-center items-center w-full font-medium text-base mt-5
   }
 .pagination-container button{
   @apply

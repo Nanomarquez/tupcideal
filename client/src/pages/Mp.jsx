@@ -9,7 +9,10 @@ function Mp() {
   const {cart} = useSelector(state=>state.products)
 
   const {usuario} = useAuth();
-  usuario.cart = cart
+
+  if(usuario){
+    usuario.cart = cart;
+  }
   
   
   const[button, setButton] = useState("")
@@ -18,8 +21,6 @@ function Mp() {
     pais: "",
     provincia: "",
     ciudad: "",
-    email: usuario.email,
-    cart: usuario.cart,
     zip_code: "",
     street_number: "",
     street_name: "",
@@ -39,12 +40,13 @@ function Mp() {
  
   let handleSubmit = async (e) => {
     e.preventDefault();
+    input.email = usuario.email;
+    input.cart = usuario.cart;
     await axios.post("/payment", input)
     .then(response => setButton(response.data) )
     
   }
   console.log(button);
-  console.log(input);
   return (
     <div className='h-screen flex'>
         <form onSubmit={handleSubmit}>
@@ -76,7 +78,7 @@ function Mp() {
                
           </div>     
         </form>
-        {button.length && <a href={button} > PAGAR CON MERCADOPAGO</a> }
+        {button.length && <a href={button} > PAGAR CON MERCADOPAGO</a>}
     </div>
   )
 }

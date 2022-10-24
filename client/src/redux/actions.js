@@ -32,21 +32,21 @@ export const newUser = (user) => (dispatch) => {
 };
 
 export const getAll = () => (dispatch) => {
-  axios("/products")
+  axios("/warehouse")
     .then((res) => dispatch(getAllProducts(res.data)))
     .catch((e) => console.log(e));
 };
 
 // trae todos los productos, sin filtros
 
-export const getAllById = (id_table,categories) => (dispatch) => {
-  axios(`/${categories}/${id_table}`)
+export const getAllById = (id) => (dispatch) => {
+  axios(`/warehouse/${id}`)
     .then((res) => dispatch(getAllProductsById(res.data)))
     .catch((e) => console.log(e));
 };
 
 export const getFiltered = (brand, category) => (dispatch) => {
-  axios(`/products?brand=${brand}&category=${category}`)
+  axios(`/warehouse?brand=${brand}&category=${category}`)
     .then((res) => dispatch(getProductsFiltered(res.data)))
     .catch((e) => console.log(e));
 };
@@ -54,11 +54,11 @@ export const getFiltered = (brand, category) => (dispatch) => {
 //trae de forma dinamica, segun componente (endpoint), por query busqueda por name,
 //o filtrado por brand o compatibility
 
-export const getDetail = (id) => (dispatch) => {
+/* export const getDetail = (id) => (dispatch) => {
   axios(`/products/:${id}`)
     .then((res) => dispatch(getProductDetail(res.data)))
     .catch((e) => console.log(e));
-};
+}; */
 
 export const orderByPrice = (array) => (dispatch) => {
   dispatch(orderProductInRangeOfPrice(array));

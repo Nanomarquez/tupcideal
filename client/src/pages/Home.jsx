@@ -9,7 +9,24 @@ import Gigabyte from "../assets/marcas/gigabyte.png";
 import Hyperx from "../assets/marcas/hyperx.png";
 import Intel from "../assets/marcas/intel.png";
 import Reddragon from "../assets/marcas/reddragon.png";
+import {useAuth} from '../context/authContext';
+import axios from 'axios'
+import {useNavigate} from 'react-router-dom'
 function Home() {
+  
+  const navigate = useNavigate();
+
+  const {usuario} = useAuth();
+
+  if(usuario !== null){
+    axios.get(`/users/${usuario.email}`)
+    .then(res=>{
+      if(res.data.error){
+        navigate('/completarform')
+      }
+    })
+  }
+  
   return (
     <>
       <div className="flex flex-col sm:flex-row h-[400px] bg-gradient-to-br bg-gray-900">

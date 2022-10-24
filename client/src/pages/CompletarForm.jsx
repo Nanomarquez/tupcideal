@@ -1,31 +1,20 @@
 import React, { useState } from "react";
 import { useAuth } from "../context/authContext";
 import axios from "axios";
-import {useNavigate} from 'react-router-dom';
-import { useEffect } from "react";
-function User() {
+import { useNavigate } from "react-router-dom";
+function CompletarForm() {
   const { usuario } = useAuth();
 
   const navigate = useNavigate();
-
-  const [user, setUser] = useState({})
-
- useEffect(()=>{
-  if(usuario){
-    axios.get(`/users/${usuario.email}`)
-    .then(res=>{
-      setUser(res.data)
-    })
-  }
- },[usuario])
-
+  
   const [input, setInput] = useState({
-    name: user.name,
-    last_name: user.last_name,
-    adress: user.adress,
-    phone_number: user.phone_number,
+    name: "",
+    last_name: "",
+    adress: "",
+    phone_number: "",
+    email: ""
   });
-
+  
   let handleChange = (e) => {
     setInput({
       ...input,
@@ -36,17 +25,17 @@ function User() {
   let onSubmit = (e) => {
     e.preventDefault();
     try {
-      axios.put(`/users/${usuario.email}`,input)
-      .then(res=>console.log(res))
+      input.email = usuario.email;
+      axios.post("/users",input);
       navigate('/')
     } catch (error) {
-      console.log(error);
+      console.log(error.message);
     }
   };
 
   return (
-    <div className="h-screen flex justify-center items-center flex-col gap-10">
-      <h1 className="text-center text-2xl">Quieres modificar algun dato?</h1>
+    <div className="h-screen flex flex-col justify-center items-center gap-10">
+      <h1 className="text-2xl text-center">Antes de proseguir deberas completar tus datos</h1>
       <form
         onSubmit={onSubmit}
         className="flex flex-col justify-center w-80 h-80 bg-gray-200 items-center"
@@ -87,4 +76,4 @@ function User() {
   );
 }
 
-export default User;
+export default CompletarForm;

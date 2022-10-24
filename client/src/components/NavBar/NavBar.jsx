@@ -10,6 +10,7 @@ import { useAuth } from "../../context/authContext";
 import { motion, AnimatePresence } from "framer-motion";
 import Modal from "../../components/Modal/Modal";
 import Avatar from './Avatar'
+import axios from "axios";
 function NavBar() {
   const [modalOpen, setModalOpen] = useState(false);
 
@@ -22,8 +23,10 @@ function NavBar() {
     active ? setActive("") : setActive("active");
   }
 
+  
+
   useEffect(()=>{
-    cart.length === 0 ? localStorage.setItem("cart","") :
+    !localStorage.hasOwnProperty('cart') ? localStorage.setItem("cart","") :
     localStorage.setItem("cart",JSON.stringify(cart))
   },[cart])
   
@@ -34,8 +37,6 @@ function NavBar() {
       usuario.cart = cart
     }
   },[cart])
-
-  console.log(usuario);
 
   return (
     <>
@@ -66,7 +67,7 @@ function NavBar() {
           </motion.button>
 
           <span className="bg-white rounded-full absolute w-6 h-6 text-center">
-            {cart.length}
+            {cart?.length}
           </span>
         </div>
       </nav>

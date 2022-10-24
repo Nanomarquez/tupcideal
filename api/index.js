@@ -23,37 +23,52 @@ const bulkMotherboard = require("./src/data/motherboard.json");
 const bulkCase = require("./src/data/case.json");
 const bulkInternalHardDrive = require("./src/data/internal-hard-drive.json");
 const bulkSellers = require("./src/data/sellers.json");
-const bulkWareHouse = require("./src/data/warehouse.json");
+
+const bulkWareHouse = require("./src/data/WareHouses.json");
+// const bulkWareHouse = require("./src/data/warehouse.json");
 const bulkProducts = require("./src/data/products.json");
 const bulkAdmins = require("./src/data/admin.json");
 
+const user = CPU.findAll();
+var setter;
+if (user === []) {
+  setter = true;
+} else {
+  setter = false;
+}
+
 // Syncing all the models at once.
-conn.sync({ force: true }).then(() => {
+
+conn.sync({ force: setter }).then(() => {
   server.listen(3001, async () => {
-    await CPU.bulkCreate(bulkCPU);
-    console.log("✓ Se llenó la tabla CPU con la data del json");
-    await Memory.bulkCreate(bulkMemory);
-    console.log("✓ Se llenó la tabla Memory con la data del json");
-    await PowerSupply.bulkCreate(bulkPowerSupply);
-    console.log("✓ Se llenó la tabla PowerSupply con la data del json");
-    await Motherboard.bulkCreate(bulkMotherboard);
-    console.log("✓ Se llenó la tabla Motherboard con la data del json");
-    await Case.bulkCreate(bulkCase);
-    console.log("✓ Se llenó la tabla Case con la data del json");
-    await InternalHardDrive.bulkCreate(bulkInternalHardDrive);
-    console.log("✓ Se llenó la tabla InternalHardDrive con la data del json");
-    await VideoCard.bulkCreate(bulkGPU);
-    console.log("✓ Se llenó la tabla VideoCard con la data del json");
+    if (setter === true) {
+      await CPU.bulkCreate(bulkCPU);
+      console.log("✓ Se llenó la tabla CPU con la data del json");
+      await Memory.bulkCreate(bulkMemory);
+      console.log("✓ Se llenó la tabla Memory con la data del json");
+      await PowerSupply.bulkCreate(bulkPowerSupply);
+      console.log("✓ Se llenó la tabla PowerSupply con la data del json");
+      await Motherboard.bulkCreate(bulkMotherboard);
+      console.log("✓ Se llenó la tabla Motherboard con la data del json");
+      await Case.bulkCreate(bulkCase);
+      console.log("✓ Se llenó la tabla Case con la data del json");
+      await InternalHardDrive.bulkCreate(bulkInternalHardDrive);
+      console.log("✓ Se llenó la tabla InternalHardDrive con la data del json");
+      await VideoCard.bulkCreate(bulkGPU);
+      console.log("✓ Se llenó la tabla VideoCard con la data del json");
 
-    await Product.bulkCreate(bulkProducts);
-    console.log("✓ Se llenó la tabla Products");
+      await Product.bulkCreate(bulkProducts);
+      console.log("✓ Se llenó la tabla Products");
 
-    await Seller.bulkCreate(bulkSellers);
-    console.log("✓ Se llenó la tabla Seller con la data del json");
-    await WareHouse.bulkCreate(bulkWareHouse);
-    console.log("✓ Se llenó la tabla WareHouse con la data del json");
-    await Admin.bulkCreate(bulkAdmins);
-    console.log("✓ Se llenó la tabla Admin con la data del json");
-    console.log(`⇒ listening at port ${process.env.PORT}`); // eslint-disable-line no-console
+      await Seller.bulkCreate(bulkSellers);
+      console.log("✓ Se llenó la tabla Seller con la data del json");
+      await WareHouse.bulkCreate(bulkWareHouse);
+      console.log("✓ Se llenó la tabla WareHouse con la data del json");
+      await Admin.bulkCreate(bulkAdmins);
+      console.log("✓ Se llenó la tabla Admin con la data del json");
+      console.log(`⇒ listening at port ${process.env.PORT}`); // eslint-disable-line no-console
+    } else {
+      console.log(`⇒ listening at port ${process.env.PORT}`); // eslint-disable-line no-console
+    }
   });
 });
