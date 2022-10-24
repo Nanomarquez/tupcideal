@@ -17,7 +17,7 @@ function ProductosSearch() {
   return (
     <>
       {productsFilterById && (
-        <div className="w-full flex flex-col sm:flex-row items-center">
+        <div className="w-full h-[120%] flex flex-col sm:flex-row items-center">
           <section className="flex p-10 sm:w-2/5 justify-center w-full">
             <img
               src={productsFilterById.image}
