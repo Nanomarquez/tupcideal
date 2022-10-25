@@ -1,4 +1,3 @@
-const { Router } = require("express");
 const { Seller, Product, WareHouse } = require("../db");
 const caseData = require("../data/case.json");
 const cpuData = require("../data/cpu.json");

@@ -25,7 +25,7 @@ function NavBar() {
   
 
   useEffect(()=>{
-    !localStorage.hasOwnProperty('cart') ? localStorage.setItem("cart","") :
+    !localStorage.hasOwnProperty('cart') ? localStorage.setItem("cart","[]") :
     localStorage.setItem("cart",JSON.stringify(cart))
   },[cart])
   
