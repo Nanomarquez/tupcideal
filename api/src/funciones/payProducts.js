@@ -61,13 +61,13 @@ const payProducts = async (req, res) => {
 
     back_urls: {
       //definir las verdaderas aca
-      success: (process.env.NODE_ENV === "production" ? "https://tupcideal.vercel.app/" : "https:localhost:3000/"),
-      failure: (process.env.NODE_ENV === "production" ? "https://tupcideal.vercel.app/" : "https:localhost:3000/"),
-      pending: (process.env.NODE_ENV === "production" ? "https://tupcideal.vercel.app/" : "https:localhost:3000/"),
+      success: "https://tupcideal.vercel.app/",
+      failure: "https://tupcideal.vercel.app/",
+      pending: "https://tupcideal.vercel.app/",
     },
     //auto_return: "approved",
 
-    notification_url: `${NGROK_URL}/payment/notification`
+    notification_url: (procces.env.NODE_ENV === "production" ? "https://tupcideal-production-5005.up.railway.app/payment/notification" : `${NGROK_URL}/payment/notification` )
   };
 
   mercadopago.preferences

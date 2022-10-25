@@ -40,8 +40,10 @@ function CompletarForm() {
       number.nro !== ""
     ) {
       setDisabled(false);
+    }else{
+      setDisabled(true);
     }
-  }, [input, disabled]);
+  }, [input, disabled,number]);
   
   let handleChange = (e) => {
     setInput({
@@ -68,10 +70,6 @@ function CompletarForm() {
       [e.target.name]: e.target.value
     })
   }
-
-  console.log(input)
-  console.log(number)
-  console.log(disabled)
   
 
   return (
@@ -112,6 +110,7 @@ function CompletarForm() {
             className="outline-none p-1 rounded-md"
           />
         </div>
+
         <div className="flex flex-col">
           <label className="font-bold">
             Direccion<span className="text-red-600 text-xl">*</span>
@@ -155,7 +154,7 @@ function CompletarForm() {
         <button
           type="submit"
           className={`bg-white px-10 py-2 rounded-md text-2xl duration-300 shadow-black shadow ${
-            disabled ? "bg-gray-300" : ""
+            disabled ? "bg-gray-300 line-through" : ""
           }`}
           disabled={disabled}
         >
