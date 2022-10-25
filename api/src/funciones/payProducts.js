@@ -65,7 +65,9 @@ const payProducts = async (req, res) => {
       failure: "http://www.failure.com",
       pending: "http://www.pending.com",
     },
-    auto_return: "approved",
+    //auto_return: "approved",
+
+    notification_url: "https://c443-181-230-140-118.sa.ngrok.io/payment/notification" 
   };
 
   mercadopago.preferences
