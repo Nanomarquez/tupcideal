@@ -61,9 +61,9 @@ const payProducts = async (req, res) => {
 
     back_urls: {
       //definir las verdaderas aca
-      success: "https://www.success.com",
-      failure: "http://www.failure.com",
-      pending: "http://www.pending.com",
+      success: (process.env.NODE_ENV === "production" ? "https://tupcideal.vercel.app/" : "https:localhost:3000/"),
+      failure: (process.env.NODE_ENV === "production" ? "https://tupcideal.vercel.app/" : "https:localhost:3000/"),
+      pending: (process.env.NODE_ENV === "production" ? "https://tupcideal.vercel.app/" : "https:localhost:3000/"),
     },
     //auto_return: "approved",
 

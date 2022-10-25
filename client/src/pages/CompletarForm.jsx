@@ -6,7 +6,7 @@ import { useEffect } from "react";
 function CompletarForm() {
   const { usuario } = useAuth();
   const navigate = useNavigate();
-
+  const [disabled, setDisabled] = useState(true);
   useEffect(() => {
     if (usuario !== null) {
       axios.get(`/users/${usuario.email}`).then((res) => {
@@ -16,7 +16,13 @@ function CompletarForm() {
       });
     }
   });
+  
 
+
+  const [number, setNumber] = useState({
+    area: "",
+    nro: ""
+  });
   const [input, setInput] = useState({
     name: "",
     last_name: "",
@@ -25,23 +31,48 @@ function CompletarForm() {
     email: "",
   });
 
+  useEffect(() => {
+    if (
+      input.name !== "" &&
+      input.last_name !== "" &&
+      input.adress !== "" &&
+      number.area !== "" &&
+      number.nro !== ""
+    ) {
+      setDisabled(false);
+    }
+  }, [input, disabled]);
+  
   let handleChange = (e) => {
     setInput({
       ...input,
       [e.target.name]: e.target.value,
     });
   };
-
+  
   let onSubmit = (e) => {
     e.preventDefault();
     try {
       input.email = usuario.email;
+      input.phone_number = number.area + number.nro;
       axios.post("/users", input);
       navigate("/");
     } catch (error) {
       console.log(error.message);
     }
   };
+  
+  let onChangeNumber = (e) => {
+    setNumber({
+      ...number,
+      [e.target.name]: e.target.value
+    })
+  }
+
+  console.log(input)
+  console.log(number)
+  console.log(disabled)
+  
 
   return (
     <div className="h-screen w-full flex flex-col justify-center items-center gap-10">
@@ -96,22 +127,37 @@ function CompletarForm() {
           />
         </div>
         <div className="flex flex-col">
-          <label className="font-bold">
+          <label className="font-bold ml-9">
             Telefono<span className="text-red-600 text-xl">*</span>
           </label>
-          <input
-            onChange={handleChange}
-            type="text"
-            name="phone_number"
-            pattern="[0-9]+"
-            placeholder="Ej: 1130823451"
-            value={input.phone_number}
-            className="outline-none p-1 rounded-md"
-          />
+          <div className="flex gap-2 items-center">
+            <label className="font-bold">+</label>
+            <input
+              type="text"
+              pattern="[0-9]+"
+              onChange={onChangeNumber}
+              className="w-[50px] outline-none p-1 rounded-md"
+              placeholder="Ej: 11"
+              value={number.area}
+              name="area"
+            />
+            <input
+              onChange={onChangeNumber}
+              type="text"
+              name="nro"
+              pattern="[0-9]+"
+              placeholder="Ej: 30823451"
+              value={number.nro}
+              className="outline-none p-1 rounded-md"
+            />
+          </div>
         </div>
         <button
           type="submit"
-          className="bg-white px-10 py-2 rounded-md text-2xl hover:text-white hover:bg-black duration-300 shadow-black shadow"
+          className={`bg-white px-10 py-2 rounded-md text-2xl duration-300 shadow-black shadow ${
+            disabled ? "bg-gray-300" : ""
+          }`}
+          disabled={disabled}
         >
           Enviar
         </button>

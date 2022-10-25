@@ -177,7 +177,7 @@ function Productos() {
                   <div className="flex items-center justify-center rounded-full text-xs bg-gray-100 w-20 px-3 py-1">
                     Stock:
                     <p className="font-extrabold ml-1">
-                      {e.Product.rating_count}
+                      {e.cantidad}
                     </p>
                   </div>
                   <span className="flex bg-gray-100 py-1 rounded-full items-center justify-center w-36">

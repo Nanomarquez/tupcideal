@@ -8,7 +8,6 @@ import { BrowserRouter } from "react-router-dom";
 import "swiper/css/bundle";
 import { AuthProvider } from "./context/authContext";
 import axios from 'axios';
-
 if(import.meta.env.MODE === 'development'){
   axios.defaults.baseURL = 'http://localhost:3001';
 }
@@ -18,7 +17,6 @@ if(import.meta.env.MODE === 'production'){
 
 
 console.log(import.meta.env.MODE)
-
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <AuthProvider>
