@@ -69,7 +69,7 @@ function Modal({ handleClose }) {
               <h3 className="text-2xl">Name {p.Product.name}</h3>
               <span className="text-center text-xl">Precio ${p.precio}</span>
               <button className="bg-gray-300 px-3 py-1 rounded-md shadow-md shadow-black"
-                onClick={() => dispatch(deleteProductToShoppingCart(p.id))}
+                onClick={() => dispatch(deleteProductToShoppingCart(i))}
               >
                 Eliminar
               </button>
