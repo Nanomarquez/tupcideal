@@ -32,14 +32,13 @@ const bulkAdmins = require("./src/data/admin.json");
 var setter ;
 async function setterFunction (){
 const user = await CPU.findAll();
-console.log(user);
 if (!user) {
   setter = true;
 } else {
   setter = false;
 }}
 
-setterFunction;
+setterFunction();
 
 // Syncing all the models at once.
 
