@@ -123,7 +123,7 @@ function Mp() {
               type="submit"
               className="inline-block px-7 py-3 bg-gray-600 text-white font-medium text-sm leading-snug uppercase rounded shadow-md hover:bg-blue-600 hover:shadow-lg focus:bg-blue-600 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-600 active:shadow-lg transition duration-150 ease-in-out"
             >
-              Comprar
+              Generar boton de compra
             </button>
           </div>
         </form>
