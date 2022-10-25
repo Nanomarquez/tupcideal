@@ -1,7 +1,6 @@
 require("dotenv").config();
 const server = require("./src/app.js");
 const { conn } = require("./src/db.js");
-const fillProduct = require("../api/src/funciones/fillProducts");
 const {
   CPU,
   Memory,
