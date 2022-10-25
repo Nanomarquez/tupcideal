@@ -67,7 +67,7 @@ const payProducts = async (req, res) => {
     },
     //auto_return: "approved",
 
-    notification_url: (procces.env.NODE_ENV === "production" ? "https://tupcideal-production-5005.up.railway.app/payment/notification" : `${NGROK_URL}/payment/notification` )
+    notification_url: (process.env.NODE_ENV === "production" ? "https://tupcideal-production-5005.up.railway.app/payment/notification" : `${NGROK_URL}/payment/notification` )
   };
 
   mercadopago.preferences
