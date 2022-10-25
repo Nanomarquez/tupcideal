@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import './SliderRange.css'
 import ReactSlider from "react-slider";
 import {useSelector, useDispatch } from "react-redux"
@@ -8,18 +8,31 @@ import { orderByPrice } from "../redux/actions"
 function SliderRange({setCurrentPage}) {
   const dispatch = useDispatch()
 
-  const { productsFiltered , allProducts } = useSelector(state=>state.products)
+  const { allProducts } = useSelector(state=>state.products)
+  
+  
+  const [precioMax, setPrecioMax] = useState(0);
+  const [precioMin, setPrecioMin] = useState(0);
 
-  const priceMaxOfProducts = Math.max(...allProducts.map(e=>e.price))
+  useEffect(() => {
+  
+    if(allProducts.length>0){
+      setPrecioMax(Math.max(...allProducts.map(p=>p.precio)))
+      setPrecioMin(Math.min(...allProducts.map(p=>p.precio)))
+      setMin(precioMin)
+      setMax(precioMax)
+    }
+    
+  }, [allProducts])
 
-  const priceMinOfProducts = Math.min(...allProducts.map(e=>e.price))
+  
+  const [min, setMin] = useState(precioMin);
+  const [max, setMax] = useState(precioMax);
+  
 
-
-  const [min, setMin] = useState(priceMinOfProducts);
-  const [max, setMax] = useState(priceMaxOfProducts);
-
-  const filterByRange = allProducts.filter(product=>product.price >= min && product.price <= max)
-
+  const productNotNull = allProducts.filter(p=>p.precio !== null)
+  const filterByRange = productNotNull.filter(product=>product.precio >= min && product.precio <= max)
+  
 
   const handleSlide = (e) => {
     setMin(e[0]);
@@ -31,11 +44,11 @@ function SliderRange({setCurrentPage}) {
   return (
     <div className="text-center mt-7   flex flex-col gap-5 text-lg">
             <ReactSlider
-              defaultValue={[min, max]}
+              defaultValue={[precioMin, precioMax]}
               className="slider"
               trackClassName="tracker"
-              min={priceMinOfProducts}
-              max={priceMaxOfProducts}
+              min={precioMin}
+              max={precioMax}
               minDistance={0}
               step={200}
               withTracks={true}

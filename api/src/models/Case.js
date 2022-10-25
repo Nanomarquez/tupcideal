@@ -31,9 +31,11 @@ module.exports = (sequelize) => {
       },
       'external_5.25"_bays': {
         type: DataTypes.STRING,
+        default:null
       },
       'internal_3.5"_bays': {
         type: DataTypes.STRING,
+        default:null
       },
       image: {
         type: DataTypes.STRING

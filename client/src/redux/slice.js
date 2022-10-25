@@ -8,7 +8,7 @@ export const productsSlice = createSlice({
     details: {},
     component: [],
     filterByPrice: [],
-    addProductToCart: [],
+    cart: localStorage.hasOwnProperty('cart') ? JSON.parse(localStorage.getItem('cart')) : [] ,
     // la idea es tener siempre todos los productos cargados para los selects o busqueda por name
     // por otra parte tener los productos filtrados para el display y/o sus selects
     // los ordenamientos se harian sobre productsFiltered, tengan todos los productos o los filtrados
@@ -34,13 +34,13 @@ export const productsSlice = createSlice({
       switch (action.payload) {
         case "Ascendente": {
           state.productsFiltered = [...state.productsFiltered].sort(
-            (a, b) => a.price - b.price
+            (a, b) => a.precio - b.precio
           );
           break;
         }
         case "Descendente": {
           state.productsFiltered = [...state.productsFiltered].sort(
-            (a, b) => b.price - a.price
+            (a, b) => b.precio - a.precio
           );
           break;
         }
@@ -60,8 +60,11 @@ export const productsSlice = createSlice({
       state.component = action.payload;
     },
     addProductToCart: (state, action) => {
-      state.addProductToCart = [...state.addProductToCart, action.payload];
+      state.cart = [...state.cart, action.payload];
     },
+    deleteProductToCart: (state, action) => {
+      state.cart = state.cart.slice(0,state.cart.indexOf(action.payload))
+    }
 
     // una diferencia entre redux y redux toolkit
     // es que aca no hay switch, son funciones que se invocan desde las actions
@@ -80,6 +83,7 @@ export const {
   getCategory,
   getBrand,
   addProductToCart,
+  deleteProductToCart,
   orderProductInRangeOfPrice
 } = productsSlice.actions;
 

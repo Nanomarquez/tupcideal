@@ -27,11 +27,11 @@ export default function SwiperHome() {
         modules={[Autoplay, Pagination, Navigation]}
         className="mySwiper"
       >
-        <SwiperSlide><img src={Preview1} alt="preview1" className="w-20" /></SwiperSlide>
-        <SwiperSlide><img src={Preview2} alt="preview2" className="w-20"  /></SwiperSlide>
-        <SwiperSlide><img src={Preview3} alt="preview3" className="w-20"  /></SwiperSlide>
-        <SwiperSlide><img src={Preview4} alt="preview4" className="w-20"  /></SwiperSlide>
-        <SwiperSlide><img src={Preview5} alt="preview5" className="w-20"  /></SwiperSlide>
+        <SwiperSlide><img src={Preview1} alt="preview1" className="w-20 object-contain" /></SwiperSlide>
+        <SwiperSlide><img src={Preview2} alt="preview2" className="w-20 object-contain"  /></SwiperSlide>
+        <SwiperSlide><img src={Preview3} alt="preview3" className="w-20 object-contain"  /></SwiperSlide>
+        <SwiperSlide><img src={Preview4} alt="preview4" className="w-20 object-contain"  /></SwiperSlide>
+        <SwiperSlide><img src={Preview5} alt="preview5" className="w-20 object-contain"  /></SwiperSlide>
       </Swiper>
     </>
   );

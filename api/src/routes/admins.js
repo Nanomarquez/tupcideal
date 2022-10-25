@@ -79,10 +79,6 @@ router.put("/:email", async (req, res) => {
     const { email } = req.params;
     const { name, last_name, initial_date, password, phone_number, admin } =
       req.body;
-    // console.log("/n"+email);
-    // console.log(store_name);
-    // console.log(adress);
-    // console.log(phone_number);
     const editdAdmin = await Admin.update(
       {
         name: name,
@@ -107,9 +103,7 @@ router.put("/:email", async (req, res) => {
 router.delete("/:email", async (req, res) => {
   try {
     const { email } = req.params;
-    // console.log("este es el correo" + email);
     const deleteAdmin = await Admin.findOne({ where: { email: email } });
-    // console.log(deleteuser);
     await deleteAdmin.destroy();
     res.status(200).send({ message: "The admin was deleted successfully" });
   } catch (err) {

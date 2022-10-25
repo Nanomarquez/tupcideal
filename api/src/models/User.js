@@ -48,7 +48,7 @@ module.exports = (sequelize) => {
       },
       email: {
         type: DataTypes.STRING,
-        allowNull: true,
+        allowNull: false,
         unique: true,
         validate: {
           isEmail: {
@@ -58,7 +58,7 @@ module.exports = (sequelize) => {
         },
       },
       phone_number: {
-        type: DataTypes.INTEGER,
+        type: DataTypes.BIGINT,
         unique: true,
         validate: {
           isInt: {
@@ -66,6 +66,10 @@ module.exports = (sequelize) => {
             msg: "El número telefónico solo debe contener números",
           },
         },
+      },
+      isBanned: {
+        type: DataTypes.BOOLEAN,
+        defaultValue: false
       },
 
     },

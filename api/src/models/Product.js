@@ -10,9 +10,30 @@ module.exports = (sequelize) => {
         defaultValue: DataTypes.UUIDV4,
         primaryKey: true,
       },
+      categories: {
+        type: DataTypes.STRING,
+      },
+      name: {
+        type: DataTypes.STRING,
+      },
+      price_usd: {
+        type: DataTypes.FLOAT,
+      },
+      rating: {
+        type: DataTypes.INTEGER,
+      },
+      rating_count: {
+        type: DataTypes.INTEGER,
+      },
+      image: {
+        type: DataTypes.STRING,
+      },
+      id_table: {
+        type: DataTypes.INTEGER,
+      },
     },
     {
-      timestamps: true,
+      timestamps: false,
     }
   );
 };

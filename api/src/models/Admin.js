@@ -35,7 +35,7 @@ module.exports = (sequelize) => {
 
       initial_date: {
         type: DataTypes.STRING,
-        allowNull: false,
+        allowNull: true,
       },
 
       email: {
@@ -59,9 +59,9 @@ module.exports = (sequelize) => {
           },
         },
       },
-      admin: {
-        type: DataTypes.INTEGER,
-        defaultValue: 1,
+      isSuperAdmin: {
+        type: DataTypes.BOOLEAN,
+        defaultValue: false
       },
     },
     {
