@@ -42,7 +42,7 @@ setter = true;
 // Syncing all the models at once.
 
 conn.sync({ force: setter }).then(() => {
-  server.listen(3001, async () => {
+  server.listen(process.env.PORT, async () => {
     if (setter === true) {
       await CPU.bulkCreate(bulkCPU);
       console.log("✓ Se llenó la tabla CPU con la data del json");
