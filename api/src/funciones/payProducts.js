@@ -1,6 +1,7 @@
 const { mercadopago } = require("../mercadoPago.js");
 const { User, Product } = require("../db");
 //const { preferences } = require("mercadopago");
+const { NGROK_URL } = process.env;
 
 const payProducts = async (req, res) => {
   const data = req.body;
@@ -15,6 +16,7 @@ const payProducts = async (req, res) => {
 
   data.cart.map((p) => {
     productos.push({
+      id: p.id,
       picture_url: p.Product.image,
       title: p.Product.name,
       unit_price: p.precio,
@@ -22,12 +24,12 @@ const payProducts = async (req, res) => {
     });
   });
 
-  console.log(productos);
+  //console.log(productos);
 
   let suma = 0;
   for (let i = 0; i < productos.length; i++) {
     suma = suma + productos[i].unit_price;
-    console.log(suma);
+    //console.log(suma);
   }
 
   let preference = {
@@ -67,14 +69,14 @@ const payProducts = async (req, res) => {
     },
     //auto_return: "approved",
 
-    notification_url: "https://c443-181-230-140-118.sa.ngrok.io/payment/notification" 
+    notification_url: `${NGROK_URL}/payment/notification`
   };
 
   mercadopago.preferences
     .create(preference)
     //le pasamos las preference que definimos de linea 35 a 72
     .then(function (response) {
-      console.log(response);
+      //console.log(response);
       res.send(
         response.body.init_point
 
