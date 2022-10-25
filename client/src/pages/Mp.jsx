@@ -114,9 +114,9 @@ function Mp() {
             value={input.apartment}
           />
           {button && (
-            <button className="h-[90px] w-[300px]" id="mp-button">
-              <a href={button}></a>
-            </button>
+
+            <a target="_BLANK" className="h-[90px] w-[300px]" id="mp-button" href={button}></a>
+
           )}
           <div className="text-center">
             <button
