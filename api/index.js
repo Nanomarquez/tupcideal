@@ -1,7 +1,6 @@
 require("dotenv").config();
 const server = require("./src/app.js");
 const { conn } = require("./src/db.js");
-const fillProduct = require("../api/src/funciones/fillProducts");
 const {
   CPU,
   Memory,
@@ -29,6 +28,7 @@ const bulkWareHouse = require("./src/data/WareHouses.json");
 const bulkProducts = require("./src/data/products.json");
 const bulkAdmins = require("./src/data/admin.json");
 
+
 var setter ;
 async function setterFunction (){
 const user = await CPU.findAll();
@@ -40,10 +40,11 @@ if (!user) {
 
 setterFunction();
 
+
 // Syncing all the models at once.
 
 conn.sync({ force: setter }).then(() => {
-  server.listen(3001, async () => {
+  server.listen(process.env.PORT, async () => {
     if (setter === true) {
       await CPU.bulkCreate(bulkCPU);
       console.log("✓ Se llenó la tabla CPU con la data del json");
