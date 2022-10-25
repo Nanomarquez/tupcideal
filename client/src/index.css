@@ -10,3 +10,8 @@
   box-sizing: border-box;
   font-family: Lato, sans-serif;
 }
+
+#mp-button{
+  background-image: url(https://www.moldeointeractive.com.ar/web/image/6679/BOTON-DE-MERCADO-PAGO.jpg?access_token=ae78a0aa-2e9e-4a61-96fa-98662d808747);
+  background-size:contain;
+}
