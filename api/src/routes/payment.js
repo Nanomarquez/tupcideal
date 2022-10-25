@@ -38,7 +38,6 @@ router.post("/notification", async (req, res) => {
           purchase ? await purchase.save() : console.log("se borró");
         }
       }
-      console.log(merchantOrder)
       //await purchase.save()
       break;
     case "merchant_order":

@@ -5,11 +5,9 @@ const { NGROK_URL } = process.env;
 
 const payProducts = async (req, res) => {
   const data = req.body;
-  console.log(data);
   const user = await User.findOne({
     where: { email: data.email },
   });
-  console.log(user);
   const phone = user.phone_number;
   const adress = user.adress;
   const productos = [];
