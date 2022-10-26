@@ -20,11 +20,9 @@ function Avatar() {
   return (
     <Link to="/user">
       <button className="btn-neon bg-white items-center sm:rounded hover:shadow-neon px-1 h-10 sm:w-full w-14 font-semibold flex relative rounded-3xl text-xs sm:text-base overflow-hidden duration-300 delay-1000 border-white">
-        {!currentUser ? (
-          <span>Completa tus datos</span>
-        ) : (
+       
           <span>Ver Perfil</span>
-        )}
+      
       </button>
     </Link>
   );
