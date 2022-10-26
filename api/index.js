@@ -29,17 +29,18 @@ const bulkProducts = require("./src/data/products.json");
 const bulkAdmins = require("./src/data/admin.json");
 
 
-var setter ;
-async function setterFunction (){
-const user = await CPU.findAll();
-if (!user) {
-  setter = true;
-} else {
-  setter = false;
-}}
+// var setter ;
+// async function setterFunction (){
+// const user = await CPU.findAll();
+// if (!user) {
+//   setter = true;
+// } else {
+//   setter = false;
+// }}
 
-setterFunction();
+// setterFunction();
 
+setter=true
 
 // Syncing all the models at once.
 
