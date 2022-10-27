@@ -87,14 +87,14 @@ const {
 User.hasMany(Review);
 Review.belongsTo(User);
 
-Product.hasMany(Review);
-Review.belongsTo(Product);
+// Product.hasMany(Review);
+// Review.belongsTo(Product);
 
 User.hasMany(Purchase);
 Purchase.belongsTo(User);
 
-Purchase.belongsToMany(WareHouse, {through: 'Purchase_WareHouse'});
-WareHouse.belongsToMany(Purchase, {through: 'Purchase_WareHouse'});
+Purchase.belongsToMany(WareHouse, { through: "Purchase_WareHouse" });
+WareHouse.belongsToMany(Purchase, { through: "Purchase_WareHouse" });
 
 Seller.hasMany(WareHouse);
 WareHouse.belongsTo(Seller);
@@ -102,6 +102,8 @@ WareHouse.belongsTo(Seller);
 Product.hasMany(WareHouse);
 WareHouse.belongsTo(Product);
 
+WareHouse.hasMany(Review);
+Review.belongsTo(WareHouse);
 
 // Seller.belongsToMany(Product, { through: "Seller_Product" });
 // Product.belongsToMany(Seller, { through: "Seller_Product" });

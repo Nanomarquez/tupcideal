@@ -40,7 +40,7 @@ const bulkAdmins = require("./src/data/admin.json");
 
 // setterFunction();
 
-setter=false
+setter=false;
 
 // Syncing all the models at once.
 

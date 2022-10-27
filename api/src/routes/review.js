@@ -1,12 +1,12 @@
 const { Router } = require('express');
 const router = Router();
-const { Review, Product, User} = require('../db.js');
+const { Review, WareHouse, User} = require('../db.js');
 
 router.get('/product/:productId', async (req,res) => {
     const { productId } = req.params;
     const productReview = await Review.findAll({
         include: [{
-            model: Product,
+            model: WareHouse,
             where: { id : [productId] }
         }]
     })
