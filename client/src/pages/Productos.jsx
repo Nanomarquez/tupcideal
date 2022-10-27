@@ -93,9 +93,10 @@ function Productos() {
   const handleSort = (e) => {
     dispatch(orderProducts(e.target.value));
   };
+
   return (
     <div className="flex items-center justify-center bg-gray-300">
-      <div className="flex sm:flex-row flex-col w-[1024px] bg-white shadow-md">
+      <div className="flex sm:flex-row flex-col w-full sm:w-[1024px] bg-white shadow-md">
         <section className="p-2 sm:px-5 border-b-2 sm:border-b-0 sm:border-r-2 rounded-xl w-full sm:w-2/6">
           <h1 className="text-xl sm:text-2xl mb-2">Filtrar por:</h1>
           <hr />
@@ -150,13 +151,13 @@ function Productos() {
           {currentProducts.map((e, i) => (
             <div
               key={i}
-              className="flex w-full mt-5 rounded-lg flex-col sm:flex-row p-5 shadow-xl overflow-hidden"
+              className="flex w-full mt-5 rounded-lg flex-col sm:flex-row p-5 items-center shadow-xl overflow-clip"
             >
               {" "}
               <div className="flex items-center justify-center">
-                <Link to={`/productos/search/${e.id}`}>
-                  <div className="text-white duration-500 rounded bg-gray-700/50 text-2xl flex hover:opacity-100 cursor-pointer opacity-0 justify-center items-center z-50 h-36 w-36 absolute">
-                    Ver Mas
+
+                  <div onClick={()=>dispatch(addProductToShoppingCart(e))} className="text-white duration-500 rounded bg-gray-700/50 text-2xl flex hover:opacity-100 cursor-pointer opacity-0 justify-center items-center z-50 h-36 w-36 absolute text-center">
+                    Añadir al carrito
                   </div>
                   <img
                     src={
@@ -167,11 +168,11 @@ function Productos() {
                     alt=""
                     className="h-36 w-36 shadow-lg object-contain rounded-md border-b-[2px] border-l-[2px] duration-200 hover:scale-105"
                   />
-                </Link>
+
               </div>
-              <div className="m-2 ml-10">
+              <div className="sm:m-2 sm:ml-10 m-0">
                 <h1 className="text-2xl font-semibold overflow-ellipsis overflow-hidden whitespace-nowrap">
-                  {e.Product.name.slice(0, 35) + "..."}
+                  {e.Product.name.slice(0, 20) + "..."}
                 </h1>
                 <div className="flex gap-5">
                   <div className="flex items-center justify-center rounded-full text-xs bg-gray-100 w-20 px-3 py-1">
@@ -207,6 +208,7 @@ function Productos() {
                   </p>
                 </div>
               </div>
+              <div className="p-2 bg-gray-300 rounded shadow-black shadow-sm font-bold">Vendido por {e.Seller.store_name}</div>
             </div>
           ))}
           <div className="flex justify-center items-center">

@@ -11,7 +11,6 @@ function ProductosSearch() {
     dispatch(getAllById(id));
   }, []);
 
-  console.log(productsFilterById);
 
   return (
     <>

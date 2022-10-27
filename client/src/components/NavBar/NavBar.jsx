@@ -94,28 +94,28 @@ function NavBar() {
           } w-full duration-1000 z-10 gap-5 overflow-hidden`}
         >
           <Link to="/armatupc">
-            <li className="cursor-pointer hover:animate-bounce p-4">
+            <li onClick={() => handleActive()} className="cursor-pointer hover:animate-bounce p-4">
               Te armamos tu PC
             </li>
           </Link>
           <Link to="/productos">
-            <li className="cursor-pointer hover:animate-bounce p-4">
+            <li onClick={() => handleActive()} className="cursor-pointer hover:animate-bounce p-4">
               Productos
             </li>
           </Link>
           <Link to="/equipo">
-            <li className="cursor-pointer hover:animate-bounce p-4">
+            <li onClick={() => handleActive()} className="cursor-pointer hover:animate-bounce p-4">
               Quienes somos
             </li>
           </Link>
           <Link to="/custompc">
-            <li className="cursor-pointer hover:animate-bounce p-4">
+            <li onClick={() => handleActive()} className="cursor-pointer hover:animate-bounce p-4">
               Customiza tu PC
             </li>
           </Link>
           { admin &&
           <Link to='/admin'>
-          <li className="cursor-pointer hover:animate-bounce p-4">
+          <li onClick={() => handleActive()} className="cursor-pointer hover:animate-bounce p-4">
             Admin
           </li>
           </Link>
