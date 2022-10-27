@@ -12,7 +12,8 @@ const {
   Seller,
   WareHouse,
   Product,
-  User
+  User,
+  Review
 } = require("./src/db");
 const bulkCPU = require("./src/data/cpu.json");
 const bulkGPU = require("./src/data/video-card.json");
@@ -27,6 +28,7 @@ const bulkWareHouse = require("./src/data/WareHouses.json");
 // const bulkWareHouse = require("./src/data/warehouse.json");
 const bulkProducts = require("./src/data/products.json");
 const bulkAdmins = require("./src/data/admin.json");
+const bulkReviews = require("./src/data/Reviews.json");
 
 
 // var setter ;
@@ -40,7 +42,7 @@ const bulkAdmins = require("./src/data/admin.json");
 
 // setterFunction();
 
-setter=false;
+setter=true;
 
 // setter = true; 
 // descomentar setter hacer para los cambios nuevos y comentar funcion linea 33 user
@@ -74,6 +76,8 @@ conn.sync({ force: setter }).then(() => {
       console.log("✓ Se llenó la tabla WareHouse con la data del json");
       await User.bulkCreate(bulkAdmins);
       console.log("✓ Se llenó la tabla Admin con la data del json");
+      await Review.bulkCreate(bulkReviews);
+      console.log("✓ Se llenó la tabla Review con la data del json");
       console.log(`⇒ listening at port ${process.env.PORT}`); // eslint-disable-line no-console
     } else {
       console.log(`⇒ listening at port ${process.env.PORT}`); // eslint-disable-line no-console
