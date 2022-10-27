@@ -1,6 +1,6 @@
 const { mercadopago } = require("../mercadoPago.js");
 const { User, Product } = require("../db");
-//const { preferences } = require("mercadopago");
+const { preferences } = require("mercadopago");
 const { NGROK_URL } = process.env;
 
 const payProducts = async (req, res) => {
