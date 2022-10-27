@@ -42,6 +42,9 @@ const bulkAdmins = require("./src/data/admin.json");
 
 setter=false;
 
+// setter = true; 
+// descomentar setter hacer para los cambios nuevos y comentar funcion linea 33 user
+
 // Syncing all the models at once.
 
 conn.sync({ force: setter }).then(() => {

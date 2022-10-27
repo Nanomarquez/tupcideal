@@ -2,13 +2,14 @@ import React, { useState } from "react";
 import { useParams } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { useEffect } from "react";
-import { getAllById, addProductToShoppingCart } from "../redux/actions";
+import { getAllById, addProductToShoppingCart, listReviews } from "../redux/actions";
 function ProductosSearch() {
   const { id } = useParams();
   const dispatch = useDispatch();
   const { productsFilterById } = useSelector((state) => state.products);
   useEffect(() => {
     dispatch(getAllById(id));
+    dispatch(listReviews(id));
   }, []);
 
 

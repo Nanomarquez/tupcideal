@@ -8,6 +8,7 @@ import {
   getFiltered,
   orderProducts,
   addProductToShoppingCart,
+  addFavorites
 } from "../redux/actions";
 import { Link } from "react-router-dom";
 
