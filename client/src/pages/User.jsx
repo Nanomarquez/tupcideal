@@ -15,6 +15,9 @@ function User() {
     axios.get(`/users/${usuario.email}`)
     .then(res=>{
       setUser(res.data)
+      if(res.data.error){
+        navigate('/completarform')
+      }
     })
   }
  },[usuario])

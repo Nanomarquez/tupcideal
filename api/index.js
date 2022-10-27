@@ -12,7 +12,7 @@ const {
   Seller,
   WareHouse,
   Product,
-  Admin
+  User
 } = require("./src/db");
 const bulkCPU = require("./src/data/cpu.json");
 const bulkGPU = require("./src/data/video-card.json");
@@ -29,17 +29,18 @@ const bulkProducts = require("./src/data/products.json");
 const bulkAdmins = require("./src/data/admin.json");
 
 
-var setter ;
-async function setterFunction (){
-const user = await CPU.findAll();
-if (!user) {
-  setter = true;
-} else {
-  setter = false;
-}}
+// var setter ;
+// async function setterFunction (){
+// const user = await CPU.findAll();
+// if (!user) {
+//   setter = true;
+// } else {
+//   setter = false;
+// }}
 
-setterFunction();
+// setterFunction();
 
+setter=false
 
 // Syncing all the models at once.
 
@@ -68,7 +69,7 @@ conn.sync({ force: setter }).then(() => {
       console.log("✓ Se llenó la tabla Seller con la data del json");
       await WareHouse.bulkCreate(bulkWareHouse);
       console.log("✓ Se llenó la tabla WareHouse con la data del json");
-      await Admin.bulkCreate(bulkAdmins);
+      await User.bulkCreate(bulkAdmins);
       console.log("✓ Se llenó la tabla Admin con la data del json");
       console.log(`⇒ listening at port ${process.env.PORT}`); // eslint-disable-line no-console
     } else {
