@@ -37,7 +37,8 @@ if (user === []) {
   setter = false;
 }
 
-// setter = true; // hacer para los cambios nuevos y comentar funcion linea 33
+// setter = true; 
+// descomentar setter hacer para los cambios nuevos y comentar funcion linea 33 user
 
 // Syncing all the models at once.
 
