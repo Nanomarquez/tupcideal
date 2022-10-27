@@ -68,7 +68,7 @@ router.post("/notification", async (req, res) => {
         }
       });
 
-      await purchase.addUser(merchantOrder.body.additional_info);
+      //await purchase.setUser(merchantOrder.body.additional_info);
 
       res.status(200).send(merchantOrder);
       break;
