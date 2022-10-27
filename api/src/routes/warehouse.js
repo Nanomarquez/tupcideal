@@ -28,7 +28,7 @@ router.get("/", async (req, res) => {
           ],
         },
         {
-          model: Review,
+          model: Review
         },
       ],
       attributes: ["precio", "cantidad", "id"],

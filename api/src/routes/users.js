@@ -1,16 +1,20 @@
 const { Router } = require("express");
 const router = Router();
-const { User } = require("../db.js");
+const { User, Favorite } = require("../db.js");
 
 //------- Pedir usuario(individual) a la BD--------
 router.get("/:email", async (req, res) => {
   const { email } = req.params;
   try {
     let respuestabd;
-    respuestabd = await User.findOne({ where: { email: email } });
+    respuestabd = await User.findOne({
+      // include: { 
+      //   model: WareHouse,
+      //   attributes: ["id"] },
+      where: { email: email },
+    });
     if (respuestabd === null) {
-      return res
-        .send({error:'Usuario no encontrado'})
+      return res.send({ error: "Usuario no encontrado" });
     } else {
       res.status(200).json(respuestabd);
     }
@@ -37,10 +41,12 @@ router.get("/", async (req, res) => {
   }
 });
 
+
+
 //------- Create User -------
 router.post("/", async (req, res) => {
   const { name, last_name, adress, email, phone_number } = req.body;
-  console.log(req.body)
+  console.log(req.body);
   try {
     const [usuario, created] = await User.findOrCreate({
       where: {
@@ -58,7 +64,7 @@ router.post("/", async (req, res) => {
       res.status(200).json("El Usuario ya existe.");
     }
   } catch (err) {
-    console.log(err)
+    console.log(err);
     res.status(500).json(err);
   }
 });
@@ -67,14 +73,14 @@ router.post("/", async (req, res) => {
 router.put("/:email", async (req, res) => {
   try {
     const { email } = req.params;
-    const { name, last_name, adress, phone_number , ban } = req.body;
+    const { name, last_name, adress, phone_number, ban } = req.body;
     const editdUser = await User.update(
       {
         name: name,
         last_name: last_name,
         adress: adress,
         phone_number: phone_number,
-        isBanned: ban
+        isBanned: ban,
       },
       { where: { email: email } }
     );
