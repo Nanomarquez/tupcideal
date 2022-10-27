@@ -9,7 +9,6 @@ router.get("/", async (req, res) => {
   let response = []
   try {
     let ware;
-    console.log("estoy dentro");
     ware = await WareHouse.findAll({
       include: [
         {

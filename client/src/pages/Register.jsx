@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useAuth } from "../context/authContext";
 import swal from "sweetalert";
@@ -16,11 +16,19 @@ function Register() {
     phone_number: "",
     adress: "",
   });
-
+  const [disabled, setDisabled] = useState(true);
   const handleChange = ({ target: { name, value } }) => {
     setUser({ ...user, [name]: value });
   };
  
+  useEffect(() => {
+    if(user.email !== "" && user.password !== "" && user.phone_number !== "" && user.adress !== "" && user.name !== "" && user.last_name !== ""){
+      setDisabled(false);
+    }else{
+      setDisabled(true)
+    }
+  }, [user])
+  
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -113,9 +121,10 @@ function Register() {
               <div className="mb-6">
                 <input
                   onChange={handleChange}
-                  type="number"
+                  type="text"
                   className="form-control block w-full px-4 py-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
                   name="phone_number"
+                  pattern="[0-9]+"
                   id="phone_number"
                   placeholder="Phone Number"
                 />
@@ -123,7 +132,8 @@ function Register() {
               <div className="text-center lg:text-left">
                 <button
                   type="submit"
-                  className="inline-block px-7 py-3 bg-gray-600 text-white font-medium text-sm leading-snug uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out"
+                  className={`inline-block px-7 py-3 bg-gray-600 text-white font-medium text-sm leading-snug uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out ${disabled ? 'line-through' : ''}`}
+                  disabled={disabled}
                 >
                   Register
                 </button>

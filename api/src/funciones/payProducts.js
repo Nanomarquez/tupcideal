@@ -1,20 +1,20 @@
 const { mercadopago } = require("../mercadoPago.js");
 const { User, Product } = require("../db");
 //const { preferences } = require("mercadopago");
+const { NGROK_URL } = process.env;
 
 const payProducts = async (req, res) => {
   const data = req.body;
-  console.log(data);
   const user = await User.findOne({
     where: { email: data.email },
   });
-  console.log(user);
   const phone = user.phone_number;
   const adress = user.adress;
   const productos = [];
 
   data.cart.map((p) => {
     productos.push({
+      id: p.id,
       picture_url: p.Product.image,
       title: p.Product.name,
       unit_price: p.precio,
@@ -22,12 +22,12 @@ const payProducts = async (req, res) => {
     });
   });
 
-  console.log(productos);
+  //console.log(productos);
 
   let suma = 0;
   for (let i = 0; i < productos.length; i++) {
     suma = suma + productos[i].unit_price;
-    console.log(suma);
+    //console.log(suma);
   }
 
   let preference = {
@@ -61,18 +61,21 @@ const payProducts = async (req, res) => {
 
     back_urls: {
       //definir las verdaderas aca
-      success: "https://www.success.com",
-      failure: "http://www.failure.com",
-      pending: "http://www.pending.com",
+      success: "https://tupcideal.vercel.app/",
+      failure: "https://tupcideal.vercel.app/",
+      pending: "https://tupcideal.vercel.app/",
     },
-    auto_return: "approved",
+    //auto_return: "approved",
+
+    notification_url: (process.env.NODE_ENV === "production" ? "https://tupcideal-production-5005.up.railway.app/payment/notification" : `${NGROK_URL}/payment/notification` )
+
   };
 
   mercadopago.preferences
     .create(preference)
     //le pasamos las preference que definimos de linea 35 a 72
     .then(function (response) {
-      console.log(response);
+      //console.log(response);
       res.send(
         response.body.init_point
 

@@ -1,7 +1,6 @@
 require("dotenv").config();
 const server = require("./src/app.js");
 const { conn } = require("./src/db.js");
-const fillProduct = require("../api/src/funciones/fillProducts");
 const {
   CPU,
   Memory,
@@ -13,7 +12,7 @@ const {
   Seller,
   WareHouse,
   Product,
-  Admin
+  User
 } = require("./src/db");
 const bulkCPU = require("./src/data/cpu.json");
 const bulkGPU = require("./src/data/video-card.json");
@@ -29,13 +28,19 @@ const bulkWareHouse = require("./src/data/WareHouses.json");
 const bulkProducts = require("./src/data/products.json");
 const bulkAdmins = require("./src/data/admin.json");
 
-const user = CPU.findAll();
-var setter;
-if (user === []) {
-  setter = true;
-} else {
-  setter = false;
-}
+
+// var setter ;
+// async function setterFunction (){
+// const user = await CPU.findAll();
+// if (!user) {
+//   setter = true;
+// } else {
+//   setter = false;
+// }}
+
+// setterFunction();
+
+setter=false
 
 // setter = true; 
 // descomentar setter hacer para los cambios nuevos y comentar funcion linea 33 user
@@ -43,7 +48,7 @@ if (user === []) {
 // Syncing all the models at once.
 
 conn.sync({ force: setter }).then(() => {
-  server.listen(3001, async () => {
+  server.listen(process.env.PORT, async () => {
     if (setter === true) {
       await CPU.bulkCreate(bulkCPU);
       console.log("✓ Se llenó la tabla CPU con la data del json");
@@ -67,7 +72,7 @@ conn.sync({ force: setter }).then(() => {
       console.log("✓ Se llenó la tabla Seller con la data del json");
       await WareHouse.bulkCreate(bulkWareHouse);
       console.log("✓ Se llenó la tabla WareHouse con la data del json");
-      await Admin.bulkCreate(bulkAdmins);
+      await User.bulkCreate(bulkAdmins);
       console.log("✓ Se llenó la tabla Admin con la data del json");
       console.log(`⇒ listening at port ${process.env.PORT}`); // eslint-disable-line no-console
     } else {

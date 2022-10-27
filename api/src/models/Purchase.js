@@ -17,5 +17,11 @@ module.exports = (sequelize) => {
       type: DataTypes.ENUM('Pending', 'Canceled', 'Paid'),
       defaultValue: 'Pending',
     },
+    mp_payment_id: {
+      type: DataTypes.BIGINT
+    },
+    mp_merchantOrder_id: {
+      type: DataTypes.BIGINT
+    }
   });
 };
