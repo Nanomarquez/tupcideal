@@ -84,7 +84,9 @@ export const {
   getBrand,
   addProductToCart,
   deleteProductToCart,
-  orderProductInRangeOfPrice
+  orderProductInRangeOfPrice,
+  favorites,
+  deleteFavorites,
 } = productsSlice.actions;
 
 // se exportan las funciones que invocamos desde las actions
