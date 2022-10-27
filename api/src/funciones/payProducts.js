@@ -68,7 +68,8 @@ const payProducts = async (req, res) => {
     //auto_return: "approved",
 
     notification_url: process.env.NODE_ENV === "production"
-    ? '/payment/notification' : `${NGROK_URL}/payment/notification`
+    ? '#/payment/notification' : `${NGROK_URL}/payment/notification`
+    //notification_url: `${NGROK_URL}/payment/notification`
   };
 
   mercadopago.preferences
