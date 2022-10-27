@@ -37,6 +37,8 @@ if (user === []) {
   setter = false;
 }
 
+// setter = true; // hacer para los cambios nuevos y comentar funcion linea 33
+
 // Syncing all the models at once.
 
 conn.sync({ force: setter }).then(() => {
