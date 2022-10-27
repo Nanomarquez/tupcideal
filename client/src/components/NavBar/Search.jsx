@@ -81,7 +81,7 @@ function Search() {
         <div className="searchResult z-[1000000000]">
            {filteredData.slice(0,10).map((p) => 
             <Link to={`/productos/search/${p.id}`}>
-            <p className="hover:bg-blue-200">{p.Product.name.slice(0,25)}</p>
+            <p onClick={()=>handleClose()} className="hover:bg-blue-200">{p.Product.name.slice(0,25)}</p>
             </Link>
         )}
 
