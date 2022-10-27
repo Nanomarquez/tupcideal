@@ -11,6 +11,8 @@ const payProducts = async (req, res) => {
   const phone = user.phone_number;
   const adress = user.adress;
   const productos = [];
+  const email = user.email;
+  const id = user.id;
 
   data.cart.map((p) => {
     productos.push({
@@ -43,7 +45,7 @@ const payProducts = async (req, res) => {
     payer: {
       name: user.name,
       surname: user.last_name,
-      email: user.email,
+      email: email,
       adress: { adress },
       phone: { phone },
     },
@@ -56,7 +58,7 @@ const payProducts = async (req, res) => {
         apartment: data.apartment,
       },
     },
-    adittional_info: data.addInfo,
+    additional_info: id,
     items: productos,
 
     back_urls: {
@@ -75,7 +77,7 @@ const payProducts = async (req, res) => {
     .create(preference)
     //le pasamos las preference que definimos de linea 35 a 72
     .then(function (response) {
-      //console.log(response);
+      console.log(response);
       res.send(
         response.body.init_point
 

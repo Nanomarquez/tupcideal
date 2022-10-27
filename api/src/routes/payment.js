@@ -1,9 +1,9 @@
 const { Router } = require("express");
 const { merchant_orders } = require("mercadopago");
 const mercadopago = require("mercadopago");
-const { DatabaseError } = require("sequelize");
+const { DatabaseError, UUID } = require("sequelize");
 const router = Router();
-const { Purchase, WareHouse } = require("../db.js");
+const { Purchase, WareHouse, User } = require("../db.js");
 const  payProducts = require('../funciones/payProducts')
 
 router.post("/notification", async (req, res) => {
@@ -14,6 +14,7 @@ router.post("/notification", async (req, res) => {
    // console.log(topic);
 
   var merchantOrder;
+  var purchase;
 
   switch (topic){
 
@@ -23,11 +24,11 @@ router.post("/notification", async (req, res) => {
 
       merchantOrder = await mercadopago.merchant_orders.findById(payment.body.order.id);
 
-      const purchase = await Purchase.findOne({
+      purchase = await Purchase.findOne({
         where: {
           mp_merchantOrder_id: [merchantOrder.body.id]
         }
-      })
+      });
 
       if(purchase.status === 'Pending') {
         if(merchantOrder.body.payments[0].status === 'approved') {
@@ -60,12 +61,14 @@ router.post("/notification", async (req, res) => {
       const orderId = query.id;
       merchantOrder = await mercadopago.merchant_orders.findById(orderId);
 
-      await Purchase.findOrCreate({
+      purchase = await Purchase.findOrCreate({
         where: {
           mp_merchantOrder_id: [merchantOrder.body.id],
-          totalprice: [merchantOrder.body.total_amount],
+          totalprice: [merchantOrder.body.total_amount]
         }
       });
+
+      //await purchase.setUser(merchantOrder.body.additional_info);
 
       res.status(200).send(merchantOrder);
       break;

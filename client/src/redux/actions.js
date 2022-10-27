@@ -13,7 +13,10 @@ import {
   getBrand,
   addProductToCart,
   deleteProductToCart,
-  orderProductInRangeOfPrice
+  orderProductInRangeOfPrice,
+  favorites,
+  deleteFavorites,
+  getReview,
 } from "./slice";
 
 // se definen funciones que al ser invocadas despachan las funciones ya traidas desde Slice (reducer)
@@ -73,6 +76,17 @@ export const addProductToShoppingCart = (product) => (dispatch) => {
 };
 export const deleteProductToShoppingCart = (id) => (dispatch) => {
   dispatch(deleteProductToCart(id));
+};
+export const addFavorites = (product) => (dispatch) => {
+  dispatch(favorites(product));
+};
+export const deleteFavoritesList = (id) => (dispatch) => {
+  dispatch(deleteFavorites(id));
+};
+export const listReviews = (id) => (dispatch) => {
+  axios.get(`/warehouse`)
+  .then(res => dispatch(getReview(res.data)))
+  .catch(error => console.log(error))
 };
 
 // busqueda por id por params
