@@ -67,13 +67,14 @@ router.post("/", async (req, res) => {
 router.put("/:email", async (req, res) => {
   try {
     const { email } = req.params;
-    const { name, last_name, adress, phone_number } = req.body;
+    const { name, last_name, adress, phone_number , ban } = req.body;
     const editdUser = await User.update(
       {
         name: name,
         last_name: last_name,
         adress: adress,
         phone_number: phone_number,
+        isBanned: ban
       },
       { where: { email: email } }
     );

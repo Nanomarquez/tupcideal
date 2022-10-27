@@ -10,6 +10,7 @@ import { useAuth } from "../../context/authContext";
 import { motion, AnimatePresence } from "framer-motion";
 import Modal from "../../components/Modal/Modal";
 import Avatar from './Avatar'
+import axios from "axios";
 function NavBar() {
   const [modalOpen, setModalOpen] = useState(false);
 
@@ -17,7 +18,8 @@ function NavBar() {
   const open = () => setModalOpen(true);
   const { cart } = useSelector(state=>state.products)
   const [active, setActive] = useState("");
-
+  const [admin, setAdmin] = useState(false);
+  const [superAdmin, setSuperAdmin] = useState(false);
   function handleActive() {
     active ? setActive("") : setActive("active");
   }
@@ -34,8 +36,14 @@ function NavBar() {
   useEffect(()=>{
     if(usuario){
       usuario.cart = cart
+      axios.get(`/users/${usuario.email}`).then(res=>{
+        setAdmin(res.data.isAdmin)
+        setSuperAdmin(res.data.isSuperAdmin)
+      })
+      usuario.isAdmin = admin
+      usuario.isSuperAdmin = superAdmin
     }
-  },[cart])
+  },[cart,usuario])
 
   return (
     <>
@@ -105,6 +113,13 @@ function NavBar() {
               Customiza tu PC
             </li>
           </Link>
+          { admin &&
+          <Link to='/admin'>
+          <li className="cursor-pointer hover:animate-bounce p-4">
+            Admin
+          </li>
+          </Link>
+          }
         </ul>
       </div>
       <AnimatePresence
