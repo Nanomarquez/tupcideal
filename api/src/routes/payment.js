@@ -13,15 +13,15 @@ router.post("/notification", async (req, res) => {
   const topic = query.topic;
    // console.log(topic);
 
-  var merchantOrder
+  var merchantOrder;
 
   switch (topic){
+
     case "payment":
       const paymentId = query.id;
-      //console.log(topic, "getting Payment", paymentId);
       const payment = await mercadopago.payment.findById(paymentId);
+
       merchantOrder = await mercadopago.merchant_orders.findById(payment.body.order.id);
-      //console.log("merchantOrderId", merchantOrder.body.id, "paymentId", paymentId)
 
       const purchase = await Purchase.findOne({
         where: {
@@ -29,12 +29,12 @@ router.post("/notification", async (req, res) => {
         }
       })
 
-      if(merchantOrder.body.status === 'closed' && purchase.status === 'Pending') {
-        if(merchantOrder.body.order_status === 'paid') {
+      if(purchase.status === 'Pending') {
+        if(merchantOrder.body.payments[0].status === 'approved') {
           
-          purchase ? purchase.status = 'Paid' : console.log("se borró");
-          purchase ? purchase.mp_payment_id = paymentId : console.log("se borró");
-          purchase ? await purchase.save() : console.log("se borró");
+          purchase.status = 'Paid';
+          purchase.mp_payment_id = paymentId;
+          await purchase.save();
           
           const itemsId = merchantOrder.body.items.map(i => i.id);          
 
@@ -44,12 +44,13 @@ router.post("/notification", async (req, res) => {
             await product.save();
           });
 
-          res.status(200)
+          res.status(200).send(merchantOrder);
 
-        } else if (merchantOrder.body.canceled) {
-          purchase ? purchase.status = 'Canceled' : console.log("se borró");
-          purchase ? await purchase.save() : console.log("se borró");
-          res.status(200)
+        } else if (merchantOrder.body.payments[0].status === 'cancelled') {
+          purchase.status = 'Canceled';
+          purchase.mp_payment_id = paymentId;
+          await purchase.save();
+          res.status(200).send(merchantOrder);
         }
       }
 
@@ -58,15 +59,15 @@ router.post("/notification", async (req, res) => {
     case "merchant_order":
       const orderId = query.id;
       merchantOrder = await mercadopago.merchant_orders.findById(orderId);
-      //console.log(merchantOrder.body.items)
+
       await Purchase.findOrCreate({
         where: {
           mp_merchantOrder_id: [merchantOrder.body.id],
           totalprice: [merchantOrder.body.total_amount],
         }
       });
-      //console.log(merchantOrder)
-      res.status(200);
+
+      res.status(200).send(merchantOrder);
       break;
     }
   })
