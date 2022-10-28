@@ -2,19 +2,21 @@ import React, { useState } from "react";
 import { useParams } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { useEffect } from "react";
+import Loading from "../components/Loading/Loading";
 import { getAllById, addProductToShoppingCart, listReviews } from "../redux/actions";
 function ProductosSearch() {
   const { id } = useParams();
-  
+  const [loading, setLoading] = useState(true);
   const dispatch = useDispatch();
   const { productsFilterById } = useSelector((state) => state.products);
   useEffect(() => {
     dispatch(getAllById(id));
- 
-  }, [productsFilterById]);
+    setLoading(false)
+  }, [id]);
 
-  
-
+  if(loading || productsFilterById.Seller === undefined){
+    return <Loading/>
+  }
   return (
     <>
       {productsFilterById.hasOwnProperty("precio") && (

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Select from "react-select";
 import SliderRange from "../components/SliderRange";
+import Loading from "../components/Loading/Loading";
 import Pagination from "../components/Pagination/Pagination";
 import { useDispatch, useSelector } from "react-redux";
 import {
@@ -8,7 +9,6 @@ import {
   getFiltered,
   orderProducts,
   addProductToShoppingCart,
-  addFavorites
 } from "../redux/actions";
 import { Link } from "react-router-dom";
 
@@ -18,7 +18,7 @@ function Productos() {
     (state) => state.products.productsFiltered
   );
 
-  const { cart } = useSelector((state) => state.products);
+  const [loading, setLoading] = useState(true);
 
   const productNotNull = productsFiltered.filter(
     (p) => p.precio !== null && p.image !== null
@@ -27,6 +27,7 @@ function Productos() {
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(getAll());
+    setLoading(false)
   }, []);
   const [filters, setFilters] = useState({
     category: "",
@@ -66,6 +67,7 @@ function Productos() {
 
   useEffect(() => {
     dispatch(getFiltered(filters.brand, filters.category));
+    setLoading(false)
   }, [filters]);
 
   const handleChangeCategory = (e) => {
@@ -94,7 +96,10 @@ function Productos() {
   const handleSort = (e) => {
     dispatch(orderProducts(e.target.value));
   };
-
+  
+  if(loading || currentProducts.length === 0){
+    return <Loading/>
+  }
   return (
     <div className="flex items-center justify-center bg-gray-300">
       <div className="flex sm:flex-row flex-col w-full sm:w-[1024px] bg-white shadow-md">
