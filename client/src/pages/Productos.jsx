@@ -8,7 +8,7 @@ import {
   getFiltered,
   orderProducts,
   addProductToShoppingCart,
-  addFavorites
+  addFavoritesList,
 } from "../redux/actions";
 import { Link } from "react-router-dom";
 
@@ -19,6 +19,7 @@ function Productos() {
   );
 
   const { cart } = useSelector((state) => state.products);
+  const { favorites } = useSelector((state) => state.products);
 
   const productNotNull = productsFiltered.filter(
     (p) => p.precio !== null && p.image !== null
@@ -95,6 +96,15 @@ function Productos() {
     dispatch(orderProducts(e.target.value));
   };
 
+
+  let handleFavoritesClick = (product) => {
+    let favs = favorites.find((f) => f.id === product.id)
+    if(!favs){
+      dispatch(addFavoritesList(product));
+   
+    }  
+  }
+   
   return (
     <div className="flex items-center justify-center bg-gray-300">
       <div className="flex sm:flex-row flex-col w-full sm:w-[1024px] bg-white shadow-md">
@@ -196,7 +206,7 @@ function Productos() {
                         Ver mas
                       </button>
                     </Link>
-                    <button className="flex justify-center items-center bg-gray-300/30 w-10 hover:bg-gray-300/90 transition rounded-md">
+                    <button  onClick={() => handleFavoritesClick(e)} className="flex justify-center items-center bg-gray-300/30 w-10 hover:bg-gray-300/90 transition rounded-md">
                       <img
                         src="https://cdn.pixabay.com/photo/2017/06/26/20/33/icon-2445095_960_720.png"
                         className="opacity-50 object-cover"

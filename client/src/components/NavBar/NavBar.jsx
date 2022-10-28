@@ -9,14 +9,25 @@ import Carrito from "../../assets/carrito.png";
 import { useAuth } from "../../context/authContext";
 import { motion, AnimatePresence } from "framer-motion";
 import Modal from "../../components/Modal/Modal";
+import ModalFavorites from "../../components/Modal/ModalFavorites";
 import Avatar from './Avatar'
 import axios from "axios";
 function NavBar() {
+  
   const [modalOpen, setModalOpen] = useState(false);
+  const [modalFavoritesOpen, setModalFavoritesOpen] = useState(false);
 
   const close = () => setModalOpen(false);
   const open = () => setModalOpen(true);
+
+  const closeFav = () => setModalFavoritesOpen(false);
+  const openFav = () => setModalFavoritesOpen(true);
+  
+  
+  
   const { cart } = useSelector(state=>state.products)
+  const { favorites } = useSelector(state=>state.products)
+  
   const [active, setActive] = useState("");
   const [admin, setAdmin] = useState(false);
   const [superAdmin, setSuperAdmin] = useState(false);
@@ -29,13 +40,16 @@ function NavBar() {
   useEffect(()=>{
     !localStorage.hasOwnProperty('cart') ? localStorage.setItem("cart","[]") :
     localStorage.setItem("cart",JSON.stringify(cart))
-  },[cart])
+    !localStorage.hasOwnProperty('favorites') ? localStorage.setItem("favorites","[]") :
+    localStorage.setItem("favorites",JSON.stringify(favorites))
+  },[cart, favorites])
   
   const { usuario } = useAuth();
 
   useEffect(()=>{
     if(usuario){
       usuario.cart = cart
+      usuario.favorites = favorites
       axios.get(`/users/${usuario.email}`).then(res=>{
         setAdmin(res.data.isAdmin)
         setSuperAdmin(res.data.isSuperAdmin)
@@ -43,8 +57,9 @@ function NavBar() {
       usuario.isAdmin = admin
       usuario.isSuperAdmin = superAdmin
     }
-  },[cart,usuario])
+  },[cart,favorites, usuario])
 
+  console.log(favorites)
   return (
     <>
       <nav className="h-auto flex flex-col sm:flex-row justify-between items-center px-5 p-2 bg-gradient-to-b from-gray-800 to bg-gray-600 shadow-2xl z-50">
@@ -64,6 +79,7 @@ function NavBar() {
             whileTap={{ scale: 0.9 }}
             onClick={() => {
               modalOpen ? close() : open();
+              modalFavoritesOpen ? closeFav() : null
             }}
           >
             {/* <Link to={"/cart"}> */}
@@ -74,17 +90,26 @@ function NavBar() {
             />
             {/* </Link> */}
           </motion.button>
-            
-             <button className="flex justify-center items-center bg-yellow-100/30 w-10 hover:bg-gray-300/90 transition rounded-md">
-              <Link to={"/favorites"}>
-                <img
-                  src="https://cdn.pixabay.com/photo/2017/06/26/20/33/icon-2445095_960_720.png"
-                  className="opacity-50 object-cover"
-                  alt=""
-                />
-              </Link>
-            </button>
 
+          <motion.button
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+            onClick={() => {
+              modalFavoritesOpen ? closeFav() : openFav();
+              modalOpen? close() : null;
+            }}
+          >
+            {/* <Link to={"/cart"}> */}
+            <img
+             src="https://cdn.pixabay.com/photo/2017/06/26/20/33/icon-2445095_960_720.png"
+             className="object-cover h-16 p-0"
+             alt="favorites"
+  />
+            {/* </Link> */}
+          </motion.button>
+          <span className="bg-white rounded-full absolute w-6 h-6 right-1 text-center">
+            {favorites?.length}
+          </span>
           <span className="bg-white rounded-full absolute w-6 h-6 text-center">
             {cart?.length}
           </span>
@@ -141,8 +166,35 @@ function NavBar() {
       >
         {modalOpen && <Modal modalOpen={modalOpen} handleClose={close} />}
       </AnimatePresence>
+      <AnimatePresence
+        initial={true}
+        exitBeforeEnter={true}
+        onExitComplete={() => null}
+      >
+        {modalFavoritesOpen && <ModalFavorites modalOpen={modalFavoritesOpen} handleClose={closeFav} />}
+      </AnimatePresence>
+    
     </>
   );
 }
 
 export default NavBar;
+
+
+/*<button className="flex justify-center items-center bg-yellow-100/30 w-10 hover:bg-gray-300/90 transition rounded-md">
+<Link to={"/favorites"}>
+  <img
+    src="https://cdn.pixabay.com/photo/2017/06/26/20/33/icon-2445095_960_720.png"
+    className="opacity-50 object-cover"
+    alt=""
+  />
+</Link>
+</button>
+linea 78
+
+ <span className="bg-white rounded-full absolute w-6 h-6 text-right">
+            {favorites?.length}
+          </span>
+
+
+*/

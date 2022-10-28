@@ -31,18 +31,23 @@ const bulkAdmins = require("./src/data/admin.json");
 const bulkReviews = require("./src/data/Reviews.json");
 
 
-// var setter ;
-// async function setterFunction (){
-// const user = await CPU.findAll();
-// if (!user) {
-//   setter = true;
-// } else {
-//   setter = false;
-// }}
+let setter ;
+ async function setterFunction (){
+ const user = await CPU.findAll();
+  if (user) {
+  setter = false;
+ } else {
+   setter = true;
+ }
+ 
+ console.log(setter)
+ }
+ 
 
-// setterFunction();
 
-setter=true;
+ setterFunction();
+ 
+ 
 
 // setter = true; 
 // descomentar setter hacer para los cambios nuevos y comentar funcion linea 33 user

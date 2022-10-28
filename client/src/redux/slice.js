@@ -9,6 +9,9 @@ export const productsSlice = createSlice({
     component: [],
     filterByPrice: [],
     reviews: [],
+    favorites: localStorage.hasOwnProperty("favorites")
+    ? JSON.parse(localStorage.getItem("favorites"))
+    : [],
     cart: localStorage.hasOwnProperty("cart")
       ? JSON.parse(localStorage.getItem("cart"))
       : [],
@@ -72,7 +75,15 @@ export const productsSlice = createSlice({
     },
     getReview: (state, action) => {
       state.reviews = [...state.reviews, action.payload];
-    }
+    },
+    addFavorites: (state, action) => {
+      state.favorites= [...state.favorites, action.payload];
+    },
+    deleteFavorites:(state, action) => {
+      state.favorites= state.favorites.filter((f) => f.id !== action.payload)
+       
+      },
+
 
     // una diferencia entre redux y redux toolkit
     // es que aca no hay switch, son funciones que se invocan desde las actions
@@ -93,7 +104,7 @@ export const {
   addProductToCart,
   deleteProductToCart,
   orderProductInRangeOfPrice,
-  favorites,
+  addFavorites,
   deleteFavorites,
   getReview,
 } = productsSlice.actions;
