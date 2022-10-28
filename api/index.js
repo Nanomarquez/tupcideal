@@ -30,6 +30,7 @@ const bulkProducts = require("./src/data/products.json");
 const bulkAdmins = require("./src/data/admin.json");
 const bulkReviews = require("./src/data/Reviews.json");
 
+
 // var setter ;
 // async function setterFunction (){
 // const user = await CPU.findAll();
@@ -39,11 +40,13 @@ const bulkReviews = require("./src/data/Reviews.json");
 //   setter = false;
 // }}
 
-// setterFunction();
 
-setter = false;
 
-// setter = true;
+
+
+
+
+ setter = true;
 // descomentar setter hacer para los cambios nuevos y comentar funcion linea 33 user
 
 // Syncing all the models at once.
