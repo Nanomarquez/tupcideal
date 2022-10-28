@@ -1,40 +1,31 @@
-const { Router } = require("express");
+const { Router, response } = require("express");
 const { Model } = require("sequelize");
 const router = Router();
-const { Purchase, User, WareHouse, Product } = require("../db.js");
+const { Purchase, User, WareHouse } = require("../db.js");
+const mercadopago = require("mercadopago");
 
 // Una ruta que traiga toda la info de una compra
 router.get('/:id', async (req, res) => {
     const id = req.params.id;
-
+    
     try {
         const purchase = await Purchase.findByPk(id,{
             include: [
-                { model: User, attributes: {exclude: ["createdAt", "updatedAt"]} },
-                { model: WareHouse, attributes: ["id", "precio"], include: [{ model: Product }] }
+                { model: User, attributes: {exclude: ["createdAt", "updatedAt"]} }
             ],
         });
-        res.send(purchase);
+
+        const {body: mpData} = await mercadopago.merchant_orders.findById(purchase.mp_merchantOrder_id);
+
+        res.send({
+            purchase,
+            mpData
+        });
+
     } catch(err) {
         res.status(500).send({error: err.message});
     };
     
-});
-
-// Una ruta para agregar una nueva compra a la tabla
-router.post('/', async (req, res) => {
-    const { totalprice, UserId } = req.query;
-    const { cart } = req.body.data; 
-    try {
-        const newPurchase = await Purchase.create({
-            totalprice: totalprice,
-            UserId: UserId
-        });
-        cart && cart.forEach(async p => await newPurchase.addWareHouses(p.id));
-        res.send(newPurchase);
-    } catch (err) {
-        res.status(500).send({error: err.message})
-    };
 });
 
 // Una ruta para modificar la compra (modificar el estado "pending" --> "pagado / cancelado")
