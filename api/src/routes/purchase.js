@@ -28,40 +28,6 @@ router.get('/:id', async (req, res) => {
     
 });
 
-// Una ruta para modificar la compra (modificar el estado "pending" --> "pagado / cancelado")
-router.put('/:id', async (req, res) => {
-    const { id } = req.params;
-    const {status} = req.query
-    try {
-        const purchase = await Purchase.findByPk(id,{
-            include: [
-                { model: User, attributes: {exclude: ["createdAt", "updatedAt"]} },
-                { model: WareHouse, attributes: ["id"] }
-            ],
-        });
-
-        if(status === "Canceled") {
-            purchase.status = status;
-        } else if ( status === "Paid") {
-            purchase.status = status;
-            const productsIds = purchase.WareHouses.map(p => p.id);
-            
-            productsIds.forEach(async id => {
-                const product = await WareHouse.findByPk(id);
-                product.cantidad = product.cantidad - 1;
-                await product.save();
-            })   
-        };
-
-        await purchase.save();
-        
-        res.send(purchase);
-    } catch (err) {
-        res.status(500).send({error: err.message})
-    }
-});
-
-
 // Una ruta para ver todas las compras de un usuario
 router.get('/user/:id', async (req, res) => {
     const {id} = req.params;
