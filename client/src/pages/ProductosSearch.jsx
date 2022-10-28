@@ -4,6 +4,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { useEffect } from "react";
 import Loading from "../components/Loading/Loading";
 import { getAllById, addProductToShoppingCart, listReviews } from "../redux/actions";
+import axios from "axios";
 function ProductosSearch() {
   const { id } = useParams();
   const [loading, setLoading] = useState(true);
@@ -13,6 +14,17 @@ function ProductosSearch() {
     dispatch(getAllById(id));
     setLoading(false)
   }, [id]);
+  const [review,setReview] = useState([])
+  async function getReview(){
+    return await axios.get(`/review/product/${id}`).then(res=>setReview(res.data))
+  }
+  useEffect(()=>{
+    if(id){
+      getReview()
+    }
+  },[id])
+
+  console.log(review);
 
   if(loading || productsFilterById.Seller === undefined){
     return <Loading/>
@@ -20,7 +32,7 @@ function ProductosSearch() {
   return (
     <>
       {productsFilterById.hasOwnProperty("precio") && (
-        <div className="w-full h-[120%] flex flex-col sm:flex-row items-center">
+        <div className="w-full flex flex-col sm:flex-row items-center">
           <section className="flex p-10 sm:w-2/5 justify-center w-full">
             <img
               src={productsFilterById.Product.image}
@@ -61,6 +73,13 @@ function ProductosSearch() {
               <div className="flex gap-10 items-center">
               <h2 className="text-2xl">Precio: ${productsFilterById.precio}</h2>
               <h2 className="text-2xl">Vendido por <span className="bg-gray-300 px-2 py-1 rounded-md shadow-lg">{productsFilterById.Seller.store_name}</span></h2>
+              <button className="flex justify-center items-center bg-gray-300/30 w-10 hover:bg-gray-300/90 transition rounded-md">
+                      <img
+                        src="https://cdn.pixabay.com/photo/2017/06/26/20/33/icon-2445095_960_720.png"
+                        className="opacity-50 object-cover"
+                        alt=""
+                      />
+                    </button>
               </div>
             </div>
             <button
@@ -71,9 +90,23 @@ function ProductosSearch() {
             >
               Agregar al carrito
             </button>
+            <button
+              className="bg-gray-300 text-black rounded-md text-2xl p-2 shadow-lg hover:text-white hover:bg-gray-500 duration-500"
+            >
+              Agregar comentario
+            </button>
           </section>
         </div>
       )}
+      <div className="w-full h-[250px] overflow-y-scroll px-10 py-5 gap-5">
+        {review?.map((e,i)=>(
+          <div key={i} className="flex flex-col justify-center rounded-md items-center border-2">
+            <p>Anonimo</p>
+            <p>Comentario: {e.comment}</p>
+            <p>Rating: {e.rating}</p>
+          </div>
+        ))}
+      </div>
     </>
   );
 }
