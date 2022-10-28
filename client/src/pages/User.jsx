@@ -179,6 +179,12 @@ function User() {
       </div>
       <div className="w-full h-[300px]">
         <h1>Tus comentarios sobre productos</h1>
+        {review?.map((e,i)=>(
+          <div key={i}>
+            <p>{e.comment}</p>
+            <p>{e.rating}</p>
+          </div>
+        ))}
       </div>
     </>
   );
