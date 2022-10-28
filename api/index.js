@@ -13,7 +13,7 @@ const {
   WareHouse,
   Product,
   User,
-  Review
+  Review,
 } = require("./src/db");
 const bulkCPU = require("./src/data/cpu.json");
 const bulkGPU = require("./src/data/video-card.json");
@@ -31,25 +31,22 @@ const bulkAdmins = require("./src/data/admin.json");
 const bulkReviews = require("./src/data/Reviews.json");
 
 
-let setter ;
- async function setterFunction (){
- const user = await CPU.findAll();
-  if (user) {
-  setter = false;
- } else {
-   setter = true;
- }
- 
- console.log(setter)
- }
- 
+// var setter ;
+// async function setterFunction (){
+// const user = await CPU.findAll();
+// if (!user) {
+//   setter = true;
+// } else {
+//   setter = false;
+// }}
 
 
- setterFunction();
- 
- 
 
-// setter = true; 
+
+
+
+
+ setter = true;
 // descomentar setter hacer para los cambios nuevos y comentar funcion linea 33 user
 
 // Syncing all the models at once.

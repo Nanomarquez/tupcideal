@@ -30,7 +30,6 @@ function Modal({ handleClose }) {
   productsCart.map((p) => (totalPrice = totalPrice + p.precio));
   const { usuario } = useAuth();
 
-
   return (
     <Backdrop onClick={handleClose}>
       <motion.div
@@ -68,7 +67,8 @@ function Modal({ handleClose }) {
               />
               <h3 className="text-2xl">Name {p.Product.name}</h3>
               <span className="text-center text-xl">Precio ${p.precio}</span>
-              <button className="bg-gray-300 px-3 py-1 rounded-md shadow-md shadow-black"
+              <button
+                className="bg-gray-300 px-3 py-1 rounded-md shadow-md shadow-black"
                 onClick={() => dispatch(deleteProductToShoppingCart(i))}
               >
                 Eliminar
@@ -83,13 +83,25 @@ function Modal({ handleClose }) {
             </div>
           </div>
         ) : null}
-        {(productsCart.length && usuario !== null) ? (
+        {productsCart.length && usuario !== null ? (
           <Link to="/mp">
-            <button onClick={handleClose} className="p-5 bg-gray-400 text-3xl rounded-md shadow-md shadow-black mb-5 text-white">Comprar</button>
-          </Link> ) :           <Link to="/login">
-            <button onClick={handleClose} className="p-5 bg-gray-400 text-3xl rounded-md shadow-md shadow-black mb-5 text-white">Logeate para comprar</button>
+            <button
+              onClick={handleClose}
+              className="p-5 bg-gray-400 text-3xl rounded-md shadow-md shadow-black mb-5 text-white"
+            >
+              Comprar
+            </button>
           </Link>
-        }
+        ) : (
+          <Link to="/login">
+            <button
+              onClick={handleClose}
+              className="p-5 bg-gray-400 text-3xl rounded-md shadow-md shadow-black mb-5 text-white"
+            >
+              Logeate para comprar
+            </button>
+          </Link>
+        )}
       </motion.div>
     </Backdrop>
   );

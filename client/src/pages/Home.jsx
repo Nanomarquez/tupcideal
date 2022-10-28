@@ -12,10 +12,11 @@ import Reddragon from "../assets/marcas/reddragon.png";
 import { useAuth } from "../context/authContext";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-import { useEffect } from "react";
+import { useEffect,useState } from "react";
+import Loading from '../components/Loading/Loading'
 function Home() {
   const navigate = useNavigate();
-
+  const [loading, setLoading] = useState(true);
   const { usuario } = useAuth();
 
   useEffect(() => {
@@ -29,7 +30,12 @@ function Home() {
         }
       });
     }
+    setLoading(false)
   }, [usuario]);
+
+  if(loading){
+    return <Loading/>
+  }
 
   return (
     <>

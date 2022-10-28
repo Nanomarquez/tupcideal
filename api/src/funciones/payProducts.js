@@ -77,7 +77,6 @@ const payProducts = async (req, res) => {
     .create(preference)
     //le pasamos las preference que definimos de linea 35 a 72
     .then(function (response) {
-      console.log(response);
       res.send(
         response.body.init_point
 
