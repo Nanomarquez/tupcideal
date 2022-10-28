@@ -68,7 +68,13 @@ router.post("/notification", async (req, res) => {
         }
       });
 
-      //await purchase.setUser(merchantOrder.body.additional_info);
+      purchase = await Purchase.findOne({
+        where: {
+          mp_merchantOrder_id: [merchantOrder.body.id]
+        }
+      })
+
+      await purchase.setUser(merchantOrder.body.additional_info);
 
       res.status(200).send(merchantOrder);
       break;
