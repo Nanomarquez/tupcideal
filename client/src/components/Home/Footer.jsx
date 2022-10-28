@@ -1,11 +1,12 @@
 import React from "react";
-
+import {Link} from 'react-router-dom'
 function Footer() {
   return (
     <footer className="p-4 bg-gray-900 rounded-t-3xl shadow md:px-6 md:py-8 absolute w-full">
       <div className="sm:flex sm:items-center sm:justify-between">
         <div className="flex items-center mb-4 sm:mb-0">
-    <span className="logo font-bold text-3xl tracking-tighter text-transparent bg-clip-text bg-gradient-to-br from-red-400 via-purple-400 to-green-400">TuPcIdeal</span>
+          <Link to='/'>
+    <span className="logo font-bold text-3xl tracking-tighter text-transparent bg-clip-text bg-gradient-to-br from-red-400 via-purple-400 to-green-400">TuPcIdeal</span></Link>
         </div>
         <ul className="flex flex-wrap items-center mb-6 text-sm text-gray-500 sm:mb-0 dark:text-gray-400">
           <li>

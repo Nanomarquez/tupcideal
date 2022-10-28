@@ -23,7 +23,7 @@ const dropIn = {
 function Backdrop({children,onClick}) {
   return (
     <motion.div
-    className='fixed top-1/2 left-1/2 mt-[-300px] ml-[-300px] h-[600px] w-[600px] bg-white z-[1000000] overflow-scroll overflow-x-hidden shadow-lg rounded-md'
+    className='fixed sm:top-1/2 top-1/3 left-1/2 sm:mt-[-300px] sm:ml-[-300px] sm:h-[600px] sm:w-[600px] h-[500px] w-[300px] mt-[-150px] ml-[-150px] bg-white z-[1000000] overflow-scroll overflow-x-hidden shadow-lg rounded-md'
     onClick={onClick}
     variants={dropIn}
     initial="hidden"

@@ -29,18 +29,18 @@ function Admin() {
   }, []);
   return (
     <div className="h-screen">
-      <section>
-        Tabla de usuario
+      <section className="w-[400px] bg-gray-300 h-auto sm:h-screen text-center">
+        <h1 className="p-4 text-2xl">Tabla de usuarios</h1>
         {users &&
           users.map((e, i) => (
-            <div key={i} className="flex gap-10">
-              {e.name}{" "}
-              <button onClick={() => handleDelete(e.email)}>Eliminar</button>{" "}
+            <div key={i} className="border-2 flex gap-10 justify-center items-center rounded">
+              <p className="text-xl font-medium">{e.name}{" "}</p> 
+              <button className="border-2 bg-red-400 p-1 justify-center rounded" onClick={() => handleDelete(e.email)}>Eliminar</button>{" "}
               {e.isBanned && (
-                <button onClick={() => handleDesBan(e.email)}>Desbanear</button>
+                <button className="border-2 bg-green-400 rounded p-1 justify-center" onClick={() => handleDesBan(e.email)}>Desbanear</button>
               )}
               {!e.isBanned && (
-                <button onClick={() => handleBan(e.email)}>Banear</button>
+                <button className="border-2 rounded bg-red-400 p-1 justify-center" onClick={() => handleBan(e.email)}>Banear</button>
               )}
             </div>
           ))}

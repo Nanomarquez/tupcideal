@@ -33,7 +33,7 @@
   width: 35px;
 }
 
-div ul li:hover{
+div .ul li:hover{
   padding: 14px;
   font-weight: 900;
   background: linear-gradient(90deg, rgb(101, 254, 183) 0%, rgba(27,228,183,1) 35%, rgba(2,152,182,1) 100%);

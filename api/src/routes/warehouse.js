@@ -1,12 +1,12 @@
 const { Router } = require("express");
 const router = Router();
-const { Seller, Product, WareHouse } = require("../db.js");
+const { Seller, Product, WareHouse, Review } = require("../db.js");
 
 //Create User
 //------- PEDIR TODOS LOS PRODUCTOS Y VENDEDORES A LA BD--------
 router.get("/", async (req, res) => {
   const { brand, category } = req.query;
-  let response = []
+  let response = [];
   try {
     let ware;
     ware = await WareHouse.findAll({
@@ -27,24 +27,31 @@ router.get("/", async (req, res) => {
             "id_table",
           ],
         },
+        {
+          model: Review
+        },
       ],
       attributes: ["precio", "cantidad", "id"],
     });
     response = ware;
-    brand ? response = response.filter(p => p.Product.name.includes(brand)) : null;
-    category ? response = response.filter(p => p.Product.categories === category): null;
+    brand
+      ? (response = response.filter((p) => p.Product.name.includes(brand)))
+      : null;
+    category
+      ? (response = response.filter((p) => p.Product.categories === category))
+      : null;
     res.send(response);
   } catch (err) {
-    res.status(500).json({error: err.message});
+    res.status(500).json({ error: err.message });
   }
 });
 
-router.get('/product/:Product_id', async (req, res) => {
-  const {Product_id} = req.params;
+router.get("/product/:Product_id", async (req, res) => {
+  const { Product_id } = req.params;
 
   try {
     const products = await WareHouse.findAll({
-      where: {ProductId :[Product_id]},
+      where: { ProductId: [Product_id] },
       include: [
         {
           model: Seller,
@@ -64,46 +71,45 @@ router.get('/product/:Product_id', async (req, res) => {
         },
       ],
       attributes: ["precio", "cantidad", "id"],
-    })
+    });
     res.send(products);
   } catch (err) {
-    res.send({error: err.message})
+    res.send({ error: err.message });
   }
 });
 
-router.get('/:id', async (req, res) => {
-  const {id} = req.params;
+router.get("/:id", async (req, res) => {
+  const { id } = req.params;
 
   try {
-    const product = await WareHouse.findByPk(id,{
-    include: [
-      {
-        model: Seller,
-        attributes: ["store_name", "adress", "id", "email", "adress"],
-      },
-      {
-        model: Product,
-        attributes: [
-          "id",
-          "categories",
-          "name",
-          "rating",
-          "rating_count",
-          "image",
-          "id_table",
-        ],
-      },
-    ],
-    attributes: ["precio", "cantidad", "id"]
+    const product = await WareHouse.findByPk(id, {
+      include: [
+        {
+          model: Seller,
+          attributes: ["store_name", "adress", "id", "email", "adress"],
+        },
+        {
+          model: Product,
+          attributes: [
+            "id",
+            "categories",
+            "name",
+            "rating",
+            "rating_count",
+            "image",
+            "id_table",
+          ],
+        },
+      ],
+      attributes: ["precio", "cantidad", "id"],
     });
-   res.send(product);
+    res.send(product);
   } catch (err) {
-    res.status(500).send({error: err.message});
-  };
-}); 
+    res.status(500).send({ error: err.message });
+  }
+});
 
-router.get('/')
-
+router.get("/");
 
 //------- POST A ALMACEN--------
 router.post("/", async (req, res) => {

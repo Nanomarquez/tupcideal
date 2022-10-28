@@ -1,12 +1,12 @@
 const { Router } = require('express');
 const router = Router();
-const { Review, Product, User} = require('../db.js');
+const { Review, WareHouse, User} = require('../db.js');
 
 router.get('/product/:productId', async (req,res) => {
     const { productId } = req.params;
     const productReview = await Review.findAll({
         include: [{
-            model: Product,
+            model: WareHouse,
             where: { id : [productId] }
         }]
     })
@@ -46,7 +46,7 @@ router.post('/', async (req,res) => {
 router.put('/:id', async (req,res) => {
     const { rating, comment } = req.body;
     const id = req.params.id
-    if(comment && rating ) {
+    if( rating ) {
         try{
             const review = await Review.findByPk(id)
             review.rating = rating
@@ -60,5 +60,19 @@ router.put('/:id', async (req,res) => {
         res.status(400).send({err:'Es necesario que puntues el producto para guardar tu review'})
     }
 });
+
+router.delete("/:id", async (req, res) => {
+    try {
+      const { id } = req.params;
+      const deleteReview = await Review.findOne({
+        where: { id: id } 
+        });
+      await deleteReview.destroy();
+      res.status(200).send({ message: 'Review eliminada con éxito' });
+    } catch (err) {
+      res.status(400).send({ error: err.message });
+    }
+  });
+  
 
 module.exports = router;

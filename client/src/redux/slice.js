@@ -8,7 +8,13 @@ export const productsSlice = createSlice({
     details: {},
     component: [],
     filterByPrice: [],
-    cart: localStorage.hasOwnProperty('cart') ? JSON.parse(localStorage.getItem('cart')) : [] ,
+    reviews: [],
+    favorites: localStorage.hasOwnProperty("favorites")
+    ? JSON.parse(localStorage.getItem("favorites"))
+    : [],
+    cart: localStorage.hasOwnProperty("cart")
+      ? JSON.parse(localStorage.getItem("cart"))
+      : [],
     // la idea es tener siempre todos los productos cargados para los selects o busqueda por name
     // por otra parte tener los productos filtrados para el display y/o sus selects
     // los ordenamientos se harian sobre productsFiltered, tengan todos los productos o los filtrados
@@ -26,8 +32,8 @@ export const productsSlice = createSlice({
     getProductsFiltered: (state, action) => {
       state.productsFiltered = action.payload;
     },
-    orderProductInRangeOfPrice:(state,action) =>{
-      state.productsFiltered = action.payload
+    orderProductInRangeOfPrice: (state, action) => {
+      state.productsFiltered = action.payload;
     },
     OrderProductsDisplayByPrice: (state, action) => {
       //state.productsFiltered = action.payload
@@ -63,8 +69,21 @@ export const productsSlice = createSlice({
       state.cart = [...state.cart, action.payload];
     },
     deleteProductToCart: (state, action) => {
-      state.cart = state.cart.slice(0, action.payload).concat(state.cart.slice(action.payload+1, state.cart.length))
-    }
+      state.cart = state.cart
+        .slice(0, action.payload)
+        .concat(state.cart.slice(action.payload + 1, state.cart.length));
+    },
+    getReview: (state, action) => {
+      state.reviews = [...state.reviews, action.payload];
+    },
+    addFavorites: (state, action) => {
+      state.favorites= [...state.favorites, action.payload];
+    },
+    deleteFavorites:(state, action) => {
+      state.favorites= state.favorites.filter((f) => f.id !== action.payload)
+       
+      },
+
 
     // una diferencia entre redux y redux toolkit
     // es que aca no hay switch, son funciones que se invocan desde las actions
@@ -84,7 +103,10 @@ export const {
   getBrand,
   addProductToCart,
   deleteProductToCart,
-  orderProductInRangeOfPrice
+  orderProductInRangeOfPrice,
+  addFavorites,
+  deleteFavorites,
+  getReview,
 } = productsSlice.actions;
 
 // se exportan las funciones que invocamos desde las actions

@@ -65,19 +65,20 @@ sequelize.models = Object.fromEntries(capsEntries);
 // En sequelize.models están todos los modelos importados como propiedades
 // Para relacionarlos hacemos un destructuring
 const {
-  User,
-  Review,
   Admin,
-  Seller,
-  Product,
   Case,
   CPU,
+  Favorite,
   InternalHardDrive,
   Memory,
   Motherboard,
   Payment,
-  Purchase,
   PowerSupply,
+  Product,
+  Purchase,
+  Review,
+  Seller,
+  User,
   VideoCard,
   WareHouse,
 } = sequelize.models;
@@ -87,14 +88,14 @@ const {
 User.hasMany(Review);
 Review.belongsTo(User);
 
-Product.hasMany(Review);
-Review.belongsTo(Product);
+// Product.hasMany(Review);
+// Review.belongsTo(Product);
 
 User.hasMany(Purchase);
 Purchase.belongsTo(User);
 
-Purchase.belongsToMany(WareHouse, {through: 'Purchase_WareHouse'});
-WareHouse.belongsToMany(Purchase, {through: 'Purchase_WareHouse'});
+Purchase.belongsToMany(WareHouse, { through: "Purchase_WareHouse" });
+WareHouse.belongsToMany(Purchase, { through: "Purchase_WareHouse" });
 
 Seller.hasMany(WareHouse);
 WareHouse.belongsTo(Seller);
@@ -102,15 +103,14 @@ WareHouse.belongsTo(Seller);
 Product.hasMany(WareHouse);
 WareHouse.belongsTo(Product);
 
+WareHouse.hasMany(Review);
+Review.belongsTo(WareHouse);
 
-// Seller.belongsToMany(Product, { through: "Seller_Product" });
-// Product.belongsToMany(Seller, { through: "Seller_Product" });
+User.hasMany(Favorite);
+Favorite.belongsTo(User);
 
-// Product.hasMany(Case, { as: "case", foreignKey: "produId" });
-// Case.belongsTo(Product, { as: "produ" });
-
-// Product.hasMany(CPU, { as: "cpu", foreignKey: "produId" });
-// CPU.belongsTo(Product, { as: "produ" });
+// User.belongsToMany(WareHouse, { through: "Favorites", timestamps: false });
+// WareHouse.belongsToMany(User, { through: "Favorites", timestamps: false });
 
 module.exports = {
   ...sequelize.models, // para poder importar los modelos así: const { Product, User } = require('./db.js');
