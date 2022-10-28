@@ -1,7 +1,7 @@
 const { Router, response } = require("express");
 const { Model } = require("sequelize");
 const router = Router();
-const { Purchase, User, WareHouse } = require("../db.js");
+const { Purchase, User } = require("../db.js");
 const mercadopago = require("mercadopago");
 
 // Una ruta que traiga toda la info de una compra
@@ -33,7 +33,7 @@ router.get('/user/:id', async (req, res) => {
     const {id} = req.params;
 
     try {
-        const userPurchases = Purchase.finAll({
+        const userPurchases = await Purchase.findAll({
             where: {
                 UserId: [id]
             }
