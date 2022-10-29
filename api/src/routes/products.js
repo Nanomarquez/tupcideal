@@ -9,19 +9,14 @@ const { Product } = require("../db.js");
 //--------------------GET GENERAL --------------------
 
 router.get("/", async (req, res) => {
-  const { brand, category } = req.query;
+  const { category } = req.query;
+  console.log(category);
   try {
-    let product;
-    if (brand) {
-      product = await Product.findAll({
-        where: {
-          name: {[Op.iLike] : `${brand}%`}
-        }
-      });
-    } else {
-      product = await Product.findAll();
-    }
-    category ? res.send(product.filter(p => p.categories == category)) : res.status(200).json(product);
+    let product= await Product.findAll({where:{categories:category}});  
+    // category ? res.send(product.filter(p => p.categories == category)) : res.status(200).json(product);
+    // console.log(product);
+    res.status(200).json(product)
+  
   } catch (err) {
     res.status(500).json(err);
   }
@@ -53,7 +48,8 @@ router.post("/", async (req, res) => {
     console.log(typeof(usd_price));
 
     const [product, created]  = await Product.findOrCreate({
-      where:{categories: categories,
+      where:{
+      categories: categories,
       name: name,
       price_usd: Number(price_usd),
       rating: Number(rating),

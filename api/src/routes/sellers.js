@@ -49,6 +49,7 @@ router.post("/", async (req, res) => {
         email: email,
         phone_number: phone_number,
       },
+
     });
     if (created) {
       console.log("Vendedor creado");
@@ -57,7 +58,7 @@ router.post("/", async (req, res) => {
       res.status(200).json("The seller exist previusly");
     }
   } catch (err) {
-    res.status(500).json(err);
+    res.status(500).json({ error: err.message });
   }
 });
 
@@ -65,12 +66,13 @@ router.post("/", async (req, res) => {
 router.put("/:email", async (req, res) => {
   try {
     const { email } = req.params;
-    const { store_name, adress, phone_number } = req.body;
+    const { store_name, adress, phone_number,ban } = req.body;
     const editdUser = await Seller.update(
       {
         store_name: store_name,
         address: adress,
         phone_number: phone_number,
+        isBanned: ban,
       },
       { where: { email: email } }
     );

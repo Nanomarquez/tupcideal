@@ -4,6 +4,7 @@ import {
   getAllProducts,
   getAllProductsById,
   getProductsFiltered,
+  getProductsFiltered2,
   getProductDetail,
   OrderProductsDisplayByPrice,
   emptyProductDetail,
@@ -54,6 +55,11 @@ export const getFiltered = (brand, category) => (dispatch) => {
     .catch((e) => console.log(e));
 };
 
+export const getFiltered2 = ( category) => (dispatch) => {
+  axios(`/products?category=${category}`)
+    .then((res) => dispatch(getProductsFiltered2(res.data)))
+    .catch((e) => console.log(e));
+};
 //trae de forma dinamica, segun componente (endpoint), por query busqueda por name,
 //o filtrado por brand o compatibility
 
