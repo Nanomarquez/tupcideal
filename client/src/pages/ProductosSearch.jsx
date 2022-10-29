@@ -126,7 +126,7 @@ function ProductosSearch() {
         <ul>
           {
             productsFilterById.hasOwnProperty('componentData') && 
-            Object.keys(productsFilterById.componentData).map(k=><li>{k}: {productsFilterById.componentData[k]}</li>)
+            Object.keys(productsFilterById.componentData).map(k=><li>{k}: {productsFilterById.componentData[k] ? productsFilterById.componentData[k] : 'No'}</li>)
           }
         </ul>
       </div>
