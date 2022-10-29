@@ -121,6 +121,15 @@ function ProductosSearch() {
           </section>
         </div>
       )}
+      <div>
+        <h2>Detalles:</h2>
+        <ul>
+          {
+            productsFilterById.hasOwnProperty('componentData') && 
+            Object.keys(productsFilterById.componentData).map(k=><li>{k}: {productsFilterById.componentData[k]}</li>)
+          }
+        </ul>
+      </div>
       <div className="w-full h-[250px] overflow-y-scroll px-10 py-5 gap-5">
         {review?.map((e, i) => (
           <div
