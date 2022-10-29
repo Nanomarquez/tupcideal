@@ -4,6 +4,7 @@ export const productsSlice = createSlice({
   initialState: {
     allProducts: [],
     productsFiltered: [],
+    productsFiltered2: [],
     productsFilterById: {},
     details: {},
     component: [],
@@ -31,6 +32,9 @@ export const productsSlice = createSlice({
 
     getProductsFiltered: (state, action) => {
       state.productsFiltered = action.payload;
+    },
+    getProductsFiltered2: (state, action) => {
+      state.productsFiltered2 = action.payload;
     },
     orderProductInRangeOfPrice: (state, action) => {
       state.productsFiltered = action.payload;
@@ -94,6 +98,7 @@ export const {
   getAllProducts,
   getAllProductsById,
   getProductsFiltered,
+  getProductsFiltered2,
   getProductDetail,
   OrderProductsDisplayByPrice,
   emptyProductDetail,
