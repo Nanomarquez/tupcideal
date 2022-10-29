@@ -1,6 +1,7 @@
 const { Router } = require("express");
 const router = Router();
 const { Seller, Product, WareHouse, Review } = require("../db.js");
+const getComponentData = require('../funciones/getComponentData.js')
 const ratingProm = require("../funciones/ratingProm.js");
 
 //Create User
@@ -97,7 +98,9 @@ router.get("/:id", async (req, res) => {
     product.ratingProm = ratingProm(product.Reviews);
     product.save();
 
-    res.send(product);
+    const componentData = await getComponentData(product.Product.categories, product.Product.id_table);
+    
+    res.send({...product.dataValues, componentData});
   } catch (err) {
     res.status(500).send({ error: err.message });
   }
