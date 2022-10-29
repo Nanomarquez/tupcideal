@@ -14,7 +14,7 @@ import {
   addProductToCart,
   deleteProductToCart,
   orderProductInRangeOfPrice,
-  favorites,
+  addFavorites,
   deleteFavorites,
   getReview,
 } from "./slice";
@@ -77,8 +77,8 @@ export const addProductToShoppingCart = (product) => (dispatch) => {
 export const deleteProductToShoppingCart = (id) => (dispatch) => {
   dispatch(deleteProductToCart(id));
 };
-export const addFavorites = (product) => (dispatch) => {
-  dispatch(favorites(product));
+export const addFavoritesList = (product) => (dispatch) => {
+  dispatch(addFavorites(product));
 };
 export const deleteFavoritesList = (id) => (dispatch) => {
   dispatch(deleteFavorites(id));

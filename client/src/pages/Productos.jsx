@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Select from "react-select";
 import SliderRange from "../components/SliderRange";
+import Loading from "../components/Loading/Loading";
 import Pagination from "../components/Pagination/Pagination";
 import { useDispatch, useSelector } from "react-redux";
 import {
@@ -8,7 +9,9 @@ import {
   getFiltered,
   orderProducts,
   addProductToShoppingCart,
-  addFavorites
+
+  addFavoritesList,
+
 } from "../redux/actions";
 import { Link } from "react-router-dom";
 
@@ -18,7 +21,12 @@ function Productos() {
     (state) => state.products.productsFiltered
   );
 
+
   const { cart } = useSelector((state) => state.products);
+  const { favorites } = useSelector((state) => state.products);
+
+  const [loading, setLoading] = useState(true);
+
 
   const productNotNull = productsFiltered.filter(
     (p) => p.precio !== null && p.image !== null
@@ -27,6 +35,7 @@ function Productos() {
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(getAll());
+    setLoading(false)
   }, []);
   const [filters, setFilters] = useState({
     category: "",
@@ -66,6 +75,7 @@ function Productos() {
 
   useEffect(() => {
     dispatch(getFiltered(filters.brand, filters.category));
+    setLoading(false)
   }, [filters]);
 
   const handleChangeCategory = (e) => {
@@ -94,6 +104,17 @@ function Productos() {
   const handleSort = (e) => {
     dispatch(orderProducts(e.target.value));
   };
+
+
+
+  let handleFavoritesClick = (product) => {
+    let favs = favorites.find((f) => f.id === product.id)
+    if(!favs){
+      dispatch(addFavoritesList(product));
+   
+    }  
+  }
+   
 
   return (
     <div className="flex items-center justify-center bg-gray-300">
@@ -196,7 +217,7 @@ function Productos() {
                         Ver mas
                       </button>
                     </Link>
-                    <button className="flex justify-center items-center bg-gray-300/30 w-10 hover:bg-gray-300/90 transition rounded-md">
+                    <button  onClick={() => handleFavoritesClick(e)} className="flex justify-center items-center bg-gray-300/30 w-10 hover:bg-gray-300/90 transition rounded-md">
                       <img
                         src="https://cdn.pixabay.com/photo/2017/06/26/20/33/icon-2445095_960_720.png"
                         className="opacity-50 object-cover"

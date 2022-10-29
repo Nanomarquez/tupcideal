@@ -31,6 +31,10 @@ module.exports = (sequelize) => {
       id_table: {
         type: DataTypes.INTEGER,
       },
+      isBanned: {
+        type: DataTypes.BOOLEAN,
+        defaultValue: false,
+      },
     },
     {
       timestamps: false,
