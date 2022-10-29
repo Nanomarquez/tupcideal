@@ -206,7 +206,7 @@ function Productos() {
                   <span className="flex bg-gray-100 py-1 rounded-full items-center justify-center w-36">
                     Rating:{" "}
                     <p className="ml-1 text-lg">
-                      {"★".repeat(e.Product.rating).padEnd(5, "☆")}
+                      {"★".repeat(Math.round(e.ratingProm)).padEnd(5, "☆")}
                     </p>
                   </span>
                 </div>
