@@ -1,7 +1,31 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import { useSelector, useDispatch } from "react-redux";
+import {getFiltered} from "../redux/actions";
 function Admin() {
+  const dispatch= useDispatch();
+  const filtered= useSelector(state=>state.products.productsFiltered);
+  // console.log(filtrados);
   const [users, setUsers] = useState([]);
+
+  const [component,setComponent]=useState({
+    id:"",
+    name:"",
+    categories:"",
+    rating:"",
+    rating_count:"",
+    image:"",
+  });
+
+  function handleOnChange(e){
+    console.log(e.target.name);
+    const newcomponent={
+      ...component,
+      [e.target.name]:e.target.name
+    }
+    setComponent(newcomponent);
+    // console.log(newcomponent);
+  };
 
   function axion() {
     axios.get("/users").then((res) => {
@@ -44,7 +68,20 @@ function Admin() {
               )}
             </div>
           ))}
+      <form onSubmit={(e)=>{e.preventDefault();}}>
+        <button value="cpu"  onClick={()=> dispatch(getFiltered("","cpu"))}>CPU</button>
+        <select  >
+            {filtrados.map((f)=>{
+              return(
+                <option name={f.product?.name} onChange={setComponent}  >{f.Product.name}</option>
+              )
+            })}
+        
+        </select>
+      </form>
+
       </section>
+     
     </div>
   );
 }
