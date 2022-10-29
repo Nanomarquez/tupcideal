@@ -1,6 +1,7 @@
 const { Router } = require("express");
 const router = Router();
 const { Seller, Product, WareHouse, Review } = require("../db.js");
+const ratingProm = require("../funciones/ratingProm.js");
 
 //Create User
 //------- PEDIR TODOS LOS PRODUCTOS Y VENDEDORES A LA BD--------
@@ -11,29 +12,26 @@ router.get("/", async (req, res) => {
     let ware;
     ware = await WareHouse.findAll({
       include: [
-        {
-          model: Seller,
+        { model: Seller,
           attributes: ["store_name", "adress", "id", "email", "adress"],
         },
-        {
-          model: Product,
-          attributes: [
-            "id",
-            "categories",
-            "name",
-            "rating",
-            "rating_count",
-            "image",
-            "id_table",
-          ],
+        { model: Product,
+          attributes: [ "id", "categories", "name", "image", "id_table"],
         },
-        {
-          model: Review
+        { model: Review,
+          attributes: ["id", "comment", "rating", "UserId"],
         },
       ],
-      attributes: ["precio", "cantidad", "id"],
+      attributes: ["precio", "cantidad", "id", "ratingProm"],
     });
+  
+    ware.forEach(async w => {
+      w.ratingProm = ratingProm(w.Reviews);
+      await w.save()
+    });
+
     response = ware;
+    
     brand
       ? (response = response.filter((p) => p.Product.name.includes(brand)))
       : null;
@@ -53,25 +51,24 @@ router.get("/product/:Product_id", async (req, res) => {
     const products = await WareHouse.findAll({
       where: { ProductId: [Product_id] },
       include: [
-        {
-          model: Seller,
+        { model: Seller,
           attributes: ["store_name", "adress", "id", "email", "adress"],
         },
-        {
-          model: Product,
-          attributes: [
-            "id",
-            "categories",
-            "name",
-            "rating",
-            "rating_count",
-            "image",
-            "id_table",
-          ],
+        { model: Product,
+          attributes: [ "id", "categories", "name", "image", "id_table"],
+        },
+        { model: Review,
+          attributes: ["id", "comment", "rating", "UserId"],
         },
       ],
-      attributes: ["precio", "cantidad", "id"],
+      attributes: ["precio", "cantidad", "id", "ratingProm"],
     });
+    
+    products.forEach(async p => {
+      p.ratingProm = ratingProm(p.Reviews);
+      await p.save()
+    });
+
     res.send(products);
   } catch (err) {
     res.send({ error: err.message });
@@ -84,25 +81,22 @@ router.get("/:id", async (req, res) => {
   try {
     const product = await WareHouse.findByPk(id, {
       include: [
-        {
-          model: Seller,
+        { model: Seller,
           attributes: ["store_name", "adress", "id", "email", "adress"],
         },
-        {
-          model: Product,
-          attributes: [
-            "id",
-            "categories",
-            "name",
-            "rating",
-            "rating_count",
-            "image",
-            "id_table",
-          ],
+        { model: Product,
+          attributes: [ "id", "categories", "name", "image", "id_table"],
         },
+        { model: Review,
+          attributes: ["id", "comment", "rating", "UserId"],
+        }
       ],
-      attributes: ["precio", "cantidad", "id"],
+      attributes: ["precio", "cantidad", "id", "ratingProm"],
     });
+
+    product.ratingProm = ratingProm(product.Reviews);
+    product.save();
+
     res.send(product);
   } catch (err) {
     res.status(500).send({ error: err.message });

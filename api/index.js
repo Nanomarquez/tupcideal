@@ -41,9 +41,9 @@ const bulkReviews = require("./src/data/Reviews.json");
 
 // setterFunction();
 
-setter = false;
 
-// setter = true;
+
+ setter = true;
 // descomentar setter hacer para los cambios nuevos y comentar funcion linea 33 user
 
 // Syncing all the models at once.

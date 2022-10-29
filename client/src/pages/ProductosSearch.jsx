@@ -51,7 +51,7 @@ function ProductosSearch() {
             <div className="flex flex-col gap-5">
               <p className="text-xl">
                 Rating:{" "}
-                {"★".repeat(productsFilterById.Product.rating).padEnd(5, "☆")}
+                {"★".repeat(Math.round(productsFilterById.ratingProm)).padEnd(5, "☆")}
               </p>
               <h2 className="text-2xl">
                 Marca: {productsFilterById.Product.name?.split(" ")[0]}
