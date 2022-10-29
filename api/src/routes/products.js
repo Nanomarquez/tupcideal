@@ -42,24 +42,27 @@ router.get("/:id", async (req, res) => {
 });
 
 //--------------------POST DE  UN PRODUCTO --------------------
-router.post("/:id", async (req, res) => {
+router.post("/", async (req, res) => {
 
-  const {id} = req.params ;
+  console.log(req.body);
 
   try {
     const {categories,name,price_usd,rating,rating_count,image} = req.body;
-
+    console.log(Number(price_usd))
+    let usd_price = Number(price_usd)
+    console.log(typeof(usd_price));
 
     const [product, created]  = await Product.findOrCreate({
-      categories: categories,
+      where:{categories: categories,
       name: name,
-      price_usd: price_usd,
-      rating: rating,
-      rating_count: rating_count,
-      image: image,
+      price_usd: Number(price_usd),
+      rating: Number(rating),
+      rating_count: Number(rating_count),
+      image: image},
     });
     if (created) {
       console.log("Producto CREADO");
+      console.log(product)
       res.status(200).json(product);
     } else {
       res.status(200).json("El Producto ya existe.");
