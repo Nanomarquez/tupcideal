@@ -12,6 +12,7 @@ import Modal from "../../components/Modal/Modal";
 import ModalFavorites from "../../components/Modal/ModalFavorites";
 import Avatar from './Avatar'
 import axios from "axios";
+import iconFavorites from "../../assets/iconFavorites.png";
 function NavBar() {
   
   const [modalOpen, setModalOpen] = useState(false);
@@ -79,7 +80,7 @@ function NavBar() {
             whileTap={{ scale: 0.9 }}
             onClick={() => {
               modalOpen ? close() : open();
-              modalFavoritesOpen ? closeFav() : null
+              modalFavoritesOpen ? closeFav() : null;
             }}
           >
             {/* <Link to={"/cart"}> */}
@@ -96,15 +97,20 @@ function NavBar() {
             whileTap={{ scale: 0.9 }}
             onClick={() => {
               modalFavoritesOpen ? closeFav() : openFav();
-              modalOpen? close() : null;
+              modalOpen ? close() : null;
             }}
           >
             {/* <Link to={"/cart"}> */}
             <img
-             src="https://cdn.pixabay.com/photo/2017/06/26/20/33/icon-2445095_960_720.png"
-             className="object-cover h-16 p-0"
-             alt="favorites"
-  />
+              src={
+                favorites.length > 0
+                  ? iconFavorites
+                  : "https://cdn.pixabay.com/photo/2017/06/26/20/33/icon-2445095_960_720.png"
+              }
+              className="object-cover h-16 p-0"
+              alt="favorites"
+              width={50}
+            />
             {/* </Link> */}
           </motion.button>
           <span className="bg-white rounded-full absolute w-6 h-6 right-1 text-center">
@@ -131,32 +137,47 @@ function NavBar() {
           } w-full duration-1000 z-10 gap-5 overflow-hidden`}
         >
           <Link to="/armatupc">
-            <li onClick={() => handleActive()} className="cursor-pointer hover:animate-bounce p-4">
+            <li
+              onClick={() => handleActive()}
+              className="cursor-pointer hover:animate-bounce p-4"
+            >
               Te armamos tu PC
             </li>
           </Link>
           <Link to="/productos">
-            <li onClick={() => handleActive()} className="cursor-pointer hover:animate-bounce p-4">
+            <li
+              onClick={() => handleActive()}
+              className="cursor-pointer hover:animate-bounce p-4"
+            >
               Productos
             </li>
           </Link>
           <Link to="/equipo">
-            <li onClick={() => handleActive()} className="cursor-pointer hover:animate-bounce p-4">
+            <li
+              onClick={() => handleActive()}
+              className="cursor-pointer hover:animate-bounce p-4"
+            >
               Quienes somos
             </li>
           </Link>
           <Link to="/custompc">
-            <li onClick={() => handleActive()} className="cursor-pointer hover:animate-bounce p-4">
+            <li
+              onClick={() => handleActive()}
+              className="cursor-pointer hover:animate-bounce p-4"
+            >
               Customiza tu PC
             </li>
           </Link>
-          { admin &&
-          <Link to='/admin'>
-          <li onClick={() => handleActive()} className="cursor-pointer hover:animate-bounce p-4">
-            Admin
-          </li>
-          </Link>
-          }
+          {admin && (
+            <Link to="/admin">
+              <li
+                onClick={() => handleActive()}
+                className="cursor-pointer hover:animate-bounce p-4"
+              >
+                Admin
+              </li>
+            </Link>
+          )}
         </ul>
       </div>
       <AnimatePresence
@@ -171,9 +192,13 @@ function NavBar() {
         exitBeforeEnter={true}
         onExitComplete={() => null}
       >
-        {modalFavoritesOpen && <ModalFavorites modalOpen={modalFavoritesOpen} handleClose={closeFav} />}
+        {modalFavoritesOpen && (
+          <ModalFavorites
+            modalOpen={modalFavoritesOpen}
+            handleClose={closeFav}
+          />
+        )}
       </AnimatePresence>
-    
     </>
   );
 }
