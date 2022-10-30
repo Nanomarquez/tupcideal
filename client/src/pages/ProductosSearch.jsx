@@ -6,7 +6,6 @@ import Loading from "../components/Loading/Loading";
 import {
   getAllById,
   addProductToShoppingCart,
-  listReviews,
   addFavoritesList,
 } from "../redux/actions";
 import axios from "axios";
@@ -36,9 +35,8 @@ function ProductosSearch() {
       getReview();
     }
   }, [id]);
-
+  console.log(productsFilterById)
   let handleFavoritesClick = (product) => {
-    console.log(product);
     let favs = favorites.find((f) => f.id === product.id)
     if(!favs){
       dispatch(addFavoritesList(product));
@@ -104,7 +102,7 @@ function ProductosSearch() {
                     src="https://cdn.pixabay.com/photo/2017/06/26/20/33/icon-2445095_960_720.png"
                     className="opacity-50 object-cover"
                     alt=""
-                  />
+                  />  
                 </button>
               </div>
             </div>
@@ -129,12 +127,12 @@ function ProductosSearch() {
           </section>
         </div>
       )}
-      <div>
-        <h2>Detalles:</h2>
-        <ul>
+      <div className="bg-gray-300 p-5 flex items-center mx-5 rounded-md">
+        <h2>Caracteristicas</h2>
+        <ul className="flex gap-5 p-5 flex-col sm:flex-row">
           {
             productsFilterById.hasOwnProperty('componentData') && 
-            Object.keys(productsFilterById.componentData).map(k=><li key={k}>{k}: {productsFilterById.componentData[k] ? productsFilterById.componentData[k] : 'No'}</li>)
+            Object.keys(productsFilterById.componentData).map(k=><li className="border-2" key={k}>{k.toString()[0].toUpperCase()+k.slice(1)}: {productsFilterById.componentData[k] ? productsFilterById.componentData[k] : 'No'}</li>)
           }
         </ul>
       </div>
