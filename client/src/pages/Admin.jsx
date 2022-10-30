@@ -2,15 +2,20 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { useDispatch, useSelector } from "react-redux"
 import { getFiltered2 } from "../redux/actions"
+import { useAuth } from "../context/authContext";
 function Admin() {
   const dispatch = useDispatch();
   const filtered = useSelector((state) => state.products.productsFiltered2);
 
+
+  const dispatch = useDispatch()
+  const filtered = useSelector(state => state.products.productsFiltered2)
+  const { signUp } = useAuth();
   const [users, setUsers] = useState([]);
   const [sellers, setSellers] = useState([]);
 
   const [component, setComponent] = useState({});
-
+  const [error, setError] = useState();
   const [product, setProduct] = useState({
     name: "",
     categories: "",
@@ -25,6 +30,9 @@ function Admin() {
     adress: "",
     email: "",
     phone_number: "",
+
+    password:"",
+
   });
 
   function axion() {
@@ -101,12 +109,39 @@ function Admin() {
     axios.post("/products", product);
     console.log("Soy el producto", product);
     axion();
-  };
-  const onSubmitSeller = (e) => {
+
+    
+  }
+  const  onSubmitSeller = async (e) => {
     e.preventDefault();
-    axios.post("/sellers", seller);
-    console.log("Soy el seller", seller);
+    setError("");
+    try {
+      await signUp(seller.email,seller.password)
+      await axios
+        .post("/sellers", seller)
+        .then((res) => console.log(res.data))
+        .catch((e) => console.log(e));
+     // navigate("/login");
+      swal("Ok!", "Vendedor creado exitosamente", "success");
+    } catch (error) {
+      if (error.code === "auth/missing-email")
+        setError("Especifique un correo");
+      if (error.code === "auth/weak-password")
+        setError("La contraseña debe tener mas de 6 caracteres");
+      if (error.code === "auth/invalid-email")
+        setError("Ingrese un correo valido");
+      if (error.code === "auth/email-already-in-use")
+        setError("Usuario ya existente");
+      if (error.code === "auth/internal-error") setError("Contraseña invalida");
+    }
   };
+
+    
+    
+    
+    console.log("Soy el seller",seller) 
+  
+
 
   useEffect(() => {
     axion();
@@ -227,10 +262,16 @@ function Admin() {
               </label>
 
               <input
+
+                type="text" 
+                name="image"
+                value={product.image}
+                onChange={productHandlerChange}
                 className="border-2 bg-blue-400 rounded p-1 justify-center self-end mt-4"
                 type="submit"
                 value="Submit"
                 onClick={onSubmitSeller}
+
               />
             </div>
           </form>
@@ -312,6 +353,65 @@ function Admin() {
                 Editar
               </button>
             </div>
+
+          ))}
+      <form className="flex" onSubmit={onSubmitSeller}>
+      {error && (
+                <p className="bg-red-300 rounded-lg text-center mx-auto mb-7 w-max m-2 p-2">
+                  {error}
+                </p>
+              )}
+            <h1 className="p-4 text-2xl">Crear Vendedor</h1>
+            <label>
+              Store Name:
+              <input
+                type="text"
+                name="store_name"
+                value={seller.store_name}
+                onChange={sellerHandlerChange}
+              />
+            </label>
+            <label>
+              Adress:
+              <input
+                type="text"
+                name="adress"
+                value={seller.adress}
+                onChange={sellerHandlerChange}
+              />
+            </label>
+            <label>
+              email:
+              <input
+                type="text"
+                name="email"
+                value={seller.email}
+                onChange={sellerHandlerChange}
+              />
+            </label>
+            <label>
+              Phone Number:
+              <input
+                type="text"
+                name="phone_number"
+                value={seller.phone_number}
+                onChange={sellerHandlerChange}
+              />
+            </label>
+            <label>
+              Password:
+              <input
+                type="text"
+                name="password"
+                value={seller.password}
+                onChange={sellerHandlerChange}
+              />
+            </label>
+            
+            <input className="border-2 bg-blue-400 rounded p-1 justify-center" type="submit" value="Submit" onClick={onSubmitSeller} />
+      </form>
+      </div>
+    </section>
           </div>
           {/* ------------------------------------------ */}
           <div>

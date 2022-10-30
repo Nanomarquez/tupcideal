@@ -75,6 +75,38 @@ router.get("/product/:Product_id", async (req, res) => {
     res.send({ error: err.message });
   }
 });
+//---PEDIR TODOS LOS PRODUCTOS DE UN SELLER---
+router.get("/seller/:SellerId", async (req, res) => {
+  const { SellerId } = req.params;
+
+  try {
+    const products = await WareHouse.findAll({
+      where: { SellerId: [SellerId] },
+      include: [
+        { model: Seller,
+          attributes: ["store_name", "adress", "id", "email", "adress"],
+        },
+        { model: Product,
+          attributes: [ "id", "categories", "name", "image", "id_table"],
+        },
+        { model: Review,
+          attributes: ["id", "comment", "rating", "UserId"],
+        },
+      ],
+      attributes: ["precio", "cantidad", "id", "ratingProm"],
+    });
+    
+    products.forEach(async p => {
+      p.ratingProm = ratingProm(p.Reviews);
+      await p.save()
+    });
+
+    res.send(products);
+  } catch (err) {
+    res.send({ error: err.message });
+  }
+});
+
 
 router.get("/seller/:SellerId", async (req, res) => {
   const { SellerId } = req.params;
