@@ -1,6 +1,7 @@
 const { Router } = require("express");
 const router = Router();
 const { Seller, Product, WareHouse, Review } = require("../db.js");
+const getComponentData = require('../funciones/getComponentData.js')
 const ratingProm = require("../funciones/ratingProm.js");
 
 //Create User
@@ -107,6 +108,37 @@ router.get("/seller/:SellerId", async (req, res) => {
 });
 
 
+router.get("/seller/:SellerId", async (req, res) => {
+  const { SellerId } = req.params;
+
+  try {
+    const products = await WareHouse.findAll({
+      where: { SellerId: [SellerId] },
+      include: [
+        { model: Seller,
+          attributes: ["store_name", "adress", "id", "email", "adress"],
+        },
+        { model: Product,
+          attributes: [ "id", "categories", "name", "image", "id_table"],
+        },
+        { model: Review,
+          attributes: ["id", "comment", "rating", "UserId"],
+        },
+      ],
+      attributes: ["precio", "cantidad", "id", "ratingProm"],
+    });
+    
+    products.forEach(async p => {
+      p.ratingProm = ratingProm(p.Reviews);
+      await p.save()
+    });
+
+    res.send(products);
+  } catch (err) {
+    res.send({ error: err.message });
+  }
+});
+
 router.get("/:id", async (req, res) => {
   const { id } = req.params;
 
@@ -129,7 +161,9 @@ router.get("/:id", async (req, res) => {
     product.ratingProm = ratingProm(product.Reviews);
     product.save();
 
-    res.send(product);
+    const componentData = await getComponentData(product.Product.categories, product.Product.id_table);
+    
+    res.send({...product.dataValues, componentData});
   } catch (err) {
     res.status(500).send({ error: err.message });
   }
