@@ -14,28 +14,37 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { useEffect,useState } from "react";
 import Loading from '../components/Loading/Loading'
+
 function Home() {
   const navigate = useNavigate();
   const [loading, setLoading] = useState(true);
   const { usuario } = useAuth();
 
   useEffect(() => {
+       
     if (usuario !== null) {
-      axios.get(`/users/${usuario.email}`).then((res) => {
+      
+      axios.get(`/sellers/${usuario.email}`).then((res) => {
         console.log(res.data);
-        if (res.data.error) {
-          navigate("/completarform");
-        } else {
-          navigate("/");
+        if (res.data === `Don´t found matches with the email: ${usuario.email}`) {
+          axios.get(`/users/${usuario.email}`).then((res) => {
+            console.log(res.data); 
+            if (res.data.error) {
+              navigate("/completarform");
+            } else {
+              navigate("/");
+            }
+          });
         }
-      });
-    }
-    setLoading(false)
-  }, [usuario]);
+        setLoading(false)
+      }, [usuario]);
+  } })   
+    
+      
 
-  if(loading){
+  /*if(loading){
     return <Loading/>
-  }
+  }*/
 
   return (
     <>
@@ -109,6 +118,6 @@ function Home() {
       </div>
     </>
   );
-}
+            }
 
 export default Home;

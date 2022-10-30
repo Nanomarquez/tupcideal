@@ -20,7 +20,10 @@ module.exports = (sequelize) => {
         type: DataTypes.STRING,
         allowNull: false,
       },
-
+      isSeller: {
+        type: DataTypes.BOOLEAN,
+        defaultValue: true
+      },
       email: {
         type: DataTypes.STRING,
         allowNull: true,
@@ -43,7 +46,10 @@ module.exports = (sequelize) => {
           },
         },
       },
-
+      password: {
+        type: DataTypes.STRING,
+        allowNull: false,
+      },
       isBanned: {
         type: DataTypes.BOOLEAN,
         defaultValue: false
