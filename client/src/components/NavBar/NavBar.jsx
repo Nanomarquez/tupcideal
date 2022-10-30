@@ -60,7 +60,6 @@ function NavBar() {
     }
   },[cart,favorites, usuario])
 
-  console.log(favorites)
   return (
     <>
       <nav className="h-auto flex flex-col sm:flex-row justify-between items-center px-5 pt-2 bg-gradient-to-b from-gray-800 to bg-gray-600 shadow-2xl z-50">

@@ -21,8 +21,6 @@ function Productos() {
     (state) => state.products.productsFiltered
   );
 
-
-  const { cart } = useSelector((state) => state.products);
   const { favorites } = useSelector((state) => state.products);
 
   const [loading, setLoading] = useState(true);
@@ -43,7 +41,7 @@ function Productos() {
   });
   const [currentPage, setCurrentPage] = useState(1);
 
-  const productPerPage = 20;
+  const productPerPage = 30;
 
   const lastProductOfPage = currentPage * productPerPage;
 
@@ -115,10 +113,12 @@ function Productos() {
     }  
   }
    
-
+  if(loading || currentProducts.length === 0){
+    return <Loading/>
+  }
   return (
     <div className="flex items-center justify-center bg-gray-300">
-      <div className="flex sm:flex-row flex-col w-full sm:w-[1024px] bg-white shadow-md">
+      <div className="flex sm:flex-row flex-col w-full lg:w-[1050px] bg-white shadow-md">
         <section className="p-2 sm:px-5 border-b-2 sm:border-b-0 sm:border-r-2 rounded-xl w-full sm:w-2/6">
           <h1 className="text-xl sm:text-2xl mb-2">Filtrar por:</h1>
           <hr />
@@ -161,7 +161,7 @@ function Productos() {
             <SliderRange setCurrentPage={setCurrentPage} />
           </div>
         </section>
-        <section className="flex flex-col w-full p-5">
+        <section className="flex flex-col p-5">
           <div className="flex justify-center items-center">
             <Pagination
               productPerPage={productPerPage}
@@ -225,12 +225,12 @@ function Productos() {
                       />
                     </button>
                   </div>
-                  <p className="flex flex-col text-3xl font-bold text-center sm:text-start">
+                  <p className="flex flex-col mb-8 sm:mb-0 text-3xl font-bold text-center sm:text-start">
                     ${e.precio}
                   </p>
                 </div>
               </div>
-              <div className="p-2 bg-gray-300 rounded shadow-black shadow-sm font-bold">Vendido por {e.Seller.store_name}</div>
+              <div className="p-2 bg-gray-300 rounded text-center shadow-black shadow-sm font-bold">Vendido por {e.Seller.store_name}</div>
             </div>
           ))}
           <div className="flex justify-center items-center">
