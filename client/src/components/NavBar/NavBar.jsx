@@ -63,18 +63,18 @@ function NavBar() {
   console.log(favorites)
   return (
     <>
-      <nav className="h-auto flex flex-col sm:flex-row justify-between items-center px-5 p-2 bg-gradient-to-b from-gray-800 to bg-gray-600 shadow-2xl z-50">
+      <nav className="h-auto flex flex-col sm:flex-row justify-between items-center px-5 pt-2 bg-gradient-to-b from-gray-800 to bg-gray-600 shadow-2xl z-50">
         <Link to="/">
           <span className="logo font-bold text-3xl tracking-tighter text-transparent bg-clip-text bg-gradient-to-br from-red-400 via-purple-400 to-green-400">
             TuPcIdeal
           </span>
         </Link>
-        <div className="flex sm:gap-40 gap-10">
+        <div className="flex sm:gap-40 gap-10 pt-2 sm:pt-0">
           <Search />
           {usuario ? <SignOut /> : <Signin />}
           {usuario ? <Avatar /> : ""}
         </div>
-        <div className="flex right-10 sm:relative absolute">
+        <div className="flex relative gap-3 items-center">
           <motion.button
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
@@ -98,6 +98,7 @@ function NavBar() {
             onClick={() => {
               modalFavoritesOpen ? closeFav() : openFav();
               modalOpen ? close() : null;
+            
             }}
           >
             {/* <Link to={"/cart"}> */}
@@ -109,7 +110,7 @@ function NavBar() {
               }
               className="object-cover h-16 p-0"
               alt="favorites"
-              width={50}
+              width={60}
             />
             {/* </Link> */}
           </motion.button>

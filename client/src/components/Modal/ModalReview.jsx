@@ -22,7 +22,7 @@ const dropIn = {
   },
 };
 
-function ModalReview({ handleClose, ProductId, UserId }) {
+function ModalReview({ handleClose, ProductId }) {
   const { usuario } = useAuth();
   const [userId, setUserId] = useState("")
 
@@ -38,7 +38,6 @@ function ModalReview({ handleClose, ProductId, UserId }) {
     })
   }, [userId])
   
-  console.log(userId)
 
   const [reviewUser, setReviewUser] = useState({
     ProductId,
@@ -47,7 +46,6 @@ function ModalReview({ handleClose, ProductId, UserId }) {
     rating: 0,
   })
 
-  console.log(reviewUser);
 
   let handleChange = (e) => {
     setReviewUser({
