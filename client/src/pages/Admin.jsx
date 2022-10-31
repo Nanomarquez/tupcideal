@@ -4,8 +4,7 @@ import { useDispatch, useSelector } from "react-redux"
 import { getFiltered2 } from "../redux/actions"
 import { useAuth } from "../context/authContext";
 function Admin() {
-  const dispatch = useDispatch();
-  const filtered = useSelector((state) => state.products.productsFiltered2);
+  
 
 
   const dispatch = useDispatch()
