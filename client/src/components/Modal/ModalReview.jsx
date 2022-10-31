@@ -105,7 +105,7 @@ function ModalReview({ handleClose, ProductId }) {
             <option value={4}>4</option>
             <option value={5}>5</option>
           </select>
-          <button type="submit" className="px-5 py-2 bg-gray-300 rounded-md">Enviar</button>
+          <button onClick={handleClose} type="submit" className="px-5 py-2 bg-gray-300 rounded-md">Enviar</button>
         </form>
       </motion.div>
     </Backdrop>

@@ -34,7 +34,7 @@ function ProductosSearch() {
     if (id) {
       getReview();
     }
-  }, [id]);
+  }, [id,modalOpen]);
   console.log(productsFilterById)
   let handleFavoritesClick = (product) => {
     let favs = favorites.find((f) => f.id === product.id)
