@@ -3,18 +3,17 @@ import axios from "axios";
 import { useDispatch, useSelector } from "react-redux"
 import { getFiltered2 } from "../redux/actions"
 import { useAuth } from "../context/authContext";
-function Admin() {
-  
 
+function Admin() {
 
   const dispatch = useDispatch()
   const filtered = useSelector(state => state.products.productsFiltered2)
   const { signUp } = useAuth();
   const [users, setUsers] = useState([]);
   const [sellers, setSellers] = useState([]);
-
-  const [component, setComponent] = useState({});
   const [error, setError] = useState();
+  const [component, setComponent] = useState({});
+
   const [product, setProduct] = useState({
     name: "",
     categories: "",
@@ -29,9 +28,7 @@ function Admin() {
     adress: "",
     email: "",
     phone_number: "",
-
-    password:"",
-
+    password:""
   });
 
   function axion() {
@@ -39,7 +36,7 @@ function Admin() {
       setUsers(res.data.filter((e) => e.isAdmin !== true));
     });
   }
-
+ 
   function axionSellers() {
     axios.get("/sellers").then((res) => {
       setSellers(res.data);
@@ -77,19 +74,19 @@ function Admin() {
 
   let handleSelect = (e) => {
     const { value } = e.target;
-    if (value) {
+    if(value) {
       const result = filtered.find((f) => f.id === value);
       setComponent(result);
     }
   };
 
   const productHandlerChange = (e) => {
-    const value = { ...product, [e.target.name]: e.target.value };
+    const  value  = {...product, [e.target.name]:e.target.value};
     setProduct(value);
   };
 
   const sellerHandlerChange = (e) => {
-    const value2 = { ...seller, [e.target.name]: e.target.value };
+    const  value2  = {...seller, [e.target.name]:e.target.value};
     setSeller(value2);
   };
 
@@ -105,10 +102,9 @@ function Admin() {
 
   const onSubmit = (e) => {
     e.preventDefault();
-    axios.post("/products", product);
-    console.log("Soy el producto", product);
+    axios.post("/products",  product )
+    console.log("Soy el producto",product)
     axion();
-
     
   }
   const  onSubmitSeller = async (e) => {
@@ -135,21 +131,14 @@ function Admin() {
     }
   };
 
-    
-    
-    
-    console.log("Soy el seller",seller) 
-  
-
-
   useEffect(() => {
     axion();
     axionSellers();
   }, []);
-  // console.log(filtered)
+   console.log(seller);
   return (
-    <div className="min-h-[100vh] flex ">
-      <section className="w-2/5 min-w-[28%] bg-gray-300 h-auto sm:h-screen text-center">
+    <div className="h-screen">
+      <section className="w-[400px] bg-gray-300 h-auto sm:h-screen text-center">
         <h1 className="p-4 text-2xl">Tabla de usuarios</h1>
         {users &&
           users.map((e, i) => (
@@ -183,183 +172,134 @@ function Admin() {
             </div>
           ))}
 
+      <div>
+        <h1 className="p-4 text-4xl">Tabla de productos</h1>
         <div>
-          <h1 className="p-4 text-2xl">Tabla de vendedores</h1>
-          {sellers &&
-            sellers.map((e, i) => (
-              <div
-                key={i}
-                className="border-2 flex gap-10 justify-center items-center rounded"
-              >
-                <p className="text-xl font-medium">{e.store_name} </p>
-                <button
-                  className="border-2 bg-blue-400 p-1 justify-center rounded"
-                  onClick={() => handleDeleteSeller(e.email)}
-                >
-                  Eliminar
-                </button>{" "}
-                {e.isBanned && (
-                  <button
-                    className="border-2 bg-blue-400 rounded p-1 justify-center"
-                    onClick={() => handleDesBanSeller(e.email)}
-                  >
-                    Desbanear
-                  </button>
-                )}
-                {!e.isBanned && (
-                  <button
-                    className="border-2 rounder-2 bg-blue-400 p-1 justify-center"
-                    onClick={() => handleBanSeller(e.email)}
-                  >
-                    Banear
-                  </button>
-                )}
-              </div>
-            ))}
-          <form className="flex justify-center" onSubmit={onSubmitSeller}>
-            <div className="flex flex-col">
-              <h1 className="p-4 text-2xl">Crear Vendedor</h1>
-              <label className="flex justify-between">
-                Store Name:
-                <input
-                  className=" border-2 border-black h-8 ml-4"
-                  type="text"
-                  name="store_name"
-                  value={seller.store_name}
-                  onChange={sellerHandlerChange}
-                />
-              </label>
-              <label className="flex justify-between">
-                Adress:
-                <input
-                  className=" border-2 border-black h-8 ml-4"
-                  type="text"
-                  name="adress"
-                  value={seller.adress}
-                  onChange={sellerHandlerChange}
-                />
-              </label>
-              <label className="flex justify-between">
-                email:
-                <input
-                  className=" border-2 border-black h-8 ml-4"
-                  type="text"
-                  name="email"
-                  value={seller.email}
-                  onChange={sellerHandlerChange}
-                />
-              </label>
-              <label className="flex justify-between">
-                Phone Number:
-                <input
-                  className=" border-2 border-black h-8 ml-4"
-                  type="text"
-                  name="phone_number"
-                  value={seller.phone_number}
-                  onChange={sellerHandlerChange}
-                />
-              </label>
-
+          <form className="flex" onSubmit={onSubmit}>
+            <h1 className="p-4 text-2xl">Crear producto</h1>
+            <label>
+              Name:
               <input
-
-                type="text" 
+                type="text"
+                name="name"
+                value={product.name}
+                onChange={productHandlerChange}
+              />
+            </label>
+            <label>
+              Categories:
+              <input
+                type="text"
+                name="categories"
+                value={product.categories}
+                onChange={productHandlerChange}
+              />
+            </label>
+            <label>
+              Price_USD:
+              <input
+                type="text"
+                name="price_usd"
+                value={product.price_usd}
+                onChange={productHandlerChange}
+              />
+            </label>
+            <label>
+              Rating:
+              <input
+                type="text"
+                name="rating"
+                value={product.rating}
+                onChange={productHandlerChange}
+              />
+            </label>
+            <label>
+              Rating Count:
+              <input
+                type="text"
+                name="rating_count"
+                value={product.rating_count}
+                onChange={productHandlerChange}
+              />
+            </label>
+            <label>
+              Image:
+              <input
+                type="text"
                 name="image"
                 value={product.image}
                 onChange={productHandlerChange}
-                className="border-2 bg-blue-400 rounded p-1 justify-center self-end mt-4"
-                type="submit"
-                value="Submit"
-                onClick={onSubmitSeller}
-
               />
-            </div>
+            </label>
+            <input className="border-2 bg-gray-400 rounded p-1 justify-center" type="submit" value="Submit" onClick={onSubmit} />
           </form>
         </div>
-      </section>
-      <section className="flex">
-        {/* ------------------------------------------ */}
-        <section className="flex">
-          <div className="ml-4">
-            <h1 className="p-4 text-2xl">Editar o Eliminar Componente </h1>
-            <button
-              className="border-2 bg-gray-400 rounded p-1 justify-center"
-              onClick={() => dispatch(getFiltered2("CPU"))}
-            >
-              CPU
-            </button>
-            <button
-              className="border-2 bg-gray-400 rounded p-1 justify-center"
-              onClick={() => dispatch(getFiltered2("Motherboard"))}
-            >
-              MOTHER BOARD
-            </button>
-            <button
-              className="border-2 bg-gray-400 rounded p-1 justify-center"
-              onClick={() => dispatch(getFiltered2("Memory"))}
-            >
-              MEMORY CARD
-            </button>
-            <button
-              className="border-2 bg-gray-400 rounded p-1 justify-center"
-              onClick={() => dispatch(getFiltered2("PowerSupply"))}
-            >
-              POWER SUPPLY
-            </button>
-            <button
-              className="border-2 bg-gray-400 rounded p-1 justify-center"
-              onClick={() => dispatch(getFiltered2("InternalHardDrive"))}
-            >
-              INTERNAL HARD DRIVE
-            </button>
-            <button
-              className="border-2 bg-gray-400 rounded p-1 justify-center"
-              onClick={() => dispatch(getFiltered2("Case"))}
-            >
-              CASES
-            </button>
-            <button
-              className="border-2 bg-gray-400 rounded p-1 justify-center"
-              onClick={() => dispatch(getFiltered2("VideoCard"))}
-            >
-              VIDEO CARD
-            </button>
+   
+        <div>   
+          <h1 className="p-4 text-2xl">Editar o Eliminar Componente </h1>
+          <button className="border-2 bg-gray-400 rounded p-1 justify-center" onClick={()=> dispatch(getFiltered2("CPU"))}>CPU</button>
+          <button className="border-2 bg-gray-400 rounded p-1 justify-center" onClick={()=> dispatch(getFiltered2("Motherboard"))}>MOTHER BOARD</button>
+          <button className="border-2 bg-gray-400 rounded p-1 justify-center" onClick={()=> dispatch(getFiltered2("Memory"))}>MEMORY CARD</button>
+          <button className="border-2 bg-gray-400 rounded p-1 justify-center" onClick={()=> dispatch(getFiltered2("PowerSupply"))}>POWER SUPPLY</button>
+          <button className="border-2 bg-gray-400 rounded p-1 justify-center" onClick={()=> dispatch(getFiltered2("InternalHardDrive"))}>INTERNAL HARD DRIVE</button>
+          <button className="border-2 bg-gray-400 rounded p-1 justify-center" onClick={()=> dispatch(getFiltered2("Case"))}>CASES</button>
+          <button className="border-2 bg-gray-400 rounded p-1 justify-center" onClick={()=> dispatch(getFiltered2("VideoCard"))}>VIDEO CARD</button>
 
-            <select name="" id="" onChange={handleSelect}>
-              <option value="">Elige tu producto</option>
-              {filtered.map((f, i) => {
-                return (
-                  <option key={i} value={f.id}>
-                    {f.name}
-                  </option>
-                );
-              })}
-            </select>
-            <div>
-              <h2>Name: {component?.name}</h2>
-              <img src={component?.image} alt={component?.name} width="120" />
-              <h3>Category {component?.categories}</h3>
-              <h3>Rating {component?.rating}</h3>
+          <select name="" id="" onChange={handleSelect}>
+            <option value="">Elige tu producto</option>
+            {filtered.map((f, i) => {
+              return <option key={i} value={f.id}>{f.name}</option>;
+            })}
+          </select>
+          <div>
+            <h2>Name: {component?.name}</h2>
+            <img
+              src={component?.image}
+              alt={component?.name}
+              width="120"
+            />
+            <h3>Category {component?.categories}</h3>
+            <h3>Rating {component?.rating}</h3>
+            <button className="border-2 bg-gray-400 rounded p-1 justify-center" onClick={onClickDel}>Eliminar</button>
+            <button className="border-2 bg-gray-400 rounded p-1 justify-center"onClick={onClickEdit}>Editar</button>
+          </div>
+        </div>
+      </div>     
+
+      <div>
+      <h1 className="p-4 text-4xl">Tabla de vendedores</h1>
+      {sellers &&
+          sellers.map((e, i) => (
+            <div
+              key={i}
+              className="border-2 flex gap-10 justify-center items-center rounded"
+            >
+              <p className="text-xl font-medium">{e.store_name} </p>
               <button
-                className="border-2 bg-gray-400 rounded p-1 justify-center"
-                onClick={onClickDel}
+                className="border-2 bg-blue-400 p-1 justify-center rounded"
+                onClick={() => handleDeleteSeller(e.email)}
               >
                 Eliminar
-              </button>
-              <button
-                className="border-2 bg-gray-400 rounded p-1 justify-center"
-                onClick={onClickEdit}
-              >
-                Editar
-              </button>
+              </button>{" "}
+              {e.isBanned && (
+                <button
+                  className="border-2 bg-blue-400 rounded p-1 justify-center"
+                  onClick={() => handleDesBanSeller(e.email)}
+                >
+                  Desbanear
+                </button>
+              )}
+              {!e.isBanned && (
+                <button
+                  className="border-2 rounder-2 bg-blue-400 p-1 justify-center"
+                  onClick={() => handleBanSeller(e.email)}
+                >
+                  Banear
+                </button>
+              )}
             </div>
-
           ))}
       <form className="flex" onSubmit={onSubmitSeller}>
-      {error && (
-                <p className="bg-red-300 rounded-lg text-center mx-auto mb-7 w-max m-2 p-2">
-                  {error}
-                </p>
-              )}
             <h1 className="p-4 text-2xl">Crear Vendedor</h1>
             <label>
               Store Name:
@@ -407,92 +347,10 @@ function Admin() {
               />
             </label>
             
-            <input className="border-2 bg-blue-400 rounded p-1 justify-center" type="submit" value="Submit" onClick={onSubmitSeller} />
+            <input className="border-2 bg-blue-400 rounded p-1 justify-center" type="submit" value="Submit"/>
       </form>
       </div>
     </section>
-          </div>
-          {/* ------------------------------------------ */}
-          <div>
-            <h1 className="p-4 text-2xl">Tabla de productos</h1>
-            <div>
-              <form className="flex" onSubmit={onSubmit}>
-                <div className="flex">
-                  <h1 className="p-4 text-2xl">Crear producto</h1>
-                  <div className="flex flex-wrap flex-row-reverse mr-10">
-                    <label>
-                      <span>Name:</span>
-                      <input
-                        className=" border-2 border-black h-8 ml-4"
-                        type="text"
-                        name="name"
-                        value={product.name}
-                        onChange={productHandlerChange}
-                      />
-                    </label>
-                    <label>
-                      Categories:
-                      <input
-                        className=" border-2 border-black h-8 ml-4"
-                        type="text"
-                        name="categories"
-                        value={product.categories}
-                        onChange={productHandlerChange}
-                      />
-                    </label>
-                    <label>
-                      Price_USD:
-                      <input
-                        className=" border-2 border-black h-8 ml-4"
-                        type="text"
-                        name="price_usd"
-                        value={product.price_usd}
-                        onChange={productHandlerChange}
-                      />
-                    </label>
-                    <label>
-                      Rating:
-                      <input
-                        className=" border-2 border-black h-8 ml-4"
-                        type="text"
-                        name="rating"
-                        value={product.rating}
-                        onChange={productHandlerChange}
-                      />
-                    </label>
-                    <label>
-                      Rating Count:
-                      <input
-                        className=" border-2 border-black h-8 ml-4"
-                        type="text"
-                        name="rating_count"
-                        value={product.rating_count}
-                        onChange={productHandlerChange}
-                      />
-                    </label>
-                    <label>
-                      Image:
-                      <input
-                        className=" border-2 border-black h-8 ml-4"
-                        type="text"
-                        name="image"
-                        value={product.image}
-                        onChange={productHandlerChange}
-                      />
-                    </label>
-                    <input
-                      className="border-2 bg-gray-400 rounded p-1 justify-center mr-4"
-                      type="submit"
-                      value="Submit"
-                      onClick={onSubmit}
-                    />
-                  </div>
-                </div>
-              </form>
-            </div>
-          </div>
-        </section>
-      </section>
     </div>
   );
 }
