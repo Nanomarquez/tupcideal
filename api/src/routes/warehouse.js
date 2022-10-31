@@ -1,6 +1,6 @@
 const { Router } = require("express");
 const router = Router();
-const { Seller, Product, WareHouse, Review } = require("../db.js");
+const { Seller, Product, WareHouse, Review, User } = require("../db.js");
 const getComponentData = require('../funciones/getComponentData.js')
 const ratingProm = require("../funciones/ratingProm.js");
 
@@ -20,6 +20,10 @@ router.get("/", async (req, res) => {
           attributes: [ "id", "categories", "name", "image", "id_table"],
         },
         { model: Review,
+          include: {
+            model: User,
+            attributes: ["email"]
+          },
           attributes: ["id", "comment", "rating", "UserId"],
         },
       ],
@@ -152,8 +156,12 @@ router.get("/:id", async (req, res) => {
           attributes: [ "id", "categories", "name", "image", "id_table"],
         },
         { model: Review,
+          include: {
+            model: User,
+            attributes: ["email"]
+          },
           attributes: ["id", "comment", "rating", "UserId"],
-        }
+        },
       ],
       attributes: ["precio", "cantidad", "id", "ratingProm"],
     });
