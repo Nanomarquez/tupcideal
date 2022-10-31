@@ -129,6 +129,13 @@ function Admin() {
     }
   };
 
+
+  let disable = true;
+  if(seller.store_name !== "" && seller.adress !== "" && seller.email !== "" 
+  && seller.password !== "" && seller.phone_number !== ""){
+    disable = false
+  }
+
   useEffect(() => {
     axion();
     axionSellers();
@@ -246,11 +253,22 @@ function Admin() {
                   onChange={sellerHandlerChange}
                 />
               </label>
+              <label className="flex justify-between">
+                Password:
+                <input
+                  className=" border-2 border-black h-8 ml-4"
+                  type="text"
+                  name="password"
+                  value={seller.password}
+                  onChange={sellerHandlerChange}
+                />
+              </label>
 
               <input
                 className="border-2 bg-blue-400 rounded p-1 justify-center self-end mt-4"
                 type="submit"
                 value="Submit"
+                disabled={disable}
                 onClick={onSubmitSeller}
               />
             </div>
