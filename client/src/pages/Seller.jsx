@@ -72,13 +72,13 @@ export default function Seller() {
        <div>
         <div>   
           <h1 className="p-4 text-2xl">Vender nuevo componente </h1>
-          <button className="border-2 bg-gray-400 rounded p-1 justify-center" onClick={()=> dispatch(getFiltered2("cpu"))}>CPU</button>
-          <button className="border-2 bg-gray-400 rounded p-1 justify-center" onClick={()=> dispatch(getFiltered2("mother"))}>MOTHER BOARD</button>
-          <button className="border-2 bg-gray-400 rounded p-1 justify-center" onClick={()=> dispatch(getFiltered2("memory"))}>MEMORY CARD</button>
-          <button className="border-2 bg-gray-400 rounded p-1 justify-center" onClick={()=> dispatch(getFiltered2("power"))}>POWER SUPPLY</button>
-          <button className="border-2 bg-gray-400 rounded p-1 justify-center" onClick={()=> dispatch(getFiltered2("internal"))}>INTERNAL HARD DRIVE</button>
-          <button className="border-2 bg-gray-400 rounded p-1 justify-center" onClick={()=> dispatch(getFiltered2("cases"))}>CASES</button>
-          <button className="border-2 bg-gray-400 rounded p-1 justify-center" onClick={()=> dispatch(getFiltered2("videocard"))}>VIDEO CARD</button>
+          <button className="border-2 bg-gray-400 rounded p-1 justify-center" onClick={()=> dispatch(getFiltered2("CPU"))}>CPU</button>
+          <button className="border-2 bg-gray-400 rounded p-1 justify-center" onClick={()=> dispatch(getFiltered2("Motherboard"))}>MOTHER BOARD</button>
+          <button className="border-2 bg-gray-400 rounded p-1 justify-center" onClick={()=> dispatch(getFiltered2("Memory"))}>MEMORY CARD</button>
+          <button className="border-2 bg-gray-400 rounded p-1 justify-center" onClick={()=> dispatch(getFiltered2("PowerSupply"))}>POWER SUPPLY</button>
+          <button className="border-2 bg-gray-400 rounded p-1 justify-center" onClick={()=> dispatch(getFiltered2("InternalHardDrive"))}>INTERNAL HARD DRIVE</button>
+          <button className="border-2 bg-gray-400 rounded p-1 justify-center" onClick={()=> dispatch(getFiltered2("Case"))}>CASES</button>
+          <button className="border-2 bg-gray-400 rounded p-1 justify-center" onClick={()=> dispatch(getFiltered2("VideoCard"))}>VIDEO CARD</button>
 
           <select name={product.id} id={product.id} onChange={handleSelect}>
             <option value="">Elige el producto a vender</option>
