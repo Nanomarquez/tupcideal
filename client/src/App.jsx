@@ -11,6 +11,7 @@ import ProductosSearch from './pages/ProductosSearch'
 import User from "./pages/User";
 import CompletarForm from "./pages/CompletarForm";
 import Admin from './pages/Admin'
+import CustomPc from './pages/CustomPc'
 import Seller from "./pages/Seller";
 function App() {
 
@@ -24,6 +25,7 @@ function App() {
         <Route exact path="/login" element={<Login />} />
         <Route exact path="/register" element={<Register />} />
         <Route exact path="/productos" element={<Productos />} />
+        <Route exact path="/custompc" element={<CustomPc />} />
         <Route exact path="/mp" element={<Mp />} />
         <Route exact path="/completarform" element={<CompletarForm />} />
         <Route exact path="/admin" element={<Admin />} />

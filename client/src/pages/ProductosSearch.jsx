@@ -6,12 +6,13 @@ import Loading from "../components/Loading/Loading";
 import {
   getAllById,
   addProductToShoppingCart,
-  listReviews,
+  addFavoritesList,
 } from "../redux/actions";
 import axios from "axios";
 import { motion, AnimatePresence } from "framer-motion";
 import ModalReview from "../components/Modal/ModalReview";
 function ProductosSearch() {
+  const { favorites } = useSelector((state) => state.products);
   const [modalOpen, setModalOpen] = useState(false);
   const close = () => setModalOpen(false);
   const open = () => setModalOpen(true);
@@ -33,9 +34,14 @@ function ProductosSearch() {
     if (id) {
       getReview();
     }
-  }, [id]);
-
-  console.log(review);
+  }, [id,modalOpen]);
+  console.log(productsFilterById)
+  let handleFavoritesClick = (product) => {
+    let favs = favorites.find((f) => f.id === product.id)
+    if(!favs){
+      dispatch(addFavoritesList(product));
+    }  
+  }
 
   if (loading || productsFilterById.Seller === undefined) {
     return <Loading />;
@@ -91,12 +97,12 @@ function ProductosSearch() {
                     {productsFilterById.Seller.store_name}
                   </span>
                 </h2>
-                <button className="flex justify-center items-center bg-gray-300/30 w-10 hover:bg-gray-300/90 transition rounded-md">
+                <button onClick={() => handleFavoritesClick(productsFilterById)} className="flex justify-center z-50 items-center bg-gray-300/30 w-10 hover:bg-gray-300/90 transition rounded-md">
                   <img
                     src="https://cdn.pixabay.com/photo/2017/06/26/20/33/icon-2445095_960_720.png"
                     className="opacity-50 object-cover"
                     alt=""
-                  />
+                  />  
                 </button>
               </div>
             </div>
@@ -121,12 +127,12 @@ function ProductosSearch() {
           </section>
         </div>
       )}
-      <div>
-        <h2>Detalles:</h2>
-        <ul>
+      <div className="bg-gray-300 p-5 flex items-center mx-5 rounded-md">
+        <h2>Caracteristicas</h2>
+        <ul className="flex gap-5 p-5 flex-col sm:flex-row">
           {
             productsFilterById.hasOwnProperty('componentData') && 
-            Object.keys(productsFilterById.componentData).map(k=><li>{k}: {productsFilterById.componentData[k] ? productsFilterById.componentData[k] : 'No'}</li>)
+            Object.keys(productsFilterById.componentData).map(k=><li className="border-2" key={k}>{k.toString()[0].toUpperCase()+k.slice(1)}: {productsFilterById.componentData[k] ? productsFilterById.componentData[k] : 'No'}</li>)
           }
         </ul>
       </div>
