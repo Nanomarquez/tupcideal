@@ -26,12 +26,12 @@ router.get('/user/:userId', async (req,res) => {
 
 router.post('/', async (req,res) => {
     const { ProductId, rating, comment, UserId} = req.body;
-    if(ProductId && rating ) {
+    if(ProductId) {
         try{
             const newReview = await Review.create({
                 rating : rating,
                 comment : comment,
-                ProductId: ProductId,
+                WareHouseId: ProductId,
                 UserId: UserId
                 });
             res.status(201).send(newReview)
