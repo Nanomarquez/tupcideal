@@ -57,6 +57,8 @@ function NavBar() {
       })
       usuario.isAdmin = admin
       usuario.isSuperAdmin = superAdmin
+    }else{
+      setAdmin(false)
     }
   },[cart,favorites, usuario])
 
@@ -71,11 +73,17 @@ function NavBar() {
         <div className="flex sm:gap-40 gap-10 pt-2 sm:pt-0">
           <Search />
           {usuario ? <SignOut /> : <Signin />}
-          {usuario ? <Avatar /> : ""}
+          {usuario && usuario.isAdmin ? <Avatar /> : ""}
         </div>
         <div className="flex relative gap-3 items-center">
+        <span className="bg-white rounded-full absolute w-6 h-6 right-1 text-center">
+            {favorites?.length}
+          </span>
+          <span className="bg-white rounded-full absolute w-6 h-6 text-center">
+            {cart?.length}
+          </span>
           <motion.button
-            whileHover={{ scale: 1.1 }}
+            whileHover={{ scale: 1.5 }}
             whileTap={{ scale: 0.9 }}
             onClick={() => {
               modalOpen ? close() : open();
@@ -92,7 +100,7 @@ function NavBar() {
           </motion.button>
 
           <motion.button
-            whileHover={{ scale: 1.1 }}
+            whileHover={{ scale: 1.5 }}
             whileTap={{ scale: 0.9 }}
             onClick={() => {
               modalFavoritesOpen ? closeFav() : openFav();
@@ -113,12 +121,7 @@ function NavBar() {
             />
             {/* </Link> */}
           </motion.button>
-          <span className="bg-white rounded-full absolute w-6 h-6 right-1 text-center">
-            {favorites?.length}
-          </span>
-          <span className="bg-white rounded-full absolute w-6 h-6 text-center">
-            {cart?.length}
-          </span>
+
         </div>
       </nav>
       <hr />

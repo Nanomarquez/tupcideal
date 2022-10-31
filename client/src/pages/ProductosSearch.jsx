@@ -25,17 +25,26 @@ function ProductosSearch() {
     setLoading(false);
   }, [id]);
   const [review, setReview] = useState([]);
+  const [otherSeller, setOtherSeller] = useState([]);
   async function getReview() {
     return await axios
       .get(`/review/product/${id}`)
       .then((res) => setReview(res.data));
+  }
+  async function getOtherSellers(){
+    return await axios.get(`/warehouse/product/${productsFilterById.Product.id}`).then(res=>setOtherSeller(res.data))
   }
   useEffect(() => {
     if (id) {
       getReview();
     }
   }, [id,modalOpen]);
-  console.log(productsFilterById)
+
+  useEffect(()=>{
+    if(productsFilterById.hasOwnProperty("Product")){
+      getOtherSellers()
+    }
+  },[productsFilterById])
   let handleFavoritesClick = (product) => {
     let favs = favorites.find((f) => f.id === product.id)
     if(!favs){
