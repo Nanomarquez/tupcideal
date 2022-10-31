@@ -8,7 +8,12 @@ router.get('/product/:productId', async (req,res) => {
         include: [{
             model: WareHouse,
             where: { id : [productId] }
-        }]
+        },
+        {
+            model: User,
+            attributes: ["email"]
+        }
+    ]
     })
     res.send(productReview)
 });

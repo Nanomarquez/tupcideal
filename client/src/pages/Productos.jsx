@@ -41,7 +41,7 @@ function Productos() {
   });
   const [currentPage, setCurrentPage] = useState(1);
 
-  const productPerPage = 30;
+  const productPerPage = 35;
 
   const lastProductOfPage = currentPage * productPerPage;
 
