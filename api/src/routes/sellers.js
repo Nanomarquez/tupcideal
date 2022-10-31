@@ -41,6 +41,7 @@ router.get("/:email", async (req, res) => {
 //--------------------POST UN SELLER--------------------
 router.post("/", async (req, res) => {
   const { store_name, adress, email, phone_number, password } = req.body;
+  console.log(req.body);
   try {
     const [seller, created] = await Seller.findOrCreate({
       where: {
