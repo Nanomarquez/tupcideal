@@ -2,42 +2,51 @@ import React, { useEffect, useState } from "react";
 import { useAuth } from "../../context/authContext";
 import { Link } from "react-router-dom";
 import axios from "axios";
-function Avatar() {
+  function Avatar() {
   const { usuario } = useAuth();
 
   const [currentUser, setCurrentUser] = useState(false);
 
   const [user, setUser] = useState({});
+  const [seller, setSeller] = useState({})
+
+ 
+  
+  
+  async function getUser () {
+    await axios.get(`/users/${usuario.email}`).then((res) => {
+      if(!res.data.error){
+      setCurrentUser(true);
+      setSeller({})
+      setUser(res.data)}
+    
+      else{
+       axios.get(`/sellers/${usuario.email}`).then((res) => {
+      if(!res.data.error){
+      setCurrentUser(true);
+      setUser({})
+      setSeller(res.data)}
+   })}})}
 
 
-  useEffect(() => {
-   
-   
-   
-   
-   
+  useEffect(  () => {
     if (usuario !== null) {
-      axios.get(`/sellers/${usuario.email}`).then((res) => {
-        if(res.data === `Don´t found matches with the email: ${usuario.email}`){
-          axios.get(`/users/${usuario.email}`).then((res) => {
-            if (!res.data.error) {
-              setCurrentUser(true);
-              setUser(res.data) 
-            }
-          })
-        }
-          else {
-          setUser(res.data)  
-          setCurrentUser(true);
-        }
-      }); 
-     ;
-    }
-  }, [usuario]);
+     getUser();}
+      else{
+      setCurrentUser(false);
+     }
+  },[usuario])
+    
+ 
 
+    
+ console.log(currentUser)
+ console.log(user);
+ console.log(seller)
   return (
    <>
-   {  user.isSeller &&   
+      
+   {  seller.isSeller && currentUser &&
    <Link to="/seller">
       <button className="btn-neon bg-white items-center sm:rounded hover:shadow-neon px-1 h-10 sm:w-full w-14 font-semibold flex relative rounded-3xl text-xs sm:text-base overflow-hidden duration-300 delay-1000 border-white">
        
@@ -45,7 +54,7 @@ function Avatar() {
       
       </button>
     </Link>}
-    {  !user.isSeller &&
+    { !user.isSuperAdmin && !user.isAdmin && !seller.isSeller && currentUser &&
     <Link to="/user">
       <button className="btn-neon bg-white items-center sm:rounded hover:shadow-neon px-1 h-10 sm:w-full w-14 font-semibold flex relative rounded-3xl text-xs sm:text-base overflow-hidden duration-300 delay-1000 border-white">
        
@@ -54,6 +63,23 @@ function Avatar() {
       </button>
     </Link>}
    
+    {  user.isAdmin && currentUser &&
+    <Link to="/admin">
+      <button className="btn-neon bg-white items-center sm:rounded hover:shadow-neon px-1 h-10 sm:w-full w-14 font-semibold flex relative rounded-3xl text-xs sm:text-base overflow-hidden duration-300 delay-1000 border-white">
+       
+      <span>Admin</span>
+      
+      </button>
+    </Link>}
+
+    {  user.isSuperAdmin && currentUser &&
+    <Link to="/superadmin">
+      <button className="btn-neon bg-white items-center sm:rounded hover:shadow-neon px-1 h-10 sm:w-full w-14 font-semibold flex relative rounded-3xl text-xs sm:text-base overflow-hidden duration-300 delay-1000 border-white">
+       
+      <span>Superadmin</span>
+      
+      </button>
+    </Link>}
    
    
    
@@ -62,3 +88,33 @@ function Avatar() {
 }
 
 export default Avatar;
+
+
+/*if (usuario !== null) {
+  axios.get(`/sellers/${usuario.email}`).then((res) => {
+    if(res.status === 404){
+      axios.get(`/users/${usuario.email}`).then((res) => {
+        if (!res.data.error) {
+          setCurrentUser(true);
+          setUser(res.data) 
+        }
+        else{ setUser({})  
+        setCurrentUser(false)
+        }
+      })
+    }
+      else if (!res.data.error){
+      setUser(res.data)  
+      setCurrentUser(true);
+    }
+    else { setUser({})  
+    setCurrentUser(false);}
+  }); 
+ ;
+} else{
+  setUser({})  
+    setCurrentUser(false)
+}
+
+
+}, [usuario]);*/
