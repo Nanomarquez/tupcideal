@@ -58,7 +58,7 @@ const payProducts = async (req, res) => {
         apartment: data.apartment,
       },
     },
-    additional_info: id,
+    additional_info: email,
     items: productos,
 
     back_urls: {
