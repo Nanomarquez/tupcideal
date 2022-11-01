@@ -15,7 +15,7 @@ import axios from "axios";
   
   async function getUser () {
     await axios.get(`/users/${usuario.email}`).then((res) => {
-      if(!res.data.error){
+      if(res.data !== "Usuario no encontrado"){
       setCurrentUser(true);
       setSeller({})
       setUser(res.data)}
@@ -37,12 +37,7 @@ import axios from "axios";
      }
   },[usuario])
     
- 
 
-    
- console.log(currentUser)
- console.log(user);
- console.log(seller)
   return (
    <>
       

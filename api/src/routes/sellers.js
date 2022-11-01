@@ -27,14 +27,12 @@ router.get("/:email", async (req, res) => {
     let respuestabd;
     respuestabd = await Seller.findOne({ where: { email: email } });
     if (respuestabd === null) {
-      return res
-        .status(404)
-        .send(`Don´t found matches with the email: ${email}`);
+      return res.send(`Dont found matches with the email: ${email}`);
     } else {
       res.status(200).json(respuestabd);
     }
   } catch (err) {
-    res.status(500).json(err);
+    res.status(500).send(err.data);
   }
 });
 

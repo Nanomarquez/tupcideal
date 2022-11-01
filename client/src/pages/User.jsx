@@ -15,7 +15,7 @@ function User() {
       axios.get(`/users/${usuario.email}`).then((res) => {
         setUser(res.data);
         setId(res.data.id);
-        if (res.data.error) {
+        if (res.data === "Usuario no encontrado") {
           navigate("/completarform");
         }
       });

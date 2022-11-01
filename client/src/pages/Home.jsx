@@ -12,30 +12,37 @@ import Reddragon from "../assets/marcas/reddragon.png";
 import { useAuth } from "../context/authContext";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-import { useEffect,useState } from "react";
-import Loading from '../components/Loading/Loading'
+import { useEffect, useState } from "react";
+import Loading from "../components/Loading/Loading";
 
 function Home() {
   const navigate = useNavigate();
   const [loading, setLoading] = useState(true);
   const { usuario } = useAuth();
 
+
+  
+
   useEffect(() => {
-   
-   
-   if (usuario !== null){
-    axios.get(`/users/${usuario.email}`).then((res) => {
-      console.log(res.data); 
-      if (res.data.status === 404) {
-        navigate("/completarform");
-      } else {
-        navigate("/");
-      }
-    });
-    }}, [usuario])   
-    
-    
-      
+    if(usuario !== null){
+      axios.get(`/sellers/${usuario.email}`).then(res=>{
+        console.log(res);
+        if(res.data === `Dont found matches with the email: ${usuario.email}`){
+          axios.get(`/users/${usuario.email}`).then(res=>{
+            console.log(res)
+            if(res.data === "Usuario no encontrado"){
+              navigate('/completarform')
+            }else if(res.data !== "Usuario no encontrado"){
+              navigate('/')
+            }
+          })
+        }
+      })
+    }
+  }, [usuario]);
+
+
+
 
   /*if(loading){
     return <Loading/>
@@ -113,10 +120,9 @@ function Home() {
       </div>
     </>
   );
-            }
+}
 
 export default Home;
-
 
 /*if (usuario !== null) {
       

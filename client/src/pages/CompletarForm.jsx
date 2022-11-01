@@ -10,7 +10,7 @@ function CompletarForm() {
   useEffect(() => {
     if (usuario !== null) {
       axios.get(`/users/${usuario.email}`).then((res) => {
-        if (!res.data.error) {
+        if (res.data !== "Usuario no encontrado") {
           navigate("/");
         }
       });

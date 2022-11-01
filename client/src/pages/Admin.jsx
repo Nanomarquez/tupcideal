@@ -129,18 +129,21 @@ function Admin() {
     }
   };
 
+  const [disable,setDisable] = useState(true)
 
-  let disable = true;
-  if(seller.store_name !== "" && seller.adress !== "" && seller.email !== "" 
-  && seller.password !== "" && seller.phone_number !== ""){
-    disable = false
-  }
+  useEffect(()=>{
+    if(seller.store_name !== "" && seller.adress !== "" && seller.email !== "" 
+    && seller.password !== "" && seller.phone_number !== ""){
+     setDisable(false)
+    }else{
+      setDisable(true)
+    }
+  },[seller])
 
   useEffect(() => {
     axion();
     axionSellers();
   }, []);
-  console.log(seller);
   return (
     <div className="min-h-[100vh] flex ">
       <section className="w-2/5 min-w-[28%] bg-gray-300 h-auto sm:h-screen text-center">

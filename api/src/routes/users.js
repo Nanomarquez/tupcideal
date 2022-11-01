@@ -14,7 +14,7 @@ router.get("/:email", async (req, res) => {
       where: { email: email },
     });
     if (respuestabd === null) {
-      return res.send({ error: "Usuario no encontrado" });
+      return res.send("Usuario no encontrado");
     } else {
       res.status(200).json(respuestabd);
     }
