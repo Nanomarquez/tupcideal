@@ -1,17 +1,16 @@
 const { Router } = require("express");
-const { merchant_orders } = require("mercadopago");
 const mercadopago = require("mercadopago");
 const { DatabaseError, UUID } = require("sequelize");
 const router = Router();
 const { Purchase, WareHouse, User } = require("../db.js");
-const  payProducts = require('../funciones/payProducts')
+const  payProducts = require('../funciones/payProducts');
+const sendMailMP = require('../funciones/sendMailMP');
+
 
 router.post("/notification", async (req, res) => {
 
   const {query} = req
-   // console.log(query);
   const topic = query.topic;
-   // console.log(topic);
 
   var merchantOrder;
   var purchase;
@@ -30,7 +29,7 @@ router.post("/notification", async (req, res) => {
         }
       });
 
-      if(purchase.status === 'Pending') {
+      if(purchase && purchase.status === 'Pending') {
         if(merchantOrder.body.payments[0].status === 'approved') {
           
           purchase.status = 'Paid';
@@ -45,12 +44,15 @@ router.post("/notification", async (req, res) => {
             await product.save();
           });
 
+          sendMailMP(merchantOrder, 'success');
+
           res.status(200).send(merchantOrder);
 
         } else if (merchantOrder.body.payments[0].status === 'cancelled') {
           purchase.status = 'Canceled';
           purchase.mp_payment_id = paymentId;
           await purchase.save();
+          sendMailMP(merchantOrder, 'cancelled');
           res.status(200).send(merchantOrder);
         }
       }
@@ -74,7 +76,13 @@ router.post("/notification", async (req, res) => {
         }
       })
 
-      await purchase.setUser(merchantOrder.body.additional_info);
+      const user = await User.findOne({
+        where: { email: merchantOrder.body.additional_info },
+      });
+
+      await purchase.setUser(user);
+
+      //sendMailMP(merchantOrder, 'pending');
 
       res.status(200).send(merchantOrder);
       break;
