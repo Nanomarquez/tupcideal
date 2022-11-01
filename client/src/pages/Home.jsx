@@ -21,24 +21,19 @@ function Home() {
   const { usuario } = useAuth();
 
   useEffect(() => {
-       
-    if (usuario !== null) {
-      
-      axios.get(`/sellers/${usuario.email}`).then((res) => {
-        console.log(res.data);
-        if (res.data === `Don´t found matches with the email: ${usuario.email}`) {
-          axios.get(`/users/${usuario.email}`).then((res) => {
-            console.log(res.data); 
-            if (res.data.error) {
-              navigate("/completarform");
-            } else {
-              navigate("/");
-            }
-          });
-        }
-        setLoading(false)
-      }, [usuario]);
-  } })   
+   
+   
+   if (usuario !== null){
+    axios.get(`/users/${usuario.email}`).then((res) => {
+      console.log(res.data); 
+      if (res.data.status === 404) {
+        navigate("/completarform");
+      } else {
+        navigate("/");
+      }
+    });
+    }}, [usuario])   
+    
     
       
 
@@ -121,3 +116,22 @@ function Home() {
             }
 
 export default Home;
+
+
+/*if (usuario !== null) {
+      
+  axios.get(`/sellers/${usuario.email}`).then((res) => {
+   console.log(res.data);
+    if (res.data.error) {
+      axios.get(`/users/${usuario.email}`).then((res) => {
+        console.log(res.data); 
+        if (res.data.error) {
+          navigate("/completarform");
+        } else {
+          navigate("/");
+        }
+      });
+    }
+    setLoading(false)
+  }, [usuario]);
+}*/

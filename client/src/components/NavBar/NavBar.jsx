@@ -36,7 +36,7 @@ function NavBar() {
     active ? setActive("") : setActive("active");
   }
 
-  
+    
 
   useEffect(()=>{
     !localStorage.hasOwnProperty('cart') ? localStorage.setItem("cart","[]") :
@@ -73,7 +73,7 @@ function NavBar() {
         <div className="flex sm:gap-40 gap-10 pt-2 sm:pt-0">
           <Search />
           {usuario ? <SignOut /> : <Signin />}
-          {usuario && usuario.isAdmin ? <Avatar /> : ""}
+            <Avatar /> 
         </div>
         <div className="flex relative gap-3 items-center">
         <span className="bg-white rounded-full absolute w-6 h-6 right-1 text-center">
@@ -171,16 +171,7 @@ function NavBar() {
               Customiza tu PC
             </li>
           </Link>
-          {admin && (
-            <Link to="/admin">
-              <li
-                onClick={() => handleActive()}
-                className="cursor-pointer hover:animate-bounce p-4"
-              >
-                Admin
-              </li>
-            </Link>
-          )}
+          
         </ul>
       </div>
       <AnimatePresence
@@ -226,3 +217,16 @@ linea 78
 
 
 */
+/*{usuario && usuario.isAdmin ? <Avatar /> : ""}*/
+
+
+/*{admin && (
+  <Link to="/admin">
+    <li
+      onClick={() => handleActive()}
+      className="cursor-pointer hover:animate-bounce p-4"
+    >
+      Admin
+    </li>
+  </Link>
+)}*/
