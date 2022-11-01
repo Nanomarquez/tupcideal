@@ -178,7 +178,7 @@ function User() {
         </section>
       </div>
       <div className="w-full h-[300px]">
-        <h1>Tus comentarios sobre productos</h1>
+        <h1 className="text-center text-4xl">{review.length > 0 ? "Estas son tus compras" : "No hiciste ninguna compra aún"}</h1>
         {review?.map((e,i)=>(
           <div key={i}>
             <p>{e.comment}</p>

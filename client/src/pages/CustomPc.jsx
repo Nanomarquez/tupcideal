@@ -6,6 +6,10 @@ function CustomPc() {
   const [step1, setStep1] = useState([]);
   const [step2, setStep2] = useState([]);
   const [step3, setStep3] = useState([]);
+  const [step4, setStep4] = useState([]);
+  const [step5, setStep5] = useState([]);
+  const [step6, setStep6] = useState([]);
+  const [step7, setStep7] = useState([]);
   async function getBrand(brand) {
     setStep(step + 1);
     return await axios
@@ -27,6 +31,28 @@ function CustomPc() {
   const memory = (e) => {
     setArray([...array, e]);
     setStep(step + 1);
+    axios
+      .get(`/warehouse?category=InternalHardDrive`)
+      .then((res) => setStep4(res.data));
+  };
+  const internal = (e) => {
+    setArray([...array, e]);
+    setStep(step + 1);
+    axios
+      .get(`/warehouse?category=VideoCard`)
+      .then((res) => setStep5(res.data));
+  };
+  const gpu = (e) => {
+    setArray([...array, e]);
+    setStep(step + 1);
+    axios
+      .get(`/warehouse?category=PowerSupply`)
+      .then((res) => setStep6(res.data));
+  };
+  const powerSupply = (e) => {
+    setArray([...array, e]);
+    setStep(step + 1);
+    axios.get(`/warehouse?category=Case`).then((res) => setStep7(res.data));
   };
 
   console.log(array);
@@ -115,11 +141,77 @@ function CustomPc() {
         )}
         {step === 3 && (
           <div className="flex flex-col items-center justify-center">
-            <h1 className="text-2xl py-5">Elije tu mother</h1>
+            <h1 className="text-2xl py-5">Elije tu memoria ram</h1>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4">
               {step3.slice(0, 30)?.map((e, i) => (
                 <div
                   onClick={() => memory(e)}
+                  key={i}
+                  className="flex m-5 shadow-black hover:shadow-xl cursor-pointer rounded-md flex-col justify-center border-2 items-center w-[200px] h-[200px]"
+                >
+                  <p>{e.Product.name}</p>
+                  <img
+                    src={e.Product.image}
+                    alt={e.Product.name}
+                    className="w-24 h-24 object-contain"
+                  />
+                  <p>${Math.ceil(e.precio)}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
+        {step === 4 && (
+          <div className="flex flex-col items-center justify-center">
+            <h1 className="text-2xl py-5">Elije tu almacenamiento</h1>
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4">
+              {step4.slice(0, 30)?.map((e, i) => (
+                <div
+                  onClick={() => internal(e)}
+                  key={i}
+                  className="flex m-5 shadow-black hover:shadow-xl cursor-pointer rounded-md flex-col justify-center border-2 items-center w-[200px] h-[200px]"
+                >
+                  <p>{e.Product.name}</p>
+                  <img
+                    src={e.Product.image}
+                    alt={e.Product.name}
+                    className="w-24 h-24 object-contain"
+                  />
+                  <p>${Math.ceil(e.precio)}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
+        {step === 5 && (
+          <div className="flex flex-col items-center justify-center">
+            <h1 className="text-2xl py-5">Elije tu Placa de Video</h1>
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4">
+              {step5.slice(0, 30)?.map((e, i) => (
+                <div
+                  onClick={() => gpu(e)}
+                  key={i}
+                  className="flex m-5 shadow-black hover:shadow-xl cursor-pointer rounded-md flex-col justify-center border-2 items-center w-[200px] h-[200px]"
+                >
+                  <p>{e.Product.name}</p>
+                  <img
+                    src={e.Product.image}
+                    alt={e.Product.name}
+                    className="w-24 h-24 object-contain"
+                  />
+                  <p>${Math.ceil(e.precio)}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
+        {step === 6 && (
+          <div className="flex flex-col items-center justify-center">
+            <h1 className="text-2xl py-5">Elije tu Fuente</h1>
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4">
+              {step6.slice(0, 30)?.map((e, i) => (
+                <div
+                  onClick={() => powerSupply(e)}
                   key={i}
                   className="flex m-5 shadow-black hover:shadow-xl cursor-pointer rounded-md flex-col justify-center border-2 items-center w-[200px] h-[200px]"
                 >
