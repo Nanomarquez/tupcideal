@@ -1,6 +1,7 @@
 const { Router } = require("express");
 const router = Router();
 const { User, Favorite } = require("../db.js");
+const sendRegisterMail= require ('../Funciones/sendRegisterMail')
 
 //------- Pedir usuario(individual) a la BD--------
 router.get("/:email", async (req, res) => {
@@ -59,6 +60,7 @@ router.post("/", async (req, res) => {
     });
     if (created) {
       console.log("Usuario CREADO");
+      sendRegisterMail(usuario);
       res.status(200).json(usuario);
     } else {
       res.status(200).json("El Usuario ya existe.");

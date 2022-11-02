@@ -20,7 +20,7 @@ const payProducts = async (req, res) => {
       picture_url: p.Product.image,
       title: p.Product.name,
       unit_price: p.precio,
-      quantity: 1,
+      quantity: p.quantity,
     });
   });
 
@@ -28,7 +28,7 @@ const payProducts = async (req, res) => {
 
   let suma = 0;
   for (let i = 0; i < productos.length; i++) {
-    suma = suma + productos[i].unit_price;
+    suma = suma + productos[i].unit_price * productos[i].quantity;
     //console.log(suma);
   }
 

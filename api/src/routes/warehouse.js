@@ -27,7 +27,7 @@ router.get("/", async (req, res) => {
           attributes: ["id", "comment", "rating", "UserId"],
         },
       ],
-      attributes: ["precio", "cantidad", "id", "ratingProm"],
+      attributes: ["precio", "cantidad", "id", "ratingProm", "quantity"],
     });
   
     ware.forEach(async w => {
@@ -66,7 +66,7 @@ router.get("/product/:Product_id", async (req, res) => {
           attributes: ["id", "comment", "rating", "UserId"],
         },
       ],
-      attributes: ["precio", "cantidad", "id", "ratingProm"],
+      attributes: ["precio", "cantidad", "id", "ratingProm", "quantity"],
     });
     
     products.forEach(async p => {
@@ -97,7 +97,7 @@ router.get("/seller/:SellerId", async (req, res) => {
           attributes: ["id", "comment", "rating", "UserId"],
         },
       ],
-      attributes: ["precio", "cantidad", "id", "ratingProm"],
+      attributes: ["precio", "cantidad", "id", "ratingProm", "quantity"],
     });
     
     products.forEach(async p => {
@@ -129,7 +129,7 @@ router.get("/seller/:SellerId", async (req, res) => {
           attributes: ["id", "comment", "rating", "UserId"],
         },
       ],
-      attributes: ["precio", "cantidad", "id", "ratingProm"],
+      attributes: ["precio", "cantidad", "id", "ratingProm", "quantity"],
     });
     
     products.forEach(async p => {
@@ -163,7 +163,7 @@ router.get("/:id", async (req, res) => {
           attributes: ["id", "comment", "rating", "UserId"],
         },
       ],
-      attributes: ["precio", "cantidad", "id", "ratingProm"],
+      attributes: ["precio", "cantidad", "id", "ratingProm", "quantity"],
     });
 
     product.ratingProm = ratingProm(product.Reviews);
