@@ -35,7 +35,10 @@ function NavBar() {
   function handleActive() {
     active ? setActive("") : setActive("active");
   }
+  let cartSum = 0;
 
+  cart.map((c) => {cartSum = cartSum + c.quantity }
+  )
     
 
   useEffect(()=>{
@@ -80,7 +83,7 @@ function NavBar() {
             {favorites?.length}
           </span>
           <span className="bg-white rounded-full absolute w-6 h-6 text-center">
-            {cart?.length}
+            {cartSum}
           </span>
           <motion.button
             whileHover={{ scale: 1.5 }}

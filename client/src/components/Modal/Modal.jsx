@@ -27,7 +27,7 @@ function Modal({ handleClose }) {
   const dispatch = useDispatch();
   const productsCart = useSelector((state) => state.products.cart);
   let totalPrice = 0;
-  productsCart.map((p) => (totalPrice = totalPrice + p.precio));
+  productsCart.map((p) => (totalPrice = totalPrice + p.precio * p.quantity));
   const { usuario } = useAuth();
 
   return (
@@ -67,6 +67,7 @@ function Modal({ handleClose }) {
               />
               <h3 className="text-2xl">Name {p.Product.name}</h3>
               <span className="text-center text-xl">Precio ${p.precio}</span>
+              <span className="text-center text-xl"> X {p.quantity}</span>
               <button
                 className="bg-gray-300 px-3 py-1 rounded-md shadow-md shadow-black"
                 onClick={() => dispatch(deleteProductToShoppingCart(i))}
