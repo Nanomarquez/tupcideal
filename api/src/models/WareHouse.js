@@ -16,6 +16,10 @@ module.exports = (sequelize) => {
     cantidad: {
       type: DataTypes.INTEGER,
     },
+    quantity: {
+      type: DataTypes.INTEGER,
+      defaultValue: 1
+    },
     ratingProm: {
       type: DataTypes.FLOAT,
       defaultValue: 0

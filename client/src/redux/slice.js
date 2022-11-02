@@ -70,12 +70,35 @@ export const productsSlice = createSlice({
       state.component = action.payload;
     },
     addProductToCart: (state, action) => {
-      state.cart = [...state.cart, action.payload];
+      const {cart} = state
+      console.log(cart);
+      const finder = cart.find((c)=> {  return c.id === action.payload.id })
+      if(finder === undefined){
+        state.cart = [...state.cart, action.payload];
+      }else{
+        finder.quantity = finder.quantity +1 ;
+       
+      }
+      
     },
     deleteProductToCart: (state, action) => {
-      state.cart = state.cart
-        .slice(0, action.payload)
+      const {cart} = state
+      const finder = cart[action.payload]
+   
+      if (finder.quantity === 1){
+        finder.quantity = finder.quantity -1
+        state.cart = cart.slice(0, action.payload)
         .concat(state.cart.slice(action.payload + 1, state.cart.length));
+      
+      }
+      
+      else{
+        finder.quantity = finder.quantity -1;
+       }
+
+
+
+
     },
     getReview: (state, action) => {
       state.reviews = [...state.reviews, action.payload];
@@ -117,3 +140,9 @@ export const {
 // se exportan las funciones que invocamos desde las actions
 
 export default productsSlice.reducer;
+/*if (here){
+  cart.filter((c)=> {c.id !== action.payload})
+}
+else{
+  here.quantity = here.quantity -1;
+}*/

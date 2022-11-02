@@ -14,6 +14,10 @@ function Mp() {
 
   console.log(cart);
 
+  let cartSum = 0;
+  cart.map((c)=> { cartSum = cartSum + c.quantity
+  })
+
   const [button, setButton] = useState("");
 
   const [input, setInput] = useState({
@@ -43,7 +47,7 @@ function Mp() {
       .then((response) => setButton(response.data));
   };
   let totalPrice = 0;
-  cart?.map((e) => (totalPrice += e.precio));
+  cart?.map((e) => (totalPrice =  totalPrice + e.precio * e.quantity));
   return (
     <div className="h-screen flex sm:flex-row flex-col">
       <section className="w-full flex-col gap-5 sm:w-1/2 h-screen flex items-center justify-center">
@@ -131,7 +135,7 @@ function Mp() {
       </section>
       <section className="w-full sm:w-1/2 overflow-y-scroll h-screen">
         <div className="flex text-2xl items-center justify-center gap-10 mt-5">
-          <h1>Productos {cart.length}</h1>
+          <h1>Productos: {cartSum}</h1>
           <h1>Total: {totalPrice}</h1>
         </div>
         {cart?.map((e, i) => (
@@ -146,6 +150,7 @@ function Mp() {
             />
             <h3 className="text-2xl">Name {e.Product.name}</h3>
             <span className="text-center text-xl">Precio ${e.precio}</span>
+            <span className="text-center text-xl"> X {e.quantity}</span>
           </div>
         ))}
       </section>
