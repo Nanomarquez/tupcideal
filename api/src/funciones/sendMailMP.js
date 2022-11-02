@@ -1,6 +1,6 @@
 const {sgMail} = require('../services/sendgrid');
 const {client} = require('../services/sendgrid');
-const { User } = require("../db");
+const { WareHouse, Seller } = require("../db");
 
 const sendMailMP = async (merchant_order, status) => {
 
@@ -14,13 +14,21 @@ const sendMailMP = async (merchant_order, status) => {
     html: ''
   };
 
-  
-  const itemsHTML = merchant_order.body.items.map(i => {
-    return(`
+  const itemsHTML = [];
+
+  merchant_order.body.items.forEach(async i => {
+    const product = await WareHouse.findByPk(i.id, {
+      include: {
+        model: Seller, 
+      }
+    });
+    itemsHTML.push(`
       <div>
         <hr/>
         <h5>${i.title}</h5>
-        <h6>Precio unitario: $${i.unit_price}<h6>
+        <h6>Precio unitario: $${i.unit_price}</h6>
+        <h6>Cantidad: ${i.quantity}</h6>
+        <span>Vendido por: ${product.Seller.store_name}</span>
         <img style='max-width:150px' src=${i.picture_url} />
       </div>
     `);

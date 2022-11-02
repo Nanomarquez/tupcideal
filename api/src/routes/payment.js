@@ -34,12 +34,9 @@ router.post("/notification", async (req, res) => {
           purchase.mp_payment_id = paymentId;
           await purchase.save();
 
-          const itemsId = merchantOrder.body.items.map((i) => i.id);
-
-          itemsId.map(async (id) => {
-            const product = await WareHouse.findByPk(id);
-            product.cantidad =
-              product.cantidad - itemsId.filter((i) => i === id).length;
+          merchantOrder.body.items.map(async i => {
+            const product = await WareHouse.findByPk(i.id);
+            product.cantidad = product.cantidad - i.quantity;
             await product.save();
           });
 
