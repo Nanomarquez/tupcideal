@@ -64,10 +64,12 @@ function Modal({ handleClose }) {
                 className="object-contain h-36 w-36"
                 src={p.Product.image}
                 alt={p.Product.name}
+              
               />
+              <span className="bg-white rounded-full absolute  left-2  w-9 h-9 text-2xl text-center"> X {p.quantity}</span>
               <h3 className="text-2xl">Name {p.Product.name}</h3>
               <span className="text-center text-xl">Precio ${p.precio}</span>
-              <span className="text-center text-xl"> X {p.quantity}</span>
+              
               <button
                 className="bg-gray-300 px-3 py-1 rounded-md shadow-md shadow-black"
                 onClick={() => dispatch(deleteProductToShoppingCart(i))}
