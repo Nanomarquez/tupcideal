@@ -97,6 +97,9 @@ Purchase.belongsTo(User);
 Purchase.belongsToMany(WareHouse, { through: "Purchase_WareHouse" });
 WareHouse.belongsToMany(Purchase, { through: "Purchase_WareHouse" });
 
+Purchase.belongsToMany(Seller, { through: "Purchase_Seller" });
+Seller.belongsToMany(Purchase, { through: "Purchase_Seller" });
+
 Seller.hasMany(WareHouse);
 WareHouse.belongsTo(Seller);
 
