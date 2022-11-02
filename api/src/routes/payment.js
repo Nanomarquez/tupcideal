@@ -33,12 +33,19 @@ router.post("/notification", async (req, res) => {
           purchase.status = "Paid";
           purchase.mp_payment_id = paymentId;
           await purchase.save();
-
-          merchantOrder.body.items.map(async i => {
+        
+          const sellers = [];
+          merchantOrder.body.items.forEach(async i => {
             const product = await WareHouse.findByPk(i.id);
             product.cantidad = product.cantidad - i.quantity;
             await product.save();
+            sellers.push(product.SellerId.toString())
           });
+          
+          setTimeout(()=> {
+            const unicos = sellers.filter((id, index) => sellers.indexOf(id)===index);
+            unicos.map(s => purchase.addSeller(s))
+          },1000);
 
           sendMailMP(merchantOrder, "success");
 
