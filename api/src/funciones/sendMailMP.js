@@ -9,7 +9,7 @@ const sendMailMP = async (merchant_order, status) => {
 
   const msg = {
     to: merchant_order.body.additional_info,
-    from: 'federicohuertas@outlook.com',
+    from: 'tupcideal.henry@gmail.com',
     subject: '',
     html: ''
   };
