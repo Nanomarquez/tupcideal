@@ -1,7 +1,7 @@
-const { Router, response } = require("express");
+const { Router} = require("express");
 const { Model } = require("sequelize");
 const router = Router();
-const { Purchase, User } = require("../db.js");
+const { Purchase, User, Seller, WareHouse } = require("../db.js");
 const mercadopago = require("mercadopago");
 
 // Una ruta que traiga toda la info de una compra
@@ -43,5 +43,46 @@ router.get('/user/:id', async (req, res) => {
         res.send({error: err.message})
     };
 });
+
+router.get('/seller/:sellerId', async (req,res) => {
+    const sellerId = req.params.sellerId;
+    const purchases = await Purchase.findAll({
+        include: [{
+            model: Seller, 
+            where: {id: [sellerId]},
+            attributes: []
+           },
+           {
+            model: WareHouse,
+            where: {SellerId: [sellerId]},
+            attributes: ['id']
+           }
+        ],
+        attributes: {exclude: ['totalprice', 'UserId', 'mp_payment_id']}
+    });
+    
+    const response = []
+    purchases.forEach( async purchase => {
+        let sum = 0;
+        const merchantOrder = await mercadopago.merchant_orders.findById(purchase.mp_merchantOrder_id);
+        const items = purchase.WareHouses.map(w => merchantOrder.body.items.find(i => i.id == w.id));
+        items.forEach((i) => sum = sum+(i.unit_price*i.quantity));
+        response.push({
+            purchase: {
+                id: purchase.id,
+                status: purchase.status,
+                createdAt: purchase.createdAt,
+                updatedAt: purchase.updatedAt,
+                amount: sum
+            },
+            items: items
+        });
+    });
+    
+    setTimeout(()=>{
+        res.send(response)
+    }, 1000)
+})
+
 
 module.exports = router;
