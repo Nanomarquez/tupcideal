@@ -56,8 +56,8 @@ function Admin() {
     axion();
   };
 
-  let handleDesBan = (e) => {
-    axios.put(`/users/${e}`, { ban: false });
+  let handleDesBan = async(e) => {
+    await axios.put(`/users/${e}`, { ban: false });
     axion();
   };
 
@@ -66,8 +66,8 @@ function Admin() {
     axionSellers();
   };
 
-  let handleDesBanSeller = (e) => {
-    axios.put(`/sellers/${e}`, { ban: false });
+  let handleDesBanSeller = async (e) => {
+    await axios.put(`/sellers/${e}`, { ban: false });
     axionSellers();
   };
 
@@ -325,18 +325,19 @@ function Admin() {
             >
               VIDEO CARD
             </button>
-
-            <select name="" id="" onChange={handleSelect}>
-              <option value="">Elige tu producto</option>
-              {filtered.map((f, i) => {
-                return (
-                  <option key={i} value={f.id}>
-                    {f.name}
-                  </option>
-                );
-              })}
-            </select>
             <div>
+              <select name="" id="" onChange={handleSelect}>
+                <option value="">Elige tu producto</option>
+                {filtered.map((f, i) => {
+                  return (
+                    <option key={i} value={f.id}>
+                      {f.name}
+                    </option>
+                  );
+                })}
+              </select>
+            </div>
+            <div className="border-2 bg-gray-100 rounded p-5">
               <h2>Name: {component?.name}</h2>
               <img src={component?.image} alt={component?.name} width="120" />
               <h3>Category {component?.categories}</h3>
