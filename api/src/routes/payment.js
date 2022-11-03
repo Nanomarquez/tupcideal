@@ -37,6 +37,7 @@ router.post("/notification", async (req, res) => {
           const sellers = [];
           merchantOrder.body.items.forEach(async i => {
             const product = await WareHouse.findByPk(i.id);
+            purchase.addWareHouse(product)
             product.cantidad = product.cantidad - i.quantity;
             await product.save();
             sellers.push(product.SellerId.toString())
