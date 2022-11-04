@@ -49,8 +49,8 @@ export const getAllById = (id) => (dispatch) => {
     .catch((e) => console.log(e));
 };
 
-export const getFiltered = (brand, category) => (dispatch) => {
-  axios(`/warehouse?brand=${brand}&category=${category}`)
+export const getFiltered = (brand, category, priceMin, priceMax) => (dispatch) => {
+  axios(`/warehouse?brand=${brand}&category=${category}&priceMin=${priceMin}&priceMax=${priceMax}`)
     .then((res) => dispatch(getProductsFiltered(res.data)))
     .catch((e) => console.log(e));
 };
