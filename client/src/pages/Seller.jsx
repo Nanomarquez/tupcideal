@@ -140,8 +140,9 @@ export default function Seller() {
   // console.log(product)
   //console.log(seller)
   console.log(editSelled);
+  console.log(filters);
   return (
-    <section className="flex flex-col bg-gray-300 w-full">
+    <section className="flex flex-col bg-gray-300 w-full gap-5">
       <article className="flex flex-col justify-center items-center gap-5 bg-white w-max p-5 mx-auto rounded-b-lg shadow-xl">
         <h1 className="p-4 text-lg sm:text-2xl">Vender nuevo componente </h1>
         <h2 className="text-2xl">Categorias</h2>
@@ -195,7 +196,12 @@ export default function Seller() {
           </div>
         </div>
 
-        <select className="bg-gray-300 px-2 rounded-md outline-none flex items-center justify-center" name={product.id} id={product.id} onChange={handleSelect}>
+        <select
+          className="bg-gray-300 px-2 rounded-md outline-none flex items-center justify-center"
+          name={product.id}
+          id={product.id}
+          onChange={handleSelect}
+        >
           <option value="">Selecciona una categoria</option>
           {filtered.map((f, i) => {
             return (
@@ -206,9 +212,18 @@ export default function Seller() {
           })}
         </select>
         <div className="flex gap-2 justify-center items-center flex-col border-n-2 p-4 rounded-md shadow-lg">
-          <h2 className="flex justify-center font-bold items-center flex-col border-b px-2 rounded-md">Name <span>{component?.name}</span> </h2>
-          <img src={component?.image} alt={component?.name} width="120" className="object-cover m-2"/>
-          <h3  className="flex justify-center  font-bold items-center flex-col border-b px-2 rounded-md">Categoria <span>{component?.categories}</span> </h3>
+          <h2 className="flex justify-center font-bold items-center flex-col border-b px-2 rounded-md">
+            Name <span>{component?.name}</span>{" "}
+          </h2>
+          <img
+            src={component?.image}
+            alt={component?.name}
+            width="120"
+            className="object-cover m-2"
+          />
+          <h3 className="flex justify-center  font-bold items-center flex-col border-b px-2 rounded-md">
+            Categoria <span>{component?.categories}</span>{" "}
+          </h3>
           <p className="text-x2">
             Rating: {"★".repeat(Math.round(component?.rating)).padEnd(5, "☆")}
           </p>
@@ -252,114 +267,152 @@ export default function Seller() {
           </form>
         </div>
       </article>
-      <div>
-        <h1 className="p-4 text-2xl">Editar componente vendido </h1>
-        <button
-          className="border-2 bg-gray-400 rounded p-1 justify-center"
-          onClick={() => filterCategory("")}
-        >
-          TODOS
-        </button>
-        <button
-          className="border-2 bg-gray-400 rounded p-1 justify-center"
-          onClick={() => filterCategory("CPU")}
-        >
-          CPU
-        </button>
-        <button
-          className="border-2 bg-gray-400 rounded p-1 justify-center"
-          onClick={() => filterCategory("Motherboard")}
-        >
-          MOTHER BOARD
-        </button>
-        <button
-          className="border-2 bg-gray-400 rounded p-1 justify-center"
-          onClick={() => filterCategory("Memory")}
-        >
-          MEMORY CARD
-        </button>
-        <button
-          className="border-2 bg-gray-400 rounded p-1 justify-center"
-          onClick={() => filterCategory("PowerSupply")}
-        >
-          POWER SUPPLY
-        </button>
-        <button
-          className="border-2 bg-gray-400 rounded p-1 justify-center"
-          onClick={() => filterCategory("InternalHardDrive")}
-        >
-          INTERNAL HARD DRIVE
-        </button>
-        <button
-          className="border-2 bg-gray-400 rounded p-1 justify-center"
-          onClick={() => filterCategory("Case")}
-        >
-          CASES
-        </button>
-        <button
-          className="border-2 bg-gray-400 rounded p-1 justify-center"
-          onClick={() => filterCategory("VideoCard")}
-        >
-          VIDEO CARD
-        </button>
+      <article className="flex w-max flex-col justify-center items-center gap-5 bg-white p-5 mx-auto rounded-b-lg shadow-xl">
+        <h1 className="p-4 text-lg sm:text-2xl">Editar componente vendido </h1>
+        <h2 className="text-2xl">Categorias</h2>
+        <div className="flex flex-col sm:flex-row">
+          <div className="flex flex-col">
+            <button
+              className="border-2 bg-gray-400 rounded p-1 justify-center"
+              onClick={() => filterCategory("")}
+            >
+              TODOS
+            </button>
+            <button
+              className="border-2 bg-gray-400 rounded p-1 justify-center"
+              onClick={() => filterCategory("CPU")}
+            >
+              CPU
+            </button>
+            <button
+              className="border-2 bg-gray-400 rounded p-1 justify-center"
+              onClick={() => filterCategory("Motherboard")}
+            >
+              MOTHER BOARD
+            </button>
+            <button
+              className="border-2 bg-gray-400 rounded p-1 justify-center"
+              onClick={() => filterCategory("Memory")}
+            >
+              MEMORY CARD
+            </button>
+          </div>
+          <div className="flex flex-col">
+            <button
+              className="border-2 bg-gray-400 rounded p-1 justify-center"
+              onClick={() => filterCategory("PowerSupply")}
+            >
+              POWER SUPPLY
+            </button>
+            <button
+              className="border-2 bg-gray-400 rounded p-1 justify-center"
+              onClick={() => filterCategory("InternalHardDrive")}
+            >
+              INTERNAL HARD DRIVE
+            </button>
+            <button
+              className="border-2 bg-gray-400 rounded p-1 justify-center"
+              onClick={() => filterCategory("Case")}
+            >
+              CASES
+            </button>
+            <button
+              className="border-2 bg-gray-400 rounded p-1 justify-center"
+              onClick={() => filterCategory("VideoCard")}
+            >
+              VIDEO CARD
+            </button>
+          </div>
+        </div>
+          {filters &&
+            filters.map((f) => (
+              <div className="flex w-full gap-2 justify-center items-center flex-col border-n-2 p-4 rounded-md shadow-lg">
+                <h2 className="flex justify-center font-bold items-center flex-col border-b px-2 rounded-md">
+                  Name <span>{f.Product.name}</span>{" "}
+                </h2>
+                <img
+                  src={f.Product.image}
+                  alt={f.Product.name}
+                  width="120"
+                  className="object-cover m-2"
+                />
+                <h3 className="flex justify-center font-bold items-center flex-col border-b px-2 rounded-md">
+                  Categoria <span>{f.Product.categories}</span>{" "}
+                </h3>
+                <p>
+                  Rating:{" "}
+                  {"★".repeat(Math.round(f.Product.ratingProm)).padEnd(5, "☆")}
+                </p>
 
-        {filters &&
-          filters.map((f) => (
-            <div className="mt-6 mb-4 border-b-4 border-grey-500 ...">
-              <div>
-                <h2>Name: {f.Product.name}</h2>
-                <img src={f.Product.image} alt={f.Product.name} width="120" />
-              </div>
-              <h3>Categoria {f.Product.categories}</h3>
-              <p>
-                Rating:{" "}
-                {"★".repeat(Math.round(f.Product.ratingProm)).padEnd(5, "☆")}
-              </p>
+                <p>
+                  {" "}
+                  Precio Actual: $ <span className="font-bold">
+                    {f.precio}
+                  </span>{" "}
+                </p>
+                <p>
+                  {" "}
+                  Stock Actual: <span className="font-bold">
+                    {f.cantidad}
+                  </span>{" "}
+                  unidades
+                </p>
+                <button
+                  className="flex justify-center items-center bg-gray-300/30 p-2 font-bold hover:bg-gray-300/90 transition-all duration-300 rounded-md"
+                  onClick={() => handleClickForm(f.id)}
+                >
+                  Modificar
+                </button>
 
-              <p> Precio Actual = $ {f.precio}</p>
-              <p> Stock Actual = {f.cantidad} unidades</p>
-              <button
-                className="flex justify-center items-center bg-gray-300/30 w-22 hover:bg-gray-300/90 transition rounded-md"
-                onClick={() => handleClickForm(f.id)}
-              >
-                Modificar
-              </button>
-              {refresh === f.id && (
-                <form onSubmit={onSubmitPut}>
-                  <label>
+                <form
+                  onSubmit={onSubmitPut}
+                  className={`${
+                    refresh === f.id ? "relative h-full" : "opacity-0 -z-10 h-0"
+                  } absolute flex flex-col gap-5 transition-all duration-500`}
+                >
+                  <label className="flex flex-col justify-center items-center">
                     Precio
                     <input
-                      className="left-5 w-55"
+                      className="border-b-2 rounded-md outline-none border-black bg-gray-100 p-1"
                       placeholder={` ${f.precio}`}
                       id={f.id}
-                      type="number"
+                      type="text"
+                      pattern="[0-9]+"
                       name="precio"
                       value={editSelled.precio}
                       onChange={handleChangeSale}
                     />
                   </label>
-                  <label>
+                  <label className="flex flex-col justify-center items-center">
                     Stock
                     <input
+                      className="border-b-2 rounded-md outline-none border-black bg-gray-100 p-1"
                       placeholder={` ${parseInt(f.cantidad)}`}
                       id={f.id}
-                      type="number"
+                      type="text"
+                      pattern="[0-9]+"
                       name="cantidad"
                       value={editSelled.cantidad}
                       onChange={handleChangeSale}
                     />
                   </label>
                   <input
-                    className="border-2 bg-blue-400 rounded p-1 justify-center"
+                    className={`border-2 duration-200 rounded p-1 ${
+                      disabledPut
+                        ? "line-through bg-gray-300"
+                        : "bg-blue-400 cursor-pointer"
+                    } justify-center`}
                     disabled={disabledPut}
                     type="submit"
                     value="Editar producto"
                   />
                 </form>
-              )}
-            </div>
-          ))}
-      </div>
+              </div>
+            ))}
+      </article>
+      <article>
+        
+      </article>
     </section>
   );
 }
