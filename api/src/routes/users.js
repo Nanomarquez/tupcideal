@@ -1,7 +1,7 @@
 const { Router } = require("express");
 const router = Router();
 const { User, Favorite } = require("../db.js");
-const sendRegisterMail= require ('../Funciones/sendRegisterMail')
+const sendRegisterMail= require ('../funciones/sendRegisterMail')
 
 //------- Pedir usuario(individual) a la BD--------
 router.get("/:email", async (req, res) => {
