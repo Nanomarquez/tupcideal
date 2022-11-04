@@ -53,6 +53,11 @@ export default function Seller() {
     }
   };
 
+  useEffect(() => {
+    axios.get(`/purchase/seller/${product.id_vendedor}`).then(res=>console.log(res.data))
+  }, [usuario,product])
+  
+
   let handleChange = (e) => {
     setProduct({
       ...product,
