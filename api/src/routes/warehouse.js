@@ -7,7 +7,7 @@ const ratingProm = require("../funciones/ratingProm.js");
 //Create User
 //------- PEDIR TODOS LOS PRODUCTOS Y VENDEDORES A LA BD--------
 router.get("/", async (req, res) => {
-  const { brand, category } = req.query;
+  const { brand, category, priceMin, priceMax } = req.query;
   let response = [];
   try {
     let ware;
@@ -42,6 +42,12 @@ router.get("/", async (req, res) => {
       : null;
     category
       ? (response = response.filter((p) => p.Product.categories === category))
+      : null;
+    priceMin
+      ? (response = response.filter((p) => p.precio >= priceMin))
+      : null;
+    priceMax
+      ? (response = response.filter((p) => p.precio <= priceMax))
       : null;
     res.send(response);
   } catch (err) {
