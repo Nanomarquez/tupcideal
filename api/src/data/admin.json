@@ -59,8 +59,8 @@
     "id": "f852877c-8eb3-45fc-a555-39fa3622fcd2",
     "name": "Super",
     "last_name": "Admin",
-    "password": "superAdmin@tupcideal.com",
-    "email": "superAdmin@tupcideal.com",
+    "password": "superadmin@tupcideal.com",
+    "email": "superadmin@tupcideal.com",
     "isSuperAdmin": true,
     "isAdmin": true
   },

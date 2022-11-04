@@ -55,24 +55,24 @@ function Superadmin() {
     axion();
   }, []);
   return (
-    <div className="min-h-[100vh] flex align-items-center">
-      <section className="w-2/5 min-w-[35%] bg-gray-300 h-auto sm:h-screen text-center">
-        <h1 className="p-4 text-2xl">Tabla de Usuarios / Administradores</h1>
+    <div className=" flex align-items-center">
+      <section className="container bg-gray-300 h-auto p-5 mx-auto text-center">
+        <h1 className="p-4 text-2xl border-gray-500 border rounded m-5">Tabla de Usuarios / Administradores</h1>
         {users.map((e, i) => (
             <div
               key={i}
-              className="border-2 flex-direction-row gap-10 justify-center items-center rounded mb-3"
+              className="border-2 border-gray-400 flex-direction-row gap-10 justify-center items-center rounded space-x-3 mb-3 p-2"
             >
-              <p className="text-xl font-medium">{e.name}: </p>
+              <p className="text-xl font-medium m-3">{e.name} {e.last_name}: </p>
               <button
-                className="border-2 bg-red-400 p-1 justify-center rounded"
+                className="border-2 font-medium text-lg border-amber-900 bg-red-600 hover:bg-red-700 rounded p-1 justify-center "
                 onClick={() => handleDelete(e.email)}
               >
                 Eliminar
               </button>{" "}
               {e.isBanned && (
                 <button
-                  className="border-2 bg-green-400 rounded p-1 justify-center"
+                  className="border-2 font-medium text-lg border-green-800 bg-green-500 hover:bg-green-600 rounded p-1 justify-center "
                   onClick={() => handleDesBan(e.email)}
                 >
                   Desbanear
@@ -80,7 +80,7 @@ function Superadmin() {
               )}
               {!e.isBanned && (
                 <button
-                  className="border-2 rounded bg-red-400 p-1 justify-center"
+                  className="border-2 font-medium text-lg border-amber-900 bg-red-600 hover:bg-red-700 rounded p-1 justify-center "
                   onClick={() => handleBan(e.email)}
                 >
                   Banear
@@ -88,7 +88,7 @@ function Superadmin() {
               )}
               {e.isAdmin && (
                 <button
-                  className="border-2 bg-green-400 rounded p-1 justify-center"
+                  className="border-2 font-medium text-lg border-green-800 bg-green-500 hover:bg-green-600 rounded p-1 justify-center "
                   onClick={() => handleDesAdmin(e.email)}
                 >
                   "Si" Admin
@@ -96,7 +96,7 @@ function Superadmin() {
               )}
               {!e.isAdmin && (
                 <button
-                  className="border-2 rounded bg-red-400 p-1 justify-center "
+                  className="border-2 font-medium text-lg border-amber-900 bg-red-600 hover:bg-red-700 rounded p-1 justify-center "
                   onClick={() => handleAdmin(e.email)}
                 >
                   "No" Admin

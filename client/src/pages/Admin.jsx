@@ -280,52 +280,68 @@ function Admin() {
       </section>
       <section className="flex">
         {/* ------------------------------------------ */}
-        <section className="flex">
-          <div className="ml-4">
+        <section className="w-2/5 min-w-[50%] bg-gray-300 h-auto sm:h-screen text-center">
+          <div className="ml-4 justify-center ">
             <h1 className="p-4 text-2xl">Editar o Eliminar Componente </h1>
-            <button
-              className="border-2 bg-gray-400 rounded p-1 justify-center"
-              onClick={() => dispatch(getFiltered2("CPU"))}
-            >
-              CPU
-            </button>
-            <button
-              className="border-2 bg-gray-400 rounded p-1 justify-center"
-              onClick={() => dispatch(getFiltered2("Motherboard"))}
-            >
-              MOTHER BOARD
-            </button>
-            <button
-              className="border-2 bg-gray-400 rounded p-1 justify-center"
-              onClick={() => dispatch(getFiltered2("Memory"))}
-            >
-              MEMORY CARD
-            </button>
-            <button
-              className="border-2 bg-gray-400 rounded p-1 justify-center"
-              onClick={() => dispatch(getFiltered2("PowerSupply"))}
-            >
-              POWER SUPPLY
-            </button>
-            <button
-              className="border-2 bg-gray-400 rounded p-1 justify-center"
-              onClick={() => dispatch(getFiltered2("InternalHardDrive"))}
-            >
-              INTERNAL HARD DRIVE
-            </button>
-            <button
-              className="border-2 bg-gray-400 rounded p-1 justify-center"
-              onClick={() => dispatch(getFiltered2("Case"))}
-            >
-              CASES
-            </button>
-            <button
-              className="border-2 bg-gray-400 rounded p-1 justify-center"
-              onClick={() => dispatch(getFiltered2("VideoCard"))}
-            >
-              VIDEO CARD
-            </button>
-            <div>
+            <div className="grid gap-3 grid-cols-2">
+              <div>
+                <button
+                  className="border-2 border-stone-400 bg-gray-200 hover:bg-zinc-400 rounded p-1 justify-center"
+                  onClick={() => dispatch(getFiltered2("CPU"))}>
+                  CPU
+                </button>
+              </div>
+              <div>
+                <button
+                  className="border-2 border-stone-400 bg-gray-200 hover:bg-zinc-400 rounded p-1 justify-center"
+                  onClick={() => dispatch(getFiltered2("Case"))}
+                >
+                  CASES
+                </button>
+              </div>
+              <div>
+                <button
+                  className="border-2 border-stone-400 bg-gray-200 hover:bg-zinc-400 rounded p-1 justify-center"
+                  onClick={() => dispatch(getFiltered2("VideoCard"))}
+                >
+                  VIDEO CARD
+                </button>
+              </div>
+              <div>
+                <button
+                  className="border-2 border-stone-400 bg-gray-200 hover:bg-zinc-400 rounded p-1 justify-center"
+                  onClick={() => dispatch(getFiltered2("Motherboard"))}
+                >
+                  MOTHER BOARD
+                </button>
+              </div>
+
+              <div>
+                <button
+                  className="border-2 border-stone-400 bg-gray-200 hover:bg-zinc-400 rounded p-1 justify-center"
+                  onClick={() => dispatch(getFiltered2("Memory"))}
+                >
+                  MEMORY CARD
+                </button>
+              </div>
+              <div>
+                <button
+                  className="border-2 border-stone-400 bg-gray-200 hover:bg-zinc-400 rounded p-1 justify-center"
+                  onClick={() => dispatch(getFiltered2("PowerSupply"))}
+                >
+                  POWER SUPPLY
+                </button>
+              </div>
+              <div>
+                <button
+                  className="border-2 border-stone-400 bg-gray-200 hover:bg-zinc-400 rounded p-1 justify-center"
+                  onClick={() => dispatch(getFiltered2("InternalHardDrive"))}
+                >
+                  INTERNAL HARD DRIVE
+                </button>
+              </div>
+            </div>
+            <div className="m-4 border-3">
               <select name="" id="" onChange={handleSelect}>
                 <option value="">Elige tu producto</option>
                 {filtered.map((f, i) => {
@@ -356,8 +372,11 @@ function Admin() {
               </button>
             </div>
           </div>
-          {/* ------------------------------------------ */}
-          <div>
+         
+        </section>
+        <section>
+           {/* ------------------------------------------ */}
+           <div>
             <h1 className="p-4 text-2xl">Tabla de productos</h1>
             <div>
               <form className="flex" onSubmit={onSubmit}>
