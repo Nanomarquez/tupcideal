@@ -22,7 +22,7 @@ const dropIn = {
   },
 };
 
-function ModalReview({ handleClose, ProductId, UserId }) {
+function ModalReview({ handleClose, ProductId }) {
   const { usuario } = useAuth();
   const [userId, setUserId] = useState("")
 
@@ -38,7 +38,6 @@ function ModalReview({ handleClose, ProductId, UserId }) {
     })
   }, [userId])
   
-  console.log(userId)
 
   const [reviewUser, setReviewUser] = useState({
     ProductId,
@@ -47,7 +46,6 @@ function ModalReview({ handleClose, ProductId, UserId }) {
     rating: 0,
   })
 
-  console.log(reviewUser);
 
   let handleChange = (e) => {
     setReviewUser({
@@ -107,7 +105,7 @@ function ModalReview({ handleClose, ProductId, UserId }) {
             <option value={4}>4</option>
             <option value={5}>5</option>
           </select>
-          <button type="submit" className="px-5 py-2 bg-gray-300 rounded-md">Enviar</button>
+          <button onClick={handleClose} type="submit" className="px-5 py-2 bg-gray-300 rounded-md">Enviar</button>
         </form>
       </motion.div>
     </Backdrop>

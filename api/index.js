@@ -24,8 +24,7 @@ const bulkCase = require("./src/data/case.json");
 const bulkInternalHardDrive = require("./src/data/internal-hard-drive.json");
 const bulkSellers = require("./src/data/sellers.json");
 
-const bulkWareHouse = require("./src/data/WareHouses.json");
-// const bulkWareHouse = require("./src/data/warehouse.json");
+const bulkWareHouse = require("./src/data/WareHouse.json");
 const bulkProducts = require("./src/data/products.json");
 const bulkAdmins = require("./src/data/admin.json");
 const bulkReviews = require("./src/data/Reviews.json");
@@ -41,13 +40,7 @@ const bulkReviews = require("./src/data/Reviews.json");
 // }}
 
 
-
-
-
-
-
- setter = true;
-// descomentar setter hacer para los cambios nuevos y comentar funcion linea 33 user
+ setter = false;
 
 // Syncing all the models at once.
 

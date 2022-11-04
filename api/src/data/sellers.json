@@ -4,20 +4,23 @@
         "store_name": "Henry1",
         "adress": "Henry Street 1",
         "email": "HenryEmail1@gmail.com",
-        "phone_number": 974116804
+        "phone_number": 974116804,
+        "password": "henry123"
     },
     {
         "id": "63a82702-fb17-46b1-b42d-8a57724344ae",
         "store_name": "Henry2",
         "adress": "Henry Street 2",
         "email": "HenryEmail2@gmail.com",
-        "phone_number": 974116805
+        "phone_number": 974116805,
+        "password": "henry123"
     },
      {
         "id": "b76670e2-01be-42ec-861a-2601e2485271",
         "store_name": "Henry3",
         "adress": "Henry Street 3",
         "email": "HenryEmail3@gmail.com",
-        "phone_number": 974116806
+        "phone_number": 974116806,
+        "password": "henry123"
     }
 ]

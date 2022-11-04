@@ -12,6 +12,7 @@ import Modal from "../../components/Modal/Modal";
 import ModalFavorites from "../../components/Modal/ModalFavorites";
 import Avatar from './Avatar'
 import axios from "axios";
+import iconFavorites from "../../assets/iconFavorites.png";
 function NavBar() {
   
   const [modalOpen, setModalOpen] = useState(false);
@@ -34,8 +35,11 @@ function NavBar() {
   function handleActive() {
     active ? setActive("") : setActive("active");
   }
+  let cartSum = 0;
 
-  
+  cart.map((c) => {cartSum = cartSum + c.quantity }
+  )
+    
 
   useEffect(()=>{
     !localStorage.hasOwnProperty('cart') ? localStorage.setItem("cart","[]") :
@@ -56,30 +60,37 @@ function NavBar() {
       })
       usuario.isAdmin = admin
       usuario.isSuperAdmin = superAdmin
+    }else{
+      setAdmin(false)
     }
   },[cart,favorites, usuario])
 
-  console.log(favorites)
   return (
     <>
-      <nav className="h-auto flex flex-col sm:flex-row justify-between items-center px-5 p-2 bg-gradient-to-b from-gray-800 to bg-gray-600 shadow-2xl z-50">
+      <nav className="h-auto flex flex-col sm:flex-row justify-between items-center px-5 pt-2 bg-gradient-to-b from-gray-800 to bg-gray-600 shadow-2xl z-50">
         <Link to="/">
           <span className="logo font-bold text-3xl tracking-tighter text-transparent bg-clip-text bg-gradient-to-br from-red-400 via-purple-400 to-green-400">
             TuPcIdeal
           </span>
         </Link>
-        <div className="flex sm:gap-40 gap-10">
+        <div className="flex sm:gap-40 gap-10 pt-2 sm:pt-0">
           <Search />
           {usuario ? <SignOut /> : <Signin />}
-          {usuario ? <Avatar /> : ""}
+            <Avatar /> 
         </div>
-        <div className="flex right-10 sm:relative absolute">
+        <div className="flex relative gap-3 items-center">
+        <span className="bg-white rounded-full absolute w-6 h-6 right-1 text-center">
+            {favorites?.length}
+          </span>
+          <span className="bg-white rounded-full absolute w-6 h-6 text-center">
+            {cartSum}
+          </span>
           <motion.button
-            whileHover={{ scale: 1.1 }}
+            whileHover={{ scale: 1.5 }}
             whileTap={{ scale: 0.9 }}
             onClick={() => {
               modalOpen ? close() : open();
-              modalFavoritesOpen ? closeFav() : null
+              modalFavoritesOpen ? closeFav() : null;
             }}
           >
             {/* <Link to={"/cart"}> */}
@@ -92,27 +103,28 @@ function NavBar() {
           </motion.button>
 
           <motion.button
-            whileHover={{ scale: 1.1 }}
+            whileHover={{ scale: 1.5 }}
             whileTap={{ scale: 0.9 }}
             onClick={() => {
               modalFavoritesOpen ? closeFav() : openFav();
-              modalOpen? close() : null;
+              modalOpen ? close() : null;
+            
             }}
           >
             {/* <Link to={"/cart"}> */}
             <img
-             src="https://cdn.pixabay.com/photo/2017/06/26/20/33/icon-2445095_960_720.png"
-             className="object-cover h-16 p-0"
-             alt="favorites"
-  />
+              src={
+                favorites.length > 0
+                  ? iconFavorites
+                  : "https://cdn.pixabay.com/photo/2017/06/26/20/33/icon-2445095_960_720.png"
+              }
+              className="object-cover h-16 p-0"
+              alt="favorites"
+              width={60}
+            />
             {/* </Link> */}
           </motion.button>
-          <span className="bg-white rounded-full absolute w-6 h-6 right-1 text-center">
-            {favorites?.length}
-          </span>
-          <span className="bg-white rounded-full absolute w-6 h-6 text-center">
-            {cart?.length}
-          </span>
+
         </div>
       </nav>
       <hr />
@@ -131,32 +143,38 @@ function NavBar() {
           } w-full duration-1000 z-10 gap-5 overflow-hidden`}
         >
           <Link to="/armatupc">
-            <li onClick={() => handleActive()} className="cursor-pointer hover:animate-bounce p-4">
+            <li
+              onClick={() => handleActive()}
+              className="cursor-pointer hover:animate-bounce p-4"
+            >
               Te armamos tu PC
             </li>
           </Link>
           <Link to="/productos">
-            <li onClick={() => handleActive()} className="cursor-pointer hover:animate-bounce p-4">
+            <li
+              onClick={() => handleActive()}
+              className="cursor-pointer hover:animate-bounce p-4"
+            >
               Productos
             </li>
           </Link>
           <Link to="/equipo">
-            <li onClick={() => handleActive()} className="cursor-pointer hover:animate-bounce p-4">
+            <li
+              onClick={() => handleActive()}
+              className="cursor-pointer hover:animate-bounce p-4"
+            >
               Quienes somos
             </li>
           </Link>
           <Link to="/custompc">
-            <li onClick={() => handleActive()} className="cursor-pointer hover:animate-bounce p-4">
+            <li
+              onClick={() => handleActive()}
+              className="cursor-pointer hover:animate-bounce p-4"
+            >
               Customiza tu PC
             </li>
           </Link>
-          { admin &&
-          <Link to='/admin'>
-          <li onClick={() => handleActive()} className="cursor-pointer hover:animate-bounce p-4">
-            Admin
-          </li>
-          </Link>
-          }
+          
         </ul>
       </div>
       <AnimatePresence
@@ -171,9 +189,13 @@ function NavBar() {
         exitBeforeEnter={true}
         onExitComplete={() => null}
       >
-        {modalFavoritesOpen && <ModalFavorites modalOpen={modalFavoritesOpen} handleClose={closeFav} />}
+        {modalFavoritesOpen && (
+          <ModalFavorites
+            modalOpen={modalFavoritesOpen}
+            handleClose={closeFav}
+          />
+        )}
       </AnimatePresence>
-    
     </>
   );
 }
@@ -198,3 +220,16 @@ linea 78
 
 
 */
+/*{usuario && usuario.isAdmin ? <Avatar /> : ""}*/
+
+
+/*{admin && (
+  <Link to="/admin">
+    <li
+      onClick={() => handleActive()}
+      className="cursor-pointer hover:animate-bounce p-4"
+    >
+      Admin
+    </li>
+  </Link>
+)}*/

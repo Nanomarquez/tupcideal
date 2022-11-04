@@ -1,17 +1,18 @@
 import React, { useState } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { useEffect } from "react";
 import Loading from "../components/Loading/Loading";
 import {
   getAllById,
   addProductToShoppingCart,
-  listReviews,
+  addFavoritesList,
 } from "../redux/actions";
 import axios from "axios";
 import { motion, AnimatePresence } from "framer-motion";
 import ModalReview from "../components/Modal/ModalReview";
 function ProductosSearch() {
+  const { favorites } = useSelector((state) => state.products);
   const [modalOpen, setModalOpen] = useState(false);
   const close = () => setModalOpen(false);
   const open = () => setModalOpen(true);
@@ -24,19 +25,38 @@ function ProductosSearch() {
     setLoading(false);
   }, [id]);
   const [review, setReview] = useState([]);
+  const [Sellers, setSellers] = useState([]);
   async function getReview() {
     return await axios
       .get(`/review/product/${id}`)
       .then((res) => setReview(res.data));
   }
+  async function getOtherSellers() {
+    return await axios
+      .get(`/warehouse/product/${productsFilterById.Product.id}`)
+      .then((res) => setSellers(res.data));
+  }
   useEffect(() => {
     if (id) {
       getReview();
     }
-  }, [id]);
+  }, [id, modalOpen]);
+  let othersSeller = Sellers.filter(
+    (e) => e.Seller.store_name !== productsFilterById.Seller.store_name
+  );
 
-  console.log(review);
-
+  useEffect(() => {
+    if (productsFilterById.hasOwnProperty("Product")) {
+      getOtherSellers();
+    }
+  }, [productsFilterById]);
+  let handleFavoritesClick = (product) => {
+    let favs = favorites.find((f) => f.id === product.id);
+    if (!favs) {
+      dispatch(addFavoritesList(product));
+    }
+  };
+  console.log(othersSeller);
   if (loading || productsFilterById.Seller === undefined) {
     return <Loading />;
   }
@@ -76,7 +96,9 @@ function ProductosSearch() {
             <div className="flex flex-col gap-5">
               <p className="text-xl">
                 Rating:{" "}
-                {"★".repeat(productsFilterById.Product.rating).padEnd(5, "☆")}
+                {"★"
+                  .repeat(Math.round(productsFilterById.ratingProm))
+                  .padEnd(5, "☆")}
               </p>
               <h2 className="text-2xl">
                 Marca: {productsFilterById.Product.name?.split(" ")[0]}
@@ -91,7 +113,10 @@ function ProductosSearch() {
                     {productsFilterById.Seller.store_name}
                   </span>
                 </h2>
-                <button className="flex justify-center items-center bg-gray-300/30 w-10 hover:bg-gray-300/90 transition rounded-md">
+                <button
+                  onClick={() => handleFavoritesClick(productsFilterById)}
+                  className="flex justify-center z-50 items-center bg-gray-300/30 w-10 hover:bg-gray-300/90 transition rounded-md"
+                >
                   <img
                     src="https://cdn.pixabay.com/photo/2017/06/26/20/33/icon-2445095_960_720.png"
                     className="opacity-50 object-cover"
@@ -121,13 +146,49 @@ function ProductosSearch() {
           </section>
         </div>
       )}
-      <div className="w-full h-[250px] overflow-y-scroll px-10 py-5 gap-5">
+      <div className="text-center w-full h-[250px] my-10">
+        <h1 className="text-3xl">
+          Otros vendedores que ofrecen el mismo producto
+        </h1>
+        <div className="flex gap-5 items-center h-full justify-center overflow-x-scroll">
+          {othersSeller?.map((e, i) => (
+            <Link to={`/productos/search/${e.id}`} className="flex flex-col items-center justify-center border-2 px-4 rounded-md">
+                <h2>{e.Seller.store_name}</h2>
+                <p>{e.Product.name}</p>
+                <img
+                  src={e.Product.image}
+                  alt={e.Product.name}
+                  className="object-cover h-20 w-20"
+                />
+                <p>Precio ${e.precio}</p>
+
+            </Link>
+          ))}
+        </div>
+      </div>
+      <div className="bg-gray-300 p-5 flex flex-col items-center mx-5 rounded-md">
+        <h2 className="text-4xl text-transparent bg-clip-text bg-gradient-to-tr from-gray-700 font-extrabold to-sky-500">
+          Caracteristicas
+        </h2>
+        <ul className="flex gap-5 p-5 flex-col sm:flex-row">
+          {productsFilterById.hasOwnProperty("componentData") &&
+            Object.keys(productsFilterById.componentData).map((k) => (
+              <li className="border-2" key={k}>
+                {k.toString()[0].toUpperCase() + k.slice(1)}:{" "}
+                {productsFilterById.componentData[k]
+                  ? productsFilterById.componentData[k]
+                  : "No"}
+              </li>
+            ))}
+        </ul>
+      </div>
+      <div className="w-full h-[250px] mt-5 flex flex-col overflow-y-scroll px-10 py-5 gap-5">
         {review?.map((e, i) => (
           <div
             key={i}
             className="flex flex-col justify-center rounded-md items-center border-2"
           >
-            <p>Anonimo</p>
+            <p>De: {e.User.email}</p>
             <p>Comentario: {e.comment}</p>
             <p>Rating: {e.rating}</p>
           </div>
@@ -138,8 +199,24 @@ function ProductosSearch() {
         exitBeforeEnter={true}
         onExitComplete={() => null}
       >
-        {modalOpen && <ModalReview ProductId={id} modalOpen={modalOpen} handleClose={close} />}
+        {modalOpen && (
+          <ModalReview
+            ProductId={id}
+            modalOpen={modalOpen}
+            handleClose={close}
+          />
+        )}
       </AnimatePresence>
+      <div className="p-5 flex flex-col gap-10">
+        <img
+          src="https://cdn.jsdelivr.net/gh/persano/BannersWebMaximus/top-under-header/mejores-precios-main-top.webp"
+          alt=""
+        />
+        <img
+          src="https://cdn.jsdelivr.net/gh/persano/BannersWebMaximus/armado-pc-home/arma-tu-compu-new.webp"
+          alt=""
+        />
+      </div>
     </>
   );
 }

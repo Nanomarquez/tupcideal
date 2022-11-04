@@ -11,7 +11,7 @@ module.exports = (sequelize) => {
         primaryKey: true,
       },
       categories: {
-        type: DataTypes.STRING,
+        type: DataTypes.ENUM('Case', 'CPU', 'InternalHardDrive', 'Memory', 'Motherboard', 'PowerSupply', 'VideoCard'),
       },
       name: {
         type: DataTypes.STRING,
@@ -30,6 +30,10 @@ module.exports = (sequelize) => {
       },
       id_table: {
         type: DataTypes.INTEGER,
+      },
+      isBanned: {
+        type: DataTypes.BOOLEAN,
+        defaultValue: false,
       },
     },
     {

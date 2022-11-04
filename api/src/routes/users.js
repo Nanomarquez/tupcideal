@@ -1,6 +1,7 @@
 const { Router } = require("express");
 const router = Router();
 const { User, Favorite } = require("../db.js");
+const sendRegisterMail= require ('../Funciones/sendRegisterMail')
 
 //------- Pedir usuario(individual) a la BD--------
 router.get("/:email", async (req, res) => {
@@ -14,7 +15,7 @@ router.get("/:email", async (req, res) => {
       where: { email: email },
     });
     if (respuestabd === null) {
-      return res.send({ error: "Usuario no encontrado" });
+      return res.send("Usuario no encontrado");
     } else {
       res.status(200).json(respuestabd);
     }
@@ -59,6 +60,7 @@ router.post("/", async (req, res) => {
     });
     if (created) {
       console.log("Usuario CREADO");
+      sendRegisterMail(usuario);
       res.status(200).json(usuario);
     } else {
       res.status(200).json("El Usuario ya existe.");
@@ -73,7 +75,7 @@ router.post("/", async (req, res) => {
 router.put("/:email", async (req, res) => {
   try {
     const { email } = req.params;
-    const { name, last_name, adress, phone_number, ban } = req.body;
+    const { name, last_name, adress, phone_number, ban ,admin} = req.body;
     const editdUser = await User.update(
       {
         name: name,
@@ -81,6 +83,7 @@ router.put("/:email", async (req, res) => {
         adress: adress,
         phone_number: phone_number,
         isBanned: ban,
+        isAdmin:admin,
       },
       { where: { email: email } }
     );
