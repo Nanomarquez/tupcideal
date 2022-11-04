@@ -40,7 +40,7 @@ const bulkReviews = require("./src/data/Reviews.json");
 // }}
 
 
- setter = false;
+ setter = true;
 
 // Syncing all the models at once.
 
