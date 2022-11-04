@@ -2,10 +2,10 @@ import React, { useEffect, useState } from 'react'
 import './SliderRange.css'
 import ReactSlider from "react-slider";
 import {useSelector, useDispatch } from "react-redux"
-import { orderByPrice } from "../redux/actions"
+import { getFiltered } from "../redux/actions"
 
 
-function SliderRange({setCurrentPage}) {
+function SliderRange({setCurrentPage, brand , category}) {
   const dispatch = useDispatch()
 
   const { allProducts } = useSelector(state=>state.products)
@@ -37,7 +37,7 @@ function SliderRange({setCurrentPage}) {
   const handleSlide = (e) => {
     setMin(e[0]);
     setMax(e[1]);
-    dispatch(orderByPrice(filterByRange))
+    dispatch(getFiltered(brand,category,min,max))
     setCurrentPage(1)
   }
 

@@ -223,6 +223,7 @@ function Admin() {
                   type="text"
                   name="store_name"
                   value={seller.store_name}
+
                   onChange={sellerHandlerChange}
                 />
               </label>
@@ -240,6 +241,7 @@ function Admin() {
                 email:
                 <input
                   className=" border-2 border-black h-8 ml-4"
+                  Style="text-transform:lowercase"
                   type="text"
                   name="email"
                   value={seller.email}

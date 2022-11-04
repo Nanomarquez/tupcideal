@@ -72,7 +72,7 @@ function Productos() {
   }
 
   useEffect(() => {
-    dispatch(getFiltered(filters.brand, filters.category));
+    dispatch(getFiltered(filters.brand, filters.category,"",""));
     setLoading(false)
   }, [filters]);
 
@@ -112,9 +112,12 @@ function Productos() {
    
     }  
   }
-   
+
+
   if(loading || currentProducts.length === 0){
-    return <Loading/>
+    if(allProducts.length === 0){
+      return <Loading/>
+  }
   }
   return (
     <div className="flex items-center justify-center bg-gray-300">
@@ -158,7 +161,7 @@ function Productos() {
                 <option value="Descendente">Descendente </option>
               </select>
             </div>
-            <SliderRange setCurrentPage={setCurrentPage} />
+            <SliderRange brand={filters.brand} category={filters.category} setCurrentPage={setCurrentPage} />
           </div>
         </section>
         <section className="flex flex-col p-5">
