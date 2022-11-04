@@ -143,7 +143,7 @@ export default function Seller() {
   return (
     <section className="flex flex-col bg-gray-300 w-full">
       <article className="flex flex-col justify-center items-center gap-5 bg-white w-max p-5 mx-auto rounded-b-lg shadow-xl">
-        <h1 className="p-4 text-4xl">Vender nuevo componente </h1>
+        <h1 className="p-4 text-lg sm:text-2xl">Vender nuevo componente </h1>
         <h2 className="text-2xl">Categorias</h2>
         <div className="flex flex-col sm:flex-row">
           <div className="flex flex-col">
@@ -195,7 +195,7 @@ export default function Seller() {
           </div>
         </div>
 
-        <select name={product.id} id={product.id} onChange={handleSelect}>
+        <select className="bg-gray-300 px-2 rounded-md outline-none flex items-center justify-center" name={product.id} id={product.id} onChange={handleSelect}>
           <option value="">Selecciona una categoria</option>
           {filtered.map((f, i) => {
             return (
@@ -205,10 +205,10 @@ export default function Seller() {
             );
           })}
         </select>
-        <div className="flex justify-center items-center flex-col border-n-2 p-4 rounded-md shadow-lg">
-          <h2>Name: {component?.name}</h2>
-          <img src={component?.image} alt={component?.name} width="120" />
-          <h3>Categoria {component?.categories}</h3>
+        <div className="flex gap-2 justify-center items-center flex-col border-n-2 p-4 rounded-md shadow-lg">
+          <h2 className="flex justify-center font-bold items-center flex-col border-b px-2 rounded-md">Name <span>{component?.name}</span> </h2>
+          <img src={component?.image} alt={component?.name} width="120" className="object-cover m-2"/>
+          <h3  className="flex justify-center  font-bold items-center flex-col border-b px-2 rounded-md">Categoria <span>{component?.categories}</span> </h3>
           <p className="text-x2">
             Rating: {"★".repeat(Math.round(component?.rating)).padEnd(5, "☆")}
           </p>
