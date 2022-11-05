@@ -1,7 +1,7 @@
 const { Router } = require("express");
 const router = Router();
 const { Op } = require("sequelize");
-const { Product } = require("../db.js");
+const { Product,WareHouse } = require("../db.js");
 
 
 
@@ -57,11 +57,9 @@ router.post("/", async (req, res) => {
       image: image},
     });
     if (created) {
-      console.log("Producto CREADO");
-      console.log(product)
-      res.status(200).json(product);
+      res.status(200).send({resp:1, message: "The Product was created successfully "});
     } else {
-      res.status(200).json("El Producto ya existe.");
+      res.status(200).send({resp:0, message: "The Product can´t created "});
     }
   } catch (err) {
     res.status(500).send({
@@ -110,11 +108,21 @@ router.put("/:id", async (req, res) => {
 router.delete("/:id", async (req, res) => {
   try {
     const { id } = req.params;
-    const deleteProduct = await Product.findOne({ where: { id: id } });
-    await deleteProduct.destroy();
-    res
-      .status(200)
-      .send({ message: "The Product was deleted successfully" });
+    const deleteProduct = await Product.findOne({ where: { id: [id] },
+      include: [
+        { model: WareHouse,
+          attributes: ["precio", "cantidad"],
+        }, ],});
+    // console.log(deleteProduct.WareHouses.length);
+     if(deleteProduct.WareHouses.length===0){
+       await deleteProduct.destroy();
+       res
+       .status(200)
+       .send({resp:1, message: "The Product was deleted successfully"});
+     }
+     else{
+      res.send({resp:0, message:"This Product can´t be deletes because, it has Sellers and Stock "})
+     }
   } catch (err) {
     res.status(500).send({
       message: "The Product can´t be deleted",
