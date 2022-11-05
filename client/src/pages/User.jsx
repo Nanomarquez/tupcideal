@@ -11,10 +11,13 @@ function User() {
   const [id, setId] = useState();
   const [user, setUser] = useState({});
 
+  const [image, setImage] = useState('');
+
   useEffect(() => {
     if (usuario) {
       axios.get(`/users/${usuario.email}`).then((res) => {
         setUser(res.data);
+        setImage(res.data.avatar);
         setId(res.data.id);
         if (res.data === "Usuario no encontrado") {
           navigate("/completarform");
@@ -92,10 +95,10 @@ function User() {
       <h1 className="text-3xl text-center mt-5 tracking-tighter font-bold">
         Bienvenido {user.name} {user.last_name}
       </h1>
-      {usuario && <UploadWidget email={usuario.email} />}
+      {usuario && <UploadWidget email={usuario.email} setImage = {setImage}/>}
       {user.avatar && (
         <img
-          src={user.avatar}
+          src={image}
           alt={user.name}
           className="object-cover w-20 h-20"
         />
