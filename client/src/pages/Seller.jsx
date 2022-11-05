@@ -54,9 +54,10 @@ export default function Seller() {
   };
 
   useEffect(() => {
-    axios.get(`/purchase/seller/${product.id_vendedor}`).then(res=>console.log(res.data))
-  }, [usuario,product])
-  
+    axios
+      .get(`/purchase/seller/${product.id_vendedor}`)
+      .then((res) => console.log(res.data));
+  }, [usuario, product]);
 
   let handleChange = (e) => {
     setProduct({
@@ -329,6 +330,7 @@ export default function Seller() {
             </button>
           </div>
         </div>
+        <div className="flex flex-col overflow-y-scroll h-[450px]">
           {filters &&
             filters.map((f) => (
               <div className="flex w-full gap-2 justify-center items-center flex-col border-n-2 p-4 rounded-md shadow-lg">
@@ -369,7 +371,7 @@ export default function Seller() {
                   Modificar
                 </button>
 
-                <form
+                {/* <form
                   onSubmit={onSubmitPut}
                   className={`${
                     refresh === f.id ? "relative h-full" : "opacity-0 -z-10 h-0"
@@ -410,14 +412,13 @@ export default function Seller() {
                     disabled={disabledPut}
                     type="submit"
                     value="Editar producto"
-                  />
-                </form>
+                  /> 
+                </form> */}
               </div>
             ))}
+        </div>
       </article>
-      <article>
-        
-      </article>
+      <article></article>
     </section>
   );
 }

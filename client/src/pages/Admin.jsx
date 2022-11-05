@@ -7,7 +7,7 @@ import { useAuth } from "../context/authContext";
 function Admin() {
   const dispatch = useDispatch();
   const filtered = useSelector((state) => state.products.productsFiltered2);
-  const { signUp } = useAuth();
+  const { signUpTwo , usuario} = useAuth();
   const [users, setUsers] = useState([]);
   const [sellers, setSellers] = useState([]);
   const [error, setError] = useState();
@@ -109,10 +109,9 @@ function Admin() {
     e.preventDefault();
     setError("");
     try {
-      await signUp(seller.email, seller.password);
+      await signUpTwo(seller.email, seller.password,usuario.email)
       await axios
         .post("/sellers", seller)
-        .then((res) => console.log(res.data))
         .catch((e) => console.log(e));
       // navigate("/login");
       swal("Ok!", "Vendedor creado exitosamente", "success");
@@ -127,6 +126,13 @@ function Admin() {
         setError("Usuario ya existente");
       if (error.code === "auth/internal-error") setError("Contraseña invalida");
     }
+    setSeller({
+      store_name: "",
+      adress: "",
+      email: "",
+      phone_number: "",
+      password: "",
+    })
   };
 
   const [disable, setDisable] = useState(true);
