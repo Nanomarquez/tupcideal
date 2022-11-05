@@ -3,6 +3,7 @@ import { useAuth } from "../context/authContext";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
+import UploadWidget from '../components/UploadWidget'
 function User() {
   const { usuario } = useAuth();
 
@@ -92,6 +93,7 @@ function User() {
       <h1 className="text-3xl text-center mt-5 tracking-tighter font-bold">
         Bienvenido {user.name} {user.last_name}
       </h1>
+      <UploadWidget/>
       <div className="flex sm:flex-row flex-col py-10">
         <section className="w-full sm:w-1/2 flex flex-col justify-center items-center gap-10">
           <h1 className="text-3xl text-center tracking-tighter font-bold">

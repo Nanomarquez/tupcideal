@@ -155,6 +155,7 @@ function Mp() {
               <h3 className="text-2xl">Name {e.Product.name}</h3>
               <span className="text-center text-xl">Precio ${e.precio}</span>
               <span className="text-center text-xl"> X {e.quantity}</span>
+              <p className="px-3 py-1 border-b-2 shadow-black shadow drop-shadow-md border-black rounded-md">Vendedor {e.Seller.store_name}</p>
             </div>
           ))}
         </div>

@@ -227,6 +227,28 @@ function CustomPc() {
             </div>
           </div>
         )}
+        {step === 7 && (
+          <div className="flex flex-col items-center justify-center">
+            <h1 className="text-2xl py-5">Elije tu Fuente</h1>
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4">
+              {step7.slice(0, 30)?.map((e, i) => (
+                <div
+                  onClick={() => powerSupply(e)}
+                  key={i}
+                  className="flex m-5 shadow-black hover:shadow-xl cursor-pointer rounded-md flex-col justify-center border-2 items-center w-[200px] h-[200px]"
+                >
+                  <p>{e.Product.name}</p>
+                  <img
+                    src={e.Product.image}
+                    alt={e.Product.name}
+                    className="w-24 h-24 object-contain"
+                  />
+                  <p>${Math.ceil(e.precio)}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
       </section>
     </div>
   );
