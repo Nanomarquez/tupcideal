@@ -78,7 +78,11 @@ module.exports = (sequelize) => {
       isSuperAdmin:{
         type: DataTypes.BOOLEAN,
         defaultValue: false
-      }
+      },
+      avatar: {
+        type: DataTypes.STRING,
+        defaultValue: "http://www.elblogdecha.org/wp-content/uploads/2021/06/perfil-vacio.jpg"
+      },
     },
     {
       timestamps: true,
