@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import Backdrop from "./Backdrop";
 import { useAuth } from "../../context/authContext";
-import { deleteProductToShoppingCart } from "../../redux/actions";
+import { deleteProductToShoppingCart , addProductToShoppingCart  } from "../../redux/actions";
 import { useSelector, useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 const dropIn = {
@@ -66,7 +66,7 @@ function Modal({ handleClose }) {
                 alt={p.Product.name}
               
               />
-              <span className="bg-white rounded-full absolute  left-2  w-9 h-9 text-2xl text-center"> X {p.quantity}</span>
+              <span onClick={()=>dispatch(addProductToShoppingCart(p))} className="bg-white rounded-full absolute flex cursor-pointer justify-center items-center left-2  w-10 h-10 text-2xl text-center border-2"> <span className="absolute flex items-center justify-center text-5xl w-10 rounded-full h-10 bg-black text-white opacity-0 hover:opacity-100 duration-500">+</span>x{p.quantity} </span>
               <h3 className="text-2xl">Name {p.Product.name}</h3>
               <span className="text-center text-xl">Precio ${p.precio}</span>
               
@@ -81,7 +81,7 @@ function Modal({ handleClose }) {
         )}
         {productsCart.length ? (
           <div className="container text-right block">
-            <div className="font-bold">
+            <div className="font-bold text-2xl">
               Total: <span>{totalPrice}</span>{" "}
             </div>
           </div>

@@ -56,9 +56,11 @@ function User() {
       .then((res) => setInfo(res.data));
   }
   async function getCompleteInfo() {
-    return await axios
-      .get(`/purchase/${todasLasCompras[0].id}`)
-      .then((res) => setInfoCompleta(res.data));
+    if (todasLasCompras.length > 0) {
+      return await axios
+        .get(`/purchase/${todasLasCompras[0].id}`)
+        .then((res) => setInfoCompleta(res.data));
+    }
   }
 
   const [review, setReview] = useState([]);
@@ -68,7 +70,6 @@ function User() {
       .get(`/review/user/${id}`)
       .then((res) => setReview(res.data));
   }
-
   useEffect(() => {
     if (id) {
       getReview();
@@ -83,7 +84,9 @@ function User() {
   useEffect(() => {
     getCompleteInfo();
   }, [todasLasCompras]);
-  console.log(review)
+
+  console.log(review);
+
   return (
     <>
       <h1 className="text-3xl text-center mt-5 tracking-tighter font-bold">
@@ -178,8 +181,12 @@ function User() {
         </section>
       </div>
       <div className="w-full h-[300px]">
-        <h1 className="text-center text-4xl">{review.length > 0 ? "Estas son tus compras" : "No hiciste ninguna compra aún"}</h1>
-        {review?.map((e,i)=>(
+        <h1 className="text-center text-4xl">
+          {review.length > 0
+            ? "Estos son tus comentarios en productos"
+            : "No hiciste ningun comentario aún"}
+        </h1>
+        {review?.map((e, i) => (
           <div key={i}>
             <p>{e.comment}</p>
             <p>{e.rating}</p>
