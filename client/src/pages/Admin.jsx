@@ -3,6 +3,9 @@ import axios from "axios";
 import { useDispatch, useSelector } from "react-redux";
 import { getFiltered2 } from "../redux/actions";
 import { useAuth } from "../context/authContext";
+import swal from 'sweetalert';
+import "../components/NavBar/Signin.css"
+
 
 function Admin() {
   const dispatch = useDispatch();
@@ -32,12 +35,33 @@ function Admin() {
 
   function axion() {
     axios.get("/users").then((res) => {
-      setUsers(res.data.filter((e) => e.isAdmin !== true));
+      let filtrados=(res.data.filter((e) => e.isAdmin !== true));
+      filtrados.sort(function (a, b) {
+        if (a.name > b.name) {
+          return 1;
+        }
+        if (a.name < b.name) {
+          return -1;
+        }
+        // a must be equal to b
+        return 0;
+      });
+      setUsers(filtrados)
     });
   }
 
   function axionSellers() {
     axios.get("/sellers").then((res) => {
+      res.data.sort(function (a, b) {
+        if (a.store_name > b.store_name) {
+          return 1;
+        }
+        if (a.store_name < b.store_name) {
+          return -1;
+        }
+        
+        return 0;
+      });
       setSellers(res.data);
     });
   }
@@ -90,7 +114,12 @@ function Admin() {
   };
 
   let onClickDel = async (e) => {
-    await axios.delete(`/products/${component.id}`);
+    const answer= await axios.delete(`/products/${component.id}`);
+    if(answer.data.resp===1){
+      swal("Great",answer.data.message,"success");
+    }else{
+      swal("Sorry",answer.data.message,"error");
+    }
     axion();
   };
 
@@ -98,11 +127,16 @@ function Admin() {
     await axios.put(`/products/${component.Product.id}`);
     axion();
   };
-
-  const onSubmit = (e) => {
+  
+  const onSubmit = async (e) => {
     e.preventDefault();
-    axios.post("/products", product);
-    console.log("Soy el producto", product);
+    const resp= await axios.post("/products", product);
+    console.log(resp);
+    if(resp.data.resp===0){
+      swal("Great",resp.data.message,"error");
+    }else{
+      swal("Great","The product was created successfully","success");
+    }
     axion();
   };
   const onSubmitSeller = async (e) => {
