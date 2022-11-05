@@ -39,7 +39,7 @@ import axios from "axios";
     
 
   return (
-   <>
+   <div className="flex gap-5">
       
    {  seller.isSeller && currentUser &&
    <Link to="/seller">
@@ -78,7 +78,7 @@ import axios from "axios";
    
    
    
-    </> 
+    </div> 
   );
 }
 
