@@ -59,7 +59,7 @@ function Admin() {
         if (a.store_name < b.store_name) {
           return -1;
         }
-        // a must be equal to b
+        
         return 0;
       });
       setSellers(res.data);
