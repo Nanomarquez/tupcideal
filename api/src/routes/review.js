@@ -1,6 +1,6 @@
 const { Router } = require("express");
 const router = Router();
-const { Review, WareHouse, User } = require("../db.js");
+const { Review, WareHouse, User , Product } = require("../db.js");
 
 router.get("/product/:productId", async (req, res) => {
   const { productId } = req.params;
@@ -29,6 +29,11 @@ router.get("/user/:userId", async (req, res) => {
       },
       {
         model: WareHouse,
+        include: [
+          {
+            model: Product
+          }
+        ]
       },
     ],
   });
@@ -94,3 +99,4 @@ router.delete("/:id", async (req, res) => {
 });
 
 module.exports = router;
+

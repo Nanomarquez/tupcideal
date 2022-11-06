@@ -156,7 +156,7 @@ function Productos() {
                 className="outline-none"
                 name="Ordenar"
                 onChange={handleSort}
-              >
+              > <option value="---------">--------</option>
                 <option value="Ascendente">Ascendente </option>
                 <option value="Descendente">Descendente </option>
               </select>
@@ -176,7 +176,7 @@ function Productos() {
           {currentProducts.map((e, i) => (
             <div
               key={i}
-              className="flex w-full mt-5 rounded-lg flex-col sm:flex-row p-5 items-center shadow-xl overflow-clip"
+              className={`flex w-full mt-5 rounded-lg flex-col sm:flex-row p-5 items-center shadow-xl overflow-clip ${e.cantidad === 0 ? "bg-gray-300/50 line-through" : ""}`}
             >
               {" "}
               <div className="flex items-center justify-center">

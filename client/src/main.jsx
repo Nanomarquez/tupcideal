@@ -15,8 +15,6 @@ if(import.meta.env.MODE === 'production'){
   axios.defaults.baseURL = 'https://tupcideal-production-5005.up.railway.app/'
 }
 
-
-console.log(import.meta.env.MODE)
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <AuthProvider>

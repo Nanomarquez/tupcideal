@@ -22,7 +22,7 @@ const UploadWidget = ({email, setImage}) => {
   },[usuario])
   return (
 
-      <button className="px-4 py-1 bg-sky-500 rounded-md text-white font-bold tracking-tighter hover:bg-sky-400 duration-300" onClick={()=> widgetRef.current.open()}>Upload</button>  
+      <button className="px-4 py-1 bg-sky-500 rounded-md text-white font-bold tracking-tighter hover:bg-sky-400 duration-300" onClick={()=> widgetRef.current.open()}>Cambiar avatar</button>  
 
   )
 }

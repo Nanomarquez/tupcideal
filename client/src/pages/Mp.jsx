@@ -2,6 +2,7 @@ import axios from "axios";
 import React, { useState } from "react";
 import { useAuth } from "../context/authContext";
 import { useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 
 function Mp() {
   const { cart } = useSelector((state) => state.products);
@@ -147,15 +148,25 @@ function Mp() {
               key={i}
               className="flex flex-col p-5 gap-5 justify-center items-center border-2 m-5 text-center shadow-md rounded-lg"
             >
-              <img
-                className="object-contain h-36 w-36"
-                src={e.Product.image}
-                alt={e.Product.name}
-              />
+              {" "}
+              <div className="flex items-center justify-center">
+                <Link to={`/productos/search/${e.id}`}>
+                  <div className="text-white duration-500 rounded bg-gray-700/50 text-2xl flex hover:opacity-100 cursor-pointer opacity-0 justify-center items-center z-50 h-24 w-36 -translate-y-12 translate-x-2 absolute text-center">
+                    Ver más
+                  </div>
+                </Link>
+                <img
+                  className="object-contain h-36 w-36"
+                  src={e.Product.image}
+                  alt={e.Product.name}
+                />
+              </div>
               <h3 className="text-2xl">Name {e.Product.name}</h3>
               <span className="text-center text-xl">Precio ${e.precio}</span>
               <span className="text-center text-xl"> X {e.quantity}</span>
-              <p className="px-3 py-1 border-b-2 shadow-black shadow drop-shadow-md border-black rounded-md">Vendedor {e.Seller.store_name}</p>
+              <p className="px-3 py-1 border-b-2 shadow-black shadow drop-shadow-md border-black rounded-md">
+                Vendedor {e.Seller.store_name}
+              </p>
             </div>
           ))}
         </div>

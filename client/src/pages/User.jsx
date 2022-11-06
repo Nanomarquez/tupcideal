@@ -5,19 +5,16 @@ import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
 import UploadWidget from "../components/UploadWidget";
 function User() {
-  const { usuario } = useAuth();
+  const { usuario , resetPassword } = useAuth();
 
   const navigate = useNavigate();
   const [id, setId] = useState();
   const [user, setUser] = useState({});
 
-  const [image, setImage] = useState('');
-
   useEffect(() => {
     if (usuario) {
       axios.get(`/users/${usuario.email}`).then((res) => {
         setUser(res.data);
-        setImage(res.data.avatar);
         setId(res.data.id);
         if (res.data === "Usuario no encontrado") {
           navigate("/completarform");
@@ -25,7 +22,6 @@ function User() {
       });
     }
   }, [usuario]);
-  
 
   const [input, setInput] = useState({
     name: user.name,
@@ -90,19 +86,43 @@ function User() {
     getCompleteInfo();
   }, [todasLasCompras]);
 
+  const [name, setName] = useState([]);
+
+  useEffect(()=>{
+    const names = []
+      review.forEach((e)=>{
+        axios.get(`/warehouse/product/${e.WareHouse.ProductId}`)
+        .then(res=>names.push(res.data[0].Product.name))
+      })
+    setName(names)
+  },[])
+
+  const handleReset = () => {
+    let email = prompt("Escribe tu email para enviarte el link")
+    if(email){
+      resetPassword(email)
+    }
+  }
   return (
     <>
-      <h1 className="text-3xl text-center mt-5 tracking-tighter font-bold">
-        Bienvenido {user.name} {user.last_name}
-      </h1>
-      {usuario && <UploadWidget email={usuario.email} setImage = {setImage}/>}
-      {user.avatar && (
-        <img
-          src={image}
-          alt={user.name}
-          className="object-cover w-20 h-20"
-        />
-      )}
+      <div className="flex flex-col">
+        {" "}
+        <h1 className="text-3xl text-center mt-5 tracking-tighter font-bold">
+          Bienvenido {user.name} {user.last_name}
+        </h1>
+        <div className="flex justify-center items-center gap-5">
+          {user.avatar && (
+            <img
+            src={user.avatar}
+            alt={user.name}
+            className="object-cover w-24 h-24 rounded-md"
+            />
+            )}
+          {usuario && <UploadWidget email={usuario.email} />}
+            <button className="cursor-pointer bg-gray-400 px-2 py-1 rounded-md hover:text-white duration-200" onClick={handleReset}>Cambiar contraseña</button>
+        </div>
+      </div>
+
       <div className="flex sm:flex-row flex-col py-10">
         <section className="w-full sm:w-1/2 flex flex-col justify-center items-center gap-10">
           <h1 className="text-3xl text-center tracking-tighter font-bold">
@@ -197,12 +217,16 @@ function User() {
             ? "Estos son tus comentarios en productos"
             : "No hiciste ningun comentario aún"}
         </h1>
-        {review?.map((e, i) => (
-          <div key={i}>
-            <p>{e.comment}</p>
-            <p>{e.rating}</p>
-          </div>
-        ))}
+        <div className="gap-5 w-full overflow-y-scroll h-[250px] flex flex-col">
+          {review?.map((e, i) => (
+            <div key={i} className="flex flex-col items-center justify-center border-2">
+              <h1 className="flex flex-col items-center justify-center">Producto: <span>{e.WareHouse.Product.name}</span></h1>
+              <p>Comentario: {e.comment}</p>
+              <p>Rating: {e.rating}</p>
+              <img src={e.WareHouse.Product.image} className="w-24 h-24" alt={e.WareHouse.Product.name} />
+            </div>
+          ))}
+        </div>
       </div>
     </>
   );
