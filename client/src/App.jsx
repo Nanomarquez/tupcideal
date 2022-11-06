@@ -14,6 +14,7 @@ import Admin from './pages/Admin'
 import Superadmin from './pages/Superadmin'
 import CustomPc from './pages/CustomPc'
 import Seller from "./pages/Seller";
+import AboutUs from "./pages/AboutUs";
 function App() {
 
   return (
@@ -32,6 +33,7 @@ function App() {
         <Route exact path="/admin" element={<Admin />} />
         <Route exact path="/superadmin" element={<Superadmin />} />
         <Route exact path="/user" element={<User/>} />
+        <Route exact path="/equipo" element={<AboutUs/>} />
         <Route exact path="/seller" element={<Seller/>} />
         <Route exact path="/productos/search/:id" element={<ProductosSearch />} />
       </Routes>
