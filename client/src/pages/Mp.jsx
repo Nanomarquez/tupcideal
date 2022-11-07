@@ -2,6 +2,7 @@ import axios from "axios";
 import React, { useState } from "react";
 import { useAuth } from "../context/authContext";
 import { useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 
 function Mp() {
   const { cart } = useSelector((state) => state.products);
@@ -15,8 +16,9 @@ function Mp() {
   console.log(cart);
 
   let cartSum = 0;
-  cart.map((c)=> { cartSum = cartSum + c.quantity
-  })
+  cart.map((c) => {
+    cartSum = cartSum + c.quantity;
+  });
 
   const [button, setButton] = useState("");
 
@@ -47,10 +49,10 @@ function Mp() {
       .then((response) => setButton(response.data));
   };
   let totalPrice = 0;
-  cart?.map((e) => (totalPrice =  totalPrice + e.precio * e.quantity));
+  cart?.map((e) => (totalPrice = totalPrice + e.precio * e.quantity));
   return (
-    <div className="h-screen flex sm:flex-row flex-col">
-      <section className="w-full flex-col gap-5 sm:w-1/2 h-screen flex items-center justify-center">
+    <div className="flex sm:flex-row flex-col">
+      <section className="w-full flex-col gap-5 sm:w-1/2 flex items-center justify-center">
         <h1 className="text-3xl">Direccion de envio</h1>
         <form className="flex flex-col gap-5" onSubmit={handleSubmit}>
           <input
@@ -118,10 +120,12 @@ function Mp() {
             value={input.apartment}
           />
           {button && (
-
-              <a target="_BLANK" className="h-[90px] w-[300px]" id="mp-button" href={button}></a>
-
-
+            <a
+              target="_BLANK"
+              className="h-[90px] w-[300px]"
+              id="mp-button"
+              href={button}
+            ></a>
           )}
           <div className="text-center">
             <button
@@ -133,26 +137,39 @@ function Mp() {
           </div>
         </form>
       </section>
-      <section className="w-full sm:w-1/2 overflow-y-scroll h-screen">
+      <section className="w-full sm:w-1/2">
         <div className="flex text-2xl items-center justify-center gap-10 mt-5">
           <h1>Productos: {cartSum}</h1>
           <h1>Total: {totalPrice}</h1>
         </div>
-        {cart?.map((e, i) => (
-          <div
-            key={i}
-            className="flex p-5 gap-5 justify-center items-center border-2 m-5 text-center shadow-md rounded-lg"
-          >
-            <img
-              className="object-contain h-36 w-36"
-              src={e.Product.image}
-              alt={e.Product.name}
-            />
-            <h3 className="text-2xl">Name {e.Product.name}</h3>
-            <span className="text-center text-xl">Precio ${e.precio}</span>
-            <span className="text-center text-xl"> X {e.quantity}</span>
-          </div>
-        ))}
+        <div className="overflow-y-scroll w-full h-[400px] border mt-2">
+          {cart?.map((e, i) => (
+            <div
+              key={i}
+              className="flex flex-col p-5 gap-5 justify-center items-center border-2 m-5 text-center shadow-md rounded-lg"
+            >
+              {" "}
+              <div className="flex items-center justify-center">
+                <Link to={`/productos/search/${e.id}`}>
+                  <div className="text-white duration-500 rounded bg-gray-700/50 text-2xl flex hover:opacity-100 cursor-pointer opacity-0 justify-center items-center z-50 h-24 w-36 -translate-y-12 translate-x-2 absolute text-center">
+                    Ver más
+                  </div>
+                </Link>
+                <img
+                  className="object-contain h-36 w-36"
+                  src={e.Product.image}
+                  alt={e.Product.name}
+                />
+              </div>
+              <h3 className="text-2xl">Name {e.Product.name}</h3>
+              <span className="text-center text-xl">Precio ${e.precio}</span>
+              <span className="text-center text-xl"> X {e.quantity}</span>
+              <p className="px-3 py-1 border-b-2 shadow-black shadow drop-shadow-md border-black rounded-md">
+                Vendedor {e.Seller.store_name}
+              </p>
+            </div>
+          ))}
+        </div>
       </section>
     </div>
   );

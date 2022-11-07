@@ -5,16 +5,32 @@ import { getFiltered2 } from "../redux/actions";
 import { useAuth } from "../context/authContext";
 import swal from 'sweetalert';
 import "../components/NavBar/Signin.css"
-
+import { useNavigate } from "react-router-dom";
 
 function Admin() {
   const dispatch = useDispatch();
   const filtered = useSelector((state) => state.products.productsFiltered2);
-  const { signUpTwo , usuario} = useAuth();
+  const { signUpTwo , usuario } = useAuth();
   const [users, setUsers] = useState([]);
   const [sellers, setSellers] = useState([]);
   const [error, setError] = useState();
   const [component, setComponent] = useState({});
+  const navigate = useNavigate()
+  function isAdmin(){
+      axios.get(`/users/${usuario.email}`).then(res=>{
+        if(!res.data.isAdmin){
+          navigate('/')
+        };
+      }) 
+  }
+
+  useEffect(()=>{
+    if(!usuario){
+      navigate('/')
+    }else if(usuario){
+      isAdmin()
+    }
+  },[usuario])
 
   const [product, setProduct] = useState({
     name: "",
@@ -123,10 +139,10 @@ function Admin() {
     axion();
   };
 
-  let onClickEdit = async (e) => {
-    await axios.put(`/products/${component.Product.id}`);
-    axion();
-  };
+  // let onClickEdit = async (e) => {
+  //   await axios.put(`/products/${component.Product.id}`);
+  //   axion();
+  // };
   
   const onSubmit = async (e) => {
     e.preventDefault();
@@ -228,7 +244,7 @@ function Admin() {
               ))}
           </div>
         </article>
-        <article class="seller">
+        <article className="seller">
           <h1 className="p-4 text-2xl">Tabla de vendedores</h1>
           <div className="flex flex-col gap-5">
             {sellers &&
@@ -351,16 +367,16 @@ function Admin() {
               >
                 Eliminar
               </button>
-              <button
+              {/* <button
                 className="border-2 bg-gray-400 rounded p-1 justify-center"
                 onClick={onClickEdit}
               >
                 Editar
-              </button>
+              </button> */}
             </div>
           </div>
         </article>
-        <article class="create-seller  bg-gray-700 py-5">
+        <article className="create-seller  bg-gray-700 py-5">
           <div className="w-min mx-auto bg-gray-300 px-20 rounded py-10 my-10">
             <h1 className="mb-6 text-2xl">Crear Vendedor</h1>
             <form
@@ -391,8 +407,7 @@ function Admin() {
                 <label className="flex flex-col justify-between">
                   Email:
                   <input
-                    className="border-b-2 border-black rounded-md outline-none"
-                    Style="text-transform:lowercase"
+                    className="border-b-2 border-black lowercase rounded-md outline-none"
                     type="text"
                     name="email"
                     value={seller.email}

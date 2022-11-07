@@ -75,9 +75,12 @@ export const productsSlice = createSlice({
       const finder = cart.find((c)=> {  return c.id === action.payload.id })
       if(finder === undefined){
         state.cart = [...state.cart, action.payload];
-      }else{
-        finder.quantity = finder.quantity +1 ;
-       
+      }
+      else if(finder.quantity === action.payload.cantidad){
+        return 
+      }
+      else{
+        finder.quantity = finder.quantity +1 ;  
       }
       
     },
