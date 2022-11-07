@@ -29,10 +29,10 @@ function AboutUs() {
      
      <ul className="flex flex-row justify-around mt-4">
        <li >
-       <a  href={e.linkedin}  ><FontAwesomeIcon className="h-10 w-10   group-hover:translate-y-6 duration-500 transition-translate" icon={faLinkedin} ></FontAwesomeIcon></a>
+       <a  href={e.linkedin} target="_BLANK" ><FontAwesomeIcon className="h-10 w-10   group-hover:translate-y-6 duration-500 transition-translate" icon={faLinkedin} ></FontAwesomeIcon></a>
        </li>
        <li>
-       <a href={e.github} className="Github"><FontAwesomeIcon className=" h-10 w-10  group-hover:translate-y-6 duration-500 transition-translate" icon={faGithub} ></FontAwesomeIcon></a>
+       <a href={e.github} target="_BLANK"  className="Github"><FontAwesomeIcon className=" h-10 w-10  group-hover:translate-y-6 duration-500 transition-translate" icon={faGithub} ></FontAwesomeIcon></a>
        </li>
      </ul>
    </div>
