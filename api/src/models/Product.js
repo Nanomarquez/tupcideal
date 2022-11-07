@@ -11,13 +11,10 @@ module.exports = (sequelize) => {
         primaryKey: true,
       },
       categories: {
-        type: DataTypes.ENUM('Case', 'CPU', 'InternalHardDrive', 'Memory', 'Motherboard', 'PowerSupply', 'VideoCard'),
+        type: DataTypes.ENUM('Case', 'CPU', 'InternalHardDrive', 'Memory', 'Motherboard', 'PowerSupply', 'VideoCard','Keyboard', 'Monitor', 'Mouse'),
       },
       name: {
         type: DataTypes.STRING,
-      },
-      price_usd: {
-        type: DataTypes.FLOAT,
       },
       rating: {
         type: DataTypes.INTEGER,
@@ -35,6 +32,9 @@ module.exports = (sequelize) => {
         type: DataTypes.BOOLEAN,
         defaultValue: false,
       },
+      brand: {
+        type: DataTypes.STRING,
+      }
     },
     {
       timestamps: false,
