@@ -1,2263 +1,3962 @@
 [
- {
-   "id": "27348bb6-85d1-4fde-8600-9bd31459b903",
-   "precio": 5420,
-   "cantidad": 85,
-   "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
-   "ProductId": "001fa870-0975-499e-885a-2518483bcac9"
- },
- {
-   "id": "34bf51b8-b3dd-40bb-add2-ae0347bfe6f1",
-   "precio": 4090,
-   "cantidad": 82,
-   "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
-   "ProductId": "013c5bec-ff89-4654-aac5-246f35b42be0"
- },
- {
-   "id": "58e4ab38-459b-45d9-b3fb-ac8b6163a3d2",
-   "precio": 3860,
-   "cantidad": 17,
-   "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
-   "ProductId": "0144f0eb-0c4d-4766-b034-7af5428fb222"
- },
- {
-   "id": "7022eee7-d12f-4910-ac09-57d343d73a23",
-   "precio": 8120,
-   "cantidad": 38,
-   "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
-   "ProductId": "016bcb67-c146-459f-b7d6-b96e4e42a7e8"
- },
- {
-   "id": "572290f3-3df4-4ed7-82f2-0e985eb7e100",
-   "precio": 8070,
-   "cantidad": 31,
-   "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
-   "ProductId": "01b4c4fc-67ad-401b-87ca-649c82f9504d"
- },
- {
-   "id": "fffee593-cf2f-40cc-8143-d76a64a56556",
-   "precio": 350,
-   "cantidad": 86,
-   "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
-   "ProductId": "020a1c1f-df36-46a1-8be5-5e4715eeb6e2"
- },
- {
-   "id": "314b7b25-4054-42cd-b6d8-ee65a08d77a4",
-   "precio": 1690,
-   "cantidad": 80,
-   "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
-   "ProductId": "02481610-e2df-4069-8d48-0e67daa2921a"
- },
- {
-   "id": "59048bf6-1e52-4bdf-8caf-403d06fb5ed4",
-   "precio": 8150,
-   "cantidad": 46,
-   "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
-   "ProductId": "027577f0-8a95-439c-b29a-68b9a57794fa"
- },
- {
-   "id": "cf45f8f3-e9b0-4363-b17f-b64407e860a1",
-   "precio": 3650,
-   "cantidad": 19,
-   "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
-   "ProductId": "0280af23-43b8-49b1-9162-1aa1084fec5b"
- },
- {
-   "id": "674c2fd1-12e3-48cf-98c2-a33e32b28b3d",
-   "precio": 850,
-   "cantidad": 85,
-   "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
-   "ProductId": "04341635-cb34-44cf-a86d-09b6d2bd4e41"
- },
- {
-   "id": "6920f27d-b2f6-42cd-afb1-be9f512da0f3",
-   "precio": 2400,
-   "cantidad": 28,
-   "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
-   "ProductId": "055f843d-acc9-4914-8e84-1afcbee6507b"
- },
- {
-   "id": "ad2fb6c0-6d6d-48a8-ac82-f1e8b0927ea5",
-   "precio": 4470,
-   "cantidad": 38,
-   "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
-   "ProductId": "05a7894a-1890-40cf-9cc0-9b26718ae4e1"
- },
- {
-   "id": "ff7c05fa-89ff-4631-b837-6c74688fb246",
-   "precio": 7200,
-   "cantidad": 85,
-   "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
-   "ProductId": "05edad94-1353-4ad1-83f4-f0c35db943f6"
- },
- {
-   "id": "f7e5c50a-96a5-4738-b75b-9ca1bef82555",
-   "precio": 3600,
-   "cantidad": 18,
-   "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
-   "ProductId": "06b793bb-0c6a-491a-964c-f4a6ebc74ded"
- },
- {
-   "id": "6c938f9b-1659-49f9-b775-c16a719bb9c4",
-   "precio": 8160,
-   "cantidad": 48,
-   "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
-   "ProductId": "06f76413-a5dc-49c5-94a4-a4b010b7658d"
- },
- {
-   "id": "62f8f044-d6ce-46b9-9771-e65e0fe492d0",
-   "precio": 9390,
-   "cantidad": 19,
-   "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
-   "ProductId": "07e390a3-1998-4504-bb05-965e9416e9bc"
- },
- {
-   "id": "4dd1b331-64c8-496a-b236-1da063d18ce7",
-   "precio": 1010,
-   "cantidad": 78,
-   "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
-   "ProductId": "0897507d-9a09-47b7-afd8-53fa7456a67a"
- },
- {
-   "id": "c65f4c10-ab51-4bf2-9eb9-4f322f5d04b1",
-   "precio": 8090,
-   "cantidad": 89,
-   "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
-   "ProductId": "099a5471-7e8e-4771-8df4-8898e1574816"
- },
- {
-   "id": "f2cbb7cd-32b5-4d90-8f1a-8d60d8ad498a",
-   "precio": 5070,
-   "cantidad": 42,
-   "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
-   "ProductId": "09a73fbc-ef47-43d1-ad2d-81eb0aed9d06"
- },
- {
-   "id": "f25a9a03-5fa6-472d-a0ea-fb0ca8ba98e2",
-   "precio": 4130,
-   "cantidad": 41,
-   "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
-   "ProductId": "09d2d07b-d24b-4a3e-922a-b85ed9e82ca5"
- },
- {
-   "id": "63b89204-931a-4c50-8a45-31403a4ad58a",
-   "precio": 4540,
-   "cantidad": 84,
-   "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
-   "ProductId": "0a382237-ddb9-40c8-8da9-2ee46e9e13e9"
- },
- {
-   "id": "e1b85a2b-22ee-42f1-9ede-21b16fc0aa48",
-   "precio": 8690,
-   "cantidad": 54,
-   "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
-   "ProductId": "0bc2577b-9b4f-416a-9877-a627072763b1"
- },
- {
-   "id": "178438a2-5f7a-4645-9283-137fc9b660b9",
-   "precio": 3090,
-   "cantidad": 81,
-   "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
-   "ProductId": "0c4970b2-10a8-4625-93f9-961f18faf7df"
- },
- {
-   "id": "9e3bea67-ae67-401f-99fa-495b277c6fd3",
-   "precio": 8560,
-   "cantidad": 48,
-   "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
-   "ProductId": "0e17d69e-4c15-4709-b36e-4473bb8cdb33"
- },
- {
-   "id": "a36f752e-7f5b-4ec6-92ce-98e8df80d103",
-   "precio": 8720,
-   "cantidad": 13,
-   "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
-   "ProductId": "0ec81dda-303e-42ab-94c6-444b962de20d"
- },
- {
-   "id": "59adfe26-eb67-4d42-b117-2461de0ba5dc",
-   "precio": 4510,
-   "cantidad": 57,
-   "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
-   "ProductId": "125347ee-eba3-4efb-8d95-5789eeb5aff4"
- },
- {
-   "id": "dea6fe5c-da0c-4294-aa6f-369a555a5b2e",
-   "precio": 3300,
-   "cantidad": 65,
-   "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
-   "ProductId": "138963b4-735e-43df-b632-c927423e5d77"
- },
- {
-   "id": "5c7ff807-446b-4fb0-9f89-2e80cd33d5fd",
-   "precio": 9300,
-   "cantidad": 77,
-   "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
-   "ProductId": "158e7187-7c31-4dfa-920b-71379410d8fd"
- },
- {
-   "id": "1d59acca-4778-4e2e-83a9-1986e12a33d2",
-   "precio": 1700,
-   "cantidad": 53,
-   "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
-   "ProductId": "15c0d7d0-c5a3-414d-a567-1e71836de56c"
- },
- {
-   "id": "f70ff484-93a7-4c2b-8192-e7407ebf345a",
-   "precio": 8440,
-   "cantidad": 22,
-   "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
-   "ProductId": "185a4a34-0c99-4101-b052-04f92dfbe91f"
- },
- {
-   "id": "b9c700f0-def9-43db-8f70-8df731045a07",
-   "precio": 4050,
-   "cantidad": 3,
-   "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
-   "ProductId": "190ffb43-721c-4cb8-af73-5178d629e9ea"
- },
- {
-   "id": "c0637d0d-a38d-4eaf-8442-6d05ad8b7823",
-   "precio": 3790,
-   "cantidad": 97,
-   "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
-   "ProductId": "1ac1d8a8-6660-49cb-8c3c-a9e51e391523"
- },
- {
-   "id": "21a5c665-2aa0-41b1-af56-5c9608c2ad57",
-   "precio": 4440,
-   "cantidad": 23,
-   "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
-   "ProductId": "1b07f61f-f0d0-4db3-84aa-70750ecccb1b"
- },
- {
-   "id": "cc7b2627-8a41-4ce7-8a32-d592355d0dd5",
-   "precio": 8780,
-   "cantidad": 30,
-   "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
-   "ProductId": "212ca275-ffc8-47f4-9f7b-3c6d827b43db"
- },
- {
-   "id": "1f17588a-62e8-4c2d-b40a-217c60d845fa",
-   "precio": 3480,
-   "cantidad": 88,
-   "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
-   "ProductId": "21f8f459-8fcc-4dd1-a48f-1a46853e1fb8"
- },
- {
-   "id": "c5646754-d2f7-481b-a039-d933052b0487",
-   "precio": 2460,
-   "cantidad": 68,
-   "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
-   "ProductId": "2561a732-9f47-45a8-805c-a306bbfea562"
- },
- {
-   "id": "7169d755-fadf-4024-a57d-f5ca6269eccc",
-   "precio": 4510,
-   "cantidad": 96,
-   "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
-   "ProductId": "2597e882-a144-4c7b-913d-6518b15106da"
- },
- {
-   "id": "ab8e0bfe-2e1a-4b72-84d2-bf30a76b66a6",
-   "precio": 4510,
-   "cantidad": 40,
-   "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
-   "ProductId": "27ec11a1-238a-4ef2-92e2-5538783ac525"
- },
- {
-   "id": "f1b10496-3198-4ff0-92ef-e1337dc6936b",
-   "precio": 4060,
-   "cantidad": 94,
-   "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
-   "ProductId": "285941c4-8ee8-42a8-ad47-6a7fb6395d2a"
- },
- {
-   "id": "993d629c-69b7-4660-816f-dd22061797ef",
-   "precio": 4810,
-   "cantidad": 50,
-   "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
-   "ProductId": "2d0bc514-f188-445b-b751-ac0fe226f1b3"
- },
- {
-   "id": "6e0ccb81-9875-4572-a097-c49e125db622",
-   "precio": 2750,
-   "cantidad": 96,
-   "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
-   "ProductId": "2d5f895a-325f-40d8-b1ba-5dca65701505"
- },
- {
-   "id": "7817babe-b2cf-43e0-b105-553f2615187e",
-   "precio": 5400,
-   "cantidad": 21,
-   "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
-   "ProductId": "2ef2e3c3-a1b9-49d8-b913-8f434fa2172a"
- },
- {
-   "id": "2c243782-9b12-497d-b6d7-c6c0b6527acf",
-   "precio": 6440,
-   "cantidad": 82,
-   "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
-   "ProductId": "2f2e75b1-c2ed-4b54-9583-61e91063d670"
- },
- {
-   "id": "faf55e2d-c922-446c-a2dc-93ae01b2d630",
-   "precio": 8970,
-   "cantidad": 93,
-   "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
-   "ProductId": "2f51756d-6a65-4713-ad42-e171721849da"
- },
- {
-   "id": "e34c5910-f600-49a6-8d9e-ad281b6b080e",
-   "precio": 9730,
-   "cantidad": 53,
-   "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
-   "ProductId": "2f6e34ed-aaaa-49d2-9f0b-7454f9dc30b5"
- },
- {
-   "id": "64ad703c-3277-4fa8-8bf9-6a32b49a2aae",
-   "precio": 6390,
-   "cantidad": 46,
-   "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
-   "ProductId": "2fbc21ae-bee4-4a53-bd1e-f89b6ba27599"
- },
- {
-   "id": "acfc5e40-0548-4926-ba36-f9e2f3404c5d",
-   "precio": 5220,
-   "cantidad": 98,
-   "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
-   "ProductId": "3095f92b-bbf9-44c6-af31-5893ecc29b09"
- },
- {
-   "id": "7bd37998-230a-46c4-9785-76447dec17ed",
-   "precio": 9250,
-   "cantidad": 18,
-   "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
-   "ProductId": "3157ebb4-18fb-44d7-b45d-24c615a50c59"
- },
- {
-   "id": "cda52eb2-3533-41cb-843d-4d80a6bec08f",
-   "precio": 70,
-   "cantidad": 53,
-   "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
-   "ProductId": "33a04b2a-07dc-4de4-a905-d57fd4760759"
- },
- {
-   "id": "9c588a2e-3265-41d8-8f67-e2be00da8ac7",
-   "precio": 6610,
-   "cantidad": 9,
-   "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
-   "ProductId": "342ab6ee-8e7a-4144-8976-17e015ce7705"
- },
- {
-   "id": "49ff9e55-e0b3-4dda-aa1d-5b5dd0bf02e9",
-   "precio": 900,
-   "cantidad": 40,
-   "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
-   "ProductId": "343716d8-f132-4ef2-af07-52c366b8b75b"
- },
- {
-   "id": "e95e03a3-7cf6-4efd-8db3-382192fc4d8a",
-   "precio": 9800,
-   "cantidad": 33,
-   "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
-   "ProductId": "344ab518-4a95-4896-8b0a-34c1b8217bdb"
- },
- {
-   "id": "290ceaa4-d557-4d2e-a7df-ea2f612ef4e6",
-   "precio": 3890,
-   "cantidad": 59,
-   "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
-   "ProductId": "34a8453d-f693-4564-a910-c0b51df72c8a"
- },
- {
-   "id": "c412ce8e-3b21-49e5-8302-3fc66d66bafc",
-   "precio": 6310,
-   "cantidad": 100,
-   "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
-   "ProductId": "34fc1447-8cf7-4180-9233-abe5d4bb5644"
- },
- {
-   "id": "35a6a5bd-6fdf-423c-9bf1-f4084481221a",
-   "precio": 6850,
-   "cantidad": 74,
-   "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
-   "ProductId": "35c0ad97-ff54-4fe5-9909-d743281cfd4b"
- },
- {
-   "id": "80a00c88-eddf-496c-88eb-6b8234abf6c7",
-   "precio": 9890,
-   "cantidad": 95,
-   "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
-   "ProductId": "377966d3-b6a1-41fb-85ab-2ad1c814d56b"
- },
- {
-   "id": "9852d85c-c32d-43c3-b285-8e4cb6d238a5",
-   "precio": 3170,
-   "cantidad": 37,
-   "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
-   "ProductId": "388ca8cc-ee90-465f-9854-e4a3857880c2"
- },
- {
-   "id": "ffb21f4f-bac5-42d3-a026-106b0e165509",
-   "precio": 1740,
-   "cantidad": 70,
-   "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
-   "ProductId": "3b4cbb30-4349-49f9-9151-0fd49888ec5c"
- },
- {
-   "id": "96e6e6b1-835d-4036-9109-bc092c6d1c93",
-   "precio": 8350,
-   "cantidad": 100,
-   "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
-   "ProductId": "3bf29299-353f-4a94-b41f-014dc4bcf187"
- },
- {
-   "id": "eb0db85c-e022-4384-8819-88656ff467ff",
-   "precio": 6240,
-   "cantidad": 64,
-   "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
-   "ProductId": "3d9592ca-925d-4dd7-82c4-9ea5be1e209b"
- },
- {
-   "id": "d5cafe19-5b2d-4592-8598-75f82c97ca23",
-   "precio": 2990,
-   "cantidad": 75,
-   "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
-   "ProductId": "3ddbfa37-2766-4d93-b766-c636f71afb6f"
- },
- {
-   "id": "ba3360da-ea81-4752-8a95-dbc5f02bf27c",
-   "precio": 2630,
-   "cantidad": 57,
-   "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
-   "ProductId": "4054a030-690c-426b-88f9-3394e2ac4444"
- },
- {
-   "id": "884505a0-6aa9-4cd9-a60e-9e433cbe7007",
-   "precio": 6760,
-   "cantidad": 15,
-   "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
-   "ProductId": "4077fd7a-69e5-4f5e-957e-5c0d88bb31e3"
- },
- {
-   "id": "4e555ab0-eb14-4d57-a1de-e9427c3d1c4e",
-   "precio": 4050,
-   "cantidad": 45,
-   "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
-   "ProductId": "447ae674-cb20-4b15-b8ba-0de83b8cf0bd"
- },
- {
-   "id": "ff0d6f3d-430e-46a0-bf4c-a0918c2c5900",
-   "precio": 5960,
-   "cantidad": 44,
-   "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
-   "ProductId": "44d788e2-9fc6-4718-b401-de53f0be7a01"
- },
- {
-   "id": "865d85b7-fbe9-45a2-9209-f98c79576c18",
-   "precio": 2040,
-   "cantidad": 92,
-   "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
-   "ProductId": "458789ea-83d8-4ace-b3cb-7396bf63a2b8"
- },
- {
-   "id": "f57cf855-d8bc-4766-8d29-43bbdcd6415f",
-   "precio": 3410,
-   "cantidad": 67,
-   "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
-   "ProductId": "489c61bd-d476-4d3f-8615-2c643ae9dcd5"
- },
- {
-   "id": "33ca98b7-3c6e-47ba-aa21-b1226f75f2df",
-   "precio": 7910,
-   "cantidad": 30,
-   "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
-   "ProductId": "4c28373a-1300-43f5-ad4f-8fbd848c0e6a"
- },
- {
-   "id": "62561c36-3144-4f75-ba4c-648935a80575",
-   "precio": 3390,
-   "cantidad": 60,
-   "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
-   "ProductId": "4c520f57-2c4b-4955-95cf-66d929c1a0f6"
- },
- {
-   "id": "6d2eb492-1e9f-49a4-b022-45cb353b10ba",
-   "precio": 6680,
-   "cantidad": 70,
-   "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
-   "ProductId": "4ef0c5a7-a07f-4233-9011-46e4a3bd7633"
- },
- {
-   "id": "c64eb4fe-3fcb-406b-9d59-825fd52eb1bb",
-   "precio": 4220,
-   "cantidad": 76,
-   "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
-   "ProductId": "4f1c2976-a0d6-4e73-bf26-a46b90c4c3f7"
- },
- {
-   "id": "24919c04-9830-4e31-ba94-e4984bae13d3",
-   "precio": 6150,
-   "cantidad": 43,
-   "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
-   "ProductId": "4f69ee4a-c1c2-4b11-a57b-5e0be90cca52"
- },
- {
-   "id": "adf7ccd3-1066-4df4-a336-431cc9f01ff1",
-   "precio": 470,
-   "cantidad": 70,
-   "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
-   "ProductId": "4fcd1775-cba2-4031-b827-2b45b60a15b9"
- },
- {
-   "id": "2d78d159-9bb1-493f-9586-0802acf5b673",
-   "precio": 8830,
-   "cantidad": 24,
-   "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
-   "ProductId": "50983feb-aff7-4cdf-ad01-62dd4ba7916d"
- },
- {
-   "id": "1da732ab-d60a-4a5b-b5da-d5d6106a7592",
-   "precio": 2250,
-   "cantidad": 52,
-   "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
-   "ProductId": "518cff6b-ac86-43cd-b8bb-60bf65579738"
- },
- {
-   "id": "991fc274-e091-4f3f-ab72-759188c69d25",
-   "precio": 440,
-   "cantidad": 9,
-   "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
-   "ProductId": "51b6184d-b329-44a1-a40e-a37293020177"
- },
- {
-   "id": "cd61b16a-b35b-4d21-8531-38361f86cefa",
-   "precio": 3440,
-   "cantidad": 83,
-   "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
-   "ProductId": "5240af7e-bceb-4c64-bf15-891025e9c4d6"
- },
- {
-   "id": "ec74a288-19da-42db-ad07-3aaf4c3bdd94",
-   "precio": 5000,
-   "cantidad": 77,
-   "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
-   "ProductId": "524716c1-d528-408e-b888-76cd7ceb7306"
- },
- {
-   "id": "a3d8784c-151f-480c-bec2-995307f5fb01",
-   "precio": 820,
-   "cantidad": 24,
-   "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
-   "ProductId": "526cb9cf-5add-44fb-bf88-ba7398e6722a"
- },
- {
-   "id": "e336a85d-8a93-49f6-9e38-90c1a74b009b",
-   "precio": 8940,
-   "cantidad": 32,
-   "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
-   "ProductId": "52fd7429-a381-4117-9c44-da5e941fe706"
- },
- {
-   "id": "11e2108c-a4cb-4a3c-96ea-de04ebea5c45",
-   "precio": 6500,
-   "cantidad": 51,
-   "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
-   "ProductId": "544cbcac-e38f-4b4f-8b51-3c4f878cd56d"
- },
- {
-   "id": "38cf1ac1-6c8f-441b-8c32-90974128ff01",
-   "precio": 350,
-   "cantidad": 13,
-   "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
-   "ProductId": "5519203b-8db1-4463-acc4-e36dfe8654f3"
- },
- {
-   "id": "1fc250c7-d437-4a0c-b8fb-639f06b39dca",
-   "precio": 5590,
-   "cantidad": 57,
-   "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
-   "ProductId": "562799d9-225f-4e5b-b039-59d6957461fe"
- },
- {
-   "id": "734b9cde-4d59-4985-a31e-4e0f107470cc",
-   "precio": 9390,
-   "cantidad": 13,
-   "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
-   "ProductId": "577191de-c2c6-4122-a07f-9a6f2f9daba3"
- },
- {
-   "id": "b9a4e37f-3774-4205-b9f3-3d92da6ea39e",
-   "precio": 9620,
-   "cantidad": 64,
-   "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
-   "ProductId": "57bf7f70-ae28-4981-be8c-d864488bb027"
- },
- {
-   "id": "30f64edd-952e-4e47-91ea-b9110bd64afb",
-   "precio": 3230,
-   "cantidad": 14,
-   "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
-   "ProductId": "5b3d6068-59df-429e-aeed-0eb8060aa5f5"
- },
- {
-   "id": "6de27e12-f9e2-400a-884d-934e266f1a52",
-   "precio": 5440,
-   "cantidad": 44,
-   "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
-   "ProductId": "5b661ce7-e49e-454e-adfe-da9333e11c9a"
- },
- {
-   "id": "8e7ed0f0-bf23-4bea-9d81-cc00e5a3f27e",
-   "precio": 1900,
-   "cantidad": 41,
-   "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
-   "ProductId": "5c5ce2e6-ed30-4592-8fd2-452a718b5516"
- },
- {
-   "id": "c2c1e956-babb-4d96-a1cf-a9358e718636",
-   "precio": 6650,
-   "cantidad": 12,
-   "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
-   "ProductId": "5c6d7029-6ac2-4aa9-909a-114c3301172e"
- },
- {
-   "id": "51496f1f-c526-4c71-b140-c44d829a4e09",
-   "precio": 8160,
-   "cantidad": 63,
-   "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
-   "ProductId": "5cbaa622-03aa-41f2-923f-3dde9c3feafb"
- },
- {
-   "id": "71c6b8aa-c4ca-4e33-8b3c-e468702b2443",
-   "precio": 9750,
-   "cantidad": 32,
-   "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
-   "ProductId": "5dba80ef-6304-4590-a000-2f2f227c1016"
- },
- {
-   "id": "1df8d548-36e4-483f-aef0-defa2fccb504",
-   "precio": 6620,
-   "cantidad": 50,
-   "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
-   "ProductId": "5fec65e6-bf02-4f8c-a312-dcb000cf02ea"
- },
- {
-   "id": "2004cab5-5545-4b70-93be-0e4a913343fe",
-   "precio": 4730,
-   "cantidad": 53,
-   "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
-   "ProductId": "60548faa-e854-4cca-9ec3-1abdf08a1f04"
- },
- {
-   "id": "c10a7332-281c-431f-a7fc-bb034c744f46",
-   "precio": 7610,
-   "cantidad": 36,
-   "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
-   "ProductId": "60e2b05d-2803-4a34-872a-f83658557688"
- },
- {
-   "id": "9671aa14-67f7-4b85-aa21-404c9490bd7b",
-   "precio": 2610,
-   "cantidad": 26,
-   "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
-   "ProductId": "60e99913-1b6d-46e3-82ed-ac888317f93e"
- },
- {
-   "id": "361901f4-f138-4a4a-8436-1812c0836d7a",
-   "precio": 1360,
-   "cantidad": 59,
-   "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
-   "ProductId": "615ab0f0-5766-4068-9ff8-e798d728b489"
- },
- {
-   "id": "e2e3e2cc-f087-4c65-b53c-4610c4a2d73b",
-   "precio": 3060,
-   "cantidad": 49,
-   "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
-   "ProductId": "616a0097-afb3-4f39-97f8-6e9f2c546066"
- },
- {
-   "id": "0dde2f27-b7e4-4c1c-b7a5-c55b09aa2c74",
-   "precio": 5320,
-   "cantidad": 34,
-   "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
-   "ProductId": "6180a9b3-4816-4685-a8e0-6f6856357ebc"
- },
- {
-   "id": "38088b94-3f44-4a5e-ad1c-24e1fbbbe3f0",
-   "precio": 8240,
-   "cantidad": 19,
-   "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
-   "ProductId": "6191acbe-6ae7-448d-b6f7-f27936ea3d00"
- },
- {
-   "id": "090c6c51-faa9-44e5-8f0c-8ddc58c47cc3",
-   "precio": 5500,
-   "cantidad": 27,
-   "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
-   "ProductId": "619391d1-d77c-4f39-aa10-05cf5326c773"
- },
- {
-   "id": "5b2bc01f-1afb-4728-9b22-1dc868ddac01",
-   "precio": 2090,
-   "cantidad": 20,
-   "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
-   "ProductId": "63a6dae4-7456-40ec-8f25-5e796d484fb6"
- },
- {
-   "id": "014cd443-ef7a-4e8b-9b39-0abc32e1357b",
-   "precio": 1610,
-   "cantidad": 14,
-   "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
-   "ProductId": "63e2c790-5175-4d83-825c-08854251b8e5"
- },
- {
-   "id": "a966ef75-2b5e-438a-9ec6-296307f92675",
-   "precio": 1820,
-   "cantidad": 12,
-   "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
-   "ProductId": "65b1a4c4-8887-44b4-8ce3-edde0ea69c79"
- },
- {
-   "id": "415ea4dc-9bf8-4f0c-8385-a669106d8cf3",
-   "precio": 6590,
-   "cantidad": 59,
-   "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
-   "ProductId": "65d4386e-b5bc-4aea-a946-a4a1e231aa41"
- },
- {
-   "id": "05f7df33-005b-451b-9cd3-0cae87477627",
-   "precio": 2080,
-   "cantidad": 28,
-   "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
-   "ProductId": "6628f9ff-086b-4734-9fd5-5782eec0fc44"
- },
- {
-   "id": "3a7f7529-f549-43ae-9adb-8365603eeb1e",
-   "precio": 9030,
-   "cantidad": 76,
-   "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
-   "ProductId": "662b081d-f2c7-4dbc-87f3-4c1b1a0a423a"
- },
- {
-   "id": "a4d46d60-bfe2-4b1d-b739-2670a4e8fa80",
-   "precio": 3320,
-   "cantidad": 92,
-   "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
-   "ProductId": "668f33f0-7abc-4479-820d-26aade5817c0"
- },
- {
-   "id": "152ad04e-60aa-448e-b9de-7f92c2c8e32c",
-   "precio": 10,
-   "cantidad": 64,
-   "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
-   "ProductId": "66b6e5c9-4a99-4df2-9ec2-e5c2d8a927cd"
- },
- {
-   "id": "fc44e19f-7175-4d50-8e47-c4a124653a4f",
-   "precio": 5080,
-   "cantidad": 9,
-   "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
-   "ProductId": "66eee6e6-53f2-4363-986c-72b976aa5596"
- },
- {
-   "id": "47502310-11da-43cf-9129-c16b24dabc93",
-   "precio": 8630,
-   "cantidad": 65,
-   "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
-   "ProductId": "6735772a-39de-4e31-bd6f-6e29ca182783"
- },
- {
-   "id": "f18ccb85-dbe8-4e54-95b7-51af8a1d7132",
-   "precio": 7780,
-   "cantidad": 40,
-   "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
-   "ProductId": "6737458e-b2ed-45bb-b7c1-8ce94eeba2de"
- },
- {
-   "id": "8a15bebe-76ca-46b0-9f5d-4d535ea7b83c",
-   "precio": 3570,
-   "cantidad": 6,
-   "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
-   "ProductId": "67653ad8-1219-4a42-b5dd-1050fe70d33f"
- },
- {
-   "id": "e13f8683-2d93-463c-a21d-e9152e8f00c8",
-   "precio": 8200,
-   "cantidad": 62,
-   "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
-   "ProductId": "67be2d63-7688-41f0-8294-0bc2abade4ee"
- },
- {
-   "id": "83705d98-35ee-41e0-827d-0cd1bb61aac6",
-   "precio": 6040,
-   "cantidad": 69,
-   "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
-   "ProductId": "67edb3f1-ce5c-4186-a99f-e7b9686225aa"
- },
- {
-   "id": "066d13ba-e3ed-4f8d-b8db-0e4387ec4dd6",
-   "precio": 5570,
-   "cantidad": 46,
-   "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
-   "ProductId": "67fb276b-3073-4037-9c58-367fe318a407"
- },
- {
-   "id": "f91be9a0-7176-424f-80ed-569ddc3a46fa",
-   "precio": 1880,
-   "cantidad": 22,
-   "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
-   "ProductId": "68aec7ad-c9e5-4b5d-afd1-cce4d97e3227"
- },
- {
-   "id": "58e5ab38-459b-45d9-b3fb-ac8b6163a3d2",
-   "precio": 500,
-   "cantidad": 99,
-   "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
-   "ProductId": "0144f0eb-0c4d-4766-b034-7af5428fb222"
- },
- {
-   "id": "7021eee7-d12f-4910-ac09-57d343d73a23",
-   "precio": 7870,
-   "cantidad": 23,
-   "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
-   "ProductId": "016bcb67-c146-459f-b7d6-b96e4e42a7e8"
- },
- {
-   "id": "e3ae7de7-7a67-4833-8a0d-d6f7eef7ef26",
-   "precio": 3930,
-   "cantidad": 80,
-   "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
-   "ProductId": "0280af23-43b8-49b1-9162-1aa1084fec5b"
- },
- {
-   "id": "7f56a67a-1f32-46ff-bc68-dd89608bd176",
-   "precio": 5640,
-   "cantidad": 27,
-   "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
-   "ProductId": "04341635-cb34-44cf-a86d-09b6d2bd4e41"
- },
- {
-   "id": "e91ea56e-155c-4301-acd2-cf706703088c",
-   "precio": 1510,
-   "cantidad": 1,
-   "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
-   "ProductId": "05edad94-1353-4ad1-83f4-f0c35db943f6"
- },
- {
-   "id": "eca15553-b780-4323-81b0-5bcd7ac1f157",
-   "precio": 830,
-   "cantidad": 73,
-   "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
-   "ProductId": "07e390a3-1998-4504-bb05-965e9416e9bc"
- },
- {
-   "id": "61c8189e-a74a-4e3d-b5ec-3e2b9fc39d14",
-   "precio": 980,
-   "cantidad": 81,
-   "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
-   "ProductId": "0897507d-9a09-47b7-afd8-53fa7456a67a"
- },
- {
-   "id": "9c787f8e-1e89-4f7e-85ac-7f7b6646e061",
-   "precio": 5410,
-   "cantidad": 13,
-   "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
-   "ProductId": "09d2d07b-d24b-4a3e-922a-b85ed9e82ca5"
- },
- {
-   "id": "f7ce944c-abaa-4b4b-9e6e-1ac79f32cb6c",
-   "precio": 6330,
-   "cantidad": 65,
-   "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
-   "ProductId": "0a382237-ddb9-40c8-8da9-2ee46e9e13e9"
- },
- {
-   "id": "ce299578-7938-4000-a672-4542f8bd46c3",
-   "precio": 9020,
-   "cantidad": 24,
-   "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
-   "ProductId": "0ef8d166-4b39-45e0-b3e1-ae7ab9f0280a"
- },
- {
-   "id": "b990bc66-41b3-404e-ac10-fb341147df97",
-   "precio": 1000,
-   "cantidad": 50,
-   "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
-   "ProductId": "0f1fd75d-86a8-4310-9839-6ad326ae4fb6"
- },
- {
-   "id": "67bf1773-478d-4057-a28e-f234c75a4914",
-   "precio": 9110,
-   "cantidad": 23,
-   "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
-   "ProductId": "13a142dd-56b3-426c-84b3-361dd81d37d3"
- },
- {
-   "id": "12378de6-0dcb-4927-8e14-faf9589b94c8",
-   "precio": 7010,
-   "cantidad": 16,
-   "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
-   "ProductId": "14a13da6-990c-4666-b8ac-c83950330641"
- },
- {
-   "id": "63c19785-b8a2-40c7-86ad-b7e9e24d7cea",
-   "precio": 9440,
-   "cantidad": 57,
-   "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
-   "ProductId": "1530042c-ab21-4426-b97f-afd73e66328d"
- },
- {
-   "id": "626a1987-e6d9-4d2b-a2e2-3b10cdc891b5",
-   "precio": 4020,
-   "cantidad": 56,
-   "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
-   "ProductId": "15431f9d-842e-4434-a128-33c937376058"
- },
- {
-   "id": "25eb84fd-aa94-462d-8f14-1a675a5a676e",
-   "precio": 4540,
-   "cantidad": 8,
-   "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
-   "ProductId": "154571e6-7fb7-4d73-bb13-9b296b5e740d"
- },
- {
-   "id": "d3067fda-b62c-47ea-ba7b-38f32e902ab7",
-   "precio": 9280,
-   "cantidad": 91,
-   "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
-   "ProductId": "154a802f-7ca1-4b18-b983-5a942bc69d2c"
- },
- {
-   "id": "333f8d93-c5b1-4199-8807-cf5dc3760fc9",
-   "precio": 3470,
-   "cantidad": 90,
-   "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
-   "ProductId": "158e7187-7c31-4dfa-920b-71379410d8fd"
- },
- {
-   "id": "3268986e-8949-46d6-9951-ecdece08d81d",
-   "precio": 6050,
-   "cantidad": 45,
-   "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
-   "ProductId": "15c0d7d0-c5a3-414d-a567-1e71836de56c"
- },
- {
-   "id": "86af4ead-d1a6-4b38-b219-d8fdb34ed611",
-   "precio": 3940,
-   "cantidad": 90,
-   "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
-   "ProductId": "15f84ea8-510b-49aa-a19a-58c77535bada"
- },
- {
-   "id": "4709c50e-e7e1-444a-a7f5-1ae0cd965d7c",
-   "precio": 5200,
-   "cantidad": 89,
-   "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
-   "ProductId": "16600d1a-121b-4390-a6fc-11eec1bfcd84"
- },
- {
-   "id": "2aa3a3cc-370f-4272-918e-0b180010d7e5",
-   "precio": 490,
-   "cantidad": 88,
-   "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
-   "ProductId": "171a9bba-067f-4c67-986b-34ed8caf0a98"
- },
- {
-   "id": "81409b69-cab2-4fab-8211-a7d46d5160b5",
-   "precio": 1840,
-   "cantidad": 59,
-   "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
-   "ProductId": "1768c180-49c5-41aa-929b-6ae72952e8bf"
- },
- {
-   "id": "d5527d22-7978-464b-b6c2-b94c5aed84f5",
-   "precio": 5930,
-   "cantidad": 75,
-   "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
-   "ProductId": "17e0026f-fa33-48cb-9b0b-bd5aac55c379"
- },
- {
-   "id": "1151e33e-1c3d-4b6f-9c33-f6ef391ae9e4",
-   "precio": 1100,
-   "cantidad": 3,
-   "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
-   "ProductId": "185a4a34-0c99-4101-b052-04f92dfbe91f"
- },
- {
-   "id": "1163ffec-ebb5-4924-a34c-8da1dbb900bb",
-   "precio": 2800,
-   "cantidad": 79,
-   "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
-   "ProductId": "190ffb43-721c-4cb8-af73-5178d629e9ea"
- },
- {
-   "id": "4735252c-6275-49f7-8423-4a58b7042a0d",
-   "precio": 2980,
-   "cantidad": 49,
-   "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
-   "ProductId": "192677bc-35e6-4c1e-8466-a65521eca251"
- },
- {
-   "id": "81319ab1-9411-4477-8428-6dee1d38abb8",
-   "precio": 910,
-   "cantidad": 57,
-   "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
-   "ProductId": "1927b5fd-8cdd-4ba3-8ff7-179edde6e4cb"
- },
- {
-   "id": "d93f4397-8db3-4d80-bfae-a1710b7ca612",
-   "precio": 5110,
-   "cantidad": 59,
-   "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
-   "ProductId": "19c1e5da-d989-4278-98af-efbcb02ac640"
- },
- {
-   "id": "05052ba0-849a-47bc-aa68-010d335ed290",
-   "precio": 5830,
-   "cantidad": 49,
-   "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
-   "ProductId": "19c32358-946b-415b-a727-8cde1374640c"
- },
- {
-   "id": "24d2d2b8-2025-477b-9d66-9fff3e8eb928",
-   "precio": 6580,
-   "cantidad": 22,
-   "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
-   "ProductId": "1a596229-b5f3-413c-90a9-fb21f9a5a8a1"
- },
- {
-   "id": "e84b7bb1-3a0d-4776-8687-e1cf796f24d6",
-   "precio": 7350,
-   "cantidad": 19,
-   "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
-   "ProductId": "1ac1d8a8-6660-49cb-8c3c-a9e51e391523"
- },
- {
-   "id": "ca3f09df-d3bd-4cea-9ba6-3de715a34cc1",
-   "precio": 8060,
-   "cantidad": 62,
-   "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
-   "ProductId": "1b07f61f-f0d0-4db3-84aa-70750ecccb1b"
- },
- {
-   "id": "a1779959-dc27-4df7-859b-33567a16ac12",
-   "precio": 8910,
-   "cantidad": 92,
-   "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
-   "ProductId": "1c559f57-f562-4257-92f9-1b7b28548dc2"
- },
- {
-   "id": "52457c06-f990-47c8-9ceb-a8c8456df0ec",
-   "precio": 2030,
-   "cantidad": 87,
-   "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
-   "ProductId": "1dadccb7-f58c-4bc2-a802-c5d8efbedc06"
- },
- {
-   "id": "3480b3fd-855f-4775-903c-fe5635b1a212",
-   "precio": 5500,
-   "cantidad": 37,
-   "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
-   "ProductId": "1e9089fa-810c-4427-83fe-72010489453c"
- },
- {
-   "id": "42a219b1-39c7-45dd-b546-6bee282a94bb",
-   "precio": 4400,
-   "cantidad": 88,
-   "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
-   "ProductId": "1f76e4aa-cb3f-4ea3-99f5-3eba7e3c96fa"
- },
- {
-   "id": "29928837-ef12-43d3-9362-4763fb38d0b2",
-   "precio": 5780,
-   "cantidad": 69,
-   "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
-   "ProductId": "20e8175a-1836-4b18-b176-3bbf715f15cf"
- },
- {
-   "id": "987062c0-c3de-4653-988c-0ce42471ff31",
-   "precio": 9370,
-   "cantidad": 45,
-   "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
-   "ProductId": "212ca275-ffc8-47f4-9f7b-3c6d827b43db"
- },
- {
-   "id": "c0278348-203b-4bc5-aea0-64679f64433e",
-   "precio": 8640,
-   "cantidad": 89,
-   "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
-   "ProductId": "21f8f459-8fcc-4dd1-a48f-1a46853e1fb8"
- },
- {
-   "id": "edf0bb85-fc79-4b66-a373-658654057898",
-   "precio": 7730,
-   "cantidad": 8,
-   "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
-   "ProductId": "21fe7df4-97f8-491e-88a7-a897935d2094"
- },
- {
-   "id": "55f5ba2e-dbcc-4abb-9a24-964cdbb4394c",
-   "precio": 3320,
-   "cantidad": 32,
-   "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
-   "ProductId": "22041c98-57c6-4528-9c6c-2a4d45367eb2"
- },
- {
-   "id": "49010ea4-896d-4906-9af9-2b62f35175e3",
-   "precio": 2950,
-   "cantidad": 75,
-   "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
-   "ProductId": "23071e9d-8853-4367-be32-ba36f326f039"
- },
- {
-   "id": "5187bbe3-4fea-445b-b041-bb221fa01bc0",
-   "precio": 8280,
-   "cantidad": 94,
-   "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
-   "ProductId": "235f117a-4e4e-4fcd-923b-b9cf597a61aa"
- },
- {
-   "id": "8fb8ccf8-d06e-4a58-8c05-dceb25b12ef3",
-   "precio": 1180,
-   "cantidad": 7,
-   "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
-   "ProductId": "2561a732-9f47-45a8-805c-a306bbfea562"
- },
- {
-   "id": "0dd79cd8-928b-4361-b851-62dfe9d336b0",
-   "precio": 7630,
-   "cantidad": 82,
-   "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
-   "ProductId": "2597e882-a144-4c7b-913d-6518b15106da"
- },
- {
-   "id": "b6917511-6e5c-476e-8c97-1929a3adb259",
-   "precio": 2490,
-   "cantidad": 52,
-   "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
-   "ProductId": "26b20d42-e181-4861-9a32-7bc116d9a703"
- },
- {
-   "id": "c2ab4e65-0cb7-4cd6-85a8-b6c5cca4628f",
-   "precio": 7250,
-   "cantidad": 30,
-   "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
-   "ProductId": "2880c4da-15a2-4132-a6c0-9211f993f8ca"
- },
- {
-   "id": "86d3381f-6f3e-483c-a843-ca474ee028ef",
-   "precio": 4680,
-   "cantidad": 35,
-   "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
-   "ProductId": "29615309-fc0b-4f73-94fd-e2d42832d6b6"
- },
- {
-   "id": "556f37d3-4d52-4234-bd5e-7832c6d4b914",
-   "precio": 9580,
-   "cantidad": 12,
-   "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
-   "ProductId": "2ef2e3c3-a1b9-49d8-b913-8f434fa2172a"
- },
- {
-   "id": "2f977217-57af-4d8a-a085-246ff77062f0",
-   "precio": 2960,
-   "cantidad": 38,
-   "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
-   "ProductId": "2f2e75b1-c2ed-4b54-9583-61e91063d670"
- },
- {
-   "id": "0f428d98-aced-4be2-818d-fc15af021726",
-   "precio": 3000,
-   "cantidad": 61,
-   "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
-   "ProductId": "33a04b2a-07dc-4de4-a905-d57fd4760759"
- },
- {
-   "id": "629b4080-d48b-466b-8909-1eef4ee2fce0",
-   "precio": 1720,
-   "cantidad": 94,
-   "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
-   "ProductId": "342ab6ee-8e7a-4144-8976-17e015ce7705"
- },
- {
-   "id": "1da0548c-f843-4d0d-8e30-9b63d533b291",
-   "precio": 8910,
-   "cantidad": 46,
-   "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
-   "ProductId": "35c0ad97-ff54-4fe5-9909-d743281cfd4b"
- },
- {
-   "id": "14fd4e17-b860-4bd2-ac77-0ce12b2f311e",
-   "precio": 5940,
-   "cantidad": 83,
-   "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
-   "ProductId": "35d6ca44-9792-4e47-9f40-b53ada6c9b3b"
- },
- {
-   "id": "c6677316-b212-4ac5-a62b-64999b0074c6",
-   "precio": 4740,
-   "cantidad": 1,
-   "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
-   "ProductId": "367bbc07-b9a8-4a96-ae14-0809293511a4"
- },
- {
-   "id": "b296c863-6ddc-4313-88c7-cabf07d6a5b2",
-   "precio": 1280,
-   "cantidad": 91,
-   "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
-   "ProductId": "37661923-849b-4bb3-be14-2cd023321001"
- },
- {
-   "id": "fa398721-2fb7-47ab-a2a4-dac407453aaf",
-   "precio": 1590,
-   "cantidad": 41,
-   "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
-   "ProductId": "377551ae-d9e9-4bbf-a05a-76b73d451ae0"
- },
- {
-   "id": "a491a345-c2ae-4642-be2d-99fa20d08278",
-   "precio": 4570,
-   "cantidad": 39,
-   "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
-   "ProductId": "377966d3-b6a1-41fb-85ab-2ad1c814d56b"
- },
- {
-   "id": "e0226dff-4122-4699-9a1b-4eb52b0bab15",
-   "precio": 3360,
-   "cantidad": 65,
-   "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
-   "ProductId": "388ca8cc-ee90-465f-9854-e4a3857880c2"
- },
- {
-   "id": "da7be83f-3bc4-40a3-ba51-43a5282b8a73",
-   "precio": 1390,
-   "cantidad": 32,
-   "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
-   "ProductId": "3908ef37-cbc1-4fc9-bce7-1d56af73fa69"
- },
- {
-   "id": "ccc9d8fb-ba33-425e-8c31-5bb03bddf5fc",
-   "precio": 5800,
-   "cantidad": 91,
-   "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
-   "ProductId": "3914b886-dad6-4ebc-b912-26063ced6a1b"
- },
- {
-   "id": "5b9eff51-7316-440d-863f-3f6a921932b7",
-   "precio": 5210,
-   "cantidad": 67,
-   "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
-   "ProductId": "3a4a01c7-2e9c-42cc-99a2-d66e4bedf70c"
- },
- {
-   "id": "31010fd8-3d2c-4563-9cf0-5373083042d1",
-   "precio": 4780,
-   "cantidad": 38,
-   "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
-   "ProductId": "3bf4abe9-b304-4443-8f2b-8184eee5a2cd"
- },
- {
-   "id": "182cba8a-40a3-45ab-8807-9792ec407193",
-   "precio": 9500,
-   "cantidad": 9,
-   "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
-   "ProductId": "3c3284b2-c0be-4415-afef-0fa776f0b083"
- },
- {
-   "id": "834bff10-b845-4e69-88ef-6048e32b5dba",
-   "precio": 4360,
-   "cantidad": 67,
-   "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
-   "ProductId": "4054a030-690c-426b-88f9-3394e2ac4444"
- },
- {
-   "id": "8845b341-5d09-441c-a289-b570fb293008",
-   "precio": 7910,
-   "cantidad": 88,
-   "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
-   "ProductId": "4077fd7a-69e5-4f5e-957e-5c0d88bb31e3"
- },
- {
-   "id": "2d186c03-5370-4067-a565-ab6fc04cbc53",
-   "precio": 660,
-   "cantidad": 30,
-   "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
-   "ProductId": "40c41cfa-d435-4015-b207-c9b9c600e6c3"
- },
- {
-   "id": "a474261e-fc4f-4cd3-a10c-708f6357c5cd",
-   "precio": 8270,
-   "cantidad": 44,
-   "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
-   "ProductId": "40dd86b8-9fa8-4ee1-ada8-42ee97742a84"
- },
- {
-   "id": "d791caf2-87d6-4b77-acec-331c7a28a415",
-   "precio": 8920,
-   "cantidad": 18,
-   "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
-   "ProductId": "41460027-46f8-4d11-aec0-d12daabc662b"
- },
- {
-   "id": "f4d20776-8549-4178-a8c9-7b338404d8a3",
-   "precio": 3640,
-   "cantidad": 38,
-   "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
-   "ProductId": "42a0061a-7fb5-4d32-8165-d60fe6d4bb87"
- },
- {
-   "id": "fb4c3d8d-5844-4af6-a85e-90ce5d1ebf1f",
-   "precio": 490,
-   "cantidad": 51,
-   "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
-   "ProductId": "42aca09f-fc15-4fdf-9735-a82374fe4d47"
- },
- {
-   "id": "2f45e45c-0702-47b7-8ac4-27131812107f",
-   "precio": 8040,
-   "cantidad": 31,
-   "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
-   "ProductId": "42b6e145-744d-4604-aef3-c526d6907f13"
- },
- {
-   "id": "114293fb-db7f-442f-b773-51c89fbe5b3b",
-   "precio": 6080,
-   "cantidad": 37,
-   "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
-   "ProductId": "4472dd8d-4f05-4ad1-9672-20aec04f4ac3"
- },
- {
-   "id": "8d41266a-f34c-42d0-9e9a-8bfa859c34ba",
-   "precio": 6150,
-   "cantidad": 99,
-   "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
-   "ProductId": "447ae674-cb20-4b15-b8ba-0de83b8cf0bd"
- },
- {
-   "id": "62dcda7b-02bd-4044-9313-51c4442ff775",
-   "precio": 7570,
-   "cantidad": 44,
-   "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
-   "ProductId": "44d788e2-9fc6-4718-b401-de53f0be7a01"
- },
- {
-   "id": "b2d66e36-caee-47be-9ba9-5d5802c5541f",
-   "precio": 2320,
-   "cantidad": 25,
-   "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
-   "ProductId": "45470f75-e536-4b91-b79e-11ff26c697ab"
- },
- {
-   "id": "fb76e22e-0d76-46dd-8937-8c073445c277",
-   "precio": 940,
-   "cantidad": 62,
-   "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
-   "ProductId": "4551a89c-29b7-4328-8255-9751293f84d2"
- },
- {
-   "id": "0ab5d4d2-66dd-4657-b20b-8a4a6aad0329",
-   "precio": 4070,
-   "cantidad": 94,
-   "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
-   "ProductId": "457014b0-817d-418a-a564-c7851b4bdf99"
- },
- {
-   "id": "b32d0572-a24a-4fcd-97c7-e2308cd622c7",
-   "precio": 4170,
-   "cantidad": 15,
-   "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
-   "ProductId": "458789ea-83d8-4ace-b3cb-7396bf63a2b8"
- },
- {
-   "id": "2eebb2f4-bd49-4392-8db1-721c0fd51167",
-   "precio": 6040,
-   "cantidad": 92,
-   "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
-   "ProductId": "489c61bd-d476-4d3f-8615-2c643ae9dcd5"
- },
- {
-   "id": "0e4d4e8a-9357-499b-ba9d-13c9fc7150d6",
-   "precio": 850,
-   "cantidad": 46,
-   "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
-   "ProductId": "4cfe53a5-78eb-4eab-bbbd-56c147a851d3"
- },
- {
-   "id": "0371d764-c324-4b1b-b74d-81e80bcce668",
-   "precio": 6370,
-   "cantidad": 16,
-   "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
-   "ProductId": "4e145314-8c8a-4c29-8bde-e62498cd99e3"
- },
- {
-   "id": "e7a8bb3e-db05-45ad-ab73-79faaf94428c",
-   "precio": 3300,
-   "cantidad": 34,
-   "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
-   "ProductId": "4ef0c5a7-a07f-4233-9011-46e4a3bd7633"
- },
- {
-   "id": "6054cb6a-7fb0-4e26-8c4e-166733c4de76",
-   "precio": 3340,
-   "cantidad": 41,
-   "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
-   "ProductId": "4f1c2976-a0d6-4e73-bf26-a46b90c4c3f7"
- },
- {
-   "id": "e48169fe-0192-404d-8c54-11672c99dd4d",
-   "precio": 9440,
-   "cantidad": 52,
-   "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
-   "ProductId": "51b6184d-b329-44a1-a40e-a37293020177"
- },
- {
-   "id": "34dadcd1-c66e-42cb-8ebb-738fa7e05824",
-   "precio": 8860,
-   "cantidad": 18,
-   "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
-   "ProductId": "5240af7e-bceb-4c64-bf15-891025e9c4d6"
- },
- {
-   "id": "fee38b0c-dc11-4be6-b44d-7c56fd969a9c",
-   "precio": 6450,
-   "cantidad": 35,
-   "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
-   "ProductId": "544cbcac-e38f-4b4f-8b51-3c4f878cd56d"
- },
- {
-   "id": "562a21a0-8d48-4fa6-ae8e-a7726100eed2",
-   "precio": 8870,
-   "cantidad": 98,
-   "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
-   "ProductId": "5519203b-8db1-4463-acc4-e36dfe8654f3"
- },
- {
-   "id": "b20e504a-5374-43af-a7a4-0c1534fdf6a3",
-   "precio": 1560,
-   "cantidad": 99,
-   "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
-   "ProductId": "562799d9-225f-4e5b-b039-59d6957461fe"
- },
- {
-   "id": "b5721e9b-7665-484c-b585-742055be52a3",
-   "precio": 8200,
-   "cantidad": 29,
-   "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
-   "ProductId": "565d59e3-6e15-483e-8bad-4cddff60ccff"
- },
- {
-   "id": "8ed35b06-357a-4283-860f-d8f5b4721db9",
-   "precio": 7000,
-   "cantidad": 5,
-   "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
-   "ProductId": "586604f8-463b-49d7-a81f-36c231f19217"
- },
- {
-   "id": "d967fd18-8eca-48b9-9328-1e66a28201d1",
-   "precio": 6870,
-   "cantidad": 12,
-   "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
-   "ProductId": "58d94633-0a59-4dc4-a662-2aaf1cbe3a3f"
- },
- {
-   "id": "e30340f8-4604-4647-b389-7539221fdfd7",
-   "precio": 9320,
-   "cantidad": 58,
-   "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
-   "ProductId": "5c5ce2e6-ed30-4592-8fd2-452a718b5516"
- },
- {
-   "id": "fe5ce5cc-d46b-4dcf-82fc-6f0fc329ceef",
-   "precio": 920,
-   "cantidad": 29,
-   "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
-   "ProductId": "5c6d7029-6ac2-4aa9-909a-114c3301172e"
- },
- {
-   "id": "72a79bb1-b978-406a-9210-dd15f12ab800",
-   "precio": 3170,
-   "cantidad": 50,
-   "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
-   "ProductId": "6180a9b3-4816-4685-a8e0-6f6856357ebc"
- },
- {
-   "id": "3060dcaa-574e-453c-96e0-9e117986725d",
-   "precio": 7030,
-   "cantidad": 38,
-   "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
-   "ProductId": "6191acbe-6ae7-448d-b6f7-f27936ea3d00"
- },
- {
-   "id": "7eca56b8-ac26-4c47-b3ad-6bfcb4008a80",
-   "precio": 2130,
-   "cantidad": 98,
-   "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
-   "ProductId": "619391d1-d77c-4f39-aa10-05cf5326c773"
- },
- {
-   "id": "9f8aafbb-517a-43cc-a67c-b4fca5390f19",
-   "precio": 6710,
-   "cantidad": 96,
-   "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
-   "ProductId": "61bfb9a4-20b9-4cd2-a589-ea89de30f9ba"
- },
- {
-   "id": "dd8ab6aa-dd71-4110-b2aa-811694933b47",
-   "precio": 4310,
-   "cantidad": 57,
-   "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
-   "ProductId": "6232a5e8-1a23-4109-979e-29a2e402801d"
- },
- {
-   "id": "5ca5bd60-490f-479c-bfa1-08786ebc4932",
-   "precio": 9640,
-   "cantidad": 47,
-   "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
-   "ProductId": "640294a8-5d33-4597-a8a2-da7ae6cb61da"
- },
- {
-   "id": "35fe1a43-ff15-4088-9c59-b8db19390e42",
-   "precio": 6440,
-   "cantidad": 46,
-   "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
-   "ProductId": "652430f8-887e-4bc5-883c-909f99fed6e6"
- },
- {
-   "id": "ca8571e9-36e4-4d20-93b1-a437e7171a3a",
-   "precio": 5570,
-   "cantidad": 55,
-   "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
-   "ProductId": "6735772a-39de-4e31-bd6f-6e29ca182783"
- },
- {
-   "id": "33e6d579-2a3b-4988-89d8-ef4af1519522",
-   "precio": 1020,
-   "cantidad": 79,
-   "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
-   "ProductId": "6737458e-b2ed-45bb-b7c1-8ce94eeba2de"
- },
- {
-   "id": "f3f89035-dc8f-4d4f-be5d-c6a348424c92",
-   "precio": 1100,
-   "cantidad": 18,
-   "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
-   "ProductId": "68aec7ad-c9e5-4b5d-afd1-cce4d97e3227"
- },
- {
-   "id": "d94962fa-422d-491b-a387-be1b7f33ebc8",
-   "precio": 9960,
-   "cantidad": 63,
-   "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
-   "ProductId": "6945c552-8edf-4be5-b97c-f322a68dd52c"
- },
- {
-   "id": "d879979b-82f2-4685-802b-cb1b920543cb",
-   "precio": 8840,
-   "cantidad": 10,
-   "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
-   "ProductId": "001fa870-0975-499e-885a-2518483bcac9"
- },
- {
-   "id": "f527d730-9bfc-4e4b-8264-4744efe3376c",
-   "precio": 2590,
-   "cantidad": 66,
-   "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
-   "ProductId": "01b4c4fc-67ad-401b-87ca-649c82f9504d"
- },
- {
-   "id": "cf94ecc2-6a47-4d6f-a6dc-aa22c95ada5d",
-   "precio": 6750,
-   "cantidad": 15,
-   "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
-   "ProductId": "020a1c1f-df36-46a1-8be5-5e4715eeb6e2"
- },
- {
-   "id": "7439737d-fd5f-4243-9493-52b9a82728f1",
-   "precio": 5060,
-   "cantidad": 61,
-   "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
-   "ProductId": "0c4970b2-10a8-4625-93f9-961f18faf7df"
- },
- {
-   "id": "c9c43829-1f35-4213-93d7-304d51caf799",
-   "precio": 6060,
-   "cantidad": 95,
-   "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
-   "ProductId": "0c70a792-6393-4bd0-b1a4-0b83be808ff2"
- },
- {
-   "id": "dbbdeffe-b441-4d02-8647-33a3a6940fd4",
-   "precio": 7930,
-   "cantidad": 48,
-   "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
-   "ProductId": "0d1670d5-da34-4528-8e20-2dfedbc903d6"
- },
- {
-   "id": "e3515e95-0011-4654-b8a2-a012cf13ac8c",
-   "precio": 4480,
-   "cantidad": 86,
-   "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
-   "ProductId": "0d457581-a116-4430-a08c-3c941522e28d"
- },
- {
-   "id": "2de4a277-dad3-4860-8e42-28c7bb07484f",
-   "precio": 5360,
-   "cantidad": 64,
-   "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
-   "ProductId": "0dd38f79-5193-4c14-9c98-2afecf22843a"
- },
- {
-   "id": "8fe7744e-acb1-4f5e-a97f-1b803b78e5a0",
-   "precio": 8010,
-   "cantidad": 45,
-   "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
-   "ProductId": "0e17d69e-4c15-4709-b36e-4473bb8cdb33"
- },
- {
-   "id": "0e9396b2-e79f-41a6-9acc-db425fe6987f",
-   "precio": 1950,
-   "cantidad": 36,
-   "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
-   "ProductId": "0ec81dda-303e-42ab-94c6-444b962de20d"
- },
- {
-   "id": "d7927b77-e93d-498c-b0f1-1ac87b08308b",
-   "precio": 9470,
-   "cantidad": 42,
-   "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
-   "ProductId": "0ef8d166-4b39-45e0-b3e1-ae7ab9f0280a"
- },
- {
-   "id": "6d646232-2588-474e-82f2-16c7b363e3a8",
-   "precio": 1580,
-   "cantidad": 37,
-   "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
-   "ProductId": "0f1fd75d-86a8-4310-9839-6ad326ae4fb6"
- },
- {
-   "id": "65199248-b5fe-414b-a732-ceb91ba64f80",
-   "precio": 6680,
-   "cantidad": 77,
-   "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
-   "ProductId": "117b6ec1-9b30-4f9b-b98b-e5d6eae11df7"
- },
- {
-   "id": "a8196d5f-3546-495f-ba10-df2b5cb26919",
-   "precio": 4980,
-   "cantidad": 54,
-   "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
-   "ProductId": "11d5185e-a2ef-4c35-a1d0-8112c48c11b5"
- },
- {
-   "id": "f4366b2d-3614-49d9-b2df-1cff9c0c3f4c",
-   "precio": 3000,
-   "cantidad": 67,
-   "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
-   "ProductId": "11e9ab90-720d-44cb-ac11-aad504d5f173"
- },
- {
-   "id": "23006072-fa0a-4fc7-897d-194d3e7ad067",
-   "precio": 8390,
-   "cantidad": 33,
-   "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
-   "ProductId": "125347ee-eba3-4efb-8d95-5789eeb5aff4"
- },
- {
-   "id": "31b53a1b-7c43-47fd-82fb-cbbb2e2cebe5",
-   "precio": 8930,
-   "cantidad": 38,
-   "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
-   "ProductId": "138963b4-735e-43df-b632-c927423e5d77"
- },
- {
-   "id": "f36a84d1-2303-4ce4-81fc-c9c0352157e4",
-   "precio": 9700,
-   "cantidad": 44,
-   "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
-   "ProductId": "13a142dd-56b3-426c-84b3-361dd81d37d3"
- },
- {
-   "id": "b9523c6d-6517-4ece-a965-20c225760ce1",
-   "precio": 7640,
-   "cantidad": 70,
-   "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
-   "ProductId": "14a13da6-990c-4666-b8ac-c83950330641"
- },
- {
-   "id": "23441a5a-6dfc-4fe9-829c-e18e14f02b2b",
-   "precio": 1860,
-   "cantidad": 31,
-   "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
-   "ProductId": "15431f9d-842e-4434-a128-33c937376058"
- },
- {
-   "id": "1a9486a2-f692-49f4-b4cc-870b6a578b33",
-   "precio": 4720,
-   "cantidad": 87,
-   "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
-   "ProductId": "154571e6-7fb7-4d73-bb13-9b296b5e740d"
- },
- {
-   "id": "4ac798f6-3538-46b9-9b79-dbf2ea18baca",
-   "precio": 7760,
-   "cantidad": 73,
-   "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
-   "ProductId": "171a9bba-067f-4c67-986b-34ed8caf0a98"
- },
- {
-   "id": "ff509f0d-01cb-4b15-9c7a-a688d3108712",
-   "precio": 5850,
-   "cantidad": 85,
-   "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
-   "ProductId": "1768c180-49c5-41aa-929b-6ae72952e8bf"
- },
- {
-   "id": "1704a271-dcd7-4709-8fc4-0b9112140c51",
-   "precio": 9010,
-   "cantidad": 2,
-   "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
-   "ProductId": "19c1e5da-d989-4278-98af-efbcb02ac640"
- },
- {
-   "id": "ed02ca97-1e16-43da-a2f9-8ee85c2b4b7e",
-   "precio": 1530,
-   "cantidad": 32,
-   "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
-   "ProductId": "19c32358-946b-415b-a727-8cde1374640c"
- },
- {
-   "id": "f38b1eeb-3395-4e6a-b88e-8598c94fb995",
-   "precio": 5280,
-   "cantidad": 56,
-   "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
-   "ProductId": "1e9089fa-810c-4427-83fe-72010489453c"
- },
- {
-   "id": "c91d3072-7bcb-4497-b1cd-8439a5dfcde2",
-   "precio": 7920,
-   "cantidad": 42,
-   "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
-   "ProductId": "1f76e4aa-cb3f-4ea3-99f5-3eba7e3c96fa"
- },
- {
-   "id": "8462e187-5880-4190-a33e-45b953ab14bf",
-   "precio": 3920,
-   "cantidad": 61,
-   "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
-   "ProductId": "23071e9d-8853-4367-be32-ba36f326f039"
- },
- {
-   "id": "91a36a98-7f65-4d8a-8d1a-1cebd0416877",
-   "precio": 7600,
-   "cantidad": 27,
-   "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
-   "ProductId": "235f117a-4e4e-4fcd-923b-b9cf597a61aa"
- },
- {
-   "id": "1dce3838-a81e-483a-ae0e-c5a6d361b81f",
-   "precio": 6160,
-   "cantidad": 33,
-   "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
-   "ProductId": "26b20d42-e181-4861-9a32-7bc116d9a703"
- },
- {
-   "id": "08d1b750-cfd6-4da5-ada5-883eb2e0dbbb",
-   "precio": 4500,
-   "cantidad": 85,
-   "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
-   "ProductId": "27318e79-0eeb-4498-878d-9443c8f52898"
- },
- {
-   "id": "6d9b7db8-1157-49dc-bde4-6b34ee78ee89",
-   "precio": 140,
-   "cantidad": 13,
-   "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
-   "ProductId": "27e95139-6c8a-4c06-ba85-f66b92858ace"
- },
- {
-   "id": "4711bf9b-611d-4104-9509-335926b67387",
-   "precio": 1220,
-   "cantidad": 80,
-   "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
-   "ProductId": "27ec11a1-238a-4ef2-92e2-5538783ac525"
- },
- {
-   "id": "67631cf1-de12-400e-8850-0fe118698be9",
-   "precio": 9190,
-   "cantidad": 14,
-   "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
-   "ProductId": "285941c4-8ee8-42a8-ad47-6a7fb6395d2a"
- },
- {
-   "id": "f9660bde-df5a-48fd-a552-0822e11413ad",
-   "precio": 1370,
-   "cantidad": 28,
-   "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
-   "ProductId": "2880c4da-15a2-4132-a6c0-9211f993f8ca"
- },
- {
-   "id": "b7efcd76-8132-47c7-bf5d-761f5dcc025f",
-   "precio": 1750,
-   "cantidad": 93,
-   "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
-   "ProductId": "29615309-fc0b-4f73-94fd-e2d42832d6b6"
- },
- {
-   "id": "beccc696-17fc-427e-813f-6cf6c0093cd6",
-   "precio": 4870,
-   "cantidad": 8,
-   "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
-   "ProductId": "2a3b229d-0eca-4f98-983c-b76e3198b724"
- },
- {
-   "id": "4f26f1f1-4b54-4c13-9b9a-caebdff8bf30",
-   "precio": 3650,
-   "cantidad": 9,
-   "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
-   "ProductId": "2b29e728-a797-4022-a80f-53bb2d8bbc3e"
- },
- {
-   "id": "239f1263-ac56-468d-a7bb-c359505085ea",
-   "precio": 6610,
-   "cantidad": 36,
-   "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
-   "ProductId": "2c9bacad-5788-43b0-9d0c-2028609d4a51"
- },
- {
-   "id": "af74ab9e-ae45-41ad-a294-6f4280cd005e",
-   "precio": 3690,
-   "cantidad": 37,
-   "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
-   "ProductId": "2d0bc514-f188-445b-b751-ac0fe226f1b3"
- },
- {
-   "id": "51eb0d97-00f6-4c89-94db-c71236ccede4",
-   "precio": 3090,
-   "cantidad": 66,
-   "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
-   "ProductId": "2d5f895a-325f-40d8-b1ba-5dca65701505"
- },
- {
-   "id": "6374da60-2be3-4b69-a535-267de09f6adb",
-   "precio": 9990,
-   "cantidad": 91,
-   "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
-   "ProductId": "2ef2e3c3-a1b9-49d8-b913-8f434fa2172a"
- },
- {
-   "id": "6f2075ac-f6a1-4358-9d9e-04610f705301",
-   "precio": 1060,
-   "cantidad": 56,
-   "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
-   "ProductId": "2f51756d-6a65-4713-ad42-e171721849da"
- },
- {
-   "id": "162e3f09-2613-4435-acc3-47b8ac5b2ee5",
-   "precio": 8190,
-   "cantidad": 63,
-   "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
-   "ProductId": "2f6e34ed-aaaa-49d2-9f0b-7454f9dc30b5"
- },
- {
-   "id": "6d1062e4-7e48-4ed9-b1c0-e901fa087bbf",
-   "precio": 4050,
-   "cantidad": 60,
-   "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
-   "ProductId": "343716d8-f132-4ef2-af07-52c366b8b75b"
- },
- {
-   "id": "222ca74e-51d3-42cb-81a6-679380ab4115",
-   "precio": 8550,
-   "cantidad": 14,
-   "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
-   "ProductId": "344ab518-4a95-4896-8b0a-34c1b8217bdb"
- },
- {
-   "id": "d04bbd9e-e419-4620-89b9-a334fed1459d",
-   "precio": 3870,
-   "cantidad": 19,
-   "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
-   "ProductId": "35d6ca44-9792-4e47-9f40-b53ada6c9b3b"
- },
- {
-   "id": "2000e695-feb1-408e-9cfe-2c502469eae2",
-   "precio": 2610,
-   "cantidad": 59,
-   "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
-   "ProductId": "367bbc07-b9a8-4a96-ae14-0809293511a4"
- },
- {
-   "id": "d3fe31d9-30ee-4e0a-a57a-00e8204ed1b2",
-   "precio": 1160,
-   "cantidad": 85,
-   "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
-   "ProductId": "3a4a01c7-2e9c-42cc-99a2-d66e4bedf70c"
- },
- {
-   "id": "99361cb9-de51-4ac1-9990-ff5a160a8116",
-   "precio": 3180,
-   "cantidad": 8,
-   "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
-   "ProductId": "3a937d0f-4b0b-45eb-91cc-e664f4497181"
- },
- {
-   "id": "e5d8e18b-e0ae-49ff-ac5d-12c2b77fd1ce",
-   "precio": 5310,
-   "cantidad": 19,
-   "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
-   "ProductId": "3b1df46a-cdf8-439d-9419-a05fa7edac36"
- },
- {
-   "id": "d3fdd3cc-4ccb-4e86-8d36-9cf8b067c6ef",
-   "precio": 8290,
-   "cantidad": 7,
-   "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
-   "ProductId": "3b4cbb30-4349-49f9-9151-0fd49888ec5c"
- },
- {
-   "id": "f500c78f-6e29-4dcd-9acc-7691da982559",
-   "precio": 7520,
-   "cantidad": 23,
-   "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
-   "ProductId": "3bf29299-353f-4a94-b41f-014dc4bcf187"
- },
- {
-   "id": "5211b01f-4e18-46d4-90ad-5786c7abd3b9",
-   "precio": 5750,
-   "cantidad": 94,
-   "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
-   "ProductId": "3bf4abe9-b304-4443-8f2b-8184eee5a2cd"
- },
- {
-   "id": "7bff5530-1e7f-4cc8-afbb-bd1cc8ae1daf",
-   "precio": 4580,
-   "cantidad": 50,
-   "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
-   "ProductId": "3c3284b2-c0be-4415-afef-0fa776f0b083"
- },
- {
-   "id": "af2bc7b3-cedf-4b98-bb42-248e59c6b5ca",
-   "precio": 4280,
-   "cantidad": 12,
-   "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
-   "ProductId": "3d9592ca-925d-4dd7-82c4-9ea5be1e209b"
- },
- {
-   "id": "fab136d6-f8e1-41e7-9f9b-dea84fecf1aa",
-   "precio": 5460,
-   "cantidad": 14,
-   "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
-   "ProductId": "3ddbfa37-2766-4d93-b766-c636f71afb6f"
- },
- {
-   "id": "5b8870c3-2061-403b-8a0c-05f86bb215cb",
-   "precio": 7870,
-   "cantidad": 60,
-   "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
-   "ProductId": "4054a030-690c-426b-88f9-3394e2ac4444"
- },
- {
-   "id": "7da1a23f-2473-496a-bedc-f1eeff67d60e",
-   "precio": 6570,
-   "cantidad": 23,
-   "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
-   "ProductId": "41460027-46f8-4d11-aec0-d12daabc662b"
- },
- {
-   "id": "f1a297d6-f9c8-4535-b775-9da976bd4a6c",
-   "precio": 20,
-   "cantidad": 94,
-   "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
-   "ProductId": "42a0061a-7fb5-4d32-8165-d60fe6d4bb87"
- },
- {
-   "id": "9e480c33-6d86-4ee5-966f-2eb62a6739ba",
-   "precio": 6850,
-   "cantidad": 95,
-   "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
-   "ProductId": "457014b0-817d-418a-a564-c7851b4bdf99"
- },
- {
-   "id": "563d2589-1e92-461a-aefa-b82e7028059e",
-   "precio": 7080,
-   "cantidad": 80,
-   "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
-   "ProductId": "489c61bd-d476-4d3f-8615-2c643ae9dcd5"
- },
- {
-   "id": "41dc98cc-3904-47ee-86a1-74cf9523702b",
-   "precio": 5370,
-   "cantidad": 32,
-   "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
-   "ProductId": "49452ada-e2c2-43d2-b46e-59e1b8268daa"
- },
- {
-   "id": "1be64635-7b19-4869-94a6-08150f3f9eaa",
-   "precio": 6740,
-   "cantidad": 3,
-   "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
-   "ProductId": "49660754-e11b-4683-a72a-224cc7860a7a"
- },
- {
-   "id": "394c7da1-d7f2-4f95-ae28-9a7fbfa3394c",
-   "precio": 5400,
-   "cantidad": 60,
-   "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
-   "ProductId": "49f63486-0bf0-4830-9874-162d89ab2e4a"
- },
- {
-   "id": "e75edd34-d4bf-43de-9780-9f2c868124c3",
-   "precio": 5900,
-   "cantidad": 25,
-   "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
-   "ProductId": "4c28373a-1300-43f5-ad4f-8fbd848c0e6a"
- },
- {
-   "id": "c77cdb18-9ea9-470a-b311-9c4fd170c8ea",
-   "precio": 3090,
-   "cantidad": 85,
-   "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
-   "ProductId": "4c520f57-2c4b-4955-95cf-66d929c1a0f6"
- },
- {
-   "id": "46957a11-abb4-41fa-b7ce-55f30385c8c3",
-   "precio": 9830,
-   "cantidad": 80,
-   "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
-   "ProductId": "4cfe53a5-78eb-4eab-bbbd-56c147a851d3"
- },
- {
-   "id": "a11df538-0f35-47cb-b4c6-ff7e2187642b",
-   "precio": 4350,
-   "cantidad": 67,
-   "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
-   "ProductId": "4e145314-8c8a-4c29-8bde-e62498cd99e3"
- },
- {
-   "id": "636bc411-38c7-4e3c-8136-784ac1fdba05",
-   "precio": 4770,
-   "cantidad": 12,
-   "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
-   "ProductId": "4e5b213d-0172-4341-9073-4d6271897c25"
- },
- {
-   "id": "09b0d2be-2af9-4000-a2b6-16997c0cf079",
-   "precio": 8620,
-   "cantidad": 16,
-   "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
-   "ProductId": "4ef0c5a7-a07f-4233-9011-46e4a3bd7633"
- },
- {
-   "id": "117ec4d8-e8ac-4283-b235-6b9ec575c2a9",
-   "precio": 1940,
-   "cantidad": 3,
-   "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
-   "ProductId": "4f69ee4a-c1c2-4b11-a57b-5e0be90cca52"
- },
- {
-   "id": "143bd20e-0162-4ff4-8e38-28f591cdb800",
-   "precio": 7840,
-   "cantidad": 5,
-   "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
-   "ProductId": "4fcd1775-cba2-4031-b827-2b45b60a15b9"
- },
- {
-   "id": "dcfef99f-7f87-4fcc-ab56-f1965336980c",
-   "precio": 6420,
-   "cantidad": 44,
-   "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
-   "ProductId": "524716c1-d528-408e-b888-76cd7ceb7306"
- },
- {
-   "id": "1f34bd17-e4c3-45e2-899e-8706a573f98b",
-   "precio": 2170,
-   "cantidad": 40,
-   "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
-   "ProductId": "562799d9-225f-4e5b-b039-59d6957461fe"
- },
- {
-   "id": "bff68ef7-e9f5-450e-bf1a-660c76aa6b83",
-   "precio": 4400,
-   "cantidad": 57,
-   "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
-   "ProductId": "565d59e3-6e15-483e-8bad-4cddff60ccff"
- },
- {
-   "id": "a0f760bd-59a8-479b-a914-e29d9712cf34",
-   "precio": 6650,
-   "cantidad": 35,
-   "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
-   "ProductId": "56da0010-f9d3-4e0b-9fff-86532e77ef0e"
- },
- {
-   "id": "a75ecb9a-f1b4-4f47-a3e8-2b85a7291ad3",
-   "precio": 8080,
-   "cantidad": 34,
-   "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
-   "ProductId": "574fdb48-9e11-4a9a-81d1-42e0c948b96f"
- },
- {
-   "id": "48c62463-f123-4b07-94b1-e1aca79937a5",
-   "precio": 5560,
-   "cantidad": 56,
-   "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
-   "ProductId": "577191de-c2c6-4122-a07f-9a6f2f9daba3"
- },
- {
-   "id": "0e5d4f85-3209-41c8-a02e-f53bee887e63",
-   "precio": 7950,
-   "cantidad": 96,
-   "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
-   "ProductId": "57bf7f70-ae28-4981-be8c-d864488bb027"
- },
- {
-   "id": "7c40ced5-9a12-4f76-8f81-ab6946f82ec2",
-   "precio": 4490,
-   "cantidad": 97,
-   "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
-   "ProductId": "586604f8-463b-49d7-a81f-36c231f19217"
- },
- {
-   "id": "ffb0cf06-dfef-4b9a-bb7e-fb91bb326e19",
-   "precio": 8900,
-   "cantidad": 59,
-   "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
-   "ProductId": "58d94633-0a59-4dc4-a662-2aaf1cbe3a3f"
- },
- {
-   "id": "f57b071b-0068-4bc1-b40c-11a1018f9ee6",
-   "precio": 7330,
-   "cantidad": 44,
-   "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
-   "ProductId": "597aceed-f682-474a-a116-be0c38a172f1"
- },
- {
-   "id": "531fcd46-79ea-486a-859f-a0e0a128b98a",
-   "precio": 9820,
-   "cantidad": 50,
-   "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
-   "ProductId": "5ab96b2b-6cf2-40e6-9947-02419fe6e659"
- },
- {
-   "id": "27688834-439a-4e57-875a-41b2d43bd5f2",
-   "precio": 9180,
-   "cantidad": 25,
-   "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
-   "ProductId": "5b3d6068-59df-429e-aeed-0eb8060aa5f5"
- },
- {
-   "id": "6de739c2-75f2-4397-bb97-2e9b3774da62",
-   "precio": 2200,
-   "cantidad": 99,
-   "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
-   "ProductId": "5cbaa622-03aa-41f2-923f-3dde9c3feafb"
- },
- {
-   "id": "cad49911-5812-4d8e-bdfd-d833c7dcd9fd",
-   "precio": 1670,
-   "cantidad": 83,
-   "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
-   "ProductId": "5dba80ef-6304-4590-a000-2f2f227c1016"
- },
- {
-   "id": "b9060f43-3de5-4e42-84c1-ef65a8b7c95c",
-   "precio": 5980,
-   "cantidad": 43,
-   "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
-   "ProductId": "6191acbe-6ae7-448d-b6f7-f27936ea3d00"
- },
- {
-   "id": "006215f1-b8cb-4357-9aeb-9827c80d13ff",
-   "precio": 2600,
-   "cantidad": 9,
-   "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
-   "ProductId": "619391d1-d77c-4f39-aa10-05cf5326c773"
- },
- {
-   "id": "0bac18b1-aa5a-4b05-8fc8-774760801221",
-   "precio": 6810,
-   "cantidad": 55,
-   "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
-   "ProductId": "61bfb9a4-20b9-4cd2-a589-ea89de30f9ba"
- },
- {
-   "id": "cac2c7ca-ffb5-43bf-ab63-1d3bfb6514db",
-   "precio": 7670,
-   "cantidad": 39,
-   "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
-   "ProductId": "6232a5e8-1a23-4109-979e-29a2e402801d"
- },
- {
-   "id": "88b1306c-6739-492e-9b5d-737f2225ea2d",
-   "precio": 370,
-   "cantidad": 45,
-   "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
-   "ProductId": "63a6dae4-7456-40ec-8f25-5e796d484fb6"
- },
- {
-   "id": "51935487-9064-4306-aab6-603e0806500d",
-   "precio": 4320,
-   "cantidad": 27,
-   "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
-   "ProductId": "63e2c790-5175-4d83-825c-08854251b8e5"
- },
- {
-   "id": "7f25a531-0e83-446f-94f3-6c9402f88d24",
-   "precio": 8700,
-   "cantidad": 9,
-   "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
-   "ProductId": "640294a8-5d33-4597-a8a2-da7ae6cb61da"
- },
- {
-   "id": "eaf848a9-f4a8-4392-9996-30717e389645",
-   "precio": 2830,
-   "cantidad": 21,
-   "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
-   "ProductId": "652430f8-887e-4bc5-883c-909f99fed6e6"
- },
- {
-   "id": "f01c03e2-94f0-4616-9c1f-a1db795c75b4",
-   "precio": 9000,
-   "cantidad": 36,
-   "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
-   "ProductId": "657fc9f1-40f2-4498-8589-d7d27488e4e4"
- },
- {
-   "id": "65f51e39-192b-4f8b-b498-cd3c21b9d226",
-   "precio": 8140,
-   "cantidad": 46,
-   "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
-   "ProductId": "65b013d4-c613-403f-9765-c31df61deef1"
- },
- {
-   "id": "571de52b-d8ae-48a4-ab87-20402a16081c",
-   "precio": 4140,
-   "cantidad": 6,
-   "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
-   "ProductId": "65b1a4c4-8887-44b4-8ce3-edde0ea69c79"
- },
- {
-   "id": "e5a5371a-208e-44e2-92d4-aea3f0245b28",
-   "precio": 8800,
-   "cantidad": 34,
-   "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
-   "ProductId": "65d4386e-b5bc-4aea-a946-a4a1e231aa41"
- },
- {
-   "id": "6ca80bc9-d558-44c3-91f5-638fb7f05719",
-   "precio": 9690,
-   "cantidad": 90,
-   "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
-   "ProductId": "67653ad8-1219-4a42-b5dd-1050fe70d33f"
- },
- {
-   "id": "a505bb94-a49e-4036-be0a-9af04d7bd829",
-   "precio": 780,
-   "cantidad": 35,
-   "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
-   "ProductId": "67be2d63-7688-41f0-8294-0bc2abade4ee"
- }
+  {
+    "id": "006215f1-b8cb-4357-9aeb-9827c80d13ff",
+    "precio": 2600,
+    "cantidad": 9,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
+    "ProductId": "619391d1-d77c-4f39-aa10-05cf5326c773"
+  },
+  {
+    "id": "014cd443-ef7a-4e8b-9b39-0abc32e1357b",
+    "precio": 1610,
+    "cantidad": 14,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
+    "ProductId": "63e2c790-5175-4d83-825c-08854251b8e5"
+  },
+  {
+    "id": "0371d764-c324-4b1b-b74d-81e80bcce668",
+    "precio": 6370,
+    "cantidad": 16,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
+    "ProductId": "4e145314-8c8a-4c29-8bde-e62498cd99e3"
+  },
+  {
+    "id": "05052ba0-849a-47bc-aa68-010d335ed290",
+    "precio": 5830,
+    "cantidad": 49,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
+    "ProductId": "19c32358-946b-415b-a727-8cde1374640c"
+  },
+  {
+    "id": "05f7df33-005b-451b-9cd3-0cae87477627",
+    "precio": 2080,
+    "cantidad": 28,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
+    "ProductId": "6628f9ff-086b-4734-9fd5-5782eec0fc44"
+  },
+  {
+    "id": "066d13ba-e3ed-4f8d-b8db-0e4387ec4dd6",
+    "precio": 5570,
+    "cantidad": 46,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
+    "ProductId": "67fb276b-3073-4037-9c58-367fe318a407"
+  },
+  {
+    "id": "08d1b750-cfd6-4da5-ada5-883eb2e0dbbb",
+    "precio": 4500,
+    "cantidad": 85,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
+    "ProductId": "27318e79-0eeb-4498-878d-9443c8f52898"
+  },
+  {
+    "id": "090c6c51-faa9-44e5-8f0c-8ddc58c47cc3",
+    "precio": 5500,
+    "cantidad": 27,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
+    "ProductId": "619391d1-d77c-4f39-aa10-05cf5326c773"
+  },
+  {
+    "id": "09b0d2be-2af9-4000-a2b6-16997c0cf079",
+    "precio": 8620,
+    "cantidad": 16,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
+    "ProductId": "4ef0c5a7-a07f-4233-9011-46e4a3bd7633"
+  },
+  {
+    "id": "0ab5d4d2-66dd-4657-b20b-8a4a6aad0329",
+    "precio": 4070,
+    "cantidad": 94,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
+    "ProductId": "457014b0-817d-418a-a564-c7851b4bdf99"
+  },
+  {
+    "id": "0bac18b1-aa5a-4b05-8fc8-774760801221",
+    "precio": 6810,
+    "cantidad": 55,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
+    "ProductId": "61bfb9a4-20b9-4cd2-a589-ea89de30f9ba"
+  },
+  {
+    "id": "0dd79cd8-928b-4361-b851-62dfe9d336b0",
+    "precio": 7630,
+    "cantidad": 82,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
+    "ProductId": "2597e882-a144-4c7b-913d-6518b15106da"
+  },
+  {
+    "id": "0dde2f27-b7e4-4c1c-b7a5-c55b09aa2c74",
+    "precio": 5320,
+    "cantidad": 34,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
+    "ProductId": "6180a9b3-4816-4685-a8e0-6f6856357ebc"
+  },
+  {
+    "id": "0e4d4e8a-9357-499b-ba9d-13c9fc7150d6",
+    "precio": 850,
+    "cantidad": 46,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
+    "ProductId": "4cfe53a5-78eb-4eab-bbbd-56c147a851d3"
+  },
+  {
+    "id": "0e5d4f85-3209-41c8-a02e-f53bee887e63",
+    "precio": 7950,
+    "cantidad": 96,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
+    "ProductId": "57bf7f70-ae28-4981-be8c-d864488bb027"
+  },
+  {
+    "id": "0e9396b2-e79f-41a6-9acc-db425fe6987f",
+    "precio": 1950,
+    "cantidad": 36,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
+    "ProductId": "0ec81dda-303e-42ab-94c6-444b962de20d"
+  },
+  {
+    "id": "0f428d98-aced-4be2-818d-fc15af021726",
+    "precio": 3000,
+    "cantidad": 61,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
+    "ProductId": "33a04b2a-07dc-4de4-a905-d57fd4760759"
+  },
+  {
+    "id": "114293fb-db7f-442f-b773-51c89fbe5b3b",
+    "precio": 6080,
+    "cantidad": 37,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
+    "ProductId": "4472dd8d-4f05-4ad1-9672-20aec04f4ac3"
+  },
+  {
+    "id": "1151e33e-1c3d-4b6f-9c33-f6ef391ae9e4",
+    "precio": 1100,
+    "cantidad": 3,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
+    "ProductId": "185a4a34-0c99-4101-b052-04f92dfbe91f"
+  },
+  {
+    "id": "1163ffec-ebb5-4924-a34c-8da1dbb900bb",
+    "precio": 2800,
+    "cantidad": 79,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
+    "ProductId": "190ffb43-721c-4cb8-af73-5178d629e9ea"
+  },
+  {
+    "id": "117ec4d8-e8ac-4283-b235-6b9ec575c2a9",
+    "precio": 1940,
+    "cantidad": 3,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
+    "ProductId": "4f69ee4a-c1c2-4b11-a57b-5e0be90cca52"
+  },
+  {
+    "id": "11e2108c-a4cb-4a3c-96ea-de04ebea5c45",
+    "precio": 6500,
+    "cantidad": 51,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
+    "ProductId": "544cbcac-e38f-4b4f-8b51-3c4f878cd56d"
+  },
+  {
+    "id": "12378de6-0dcb-4927-8e14-faf9589b94c8",
+    "precio": 7010,
+    "cantidad": 16,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
+    "ProductId": "14a13da6-990c-4666-b8ac-c83950330641"
+  },
+  {
+    "id": "143bd20e-0162-4ff4-8e38-28f591cdb800",
+    "precio": 7840,
+    "cantidad": 5,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
+    "ProductId": "4fcd1775-cba2-4031-b827-2b45b60a15b9"
+  },
+  {
+    "id": "14fd4e17-b860-4bd2-ac77-0ce12b2f311e",
+    "precio": 5940,
+    "cantidad": 83,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
+    "ProductId": "35d6ca44-9792-4e47-9f40-b53ada6c9b3b"
+  },
+  {
+    "id": "152ad04e-60aa-448e-b9de-7f92c2c8e32c",
+    "precio": 10,
+    "cantidad": 64,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
+    "ProductId": "66b6e5c9-4a99-4df2-9ec2-e5c2d8a927cd"
+  },
+  {
+    "id": "162e3f09-2613-4435-acc3-47b8ac5b2ee5",
+    "precio": 8190,
+    "cantidad": 63,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
+    "ProductId": "2f6e34ed-aaaa-49d2-9f0b-7454f9dc30b5"
+  },
+  {
+    "id": "1704a271-dcd7-4709-8fc4-0b9112140c51",
+    "precio": 9010,
+    "cantidad": 2,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
+    "ProductId": "19c1e5da-d989-4278-98af-efbcb02ac640"
+  },
+  {
+    "id": "178438a2-5f7a-4645-9283-137fc9b660b9",
+    "precio": 3090,
+    "cantidad": 81,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
+    "ProductId": "0c4970b2-10a8-4625-93f9-961f18faf7df"
+  },
+  {
+    "id": "182cba8a-40a3-45ab-8807-9792ec407193",
+    "precio": 9500,
+    "cantidad": 9,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
+    "ProductId": "3c3284b2-c0be-4415-afef-0fa776f0b083"
+  },
+  {
+    "id": "1a9486a2-f692-49f4-b4cc-870b6a578b33",
+    "precio": 4720,
+    "cantidad": 87,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
+    "ProductId": "154571e6-7fb7-4d73-bb13-9b296b5e740d"
+  },
+  {
+    "id": "1be64635-7b19-4869-94a6-08150f3f9eaa",
+    "precio": 6740,
+    "cantidad": 3,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
+    "ProductId": "49660754-e11b-4683-a72a-224cc7860a7a"
+  },
+  {
+    "id": "1d59acca-4778-4e2e-83a9-1986e12a33d2",
+    "precio": 1700,
+    "cantidad": 53,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
+    "ProductId": "15c0d7d0-c5a3-414d-a567-1e71836de56c"
+  },
+  {
+    "id": "1da0548c-f843-4d0d-8e30-9b63d533b291",
+    "precio": 8910,
+    "cantidad": 46,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
+    "ProductId": "35c0ad97-ff54-4fe5-9909-d743281cfd4b"
+  },
+  {
+    "id": "1da732ab-d60a-4a5b-b5da-d5d6106a7592",
+    "precio": 2250,
+    "cantidad": 52,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
+    "ProductId": "518cff6b-ac86-43cd-b8bb-60bf65579738"
+  },
+  {
+    "id": "1dce3838-a81e-483a-ae0e-c5a6d361b81f",
+    "precio": 6160,
+    "cantidad": 33,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
+    "ProductId": "26b20d42-e181-4861-9a32-7bc116d9a703"
+  },
+  {
+    "id": "1df8d548-36e4-483f-aef0-defa2fccb504",
+    "precio": 6620,
+    "cantidad": 50,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
+    "ProductId": "5fec65e6-bf02-4f8c-a312-dcb000cf02ea"
+  },
+  {
+    "id": "1f17588a-62e8-4c2d-b40a-217c60d845fa",
+    "precio": 3480,
+    "cantidad": 88,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
+    "ProductId": "21f8f459-8fcc-4dd1-a48f-1a46853e1fb8"
+  },
+  {
+    "id": "1f34bd17-e4c3-45e2-899e-8706a573f98b",
+    "precio": 2170,
+    "cantidad": 40,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
+    "ProductId": "562799d9-225f-4e5b-b039-59d6957461fe"
+  },
+  {
+    "id": "1fc250c7-d437-4a0c-b8fb-639f06b39dca",
+    "precio": 5590,
+    "cantidad": 57,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
+    "ProductId": "562799d9-225f-4e5b-b039-59d6957461fe"
+  },
+  {
+    "id": "2000e695-feb1-408e-9cfe-2c502469eae2",
+    "precio": 2610,
+    "cantidad": 59,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
+    "ProductId": "367bbc07-b9a8-4a96-ae14-0809293511a4"
+  },
+  {
+    "id": "2004cab5-5545-4b70-93be-0e4a913343fe",
+    "precio": 4730,
+    "cantidad": 53,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
+    "ProductId": "60548faa-e854-4cca-9ec3-1abdf08a1f04"
+  },
+  {
+    "id": "21a5c665-2aa0-41b1-af56-5c9608c2ad57",
+    "precio": 4440,
+    "cantidad": 23,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
+    "ProductId": "1b07f61f-f0d0-4db3-84aa-70750ecccb1b"
+  },
+  {
+    "id": "222ca74e-51d3-42cb-81a6-679380ab4115",
+    "precio": 8550,
+    "cantidad": 14,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
+    "ProductId": "344ab518-4a95-4896-8b0a-34c1b8217bdb"
+  },
+  {
+    "id": "23006072-fa0a-4fc7-897d-194d3e7ad067",
+    "precio": 8390,
+    "cantidad": 33,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
+    "ProductId": "125347ee-eba3-4efb-8d95-5789eeb5aff4"
+  },
+  {
+    "id": "23441a5a-6dfc-4fe9-829c-e18e14f02b2b",
+    "precio": 1860,
+    "cantidad": 31,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
+    "ProductId": "15431f9d-842e-4434-a128-33c937376058"
+  },
+  {
+    "id": "239f1263-ac56-468d-a7bb-c359505085ea",
+    "precio": 6610,
+    "cantidad": 36,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
+    "ProductId": "2c9bacad-5788-43b0-9d0c-2028609d4a51"
+  },
+  {
+    "id": "24919c04-9830-4e31-ba94-e4984bae13d3",
+    "precio": 6150,
+    "cantidad": 43,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
+    "ProductId": "4f69ee4a-c1c2-4b11-a57b-5e0be90cca52"
+  },
+  {
+    "id": "24d2d2b8-2025-477b-9d66-9fff3e8eb928",
+    "precio": 6580,
+    "cantidad": 22,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
+    "ProductId": "1a596229-b5f3-413c-90a9-fb21f9a5a8a1"
+  },
+  {
+    "id": "25eb84fd-aa94-462d-8f14-1a675a5a676e",
+    "precio": 4540,
+    "cantidad": 8,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
+    "ProductId": "154571e6-7fb7-4d73-bb13-9b296b5e740d"
+  },
+  {
+    "id": "27348bb6-85d1-4fde-8600-9bd31459b903",
+    "precio": 5420,
+    "cantidad": 85,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
+    "ProductId": "001fa870-0975-499e-885a-2518483bcac9"
+  },
+  {
+    "id": "27688834-439a-4e57-875a-41b2d43bd5f2",
+    "precio": 9180,
+    "cantidad": 25,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
+    "ProductId": "5b3d6068-59df-429e-aeed-0eb8060aa5f5"
+  },
+  {
+    "id": "290ceaa4-d557-4d2e-a7df-ea2f612ef4e6",
+    "precio": 3890,
+    "cantidad": 59,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
+    "ProductId": "34a8453d-f693-4564-a910-c0b51df72c8a"
+  },
+  {
+    "id": "29928837-ef12-43d3-9362-4763fb38d0b2",
+    "precio": 5780,
+    "cantidad": 69,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
+    "ProductId": "20e8175a-1836-4b18-b176-3bbf715f15cf"
+  },
+  {
+    "id": "2aa3a3cc-370f-4272-918e-0b180010d7e5",
+    "precio": 490,
+    "cantidad": 88,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
+    "ProductId": "171a9bba-067f-4c67-986b-34ed8caf0a98"
+  },
+  {
+    "id": "2c243782-9b12-497d-b6d7-c6c0b6527acf",
+    "precio": 6440,
+    "cantidad": 82,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
+    "ProductId": "2f2e75b1-c2ed-4b54-9583-61e91063d670"
+  },
+  {
+    "id": "2d186c03-5370-4067-a565-ab6fc04cbc53",
+    "precio": 660,
+    "cantidad": 30,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
+    "ProductId": "40c41cfa-d435-4015-b207-c9b9c600e6c3"
+  },
+  {
+    "id": "2d78d159-9bb1-493f-9586-0802acf5b673",
+    "precio": 8830,
+    "cantidad": 24,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
+    "ProductId": "50983feb-aff7-4cdf-ad01-62dd4ba7916d"
+  },
+  {
+    "id": "2de4a277-dad3-4860-8e42-28c7bb07484f",
+    "precio": 5360,
+    "cantidad": 64,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
+    "ProductId": "0dd38f79-5193-4c14-9c98-2afecf22843a"
+  },
+  {
+    "id": "2eebb2f4-bd49-4392-8db1-721c0fd51167",
+    "precio": 6040,
+    "cantidad": 92,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
+    "ProductId": "489c61bd-d476-4d3f-8615-2c643ae9dcd5"
+  },
+  {
+    "id": "2f45e45c-0702-47b7-8ac4-27131812107f",
+    "precio": 8040,
+    "cantidad": 31,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
+    "ProductId": "42b6e145-744d-4604-aef3-c526d6907f13"
+  },
+  {
+    "id": "2f977217-57af-4d8a-a085-246ff77062f0",
+    "precio": 2960,
+    "cantidad": 38,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
+    "ProductId": "2f2e75b1-c2ed-4b54-9583-61e91063d670"
+  },
+  {
+    "id": "3060dcaa-574e-453c-96e0-9e117986725d",
+    "precio": 7030,
+    "cantidad": 38,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
+    "ProductId": "6191acbe-6ae7-448d-b6f7-f27936ea3d00"
+  },
+  {
+    "id": "30f64edd-952e-4e47-91ea-b9110bd64afb",
+    "precio": 3230,
+    "cantidad": 14,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
+    "ProductId": "5b3d6068-59df-429e-aeed-0eb8060aa5f5"
+  },
+  {
+    "id": "31010fd8-3d2c-4563-9cf0-5373083042d1",
+    "precio": 4780,
+    "cantidad": 38,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
+    "ProductId": "3bf4abe9-b304-4443-8f2b-8184eee5a2cd"
+  },
+  {
+    "id": "314b7b25-4054-42cd-b6d8-ee65a08d77a4",
+    "precio": 1690,
+    "cantidad": 80,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
+    "ProductId": "02481610-e2df-4069-8d48-0e67daa2921a"
+  },
+  {
+    "id": "31b53a1b-7c43-47fd-82fb-cbbb2e2cebe5",
+    "precio": 8930,
+    "cantidad": 38,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
+    "ProductId": "138963b4-735e-43df-b632-c927423e5d77"
+  },
+  {
+    "id": "3268986e-8949-46d6-9951-ecdece08d81d",
+    "precio": 6050,
+    "cantidad": 45,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
+    "ProductId": "15c0d7d0-c5a3-414d-a567-1e71836de56c"
+  },
+  {
+    "id": "333f8d93-c5b1-4199-8807-cf5dc3760fc9",
+    "precio": 3470,
+    "cantidad": 90,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
+    "ProductId": "158e7187-7c31-4dfa-920b-71379410d8fd"
+  },
+  {
+    "id": "33ca98b7-3c6e-47ba-aa21-b1226f75f2df",
+    "precio": 7910,
+    "cantidad": 30,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
+    "ProductId": "4c28373a-1300-43f5-ad4f-8fbd848c0e6a"
+  },
+  {
+    "id": "33e6d579-2a3b-4988-89d8-ef4af1519522",
+    "precio": 1020,
+    "cantidad": 79,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
+    "ProductId": "6737458e-b2ed-45bb-b7c1-8ce94eeba2de"
+  },
+  {
+    "id": "3480b3fd-855f-4775-903c-fe5635b1a212",
+    "precio": 5500,
+    "cantidad": 37,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
+    "ProductId": "1e9089fa-810c-4427-83fe-72010489453c"
+  },
+  {
+    "id": "34bf51b8-b3dd-40bb-add2-ae0347bfe6f1",
+    "precio": 4090,
+    "cantidad": 82,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
+    "ProductId": "013c5bec-ff89-4654-aac5-246f35b42be0"
+  },
+  {
+    "id": "34dadcd1-c66e-42cb-8ebb-738fa7e05824",
+    "precio": 8860,
+    "cantidad": 18,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
+    "ProductId": "5240af7e-bceb-4c64-bf15-891025e9c4d6"
+  },
+  {
+    "id": "35a6a5bd-6fdf-423c-9bf1-f4084481221a",
+    "precio": 6850,
+    "cantidad": 74,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
+    "ProductId": "35c0ad97-ff54-4fe5-9909-d743281cfd4b"
+  },
+  {
+    "id": "35fe1a43-ff15-4088-9c59-b8db19390e42",
+    "precio": 6440,
+    "cantidad": 46,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
+    "ProductId": "652430f8-887e-4bc5-883c-909f99fed6e6"
+  },
+  {
+    "id": "361901f4-f138-4a4a-8436-1812c0836d7a",
+    "precio": 1360,
+    "cantidad": 59,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
+    "ProductId": "615ab0f0-5766-4068-9ff8-e798d728b489"
+  },
+  {
+    "id": "38088b94-3f44-4a5e-ad1c-24e1fbbbe3f0",
+    "precio": 8240,
+    "cantidad": 19,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
+    "ProductId": "6191acbe-6ae7-448d-b6f7-f27936ea3d00"
+  },
+  {
+    "id": "38cf1ac1-6c8f-441b-8c32-90974128ff01",
+    "precio": 350,
+    "cantidad": 13,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
+    "ProductId": "5519203b-8db1-4463-acc4-e36dfe8654f3"
+  },
+  {
+    "id": "394c7da1-d7f2-4f95-ae28-9a7fbfa3394c",
+    "precio": 5400,
+    "cantidad": 60,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
+    "ProductId": "49f63486-0bf0-4830-9874-162d89ab2e4a"
+  },
+  {
+    "id": "3a7f7529-f549-43ae-9adb-8365603eeb1e",
+    "precio": 9030,
+    "cantidad": 76,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
+    "ProductId": "662b081d-f2c7-4dbc-87f3-4c1b1a0a423a"
+  },
+  {
+    "id": "415ea4dc-9bf8-4f0c-8385-a669106d8cf3",
+    "precio": 6590,
+    "cantidad": 59,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
+    "ProductId": "65d4386e-b5bc-4aea-a946-a4a1e231aa41"
+  },
+  {
+    "id": "41dc98cc-3904-47ee-86a1-74cf9523702b",
+    "precio": 5370,
+    "cantidad": 32,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
+    "ProductId": "49452ada-e2c2-43d2-b46e-59e1b8268daa"
+  },
+  {
+    "id": "42a219b1-39c7-45dd-b546-6bee282a94bb",
+    "precio": 4400,
+    "cantidad": 88,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
+    "ProductId": "1f76e4aa-cb3f-4ea3-99f5-3eba7e3c96fa"
+  },
+  {
+    "id": "46957a11-abb4-41fa-b7ce-55f30385c8c3",
+    "precio": 9830,
+    "cantidad": 80,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
+    "ProductId": "4cfe53a5-78eb-4eab-bbbd-56c147a851d3"
+  },
+  {
+    "id": "4709c50e-e7e1-444a-a7f5-1ae0cd965d7c",
+    "precio": 5200,
+    "cantidad": 89,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
+    "ProductId": "16600d1a-121b-4390-a6fc-11eec1bfcd84"
+  },
+  {
+    "id": "4711bf9b-611d-4104-9509-335926b67387",
+    "precio": 1220,
+    "cantidad": 80,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
+    "ProductId": "27ec11a1-238a-4ef2-92e2-5538783ac525"
+  },
+  {
+    "id": "4735252c-6275-49f7-8423-4a58b7042a0d",
+    "precio": 2980,
+    "cantidad": 49,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
+    "ProductId": "192677bc-35e6-4c1e-8466-a65521eca251"
+  },
+  {
+    "id": "47502310-11da-43cf-9129-c16b24dabc93",
+    "precio": 8630,
+    "cantidad": 65,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
+    "ProductId": "6735772a-39de-4e31-bd6f-6e29ca182783"
+  },
+  {
+    "id": "48c62463-f123-4b07-94b1-e1aca79937a5",
+    "precio": 5560,
+    "cantidad": 56,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
+    "ProductId": "577191de-c2c6-4122-a07f-9a6f2f9daba3"
+  },
+  {
+    "id": "49010ea4-896d-4906-9af9-2b62f35175e3",
+    "precio": 2950,
+    "cantidad": 75,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
+    "ProductId": "23071e9d-8853-4367-be32-ba36f326f039"
+  },
+  {
+    "id": "49ff9e55-e0b3-4dda-aa1d-5b5dd0bf02e9",
+    "precio": 900,
+    "cantidad": 40,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
+    "ProductId": "343716d8-f132-4ef2-af07-52c366b8b75b"
+  },
+  {
+    "id": "4ac798f6-3538-46b9-9b79-dbf2ea18baca",
+    "precio": 7760,
+    "cantidad": 73,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
+    "ProductId": "171a9bba-067f-4c67-986b-34ed8caf0a98"
+  },
+  {
+    "id": "4dd1b331-64c8-496a-b236-1da063d18ce7",
+    "precio": 1010,
+    "cantidad": 78,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
+    "ProductId": "0897507d-9a09-47b7-afd8-53fa7456a67a"
+  },
+  {
+    "id": "4e555ab0-eb14-4d57-a1de-e9427c3d1c4e",
+    "precio": 4050,
+    "cantidad": 45,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
+    "ProductId": "447ae674-cb20-4b15-b8ba-0de83b8cf0bd"
+  },
+  {
+    "id": "4f26f1f1-4b54-4c13-9b9a-caebdff8bf30",
+    "precio": 3650,
+    "cantidad": 9,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
+    "ProductId": "2b29e728-a797-4022-a80f-53bb2d8bbc3e"
+  },
+  {
+    "id": "51496f1f-c526-4c71-b140-c44d829a4e09",
+    "precio": 8160,
+    "cantidad": 63,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
+    "ProductId": "5cbaa622-03aa-41f2-923f-3dde9c3feafb"
+  },
+  {
+    "id": "5187bbe3-4fea-445b-b041-bb221fa01bc0",
+    "precio": 8280,
+    "cantidad": 94,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
+    "ProductId": "235f117a-4e4e-4fcd-923b-b9cf597a61aa"
+  },
+  {
+    "id": "51935487-9064-4306-aab6-603e0806500d",
+    "precio": 4320,
+    "cantidad": 27,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
+    "ProductId": "63e2c790-5175-4d83-825c-08854251b8e5"
+  },
+  {
+    "id": "51eb0d97-00f6-4c89-94db-c71236ccede4",
+    "precio": 3090,
+    "cantidad": 66,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
+    "ProductId": "2d5f895a-325f-40d8-b1ba-5dca65701505"
+  },
+  {
+    "id": "5211b01f-4e18-46d4-90ad-5786c7abd3b9",
+    "precio": 5750,
+    "cantidad": 94,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
+    "ProductId": "3bf4abe9-b304-4443-8f2b-8184eee5a2cd"
+  },
+  {
+    "id": "52457c06-f990-47c8-9ceb-a8c8456df0ec",
+    "precio": 2030,
+    "cantidad": 87,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
+    "ProductId": "1dadccb7-f58c-4bc2-a802-c5d8efbedc06"
+  },
+  {
+    "id": "531fcd46-79ea-486a-859f-a0e0a128b98a",
+    "precio": 9820,
+    "cantidad": 50,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
+    "ProductId": "5ab96b2b-6cf2-40e6-9947-02419fe6e659"
+  },
+  {
+    "id": "556f37d3-4d52-4234-bd5e-7832c6d4b914",
+    "precio": 9580,
+    "cantidad": 12,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
+    "ProductId": "2ef2e3c3-a1b9-49d8-b913-8f434fa2172a"
+  },
+  {
+    "id": "55f5ba2e-dbcc-4abb-9a24-964cdbb4394c",
+    "precio": 3320,
+    "cantidad": 32,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
+    "ProductId": "22041c98-57c6-4528-9c6c-2a4d45367eb2"
+  },
+  {
+    "id": "562a21a0-8d48-4fa6-ae8e-a7726100eed2",
+    "precio": 8870,
+    "cantidad": 98,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
+    "ProductId": "5519203b-8db1-4463-acc4-e36dfe8654f3"
+  },
+  {
+    "id": "563d2589-1e92-461a-aefa-b82e7028059e",
+    "precio": 7080,
+    "cantidad": 80,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
+    "ProductId": "489c61bd-d476-4d3f-8615-2c643ae9dcd5"
+  },
+  {
+    "id": "571de52b-d8ae-48a4-ab87-20402a16081c",
+    "precio": 4140,
+    "cantidad": 6,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
+    "ProductId": "65b1a4c4-8887-44b4-8ce3-edde0ea69c79"
+  },
+  {
+    "id": "572290f3-3df4-4ed7-82f2-0e985eb7e100",
+    "precio": 8070,
+    "cantidad": 31,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
+    "ProductId": "01b4c4fc-67ad-401b-87ca-649c82f9504d"
+  },
+  {
+    "id": "58e4ab38-459b-45d9-b3fb-ac8b6163a3d2",
+    "precio": 3860,
+    "cantidad": 17,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
+    "ProductId": "0144f0eb-0c4d-4766-b034-7af5428fb222"
+  },
+  {
+    "id": "58e5ab38-459b-45d9-b3fb-ac8b6163a3d2",
+    "precio": 500,
+    "cantidad": 99,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
+    "ProductId": "0144f0eb-0c4d-4766-b034-7af5428fb222"
+  },
+  {
+    "id": "59048bf6-1e52-4bdf-8caf-403d06fb5ed4",
+    "precio": 8150,
+    "cantidad": 46,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
+    "ProductId": "027577f0-8a95-439c-b29a-68b9a57794fa"
+  },
+  {
+    "id": "59adfe26-eb67-4d42-b117-2461de0ba5dc",
+    "precio": 4510,
+    "cantidad": 57,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
+    "ProductId": "125347ee-eba3-4efb-8d95-5789eeb5aff4"
+  },
+  {
+    "id": "5b2bc01f-1afb-4728-9b22-1dc868ddac01",
+    "precio": 2090,
+    "cantidad": 20,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
+    "ProductId": "63a6dae4-7456-40ec-8f25-5e796d484fb6"
+  },
+  {
+    "id": "5b8870c3-2061-403b-8a0c-05f86bb215cb",
+    "precio": 7870,
+    "cantidad": 60,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
+    "ProductId": "4054a030-690c-426b-88f9-3394e2ac4444"
+  },
+  {
+    "id": "5b9eff51-7316-440d-863f-3f6a921932b7",
+    "precio": 5210,
+    "cantidad": 67,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
+    "ProductId": "3a4a01c7-2e9c-42cc-99a2-d66e4bedf70c"
+  },
+  {
+    "id": "5c7ff807-446b-4fb0-9f89-2e80cd33d5fd",
+    "precio": 9300,
+    "cantidad": 77,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
+    "ProductId": "158e7187-7c31-4dfa-920b-71379410d8fd"
+  },
+  {
+    "id": "5ca5bd60-490f-479c-bfa1-08786ebc4932",
+    "precio": 9640,
+    "cantidad": 47,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
+    "ProductId": "640294a8-5d33-4597-a8a2-da7ae6cb61da"
+  },
+  {
+    "id": "6054cb6a-7fb0-4e26-8c4e-166733c4de76",
+    "precio": 3340,
+    "cantidad": 41,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
+    "ProductId": "4f1c2976-a0d6-4e73-bf26-a46b90c4c3f7"
+  },
+  {
+    "id": "61c8189e-a74a-4e3d-b5ec-3e2b9fc39d14",
+    "precio": 980,
+    "cantidad": 81,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
+    "ProductId": "0897507d-9a09-47b7-afd8-53fa7456a67a"
+  },
+  {
+    "id": "62561c36-3144-4f75-ba4c-648935a80575",
+    "precio": 3390,
+    "cantidad": 60,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
+    "ProductId": "4c520f57-2c4b-4955-95cf-66d929c1a0f6"
+  },
+  {
+    "id": "626a1987-e6d9-4d2b-a2e2-3b10cdc891b5",
+    "precio": 4020,
+    "cantidad": 56,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
+    "ProductId": "15431f9d-842e-4434-a128-33c937376058"
+  },
+  {
+    "id": "629b4080-d48b-466b-8909-1eef4ee2fce0",
+    "precio": 1720,
+    "cantidad": 94,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
+    "ProductId": "342ab6ee-8e7a-4144-8976-17e015ce7705"
+  },
+  {
+    "id": "62dcda7b-02bd-4044-9313-51c4442ff775",
+    "precio": 7570,
+    "cantidad": 44,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
+    "ProductId": "44d788e2-9fc6-4718-b401-de53f0be7a01"
+  },
+  {
+    "id": "62f8f044-d6ce-46b9-9771-e65e0fe492d0",
+    "precio": 9390,
+    "cantidad": 19,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
+    "ProductId": "07e390a3-1998-4504-bb05-965e9416e9bc"
+  },
+  {
+    "id": "636bc411-38c7-4e3c-8136-784ac1fdba05",
+    "precio": 4770,
+    "cantidad": 12,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
+    "ProductId": "4e5b213d-0172-4341-9073-4d6271897c25"
+  },
+  {
+    "id": "6374da60-2be3-4b69-a535-267de09f6adb",
+    "precio": 9990,
+    "cantidad": 91,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
+    "ProductId": "2ef2e3c3-a1b9-49d8-b913-8f434fa2172a"
+  },
+  {
+    "id": "63b89204-931a-4c50-8a45-31403a4ad58a",
+    "precio": 4540,
+    "cantidad": 84,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
+    "ProductId": "0a382237-ddb9-40c8-8da9-2ee46e9e13e9"
+  },
+  {
+    "id": "63c19785-b8a2-40c7-86ad-b7e9e24d7cea",
+    "precio": 9440,
+    "cantidad": 57,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
+    "ProductId": "1530042c-ab21-4426-b97f-afd73e66328d"
+  },
+  {
+    "id": "64ad703c-3277-4fa8-8bf9-6a32b49a2aae",
+    "precio": 6390,
+    "cantidad": 46,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
+    "ProductId": "2fbc21ae-bee4-4a53-bd1e-f89b6ba27599"
+  },
+  {
+    "id": "65199248-b5fe-414b-a732-ceb91ba64f80",
+    "precio": 6680,
+    "cantidad": 77,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
+    "ProductId": "117b6ec1-9b30-4f9b-b98b-e5d6eae11df7"
+  },
+  {
+    "id": "65f51e39-192b-4f8b-b498-cd3c21b9d226",
+    "precio": 8140,
+    "cantidad": 46,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
+    "ProductId": "65b013d4-c613-403f-9765-c31df61deef1"
+  },
+  {
+    "id": "674c2fd1-12e3-48cf-98c2-a33e32b28b3d",
+    "precio": 850,
+    "cantidad": 85,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
+    "ProductId": "04341635-cb34-44cf-a86d-09b6d2bd4e41"
+  },
+  {
+    "id": "67631cf1-de12-400e-8850-0fe118698be9",
+    "precio": 9190,
+    "cantidad": 14,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
+    "ProductId": "285941c4-8ee8-42a8-ad47-6a7fb6395d2a"
+  },
+  {
+    "id": "67bf1773-478d-4057-a28e-f234c75a4914",
+    "precio": 9110,
+    "cantidad": 23,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
+    "ProductId": "13a142dd-56b3-426c-84b3-361dd81d37d3"
+  },
+  {
+    "id": "6920f27d-b2f6-42cd-afb1-be9f512da0f3",
+    "precio": 2400,
+    "cantidad": 28,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
+    "ProductId": "055f843d-acc9-4914-8e84-1afcbee6507b"
+  },
+  {
+    "id": "6c938f9b-1659-49f9-b775-c16a719bb9c4",
+    "precio": 8160,
+    "cantidad": 48,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
+    "ProductId": "06f76413-a5dc-49c5-94a4-a4b010b7658d"
+  },
+  {
+    "id": "6ca80bc9-d558-44c3-91f5-638fb7f05719",
+    "precio": 9690,
+    "cantidad": 90,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
+    "ProductId": "67653ad8-1219-4a42-b5dd-1050fe70d33f"
+  },
+  {
+    "id": "6d1062e4-7e48-4ed9-b1c0-e901fa087bbf",
+    "precio": 4050,
+    "cantidad": 60,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
+    "ProductId": "343716d8-f132-4ef2-af07-52c366b8b75b"
+  },
+  {
+    "id": "6d2eb492-1e9f-49a4-b022-45cb353b10ba",
+    "precio": 6680,
+    "cantidad": 70,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
+    "ProductId": "4ef0c5a7-a07f-4233-9011-46e4a3bd7633"
+  },
+  {
+    "id": "6d646232-2588-474e-82f2-16c7b363e3a8",
+    "precio": 1580,
+    "cantidad": 37,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
+    "ProductId": "0f1fd75d-86a8-4310-9839-6ad326ae4fb6"
+  },
+  {
+    "id": "6d9b7db8-1157-49dc-bde4-6b34ee78ee89",
+    "precio": 140,
+    "cantidad": 13,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
+    "ProductId": "27e95139-6c8a-4c06-ba85-f66b92858ace"
+  },
+  {
+    "id": "6de27e12-f9e2-400a-884d-934e266f1a52",
+    "precio": 5440,
+    "cantidad": 44,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
+    "ProductId": "5b661ce7-e49e-454e-adfe-da9333e11c9a"
+  },
+  {
+    "id": "6de739c2-75f2-4397-bb97-2e9b3774da62",
+    "precio": 2200,
+    "cantidad": 99,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
+    "ProductId": "5cbaa622-03aa-41f2-923f-3dde9c3feafb"
+  },
+  {
+    "id": "6e0ccb81-9875-4572-a097-c49e125db622",
+    "precio": 2750,
+    "cantidad": 96,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
+    "ProductId": "2d5f895a-325f-40d8-b1ba-5dca65701505"
+  },
+  {
+    "id": "6f2075ac-f6a1-4358-9d9e-04610f705301",
+    "precio": 1060,
+    "cantidad": 56,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
+    "ProductId": "2f51756d-6a65-4713-ad42-e171721849da"
+  },
+  {
+    "id": "7021eee7-d12f-4910-ac09-57d343d73a23",
+    "precio": 7870,
+    "cantidad": 23,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
+    "ProductId": "016bcb67-c146-459f-b7d6-b96e4e42a7e8"
+  },
+  {
+    "id": "7022eee7-d12f-4910-ac09-57d343d73a23",
+    "precio": 8120,
+    "cantidad": 38,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
+    "ProductId": "016bcb67-c146-459f-b7d6-b96e4e42a7e8"
+  },
+  {
+    "id": "7169d755-fadf-4024-a57d-f5ca6269eccc",
+    "precio": 4510,
+    "cantidad": 96,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
+    "ProductId": "2597e882-a144-4c7b-913d-6518b15106da"
+  },
+  {
+    "id": "71c6b8aa-c4ca-4e33-8b3c-e468702b2443",
+    "precio": 9750,
+    "cantidad": 32,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
+    "ProductId": "5dba80ef-6304-4590-a000-2f2f227c1016"
+  },
+  {
+    "id": "72a79bb1-b978-406a-9210-dd15f12ab800",
+    "precio": 3170,
+    "cantidad": 50,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
+    "ProductId": "6180a9b3-4816-4685-a8e0-6f6856357ebc"
+  },
+  {
+    "id": "734b9cde-4d59-4985-a31e-4e0f107470cc",
+    "precio": 9390,
+    "cantidad": 13,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
+    "ProductId": "577191de-c2c6-4122-a07f-9a6f2f9daba3"
+  },
+  {
+    "id": "7439737d-fd5f-4243-9493-52b9a82728f1",
+    "precio": 5060,
+    "cantidad": 61,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
+    "ProductId": "0c4970b2-10a8-4625-93f9-961f18faf7df"
+  },
+  {
+    "id": "7817babe-b2cf-43e0-b105-553f2615187e",
+    "precio": 5400,
+    "cantidad": 21,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
+    "ProductId": "2ef2e3c3-a1b9-49d8-b913-8f434fa2172a"
+  },
+  {
+    "id": "7bd37998-230a-46c4-9785-76447dec17ed",
+    "precio": 9250,
+    "cantidad": 18,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
+    "ProductId": "3157ebb4-18fb-44d7-b45d-24c615a50c59"
+  },
+  {
+    "id": "7bff5530-1e7f-4cc8-afbb-bd1cc8ae1daf",
+    "precio": 4580,
+    "cantidad": 50,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
+    "ProductId": "3c3284b2-c0be-4415-afef-0fa776f0b083"
+  },
+  {
+    "id": "7c40ced5-9a12-4f76-8f81-ab6946f82ec2",
+    "precio": 4490,
+    "cantidad": 97,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
+    "ProductId": "586604f8-463b-49d7-a81f-36c231f19217"
+  },
+  {
+    "id": "7da1a23f-2473-496a-bedc-f1eeff67d60e",
+    "precio": 6570,
+    "cantidad": 23,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
+    "ProductId": "41460027-46f8-4d11-aec0-d12daabc662b"
+  },
+  {
+    "id": "7eca56b8-ac26-4c47-b3ad-6bfcb4008a80",
+    "precio": 2130,
+    "cantidad": 98,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
+    "ProductId": "619391d1-d77c-4f39-aa10-05cf5326c773"
+  },
+  {
+    "id": "7f25a531-0e83-446f-94f3-6c9402f88d24",
+    "precio": 8700,
+    "cantidad": 9,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
+    "ProductId": "640294a8-5d33-4597-a8a2-da7ae6cb61da"
+  },
+  {
+    "id": "7f56a67a-1f32-46ff-bc68-dd89608bd176",
+    "precio": 5640,
+    "cantidad": 27,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
+    "ProductId": "04341635-cb34-44cf-a86d-09b6d2bd4e41"
+  },
+  {
+    "id": "80a00c88-eddf-496c-88eb-6b8234abf6c7",
+    "precio": 9890,
+    "cantidad": 95,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
+    "ProductId": "377966d3-b6a1-41fb-85ab-2ad1c814d56b"
+  },
+  {
+    "id": "81319ab1-9411-4477-8428-6dee1d38abb8",
+    "precio": 910,
+    "cantidad": 57,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
+    "ProductId": "1927b5fd-8cdd-4ba3-8ff7-179edde6e4cb"
+  },
+  {
+    "id": "81409b69-cab2-4fab-8211-a7d46d5160b5",
+    "precio": 1840,
+    "cantidad": 59,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
+    "ProductId": "1768c180-49c5-41aa-929b-6ae72952e8bf"
+  },
+  {
+    "id": "834bff10-b845-4e69-88ef-6048e32b5dba",
+    "precio": 4360,
+    "cantidad": 67,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
+    "ProductId": "4054a030-690c-426b-88f9-3394e2ac4444"
+  },
+  {
+    "id": "83705d98-35ee-41e0-827d-0cd1bb61aac6",
+    "precio": 6040,
+    "cantidad": 69,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
+    "ProductId": "67edb3f1-ce5c-4186-a99f-e7b9686225aa"
+  },
+  {
+    "id": "8462e187-5880-4190-a33e-45b953ab14bf",
+    "precio": 3920,
+    "cantidad": 61,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
+    "ProductId": "23071e9d-8853-4367-be32-ba36f326f039"
+  },
+  {
+    "id": "865d85b7-fbe9-45a2-9209-f98c79576c18",
+    "precio": 2040,
+    "cantidad": 92,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
+    "ProductId": "458789ea-83d8-4ace-b3cb-7396bf63a2b8"
+  },
+  {
+    "id": "86af4ead-d1a6-4b38-b219-d8fdb34ed611",
+    "precio": 3940,
+    "cantidad": 90,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
+    "ProductId": "15f84ea8-510b-49aa-a19a-58c77535bada"
+  },
+  {
+    "id": "86d3381f-6f3e-483c-a843-ca474ee028ef",
+    "precio": 4680,
+    "cantidad": 35,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
+    "ProductId": "29615309-fc0b-4f73-94fd-e2d42832d6b6"
+  },
+  {
+    "id": "884505a0-6aa9-4cd9-a60e-9e433cbe7007",
+    "precio": 6760,
+    "cantidad": 15,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
+    "ProductId": "4077fd7a-69e5-4f5e-957e-5c0d88bb31e3"
+  },
+  {
+    "id": "8845b341-5d09-441c-a289-b570fb293008",
+    "precio": 7910,
+    "cantidad": 88,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
+    "ProductId": "4077fd7a-69e5-4f5e-957e-5c0d88bb31e3"
+  },
+  {
+    "id": "88b1306c-6739-492e-9b5d-737f2225ea2d",
+    "precio": 370,
+    "cantidad": 45,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
+    "ProductId": "63a6dae4-7456-40ec-8f25-5e796d484fb6"
+  },
+  {
+    "id": "8a15bebe-76ca-46b0-9f5d-4d535ea7b83c",
+    "precio": 3570,
+    "cantidad": 6,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
+    "ProductId": "67653ad8-1219-4a42-b5dd-1050fe70d33f"
+  },
+  {
+    "id": "8d41266a-f34c-42d0-9e9a-8bfa859c34ba",
+    "precio": 6150,
+    "cantidad": 99,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
+    "ProductId": "447ae674-cb20-4b15-b8ba-0de83b8cf0bd"
+  },
+  {
+    "id": "8e7ed0f0-bf23-4bea-9d81-cc00e5a3f27e",
+    "precio": 1900,
+    "cantidad": 41,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
+    "ProductId": "5c5ce2e6-ed30-4592-8fd2-452a718b5516"
+  },
+  {
+    "id": "8ed35b06-357a-4283-860f-d8f5b4721db9",
+    "precio": 7000,
+    "cantidad": 5,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
+    "ProductId": "586604f8-463b-49d7-a81f-36c231f19217"
+  },
+  {
+    "id": "8fb8ccf8-d06e-4a58-8c05-dceb25b12ef3",
+    "precio": 1180,
+    "cantidad": 7,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
+    "ProductId": "2561a732-9f47-45a8-805c-a306bbfea562"
+  },
+  {
+    "id": "8fe7744e-acb1-4f5e-a97f-1b803b78e5a0",
+    "precio": 8010,
+    "cantidad": 45,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
+    "ProductId": "0e17d69e-4c15-4709-b36e-4473bb8cdb33"
+  },
+  {
+    "id": "91a36a98-7f65-4d8a-8d1a-1cebd0416877",
+    "precio": 7600,
+    "cantidad": 27,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
+    "ProductId": "235f117a-4e4e-4fcd-923b-b9cf597a61aa"
+  },
+  {
+    "id": "9671aa14-67f7-4b85-aa21-404c9490bd7b",
+    "precio": 2610,
+    "cantidad": 26,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
+    "ProductId": "60e99913-1b6d-46e3-82ed-ac888317f93e"
+  },
+  {
+    "id": "96e6e6b1-835d-4036-9109-bc092c6d1c93",
+    "precio": 8350,
+    "cantidad": 100,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
+    "ProductId": "3bf29299-353f-4a94-b41f-014dc4bcf187"
+  },
+  {
+    "id": "9852d85c-c32d-43c3-b285-8e4cb6d238a5",
+    "precio": 3170,
+    "cantidad": 37,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
+    "ProductId": "388ca8cc-ee90-465f-9854-e4a3857880c2"
+  },
+  {
+    "id": "987062c0-c3de-4653-988c-0ce42471ff31",
+    "precio": 9370,
+    "cantidad": 45,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
+    "ProductId": "212ca275-ffc8-47f4-9f7b-3c6d827b43db"
+  },
+  {
+    "id": "991fc274-e091-4f3f-ab72-759188c69d25",
+    "precio": 440,
+    "cantidad": 9,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
+    "ProductId": "51b6184d-b329-44a1-a40e-a37293020177"
+  },
+  {
+    "id": "99361cb9-de51-4ac1-9990-ff5a160a8116",
+    "precio": 3180,
+    "cantidad": 8,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
+    "ProductId": "3a937d0f-4b0b-45eb-91cc-e664f4497181"
+  },
+  {
+    "id": "993d629c-69b7-4660-816f-dd22061797ef",
+    "precio": 4810,
+    "cantidad": 50,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
+    "ProductId": "2d0bc514-f188-445b-b751-ac0fe226f1b3"
+  },
+  {
+    "id": "9c588a2e-3265-41d8-8f67-e2be00da8ac7",
+    "precio": 6610,
+    "cantidad": 9,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
+    "ProductId": "342ab6ee-8e7a-4144-8976-17e015ce7705"
+  },
+  {
+    "id": "9c787f8e-1e89-4f7e-85ac-7f7b6646e061",
+    "precio": 5410,
+    "cantidad": 13,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
+    "ProductId": "09d2d07b-d24b-4a3e-922a-b85ed9e82ca5"
+  },
+  {
+    "id": "9e3bea67-ae67-401f-99fa-495b277c6fd3",
+    "precio": 8560,
+    "cantidad": 48,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
+    "ProductId": "0e17d69e-4c15-4709-b36e-4473bb8cdb33"
+  },
+  {
+    "id": "9e480c33-6d86-4ee5-966f-2eb62a6739ba",
+    "precio": 6850,
+    "cantidad": 95,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
+    "ProductId": "457014b0-817d-418a-a564-c7851b4bdf99"
+  },
+  {
+    "id": "9f8aafbb-517a-43cc-a67c-b4fca5390f19",
+    "precio": 6710,
+    "cantidad": 96,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
+    "ProductId": "61bfb9a4-20b9-4cd2-a589-ea89de30f9ba"
+  },
+  {
+    "id": "a0f760bd-59a8-479b-a914-e29d9712cf34",
+    "precio": 6650,
+    "cantidad": 35,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
+    "ProductId": "56da0010-f9d3-4e0b-9fff-86532e77ef0e"
+  },
+  {
+    "id": "a11df538-0f35-47cb-b4c6-ff7e2187642b",
+    "precio": 4350,
+    "cantidad": 67,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
+    "ProductId": "4e145314-8c8a-4c29-8bde-e62498cd99e3"
+  },
+  {
+    "id": "a1779959-dc27-4df7-859b-33567a16ac12",
+    "precio": 8910,
+    "cantidad": 92,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
+    "ProductId": "1c559f57-f562-4257-92f9-1b7b28548dc2"
+  },
+  {
+    "id": "a36f752e-7f5b-4ec6-92ce-98e8df80d103",
+    "precio": 8720,
+    "cantidad": 13,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
+    "ProductId": "0ec81dda-303e-42ab-94c6-444b962de20d"
+  },
+  {
+    "id": "a3d8784c-151f-480c-bec2-995307f5fb01",
+    "precio": 820,
+    "cantidad": 24,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
+    "ProductId": "526cb9cf-5add-44fb-bf88-ba7398e6722a"
+  },
+  {
+    "id": "a474261e-fc4f-4cd3-a10c-708f6357c5cd",
+    "precio": 8270,
+    "cantidad": 44,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
+    "ProductId": "40dd86b8-9fa8-4ee1-ada8-42ee97742a84"
+  },
+  {
+    "id": "a491a345-c2ae-4642-be2d-99fa20d08278",
+    "precio": 4570,
+    "cantidad": 39,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
+    "ProductId": "377966d3-b6a1-41fb-85ab-2ad1c814d56b"
+  },
+  {
+    "id": "a4d46d60-bfe2-4b1d-b739-2670a4e8fa80",
+    "precio": 3320,
+    "cantidad": 92,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
+    "ProductId": "668f33f0-7abc-4479-820d-26aade5817c0"
+  },
+  {
+    "id": "a505bb94-a49e-4036-be0a-9af04d7bd829",
+    "precio": 780,
+    "cantidad": 35,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
+    "ProductId": "67be2d63-7688-41f0-8294-0bc2abade4ee"
+  },
+  {
+    "id": "a75ecb9a-f1b4-4f47-a3e8-2b85a7291ad3",
+    "precio": 8080,
+    "cantidad": 34,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
+    "ProductId": "574fdb48-9e11-4a9a-81d1-42e0c948b96f"
+  },
+  {
+    "id": "a8196d5f-3546-495f-ba10-df2b5cb26919",
+    "precio": 4980,
+    "cantidad": 54,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
+    "ProductId": "11d5185e-a2ef-4c35-a1d0-8112c48c11b5"
+  },
+  {
+    "id": "a966ef75-2b5e-438a-9ec6-296307f92675",
+    "precio": 1820,
+    "cantidad": 12,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
+    "ProductId": "65b1a4c4-8887-44b4-8ce3-edde0ea69c79"
+  },
+  {
+    "id": "ab8e0bfe-2e1a-4b72-84d2-bf30a76b66a6",
+    "precio": 4510,
+    "cantidad": 40,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
+    "ProductId": "27ec11a1-238a-4ef2-92e2-5538783ac525"
+  },
+  {
+    "id": "acfc5e40-0548-4926-ba36-f9e2f3404c5d",
+    "precio": 5220,
+    "cantidad": 98,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
+    "ProductId": "3095f92b-bbf9-44c6-af31-5893ecc29b09"
+  },
+  {
+    "id": "ad2fb6c0-6d6d-48a8-ac82-f1e8b0927ea5",
+    "precio": 4470,
+    "cantidad": 38,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
+    "ProductId": "05a7894a-1890-40cf-9cc0-9b26718ae4e1"
+  },
+  {
+    "id": "adf7ccd3-1066-4df4-a336-431cc9f01ff1",
+    "precio": 470,
+    "cantidad": 70,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
+    "ProductId": "4fcd1775-cba2-4031-b827-2b45b60a15b9"
+  },
+  {
+    "id": "af2bc7b3-cedf-4b98-bb42-248e59c6b5ca",
+    "precio": 4280,
+    "cantidad": 12,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
+    "ProductId": "3d9592ca-925d-4dd7-82c4-9ea5be1e209b"
+  },
+  {
+    "id": "af74ab9e-ae45-41ad-a294-6f4280cd005e",
+    "precio": 3690,
+    "cantidad": 37,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
+    "ProductId": "2d0bc514-f188-445b-b751-ac0fe226f1b3"
+  },
+  {
+    "id": "b20e504a-5374-43af-a7a4-0c1534fdf6a3",
+    "precio": 1560,
+    "cantidad": 99,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
+    "ProductId": "562799d9-225f-4e5b-b039-59d6957461fe"
+  },
+  {
+    "id": "b296c863-6ddc-4313-88c7-cabf07d6a5b2",
+    "precio": 1280,
+    "cantidad": 91,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
+    "ProductId": "37661923-849b-4bb3-be14-2cd023321001"
+  },
+  {
+    "id": "b2d66e36-caee-47be-9ba9-5d5802c5541f",
+    "precio": 2320,
+    "cantidad": 25,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
+    "ProductId": "45470f75-e536-4b91-b79e-11ff26c697ab"
+  },
+  {
+    "id": "b32d0572-a24a-4fcd-97c7-e2308cd622c7",
+    "precio": 4170,
+    "cantidad": 15,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
+    "ProductId": "458789ea-83d8-4ace-b3cb-7396bf63a2b8"
+  },
+  {
+    "id": "b5721e9b-7665-484c-b585-742055be52a3",
+    "precio": 8200,
+    "cantidad": 29,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
+    "ProductId": "565d59e3-6e15-483e-8bad-4cddff60ccff"
+  },
+  {
+    "id": "b6917511-6e5c-476e-8c97-1929a3adb259",
+    "precio": 2490,
+    "cantidad": 52,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
+    "ProductId": "26b20d42-e181-4861-9a32-7bc116d9a703"
+  },
+  {
+    "id": "b7efcd76-8132-47c7-bf5d-761f5dcc025f",
+    "precio": 1750,
+    "cantidad": 93,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
+    "ProductId": "29615309-fc0b-4f73-94fd-e2d42832d6b6"
+  },
+  {
+    "id": "b9060f43-3de5-4e42-84c1-ef65a8b7c95c",
+    "precio": 5980,
+    "cantidad": 43,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
+    "ProductId": "6191acbe-6ae7-448d-b6f7-f27936ea3d00"
+  },
+  {
+    "id": "b9523c6d-6517-4ece-a965-20c225760ce1",
+    "precio": 7640,
+    "cantidad": 70,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
+    "ProductId": "14a13da6-990c-4666-b8ac-c83950330641"
+  },
+  {
+    "id": "b990bc66-41b3-404e-ac10-fb341147df97",
+    "precio": 1000,
+    "cantidad": 50,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
+    "ProductId": "0f1fd75d-86a8-4310-9839-6ad326ae4fb6"
+  },
+  {
+    "id": "b9a4e37f-3774-4205-b9f3-3d92da6ea39e",
+    "precio": 9620,
+    "cantidad": 64,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
+    "ProductId": "57bf7f70-ae28-4981-be8c-d864488bb027"
+  },
+  {
+    "id": "b9c700f0-def9-43db-8f70-8df731045a07",
+    "precio": 4050,
+    "cantidad": 3,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
+    "ProductId": "190ffb43-721c-4cb8-af73-5178d629e9ea"
+  },
+  {
+    "id": "ba3360da-ea81-4752-8a95-dbc5f02bf27c",
+    "precio": 2630,
+    "cantidad": 57,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
+    "ProductId": "4054a030-690c-426b-88f9-3394e2ac4444"
+  },
+  {
+    "id": "beccc696-17fc-427e-813f-6cf6c0093cd6",
+    "precio": 4870,
+    "cantidad": 8,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
+    "ProductId": "2a3b229d-0eca-4f98-983c-b76e3198b724"
+  },
+  {
+    "id": "bff68ef7-e9f5-450e-bf1a-660c76aa6b83",
+    "precio": 4400,
+    "cantidad": 57,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
+    "ProductId": "565d59e3-6e15-483e-8bad-4cddff60ccff"
+  },
+  {
+    "id": "c0278348-203b-4bc5-aea0-64679f64433e",
+    "precio": 8640,
+    "cantidad": 89,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
+    "ProductId": "21f8f459-8fcc-4dd1-a48f-1a46853e1fb8"
+  },
+  {
+    "id": "c0637d0d-a38d-4eaf-8442-6d05ad8b7823",
+    "precio": 3790,
+    "cantidad": 97,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
+    "ProductId": "1ac1d8a8-6660-49cb-8c3c-a9e51e391523"
+  },
+  {
+    "id": "c10a7332-281c-431f-a7fc-bb034c744f46",
+    "precio": 7610,
+    "cantidad": 36,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
+    "ProductId": "60e2b05d-2803-4a34-872a-f83658557688"
+  },
+  {
+    "id": "c2ab4e65-0cb7-4cd6-85a8-b6c5cca4628f",
+    "precio": 7250,
+    "cantidad": 30,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
+    "ProductId": "2880c4da-15a2-4132-a6c0-9211f993f8ca"
+  },
+  {
+    "id": "c2c1e956-babb-4d96-a1cf-a9358e718636",
+    "precio": 6650,
+    "cantidad": 12,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
+    "ProductId": "5c6d7029-6ac2-4aa9-909a-114c3301172e"
+  },
+  {
+    "id": "c412ce8e-3b21-49e5-8302-3fc66d66bafc",
+    "precio": 6310,
+    "cantidad": 100,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
+    "ProductId": "34fc1447-8cf7-4180-9233-abe5d4bb5644"
+  },
+  {
+    "id": "c5646754-d2f7-481b-a039-d933052b0487",
+    "precio": 2460,
+    "cantidad": 68,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
+    "ProductId": "2561a732-9f47-45a8-805c-a306bbfea562"
+  },
+  {
+    "id": "c64eb4fe-3fcb-406b-9d59-825fd52eb1bb",
+    "precio": 4220,
+    "cantidad": 76,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
+    "ProductId": "4f1c2976-a0d6-4e73-bf26-a46b90c4c3f7"
+  },
+  {
+    "id": "c65f4c10-ab51-4bf2-9eb9-4f322f5d04b1",
+    "precio": 8090,
+    "cantidad": 89,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
+    "ProductId": "099a5471-7e8e-4771-8df4-8898e1574816"
+  },
+  {
+    "id": "c6677316-b212-4ac5-a62b-64999b0074c6",
+    "precio": 4740,
+    "cantidad": 1,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
+    "ProductId": "367bbc07-b9a8-4a96-ae14-0809293511a4"
+  },
+  {
+    "id": "c77cdb18-9ea9-470a-b311-9c4fd170c8ea",
+    "precio": 3090,
+    "cantidad": 85,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
+    "ProductId": "4c520f57-2c4b-4955-95cf-66d929c1a0f6"
+  },
+  {
+    "id": "c91d3072-7bcb-4497-b1cd-8439a5dfcde2",
+    "precio": 7920,
+    "cantidad": 42,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
+    "ProductId": "1f76e4aa-cb3f-4ea3-99f5-3eba7e3c96fa"
+  },
+  {
+    "id": "c9c43829-1f35-4213-93d7-304d51caf799",
+    "precio": 6060,
+    "cantidad": 95,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
+    "ProductId": "0c70a792-6393-4bd0-b1a4-0b83be808ff2"
+  },
+  {
+    "id": "ca3f09df-d3bd-4cea-9ba6-3de715a34cc1",
+    "precio": 8060,
+    "cantidad": 62,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
+    "ProductId": "1b07f61f-f0d0-4db3-84aa-70750ecccb1b"
+  },
+  {
+    "id": "ca8571e9-36e4-4d20-93b1-a437e7171a3a",
+    "precio": 5570,
+    "cantidad": 55,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
+    "ProductId": "6735772a-39de-4e31-bd6f-6e29ca182783"
+  },
+  {
+    "id": "cac2c7ca-ffb5-43bf-ab63-1d3bfb6514db",
+    "precio": 7670,
+    "cantidad": 39,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
+    "ProductId": "6232a5e8-1a23-4109-979e-29a2e402801d"
+  },
+  {
+    "id": "cad49911-5812-4d8e-bdfd-d833c7dcd9fd",
+    "precio": 1670,
+    "cantidad": 83,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
+    "ProductId": "5dba80ef-6304-4590-a000-2f2f227c1016"
+  },
+  {
+    "id": "cc7b2627-8a41-4ce7-8a32-d592355d0dd5",
+    "precio": 8780,
+    "cantidad": 30,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
+    "ProductId": "212ca275-ffc8-47f4-9f7b-3c6d827b43db"
+  },
+  {
+    "id": "ccc9d8fb-ba33-425e-8c31-5bb03bddf5fc",
+    "precio": 5800,
+    "cantidad": 91,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
+    "ProductId": "3914b886-dad6-4ebc-b912-26063ced6a1b"
+  },
+  {
+    "id": "cd61b16a-b35b-4d21-8531-38361f86cefa",
+    "precio": 3440,
+    "cantidad": 83,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
+    "ProductId": "5240af7e-bceb-4c64-bf15-891025e9c4d6"
+  },
+  {
+    "id": "cda52eb2-3533-41cb-843d-4d80a6bec08f",
+    "precio": 70,
+    "cantidad": 53,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
+    "ProductId": "33a04b2a-07dc-4de4-a905-d57fd4760759"
+  },
+  {
+    "id": "ce299578-7938-4000-a672-4542f8bd46c3",
+    "precio": 9020,
+    "cantidad": 24,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
+    "ProductId": "0ef8d166-4b39-45e0-b3e1-ae7ab9f0280a"
+  },
+  {
+    "id": "cf45f8f3-e9b0-4363-b17f-b64407e860a1",
+    "precio": 3650,
+    "cantidad": 19,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
+    "ProductId": "0280af23-43b8-49b1-9162-1aa1084fec5b"
+  },
+  {
+    "id": "cf94ecc2-6a47-4d6f-a6dc-aa22c95ada5d",
+    "precio": 6750,
+    "cantidad": 15,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
+    "ProductId": "020a1c1f-df36-46a1-8be5-5e4715eeb6e2"
+  },
+  {
+    "id": "d04bbd9e-e419-4620-89b9-a334fed1459d",
+    "precio": 3870,
+    "cantidad": 19,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
+    "ProductId": "35d6ca44-9792-4e47-9f40-b53ada6c9b3b"
+  },
+  {
+    "id": "d3067fda-b62c-47ea-ba7b-38f32e902ab7",
+    "precio": 9280,
+    "cantidad": 91,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
+    "ProductId": "154a802f-7ca1-4b18-b983-5a942bc69d2c"
+  },
+  {
+    "id": "d3fdd3cc-4ccb-4e86-8d36-9cf8b067c6ef",
+    "precio": 8290,
+    "cantidad": 7,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
+    "ProductId": "3b4cbb30-4349-49f9-9151-0fd49888ec5c"
+  },
+  {
+    "id": "d3fe31d9-30ee-4e0a-a57a-00e8204ed1b2",
+    "precio": 1160,
+    "cantidad": 85,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
+    "ProductId": "3a4a01c7-2e9c-42cc-99a2-d66e4bedf70c"
+  },
+  {
+    "id": "d5527d22-7978-464b-b6c2-b94c5aed84f5",
+    "precio": 5930,
+    "cantidad": 75,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
+    "ProductId": "17e0026f-fa33-48cb-9b0b-bd5aac55c379"
+  },
+  {
+    "id": "d5cafe19-5b2d-4592-8598-75f82c97ca23",
+    "precio": 2990,
+    "cantidad": 75,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
+    "ProductId": "3ddbfa37-2766-4d93-b766-c636f71afb6f"
+  },
+  {
+    "id": "d791caf2-87d6-4b77-acec-331c7a28a415",
+    "precio": 8920,
+    "cantidad": 18,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
+    "ProductId": "41460027-46f8-4d11-aec0-d12daabc662b"
+  },
+  {
+    "id": "d7927b77-e93d-498c-b0f1-1ac87b08308b",
+    "precio": 9470,
+    "cantidad": 42,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
+    "ProductId": "0ef8d166-4b39-45e0-b3e1-ae7ab9f0280a"
+  },
+  {
+    "id": "d879979b-82f2-4685-802b-cb1b920543cb",
+    "precio": 8840,
+    "cantidad": 10,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
+    "ProductId": "001fa870-0975-499e-885a-2518483bcac9"
+  },
+  {
+    "id": "d93f4397-8db3-4d80-bfae-a1710b7ca612",
+    "precio": 5110,
+    "cantidad": 59,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
+    "ProductId": "19c1e5da-d989-4278-98af-efbcb02ac640"
+  },
+  {
+    "id": "d94962fa-422d-491b-a387-be1b7f33ebc8",
+    "precio": 9960,
+    "cantidad": 63,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
+    "ProductId": "6945c552-8edf-4be5-b97c-f322a68dd52c"
+  },
+  {
+    "id": "d967fd18-8eca-48b9-9328-1e66a28201d1",
+    "precio": 6870,
+    "cantidad": 12,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
+    "ProductId": "58d94633-0a59-4dc4-a662-2aaf1cbe3a3f"
+  },
+  {
+    "id": "da7be83f-3bc4-40a3-ba51-43a5282b8a73",
+    "precio": 1390,
+    "cantidad": 32,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
+    "ProductId": "3908ef37-cbc1-4fc9-bce7-1d56af73fa69"
+  },
+  {
+    "id": "dbbdeffe-b441-4d02-8647-33a3a6940fd4",
+    "precio": 7930,
+    "cantidad": 48,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
+    "ProductId": "0d1670d5-da34-4528-8e20-2dfedbc903d6"
+  },
+  {
+    "id": "dcfef99f-7f87-4fcc-ab56-f1965336980c",
+    "precio": 6420,
+    "cantidad": 44,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
+    "ProductId": "524716c1-d528-408e-b888-76cd7ceb7306"
+  },
+  {
+    "id": "dd8ab6aa-dd71-4110-b2aa-811694933b47",
+    "precio": 4310,
+    "cantidad": 57,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
+    "ProductId": "6232a5e8-1a23-4109-979e-29a2e402801d"
+  },
+  {
+    "id": "dea6fe5c-da0c-4294-aa6f-369a555a5b2e",
+    "precio": 3300,
+    "cantidad": 65,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
+    "ProductId": "138963b4-735e-43df-b632-c927423e5d77"
+  },
+  {
+    "id": "e0226dff-4122-4699-9a1b-4eb52b0bab15",
+    "precio": 3360,
+    "cantidad": 65,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
+    "ProductId": "388ca8cc-ee90-465f-9854-e4a3857880c2"
+  },
+  {
+    "id": "e13f8683-2d93-463c-a21d-e9152e8f00c8",
+    "precio": 8200,
+    "cantidad": 62,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
+    "ProductId": "67be2d63-7688-41f0-8294-0bc2abade4ee"
+  },
+  {
+    "id": "e1b85a2b-22ee-42f1-9ede-21b16fc0aa48",
+    "precio": 8690,
+    "cantidad": 54,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
+    "ProductId": "0bc2577b-9b4f-416a-9877-a627072763b1"
+  },
+  {
+    "id": "e2e3e2cc-f087-4c65-b53c-4610c4a2d73b",
+    "precio": 3060,
+    "cantidad": 49,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
+    "ProductId": "616a0097-afb3-4f39-97f8-6e9f2c546066"
+  },
+  {
+    "id": "e30340f8-4604-4647-b389-7539221fdfd7",
+    "precio": 9320,
+    "cantidad": 58,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
+    "ProductId": "5c5ce2e6-ed30-4592-8fd2-452a718b5516"
+  },
+  {
+    "id": "e336a85d-8a93-49f6-9e38-90c1a74b009b",
+    "precio": 8940,
+    "cantidad": 32,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
+    "ProductId": "52fd7429-a381-4117-9c44-da5e941fe706"
+  },
+  {
+    "id": "e34c5910-f600-49a6-8d9e-ad281b6b080e",
+    "precio": 9730,
+    "cantidad": 53,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
+    "ProductId": "2f6e34ed-aaaa-49d2-9f0b-7454f9dc30b5"
+  },
+  {
+    "id": "e3515e95-0011-4654-b8a2-a012cf13ac8c",
+    "precio": 4480,
+    "cantidad": 86,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
+    "ProductId": "0d457581-a116-4430-a08c-3c941522e28d"
+  },
+  {
+    "id": "e3ae7de7-7a67-4833-8a0d-d6f7eef7ef26",
+    "precio": 3930,
+    "cantidad": 80,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
+    "ProductId": "0280af23-43b8-49b1-9162-1aa1084fec5b"
+  },
+  {
+    "id": "e48169fe-0192-404d-8c54-11672c99dd4d",
+    "precio": 9440,
+    "cantidad": 52,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
+    "ProductId": "51b6184d-b329-44a1-a40e-a37293020177"
+  },
+  {
+    "id": "e5a5371a-208e-44e2-92d4-aea3f0245b28",
+    "precio": 8800,
+    "cantidad": 34,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
+    "ProductId": "65d4386e-b5bc-4aea-a946-a4a1e231aa41"
+  },
+  {
+    "id": "e5d8e18b-e0ae-49ff-ac5d-12c2b77fd1ce",
+    "precio": 5310,
+    "cantidad": 19,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
+    "ProductId": "3b1df46a-cdf8-439d-9419-a05fa7edac36"
+  },
+  {
+    "id": "e75edd34-d4bf-43de-9780-9f2c868124c3",
+    "precio": 5900,
+    "cantidad": 25,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
+    "ProductId": "4c28373a-1300-43f5-ad4f-8fbd848c0e6a"
+  },
+  {
+    "id": "e7a8bb3e-db05-45ad-ab73-79faaf94428c",
+    "precio": 3300,
+    "cantidad": 34,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
+    "ProductId": "4ef0c5a7-a07f-4233-9011-46e4a3bd7633"
+  },
+  {
+    "id": "e84b7bb1-3a0d-4776-8687-e1cf796f24d6",
+    "precio": 7350,
+    "cantidad": 19,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
+    "ProductId": "1ac1d8a8-6660-49cb-8c3c-a9e51e391523"
+  },
+  {
+    "id": "e91ea56e-155c-4301-acd2-cf706703088c",
+    "precio": 1510,
+    "cantidad": 1,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
+    "ProductId": "05edad94-1353-4ad1-83f4-f0c35db943f6"
+  },
+  {
+    "id": "e95e03a3-7cf6-4efd-8db3-382192fc4d8a",
+    "precio": 9800,
+    "cantidad": 33,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
+    "ProductId": "344ab518-4a95-4896-8b0a-34c1b8217bdb"
+  },
+  {
+    "id": "eaf848a9-f4a8-4392-9996-30717e389645",
+    "precio": 2830,
+    "cantidad": 21,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
+    "ProductId": "652430f8-887e-4bc5-883c-909f99fed6e6"
+  },
+  {
+    "id": "eb0db85c-e022-4384-8819-88656ff467ff",
+    "precio": 6240,
+    "cantidad": 64,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
+    "ProductId": "3d9592ca-925d-4dd7-82c4-9ea5be1e209b"
+  },
+  {
+    "id": "ec74a288-19da-42db-ad07-3aaf4c3bdd94",
+    "precio": 5000,
+    "cantidad": 77,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
+    "ProductId": "524716c1-d528-408e-b888-76cd7ceb7306"
+  },
+  {
+    "id": "eca15553-b780-4323-81b0-5bcd7ac1f157",
+    "precio": 830,
+    "cantidad": 73,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
+    "ProductId": "07e390a3-1998-4504-bb05-965e9416e9bc"
+  },
+  {
+    "id": "ed02ca97-1e16-43da-a2f9-8ee85c2b4b7e",
+    "precio": 1530,
+    "cantidad": 32,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
+    "ProductId": "19c32358-946b-415b-a727-8cde1374640c"
+  },
+  {
+    "id": "edf0bb85-fc79-4b66-a373-658654057898",
+    "precio": 7730,
+    "cantidad": 8,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
+    "ProductId": "21fe7df4-97f8-491e-88a7-a897935d2094"
+  },
+  {
+    "id": "f01c03e2-94f0-4616-9c1f-a1db795c75b4",
+    "precio": 9000,
+    "cantidad": 36,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
+    "ProductId": "657fc9f1-40f2-4498-8589-d7d27488e4e4"
+  },
+  {
+    "id": "f18ccb85-dbe8-4e54-95b7-51af8a1d7132",
+    "precio": 7780,
+    "cantidad": 40,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
+    "ProductId": "6737458e-b2ed-45bb-b7c1-8ce94eeba2de"
+  },
+  {
+    "id": "f1a297d6-f9c8-4535-b775-9da976bd4a6c",
+    "precio": 20,
+    "cantidad": 94,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
+    "ProductId": "42a0061a-7fb5-4d32-8165-d60fe6d4bb87"
+  },
+  {
+    "id": "f1b10496-3198-4ff0-92ef-e1337dc6936b",
+    "precio": 4060,
+    "cantidad": 94,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
+    "ProductId": "285941c4-8ee8-42a8-ad47-6a7fb6395d2a"
+  },
+  {
+    "id": "f25a9a03-5fa6-472d-a0ea-fb0ca8ba98e2",
+    "precio": 4130,
+    "cantidad": 41,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
+    "ProductId": "09d2d07b-d24b-4a3e-922a-b85ed9e82ca5"
+  },
+  {
+    "id": "f2cbb7cd-32b5-4d90-8f1a-8d60d8ad498a",
+    "precio": 5070,
+    "cantidad": 42,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
+    "ProductId": "09a73fbc-ef47-43d1-ad2d-81eb0aed9d06"
+  },
+  {
+    "id": "f36a84d1-2303-4ce4-81fc-c9c0352157e4",
+    "precio": 9700,
+    "cantidad": 44,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
+    "ProductId": "13a142dd-56b3-426c-84b3-361dd81d37d3"
+  },
+  {
+    "id": "f38b1eeb-3395-4e6a-b88e-8598c94fb995",
+    "precio": 5280,
+    "cantidad": 56,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
+    "ProductId": "1e9089fa-810c-4427-83fe-72010489453c"
+  },
+  {
+    "id": "f3f89035-dc8f-4d4f-be5d-c6a348424c92",
+    "precio": 1100,
+    "cantidad": 18,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
+    "ProductId": "68aec7ad-c9e5-4b5d-afd1-cce4d97e3227"
+  },
+  {
+    "id": "f4366b2d-3614-49d9-b2df-1cff9c0c3f4c",
+    "precio": 3000,
+    "cantidad": 67,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
+    "ProductId": "11e9ab90-720d-44cb-ac11-aad504d5f173"
+  },
+  {
+    "id": "f4d20776-8549-4178-a8c9-7b338404d8a3",
+    "precio": 3640,
+    "cantidad": 38,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
+    "ProductId": "42a0061a-7fb5-4d32-8165-d60fe6d4bb87"
+  },
+  {
+    "id": "f500c78f-6e29-4dcd-9acc-7691da982559",
+    "precio": 7520,
+    "cantidad": 23,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
+    "ProductId": "3bf29299-353f-4a94-b41f-014dc4bcf187"
+  },
+  {
+    "id": "f527d730-9bfc-4e4b-8264-4744efe3376c",
+    "precio": 2590,
+    "cantidad": 66,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
+    "ProductId": "01b4c4fc-67ad-401b-87ca-649c82f9504d"
+  },
+  {
+    "id": "f57b071b-0068-4bc1-b40c-11a1018f9ee6",
+    "precio": 7330,
+    "cantidad": 44,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
+    "ProductId": "597aceed-f682-474a-a116-be0c38a172f1"
+  },
+  {
+    "id": "f57cf855-d8bc-4766-8d29-43bbdcd6415f",
+    "precio": 3410,
+    "cantidad": 67,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
+    "ProductId": "489c61bd-d476-4d3f-8615-2c643ae9dcd5"
+  },
+  {
+    "id": "f70ff484-93a7-4c2b-8192-e7407ebf345a",
+    "precio": 8440,
+    "cantidad": 22,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
+    "ProductId": "185a4a34-0c99-4101-b052-04f92dfbe91f"
+  },
+  {
+    "id": "f7ce944c-abaa-4b4b-9e6e-1ac79f32cb6c",
+    "precio": 6330,
+    "cantidad": 65,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
+    "ProductId": "0a382237-ddb9-40c8-8da9-2ee46e9e13e9"
+  },
+  {
+    "id": "f7e5c50a-96a5-4738-b75b-9ca1bef82555",
+    "precio": 3600,
+    "cantidad": 18,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
+    "ProductId": "06b793bb-0c6a-491a-964c-f4a6ebc74ded"
+  },
+  {
+    "id": "f91be9a0-7176-424f-80ed-569ddc3a46fa",
+    "precio": 1880,
+    "cantidad": 22,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
+    "ProductId": "68aec7ad-c9e5-4b5d-afd1-cce4d97e3227"
+  },
+  {
+    "id": "f9660bde-df5a-48fd-a552-0822e11413ad",
+    "precio": 1370,
+    "cantidad": 28,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
+    "ProductId": "2880c4da-15a2-4132-a6c0-9211f993f8ca"
+  },
+  {
+    "id": "fa398721-2fb7-47ab-a2a4-dac407453aaf",
+    "precio": 1590,
+    "cantidad": 41,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
+    "ProductId": "377551ae-d9e9-4bbf-a05a-76b73d451ae0"
+  },
+  {
+    "id": "fab136d6-f8e1-41e7-9f9b-dea84fecf1aa",
+    "precio": 5460,
+    "cantidad": 14,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
+    "ProductId": "3ddbfa37-2766-4d93-b766-c636f71afb6f"
+  },
+  {
+    "id": "faf55e2d-c922-446c-a2dc-93ae01b2d630",
+    "precio": 8970,
+    "cantidad": 93,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
+    "ProductId": "2f51756d-6a65-4713-ad42-e171721849da"
+  },
+  {
+    "id": "fb4c3d8d-5844-4af6-a85e-90ce5d1ebf1f",
+    "precio": 490,
+    "cantidad": 51,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
+    "ProductId": "42aca09f-fc15-4fdf-9735-a82374fe4d47"
+  },
+  {
+    "id": "fb76e22e-0d76-46dd-8937-8c073445c277",
+    "precio": 940,
+    "cantidad": 62,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
+    "ProductId": "4551a89c-29b7-4328-8255-9751293f84d2"
+  },
+  {
+    "id": "fc44e19f-7175-4d50-8e47-c4a124653a4f",
+    "precio": 5080,
+    "cantidad": 9,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
+    "ProductId": "66eee6e6-53f2-4363-986c-72b976aa5596"
+  },
+  {
+    "id": "fe5ce5cc-d46b-4dcf-82fc-6f0fc329ceef",
+    "precio": 920,
+    "cantidad": 29,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
+    "ProductId": "5c6d7029-6ac2-4aa9-909a-114c3301172e"
+  },
+  {
+    "id": "fee38b0c-dc11-4be6-b44d-7c56fd969a9c",
+    "precio": 6450,
+    "cantidad": 35,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
+    "ProductId": "544cbcac-e38f-4b4f-8b51-3c4f878cd56d"
+  },
+  {
+    "id": "ff0d6f3d-430e-46a0-bf4c-a0918c2c5900",
+    "precio": 5960,
+    "cantidad": 44,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
+    "ProductId": "44d788e2-9fc6-4718-b401-de53f0be7a01"
+  },
+  {
+    "id": "ff509f0d-01cb-4b15-9c7a-a688d3108712",
+    "precio": 5850,
+    "cantidad": 85,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
+    "ProductId": "1768c180-49c5-41aa-929b-6ae72952e8bf"
+  },
+  {
+    "id": "ff7c05fa-89ff-4631-b837-6c74688fb246",
+    "precio": 7200,
+    "cantidad": 85,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
+    "ProductId": "05edad94-1353-4ad1-83f4-f0c35db943f6"
+  },
+  {
+    "id": "ffb0cf06-dfef-4b9a-bb7e-fb91bb326e19",
+    "precio": 8900,
+    "cantidad": 59,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
+    "ProductId": "58d94633-0a59-4dc4-a662-2aaf1cbe3a3f"
+  },
+  {
+    "id": "ffb21f4f-bac5-42d3-a026-106b0e165509",
+    "precio": 1740,
+    "cantidad": 70,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
+    "ProductId": "3b4cbb30-4349-49f9-9151-0fd49888ec5c"
+  },
+  {
+    "id": "fffee593-cf2f-40cc-8143-d76a64a56556",
+    "precio": 350,
+    "cantidad": 86,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
+    "ProductId": "020a1c1f-df36-46a1-8be5-5e4715eeb6e2"
+  },
+  {
+    "id": "a5a792cc-dd06-4b43-a4f4-215b3fe4a742",
+    "precio": 420,
+    "cantidad": 7,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
+    "ProductId": "b5106900-edd8-4b8d-bd49-f07b7467f90f"
+  },
+  {
+    "id": "79e26bea-304a-4d7f-bbe7-2459ed833915",
+    "precio": 4220,
+    "cantidad": 6,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
+    "ProductId": "fb2821cb-de1c-40b3-b77d-e5f1596318e2"
+  },
+  {
+    "id": "3e5236c2-8899-462f-8c0d-7fc83cc39ee4",
+    "precio": 9300,
+    "cantidad": 17,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
+    "ProductId": "f5697600-342b-4558-a5ae-108cfc24437f"
+  },
+  {
+    "id": "e7633286-923e-414d-a410-6f50e1aec52a",
+    "precio": 5550,
+    "cantidad": 7,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
+    "ProductId": "d7cd5409-5f75-45dc-9c8d-f2256b0014c9"
+  },
+  {
+    "id": "843a8b60-de91-4e18-8590-256fe1e4ebfe",
+    "precio": 3970,
+    "cantidad": 13,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
+    "ProductId": "d6c0f653-374c-4b60-a82f-175757d1d584"
+  },
+  {
+    "id": "496e9f38-b24d-4236-b76d-204f040ed197",
+    "precio": 3580,
+    "cantidad": 23,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
+    "ProductId": "023f3aec-13e3-4c71-85dc-b6be33c6b3fd"
+  },
+  {
+    "id": "a84c3bd8-17fb-4178-9e07-5e7366d060f8",
+    "precio": 2570,
+    "cantidad": 11,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
+    "ProductId": "9eff7f59-dffa-4cfc-bf54-747cc21eccdc"
+  },
+  {
+    "id": "3f7b5349-9146-4b93-beda-aeada964bc97",
+    "precio": 8810,
+    "cantidad": 6,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
+    "ProductId": "051f6e77-0b7a-4955-a42d-36df3dda2999"
+  },
+  {
+    "id": "c0d6164e-0eb5-4f0f-b506-4514b43e3b87",
+    "precio": 4980,
+    "cantidad": 14,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
+    "ProductId": "6bd753c2-019c-4efe-8694-040ee98751a8"
+  },
+  {
+    "id": "9f5d457b-cac6-4471-abd9-8f8e3cb57def",
+    "precio": 2260,
+    "cantidad": 23,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
+    "ProductId": "b8dee7b9-7604-4a57-87dd-34b1bb77dc2f"
+  },
+  {
+    "id": "1e6bc765-7eed-4253-ada7-cb5da116ecd5",
+    "precio": 7400,
+    "cantidad": 1,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
+    "ProductId": "5805b8c3-105b-4a6f-962a-a60cc514c95a"
+  },
+  {
+    "id": "33a65cc6-6a93-4a56-96aa-7596cd1c0a64",
+    "precio": 4930,
+    "cantidad": 23,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
+    "ProductId": "2791efd2-bb1c-455a-9774-a4dda4471ae1"
+  },
+  {
+    "id": "d5c34bb4-d181-4fa1-bb12-ff3ddf6c9451",
+    "precio": 1360,
+    "cantidad": 18,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
+    "ProductId": "b6fdaf01-37d7-4460-b585-a55ab903a3df"
+  },
+  {
+    "id": "7d1f09af-235c-46c0-900e-5463c1438a76",
+    "precio": 3970,
+    "cantidad": 1,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
+    "ProductId": "bfbe927b-772f-4de6-961c-3c8ecdf5e4be"
+  },
+  {
+    "id": "5d1d9248-4b0b-4c1c-9dcf-8338a8d3c160",
+    "precio": 5570,
+    "cantidad": 11,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
+    "ProductId": "f0105381-723e-41bd-a540-9f9c4734c96b"
+  },
+  {
+    "id": "ebd348b3-2a46-42f6-ae40-80f8c6ebef7a",
+    "precio": 2340,
+    "cantidad": 18,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
+    "ProductId": "7ccaebe4-2ba3-40f1-bfd9-ffb00f2160f2"
+  },
+  {
+    "id": "7e099c8d-e499-415b-a48e-dd44108eb730",
+    "precio": 7340,
+    "cantidad": 18,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
+    "ProductId": "3ff0175d-71c2-404a-89f0-33c11a0c6e5b"
+  },
+  {
+    "id": "b31867df-1b0e-400a-aefb-3228e654efa5",
+    "precio": 710,
+    "cantidad": 6,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
+    "ProductId": "4bc34365-ebf6-46c9-b5d8-caac836a2bf9"
+  },
+  {
+    "id": "c47c9e8e-3c0f-4844-b630-2e453a4dbe0e",
+    "precio": 7910,
+    "cantidad": 9,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
+    "ProductId": "f0acd56e-3695-4b19-8b43-a8512d3d2526"
+  },
+  {
+    "id": "57dcb54c-4ddb-48c5-b957-ac3eaa7e4914",
+    "precio": 9720,
+    "cantidad": 6,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
+    "ProductId": "d46a3748-a332-4af7-b09b-ab42aa4977d5"
+  },
+  {
+    "id": "9196c64e-1b97-4410-bf46-9a56bc295491",
+    "precio": 5540,
+    "cantidad": 17,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
+    "ProductId": "fe859125-2a1a-4fee-b69f-820baf46df54"
+  },
+  {
+    "id": "6942cd0c-0972-4ef1-83b0-54e0c943f01c",
+    "precio": 6880,
+    "cantidad": 1,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
+    "ProductId": "8e830745-52e9-4330-9eca-1ee4759982ee"
+  },
+  {
+    "id": "691a629b-5a6b-4ba6-84c0-f6bec06aa6ff",
+    "precio": 4690,
+    "cantidad": 10,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
+    "ProductId": "e8a219ff-28bd-4f70-91ca-61baa96df689"
+  },
+  {
+    "id": "6cb13dda-df6b-4c44-ac99-9a71d76d9285",
+    "precio": 7440,
+    "cantidad": 12,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
+    "ProductId": "35e0ea2e-62f1-4e58-afdd-52c5611c85bb"
+  },
+  {
+    "id": "b46076d7-befd-4b52-ad61-c171661c2574",
+    "precio": 3610,
+    "cantidad": 5,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
+    "ProductId": "12640e82-8802-4675-b73d-69ef4e1a81aa"
+  },
+  {
+    "id": "46822b87-4d88-4fc2-9f90-86ba04b12bac",
+    "precio": 5270,
+    "cantidad": 2,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
+    "ProductId": "8e657b79-24c8-4744-9c05-41b4895db808"
+  },
+  {
+    "id": "0e11b20c-2e23-4a0e-9536-ff1a2d8d2aa1",
+    "precio": 6980,
+    "cantidad": 4,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
+    "ProductId": "b21bfb1b-8ef7-4498-b836-f6934c70aa24"
+  },
+  {
+    "id": "38d630cc-e0d0-4ad4-b290-d1d78bd22627",
+    "precio": 6570,
+    "cantidad": 3,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
+    "ProductId": "c4dbc83f-9bf0-4809-9703-5714897c5124"
+  },
+  {
+    "id": "3f519be7-f055-407b-85da-8a0391882ce3",
+    "precio": 1670,
+    "cantidad": 5,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
+    "ProductId": "c01015be-577b-492d-8b52-81bfba2a8b38"
+  },
+  {
+    "id": "2126e773-973c-4cb9-b28f-6b4788ed9dde",
+    "precio": 1430,
+    "cantidad": 19,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
+    "ProductId": "717ad198-975f-47ac-baed-89934fd9c991"
+  },
+  {
+    "id": "7c5f68e1-26ad-4497-8ff1-911881b2354e",
+    "precio": 6700,
+    "cantidad": 19,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
+    "ProductId": "a7da1df3-1f85-4e51-93f3-0901cc2dfcde"
+  },
+  {
+    "id": "7d494fad-1d8a-4263-aaa4-de58705162d3",
+    "precio": 1380,
+    "cantidad": 14,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
+    "ProductId": "237f0c83-cef4-4540-a3be-13b0c6cfb799"
+  },
+  {
+    "id": "94e3044a-4d5d-4390-b363-2b73e49b5c4b",
+    "precio": 7250,
+    "cantidad": 5,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
+    "ProductId": "5ffdb92c-70b3-465d-a7f4-0e48ea6788d6"
+  },
+  {
+    "id": "12f9ecd9-eccd-4038-80c4-a839d7d4f18b",
+    "precio": 9320,
+    "cantidad": 25,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
+    "ProductId": "f4760fbe-7f41-4b16-b7ce-301353a75e27"
+  },
+  {
+    "id": "8c5cf244-c0ef-40c1-8104-0bbaa37743bc",
+    "precio": 1820,
+    "cantidad": 20,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
+    "ProductId": "259bb3b9-676a-4979-a6ee-07b713ff01ef"
+  },
+  {
+    "id": "196582de-8471-4602-8b04-0f8a2666d91c",
+    "precio": 3550,
+    "cantidad": 14,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
+    "ProductId": "412fc8a9-364e-4ad1-ad0c-9e16129dee48"
+  },
+  {
+    "id": "2cf21712-9ae4-4bc7-b0cc-d39503e7648e",
+    "precio": 5970,
+    "cantidad": 8,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
+    "ProductId": "c60b8380-c8d2-4959-ac35-d0e71f853aba"
+  },
+  {
+    "id": "3574faca-cc03-49ed-a89c-71bd88f1fd98",
+    "precio": 2000,
+    "cantidad": 7,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
+    "ProductId": "9aaa8154-2e83-4f46-8494-3bc8845e77d1"
+  },
+  {
+    "id": "9d1c15c7-2495-4aa3-973d-bc8ef043cf8b",
+    "precio": 2450,
+    "cantidad": 23,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
+    "ProductId": "2d49dd44-c13e-4d2a-b4ba-8311c2cd0fa1"
+  },
+  {
+    "id": "41c60def-eb0d-4ad4-9746-727878aadf7a",
+    "precio": 2250,
+    "cantidad": 8,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
+    "ProductId": "b5106900-edd8-4b8d-bd49-f07b7467f90f"
+  },
+  {
+    "id": "45cb16e3-a7c6-421c-9f6a-903b69946b78",
+    "precio": 4340,
+    "cantidad": 23,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
+    "ProductId": "fb2821cb-de1c-40b3-b77d-e5f1596318e2"
+  },
+  {
+    "id": "968aabe4-8f53-4afb-b2b6-1c256a71b308",
+    "precio": 2690,
+    "cantidad": 13,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
+    "ProductId": "f5697600-342b-4558-a5ae-108cfc24437f"
+  },
+  {
+    "id": "d5974e02-adc7-49e4-b8f1-9c4046a43fe9",
+    "precio": 5480,
+    "cantidad": 18,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
+    "ProductId": "d7cd5409-5f75-45dc-9c8d-f2256b0014c9"
+  },
+  {
+    "id": "e5f89fe6-bccf-492e-9f04-5770bd2357d8",
+    "precio": 5750,
+    "cantidad": 22,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
+    "ProductId": "d6c0f653-374c-4b60-a82f-175757d1d584"
+  },
+  {
+    "id": "c6e981d2-4767-4714-b019-68238984cc30",
+    "precio": 6780,
+    "cantidad": 12,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
+    "ProductId": "023f3aec-13e3-4c71-85dc-b6be33c6b3fd"
+  },
+  {
+    "id": "4a83db04-db07-47ad-a2ae-30d1b2e2ad6d",
+    "precio": 970,
+    "cantidad": 2,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
+    "ProductId": "9eff7f59-dffa-4cfc-bf54-747cc21eccdc"
+  },
+  {
+    "id": "bd8adfc0-aca7-4ac8-b7d3-b7757e8c5698",
+    "precio": 9730,
+    "cantidad": 9,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
+    "ProductId": "051f6e77-0b7a-4955-a42d-36df3dda2999"
+  },
+  {
+    "id": "64b3b8d6-5c40-48bb-b1f3-8bf01fe4f4ea",
+    "precio": 1480,
+    "cantidad": 5,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
+    "ProductId": "6bd753c2-019c-4efe-8694-040ee98751a8"
+  },
+  {
+    "id": "13c9fcc6-bb67-4fa1-b198-c8231e184be9",
+    "precio": 9470,
+    "cantidad": 19,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
+    "ProductId": "b8dee7b9-7604-4a57-87dd-34b1bb77dc2f"
+  },
+  {
+    "id": "41959d60-3f7c-4dd8-9953-808bec79ecd9",
+    "precio": 5940,
+    "cantidad": 2,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
+    "ProductId": "5805b8c3-105b-4a6f-962a-a60cc514c95a"
+  },
+  {
+    "id": "f9bed115-2c01-4492-9977-05006fca6a69",
+    "precio": 8990,
+    "cantidad": 18,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
+    "ProductId": "2791efd2-bb1c-455a-9774-a4dda4471ae1"
+  },
+  {
+    "id": "9a24b434-1bb1-471f-9046-bca8bc4fe79e",
+    "precio": 3890,
+    "cantidad": 5,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
+    "ProductId": "b6fdaf01-37d7-4460-b585-a55ab903a3df"
+  },
+  {
+    "id": "729ec41c-788f-4ac7-ac49-db3a8d9bef7b",
+    "precio": 3270,
+    "cantidad": 19,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
+    "ProductId": "bfbe927b-772f-4de6-961c-3c8ecdf5e4be"
+  },
+  {
+    "id": "d4f1d27a-0158-4e11-9f35-5bcf7256b854",
+    "precio": 1210,
+    "cantidad": 24,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
+    "ProductId": "f0105381-723e-41bd-a540-9f9c4734c96b"
+  },
+  {
+    "id": "1d88db5c-4197-46f9-9468-5f94d83ab0d6",
+    "precio": 3830,
+    "cantidad": 1,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
+    "ProductId": "7ccaebe4-2ba3-40f1-bfd9-ffb00f2160f2"
+  },
+  {
+    "id": "9a19f979-8944-4a77-b24f-6f6f31a3aa5a",
+    "precio": 8920,
+    "cantidad": 7,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
+    "ProductId": "3ff0175d-71c2-404a-89f0-33c11a0c6e5b"
+  },
+  {
+    "id": "19fb9a04-09d4-45c1-aaa1-c12e07c6a88d",
+    "precio": 3450,
+    "cantidad": 3,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
+    "ProductId": "4bc34365-ebf6-46c9-b5d8-caac836a2bf9"
+  },
+  {
+    "id": "fb631b39-e1a3-424d-8b17-9c478e1e2fb0",
+    "precio": 8180,
+    "cantidad": 21,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
+    "ProductId": "f0acd56e-3695-4b19-8b43-a8512d3d2526"
+  },
+  {
+    "id": "6a12fbc9-7f14-49ea-8f2f-63c58a4b6ad4",
+    "precio": 9640,
+    "cantidad": 12,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
+    "ProductId": "d46a3748-a332-4af7-b09b-ab42aa4977d5"
+  },
+  {
+    "id": "5082265b-5b27-4fb7-8cab-cdd6fe9bf102",
+    "precio": 560,
+    "cantidad": 16,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
+    "ProductId": "fe859125-2a1a-4fee-b69f-820baf46df54"
+  },
+  {
+    "id": "3c9784fb-6424-4265-ac26-bef68bacee25",
+    "precio": 5350,
+    "cantidad": 2,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
+    "ProductId": "8e830745-52e9-4330-9eca-1ee4759982ee"
+  },
+  {
+    "id": "87500fa7-8056-4228-ba02-66e4677f6e58",
+    "precio": 4010,
+    "cantidad": 21,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
+    "ProductId": "e8a219ff-28bd-4f70-91ca-61baa96df689"
+  },
+  {
+    "id": "4a6d3d81-3de8-4ca5-a252-40b815677966",
+    "precio": 3720,
+    "cantidad": 6,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
+    "ProductId": "35e0ea2e-62f1-4e58-afdd-52c5611c85bb"
+  },
+  {
+    "id": "50a32adf-8803-4f24-a4b8-9339868c2c99",
+    "precio": 440,
+    "cantidad": 24,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
+    "ProductId": "12640e82-8802-4675-b73d-69ef4e1a81aa"
+  },
+  {
+    "id": "71ea6b2c-c25b-4e93-b6bd-5ffaa6f90e7c",
+    "precio": 1360,
+    "cantidad": 13,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
+    "ProductId": "8e657b79-24c8-4744-9c05-41b4895db808"
+  },
+  {
+    "id": "1676320f-20a0-4120-a42f-f8c894cb3a6b",
+    "precio": 7640,
+    "cantidad": 15,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
+    "ProductId": "b21bfb1b-8ef7-4498-b836-f6934c70aa24"
+  },
+  {
+    "id": "f58a9563-8e70-408e-af16-f499aa9e2081",
+    "precio": 2410,
+    "cantidad": 3,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
+    "ProductId": "c4dbc83f-9bf0-4809-9703-5714897c5124"
+  },
+  {
+    "id": "983f37db-76fb-4001-8300-2649ee6d3306",
+    "precio": 6500,
+    "cantidad": 24,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
+    "ProductId": "c01015be-577b-492d-8b52-81bfba2a8b38"
+  },
+  {
+    "id": "c2f2d783-601c-4bf9-b775-778415923589",
+    "precio": 7940,
+    "cantidad": 12,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
+    "ProductId": "717ad198-975f-47ac-baed-89934fd9c991"
+  },
+  {
+    "id": "2e4f2ad9-cd40-459b-9f12-8d833cac77b3",
+    "precio": 6600,
+    "cantidad": 2,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
+    "ProductId": "a7da1df3-1f85-4e51-93f3-0901cc2dfcde"
+  },
+  {
+    "id": "c79e2aee-5963-4224-b5b2-71ba8db09e90",
+    "precio": 7370,
+    "cantidad": 18,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
+    "ProductId": "237f0c83-cef4-4540-a3be-13b0c6cfb799"
+  },
+  {
+    "id": "fe078fef-c1eb-4989-8a8e-d7080ffef269",
+    "precio": 8980,
+    "cantidad": 17,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
+    "ProductId": "5ffdb92c-70b3-465d-a7f4-0e48ea6788d6"
+  },
+  {
+    "id": "06716777-801f-40cb-baa8-4d9da6b6da98",
+    "precio": 3670,
+    "cantidad": 12,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
+    "ProductId": "f4760fbe-7f41-4b16-b7ce-301353a75e27"
+  },
+  {
+    "id": "1110b181-79cd-4f88-b602-59da2c7ad1b1",
+    "precio": 6480,
+    "cantidad": 4,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
+    "ProductId": "259bb3b9-676a-4979-a6ee-07b713ff01ef"
+  },
+  {
+    "id": "7bfdabc5-2052-4880-b37a-83e3659c0d2a",
+    "precio": 2320,
+    "cantidad": 18,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
+    "ProductId": "412fc8a9-364e-4ad1-ad0c-9e16129dee48"
+  },
+  {
+    "id": "bef747d4-96d5-4f5c-bd00-3938f9d47a15",
+    "precio": 7040,
+    "cantidad": 1,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
+    "ProductId": "c60b8380-c8d2-4959-ac35-d0e71f853aba"
+  },
+  {
+    "id": "bd8cb0a0-24ac-428f-b650-c0a9acbadbc2",
+    "precio": 3370,
+    "cantidad": 7,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
+    "ProductId": "9aaa8154-2e83-4f46-8494-3bc8845e77d1"
+  },
+  {
+    "id": "b58f5590-4068-43f9-907a-b258943a7d04",
+    "precio": 6560,
+    "cantidad": 6,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
+    "ProductId": "2d49dd44-c13e-4d2a-b4ba-8311c2cd0fa1"
+  },
+  {
+    "id": "90b498cd-49ad-405c-abd0-00449b8b3995",
+    "precio": 6570,
+    "cantidad": 15,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
+    "ProductId": "b5106900-edd8-4b8d-bd49-f07b7467f90f"
+  },
+  {
+    "id": "c5c4fc9a-68b4-4fd0-8813-bd4ee07d6c86",
+    "precio": 2090,
+    "cantidad": 18,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
+    "ProductId": "fb2821cb-de1c-40b3-b77d-e5f1596318e2"
+  },
+  {
+    "id": "7a4eb4b0-a0ae-4c21-b8f5-4eda217ac7ce",
+    "precio": 9240,
+    "cantidad": 8,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
+    "ProductId": "f5697600-342b-4558-a5ae-108cfc24437f"
+  },
+  {
+    "id": "36e28697-6dbd-4fba-b37a-00c7fce100c6",
+    "precio": 2080,
+    "cantidad": 6,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
+    "ProductId": "d7cd5409-5f75-45dc-9c8d-f2256b0014c9"
+  },
+  {
+    "id": "fcb87b69-3e07-4bbb-b8ae-8bda66fbe152",
+    "precio": 9140,
+    "cantidad": 5,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
+    "ProductId": "d6c0f653-374c-4b60-a82f-175757d1d584"
+  },
+  {
+    "id": "f03e8495-c32f-4e44-a4c8-745019321cc8",
+    "precio": 7940,
+    "cantidad": 23,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
+    "ProductId": "023f3aec-13e3-4c71-85dc-b6be33c6b3fd"
+  },
+  {
+    "id": "ff502336-a2ce-44b8-bcdf-e46f08996965",
+    "precio": 3060,
+    "cantidad": 22,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
+    "ProductId": "9eff7f59-dffa-4cfc-bf54-747cc21eccdc"
+  },
+  {
+    "id": "f50ea16e-d02d-4223-9cab-0bcd09e8d95c",
+    "precio": 5780,
+    "cantidad": 7,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
+    "ProductId": "051f6e77-0b7a-4955-a42d-36df3dda2999"
+  },
+  {
+    "id": "832e5c42-d5cf-4f14-ad8e-e6d421a65e1b",
+    "precio": 3160,
+    "cantidad": 7,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
+    "ProductId": "6bd753c2-019c-4efe-8694-040ee98751a8"
+  },
+  {
+    "id": "e84f6e47-3d76-4c3c-9cd1-06e685509169",
+    "precio": 7330,
+    "cantidad": 8,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
+    "ProductId": "b8dee7b9-7604-4a57-87dd-34b1bb77dc2f"
+  },
+  {
+    "id": "33b2cf10-3b4a-4580-a1e3-730001146b4a",
+    "precio": 7170,
+    "cantidad": 15,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
+    "ProductId": "5805b8c3-105b-4a6f-962a-a60cc514c95a"
+  },
+  {
+    "id": "e0c80831-3ce6-48d3-b056-b34fe99b621a",
+    "precio": 2500,
+    "cantidad": 11,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
+    "ProductId": "2791efd2-bb1c-455a-9774-a4dda4471ae1"
+  },
+  {
+    "id": "9cd727ab-f56a-42db-ba6d-c5630c35ac17",
+    "precio": 580,
+    "cantidad": 17,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
+    "ProductId": "b6fdaf01-37d7-4460-b585-a55ab903a3df"
+  },
+  {
+    "id": "b0925f48-e8fc-44d5-b6a0-95158d515e68",
+    "precio": 750,
+    "cantidad": 11,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
+    "ProductId": "bfbe927b-772f-4de6-961c-3c8ecdf5e4be"
+  },
+  {
+    "id": "4ff27589-9cf7-44b8-bb18-90f5b8698668",
+    "precio": 6810,
+    "cantidad": 2,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
+    "ProductId": "f0105381-723e-41bd-a540-9f9c4734c96b"
+  },
+  {
+    "id": "57bac0e3-a705-46ff-96d7-fa2022022d45",
+    "precio": 6340,
+    "cantidad": 9,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
+    "ProductId": "7ccaebe4-2ba3-40f1-bfd9-ffb00f2160f2"
+  },
+  {
+    "id": "c81f46e4-f9ee-4132-99b5-6d8405d873b7",
+    "precio": 2580,
+    "cantidad": 20,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
+    "ProductId": "3ff0175d-71c2-404a-89f0-33c11a0c6e5b"
+  },
+  {
+    "id": "e3688c4c-9e44-4399-9517-eec11df61730",
+    "precio": 6810,
+    "cantidad": 24,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
+    "ProductId": "4bc34365-ebf6-46c9-b5d8-caac836a2bf9"
+  },
+  {
+    "id": "b9af927b-ac61-4ae1-888f-f8d7930b5511",
+    "precio": 7270,
+    "cantidad": 22,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
+    "ProductId": "f0acd56e-3695-4b19-8b43-a8512d3d2526"
+  },
+  {
+    "id": "4ea8701f-20e4-4491-8fe0-ab3ded5f2707",
+    "precio": 7650,
+    "cantidad": 10,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
+    "ProductId": "d46a3748-a332-4af7-b09b-ab42aa4977d5"
+  },
+  {
+    "id": "6e3ae9b8-b1b2-4a6d-a3ce-eb6a3d684713",
+    "precio": 1860,
+    "cantidad": 20,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
+    "ProductId": "fe859125-2a1a-4fee-b69f-820baf46df54"
+  },
+  {
+    "id": "fa16e6da-04f1-43df-9ad3-df7e3bfb9e34",
+    "precio": 7190,
+    "cantidad": 4,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
+    "ProductId": "8e830745-52e9-4330-9eca-1ee4759982ee"
+  },
+  {
+    "id": "2939d0e8-73f5-43c2-98bd-98c250feed27",
+    "precio": 950,
+    "cantidad": 2,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
+    "ProductId": "e8a219ff-28bd-4f70-91ca-61baa96df689"
+  },
+  {
+    "id": "47480b5f-8003-42da-a748-7817a2e6d9da",
+    "precio": 1280,
+    "cantidad": 25,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
+    "ProductId": "35e0ea2e-62f1-4e58-afdd-52c5611c85bb"
+  },
+  {
+    "id": "7e99c287-329f-40af-96ad-ce5e97652a68",
+    "precio": 7240,
+    "cantidad": 4,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
+    "ProductId": "12640e82-8802-4675-b73d-69ef4e1a81aa"
+  },
+  {
+    "id": "645eebc4-49e4-4c24-86e6-d2f8d587363a",
+    "precio": 330,
+    "cantidad": 21,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
+    "ProductId": "8e657b79-24c8-4744-9c05-41b4895db808"
+  },
+  {
+    "id": "01afb107-2d0e-48a7-bba2-53cf82a918d2",
+    "precio": 8820,
+    "cantidad": 7,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
+    "ProductId": "b21bfb1b-8ef7-4498-b836-f6934c70aa24"
+  },
+  {
+    "id": "39c54321-5832-43f0-bd0e-163a85e586fc",
+    "precio": 2640,
+    "cantidad": 2,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
+    "ProductId": "c4dbc83f-9bf0-4809-9703-5714897c5124"
+  },
+  {
+    "id": "6b1f3f9b-3a96-4fc6-9302-8f86f562ac77",
+    "precio": 8550,
+    "cantidad": 14,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
+    "ProductId": "c01015be-577b-492d-8b52-81bfba2a8b38"
+  },
+  {
+    "id": "2197c124-aebe-4c83-866a-42ae2232cfdf",
+    "precio": 8090,
+    "cantidad": 3,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
+    "ProductId": "717ad198-975f-47ac-baed-89934fd9c991"
+  },
+  {
+    "id": "f7349904-cc41-4dac-9080-baf1eb8fcaa6",
+    "precio": 4450,
+    "cantidad": 4,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
+    "ProductId": "a7da1df3-1f85-4e51-93f3-0901cc2dfcde"
+  },
+  {
+    "id": "9f118a6a-b58d-494b-85da-9998e8c4680e",
+    "precio": 1790,
+    "cantidad": 11,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
+    "ProductId": "237f0c83-cef4-4540-a3be-13b0c6cfb799"
+  },
+  {
+    "id": "f438a920-50d4-4e00-aa88-6905f81741d5",
+    "precio": 2780,
+    "cantidad": 18,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
+    "ProductId": "5ffdb92c-70b3-465d-a7f4-0e48ea6788d6"
+  },
+  {
+    "id": "8971dd8a-9c4c-4aad-96c7-1083d02f459b",
+    "precio": 1820,
+    "cantidad": 3,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
+    "ProductId": "f4760fbe-7f41-4b16-b7ce-301353a75e27"
+  },
+  {
+    "id": "bc3339d7-0bb3-41e8-8c53-cc0c855fb0e0",
+    "precio": 5060,
+    "cantidad": 1,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
+    "ProductId": "259bb3b9-676a-4979-a6ee-07b713ff01ef"
+  },
+  {
+    "id": "55d648f6-8739-4488-9ea5-a6c9c8c6efa8",
+    "precio": 5840,
+    "cantidad": 7,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
+    "ProductId": "412fc8a9-364e-4ad1-ad0c-9e16129dee48"
+  },
+  {
+    "id": "c3937fb6-b958-4cdf-a4ff-33347dbbcced",
+    "precio": 2910,
+    "cantidad": 11,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "45df0b0a-7bd7-4294-bbd0-999cb3f9407c",
+    "ProductId": "c60b8380-c8d2-4959-ac35-d0e71f853aba"
+  },
+  {
+    "id": "37dc4f0a-1cbf-4a19-b526-b4b8b20783dc",
+    "precio": 5390,
+    "cantidad": 14,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "63a82702-fb17-46b1-b42d-8a57724344ae",
+    "ProductId": "9aaa8154-2e83-4f46-8494-3bc8845e77d1"
+  },
+  {
+    "id": "1bd8ca6d-fa10-4950-a8c0-413b661ca4ff",
+    "precio": 2500,
+    "cantidad": 1,
+    "quantity": 1,
+    "ratingProm": 0,
+    "SellerId": "b76670e2-01be-42ec-861a-2601e2485271",
+    "ProductId": "2d49dd44-c13e-4d2a-b4ba-8311c2cd0fa1"
+  }
 ]

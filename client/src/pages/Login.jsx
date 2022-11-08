@@ -5,7 +5,7 @@ import swal from "sweetalert";
 import axios from "axios";
 
 function Login() {
-  const { logIn, loginWithGoogle, usuario } = useAuth();
+  const { logIn, loginWithGoogle, usuario, resetPassword } = useAuth();
   const navigate = useNavigate();
   const [error, setError] = useState();
   const [user, setUser] = useState({
@@ -45,6 +45,13 @@ function Login() {
         setError(error)
       }
       };
+
+  const handleReset = () => {
+    let email = prompt("Escribe tu email para enviarte el link")
+    if(email){
+      resetPassword(email)
+    }
+  }
 
   return (
     <>
@@ -103,7 +110,7 @@ function Login() {
                 </div>
                 {error && (
                   <p className="bg-red-300 rounded-lg text-center mx-auto mb-7 w-max m-2 p-2">
-                    {error}
+                    {error && error}
                   </p>
                 )}
                 <div className="mb-6">
@@ -143,6 +150,7 @@ function Login() {
                       </button>
                     </Link>
                   </p>
+                  <p onClick={handleReset} className="text-sm font-semibold mt-2 pt-1 mb-0 hover:text-red-700 focus:text-red-700 transition duration-200 ease-in-out cursor-pointer">Olvidaste la contraseña?</p>
                 </div>
               </form>
             </div>
@@ -154,3 +162,4 @@ function Login() {
 }
 
 export default Login;
+

@@ -26,7 +26,7 @@ function SignOut() {
         <span id='span2' className='bg-black absolute block bottom-0 right-[-100%] w-full h-[3px]'></span>
         <span id='span3' className='bg-black absolute block top-[-100%] right-0 w-[3px] h-[100%]'></span>
         <span id='span4' className='bg-black absolute block top-[100%] left-0 w-[3px] h-[100%]'></span>
-        <img src={Avatar} alt="avatar" className='object-contain pl-[2px] h-7'/>
+        <img src="https://cdn-icons-png.flaticon.com/512/3596/3596149.png" alt="avatar" className='object-contain pl-[2px] h-7'/>
         <span className='pl-2 hidden sm:inline-block '>Cerrar Sesion</span></button>
 
 

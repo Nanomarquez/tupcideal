@@ -12,12 +12,10 @@ import Reddragon from "../assets/marcas/reddragon.png";
 import { useAuth } from "../context/authContext";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-import { useEffect, useState } from "react";
-import Loading from "../components/Loading/Loading";
+import { useEffect } from "react";
 
 function Home() {
   const navigate = useNavigate();
-  const [loading, setLoading] = useState(true);
   const { usuario } = useAuth();
 
 
@@ -41,12 +39,6 @@ function Home() {
     }
   }, [usuario]);
 
-
-
-
-  /*if(loading){
-    return <Loading/>
-  }*/
 
   return (
     <>
@@ -73,8 +65,8 @@ function Home() {
             TuPcIdeal
           </span>
         </h1>
-        <div className="container">
-          <div className="swiperContainer h-32 w-full xl:w-[115%]">
+        <div className="w-full">
+          <div className="swiperContainer h-32 w-full">
             <Swiper
               modules={[Autoplay]}
               autoplay={{
@@ -123,21 +115,3 @@ function Home() {
 }
 
 export default Home;
-
-/*if (usuario !== null) {
-      
-  axios.get(`/sellers/${usuario.email}`).then((res) => {
-   console.log(res.data);
-    if (res.data.error) {
-      axios.get(`/users/${usuario.email}`).then((res) => {
-        console.log(res.data); 
-        if (res.data.error) {
-          navigate("/completarform");
-        } else {
-          navigate("/");
-        }
-      });
-    }
-    setLoading(false)
-  }, [usuario]);
-}*/

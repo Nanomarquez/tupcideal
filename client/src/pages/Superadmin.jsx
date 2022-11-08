@@ -1,13 +1,30 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-
+import { useNavigate } from "react-router-dom";
+import {useAuth} from '../context/authContext'
 
 function Superadmin() {
 
-
+  const {usuario} = useAuth();
   const [users, setUsers] = useState([]);
 
+  const navigate = useNavigate()
+  function isAdmin(){
+      axios.get(`/users/${usuario.email}`).then(res=>{
+        console.log(res.data)
+        if(!res.data.isSuperAdmin){
+          navigate('/')
+        };
+      }) 
+  }
 
+  useEffect(()=>{
+    if(!usuario){
+      navigate('/')
+    }else if(usuario){
+      isAdmin()
+    }
+  },[usuario])
 
   function axion() {
     axios.get("/users").then((res) => {

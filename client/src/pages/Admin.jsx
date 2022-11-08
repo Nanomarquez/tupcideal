@@ -3,15 +3,34 @@ import axios from "axios";
 import { useDispatch, useSelector } from "react-redux";
 import { getFiltered2 } from "../redux/actions";
 import { useAuth } from "../context/authContext";
+import swal from 'sweetalert';
+import "../components/NavBar/Signin.css"
+import { useNavigate } from "react-router-dom";
 
 function Admin() {
   const dispatch = useDispatch();
   const filtered = useSelector((state) => state.products.productsFiltered2);
-  const { signUp } = useAuth();
+  const { signUpTwo , usuario } = useAuth();
   const [users, setUsers] = useState([]);
   const [sellers, setSellers] = useState([]);
   const [error, setError] = useState();
   const [component, setComponent] = useState({});
+  const navigate = useNavigate()
+  function isAdmin(){
+      axios.get(`/users/${usuario.email}`).then(res=>{
+        if(!res.data.isAdmin){
+          navigate('/')
+        };
+      }) 
+  }
+
+  useEffect(()=>{
+    if(!usuario){
+      navigate('/')
+    }else if(usuario){
+      isAdmin()
+    }
+  },[usuario])
 
   const [product, setProduct] = useState({
     name: "",
@@ -32,12 +51,33 @@ function Admin() {
 
   function axion() {
     axios.get("/users").then((res) => {
-      setUsers(res.data.filter((e) => e.isAdmin !== true));
+      let filtrados=(res.data.filter((e) => e.isAdmin !== true));
+      filtrados.sort(function (a, b) {
+        if (a.name > b.name) {
+          return 1;
+        }
+        if (a.name < b.name) {
+          return -1;
+        }
+        // a must be equal to b
+        return 0;
+      });
+      setUsers(filtrados)
     });
   }
 
   function axionSellers() {
     axios.get("/sellers").then((res) => {
+      res.data.sort(function (a, b) {
+        if (a.store_name > b.store_name) {
+          return 1;
+        }
+        if (a.store_name < b.store_name) {
+          return -1;
+        }
+        
+        return 0;
+      });
       setSellers(res.data);
     });
   }
@@ -90,29 +130,38 @@ function Admin() {
   };
 
   let onClickDel = async (e) => {
-    await axios.delete(`/products/${component.id}`);
+    const answer= await axios.delete(`/products/${component.id}`);
+    if(answer.data.resp===1){
+      swal("Great",answer.data.message,"success");
+    }else{
+      swal("Sorry",answer.data.message,"error");
+    }
     axion();
   };
 
-  let onClickEdit = async (e) => {
-    await axios.put(`/products/${component.Product.id}`);
-    axion();
-  };
-
-  const onSubmit = (e) => {
+  // let onClickEdit = async (e) => {
+  //   await axios.put(`/products/${component.Product.id}`);
+  //   axion();
+  // };
+  
+  const onSubmit = async (e) => {
     e.preventDefault();
-    axios.post("/products", product);
-    console.log("Soy el producto", product);
+    const resp= await axios.post("/products", product);
+    console.log(resp);
+    if(resp.data.resp===0){
+      swal("Great",resp.data.message,"error");
+    }else{
+      swal("Great","The product was created successfully","success");
+    }
     axion();
   };
   const onSubmitSeller = async (e) => {
     e.preventDefault();
     setError("");
     try {
-      await signUp(seller.email, seller.password);
+      await signUpTwo(seller.email, seller.password,usuario.email)
       await axios
         .post("/sellers", seller)
-        .then((res) => console.log(res.data))
         .catch((e) => console.log(e));
       // navigate("/login");
       swal("Ok!", "Vendedor creado exitosamente", "success");
@@ -127,6 +176,13 @@ function Admin() {
         setError("Usuario ya existente");
       if (error.code === "auth/internal-error") setError("Contraseña invalida");
     }
+    setSeller({
+      store_name: "",
+      adress: "",
+      email: "",
+      phone_number: "",
+      password: "",
+    })
   };
 
   const [disable, setDisable] = useState(true);
@@ -188,7 +244,7 @@ function Admin() {
               ))}
           </div>
         </article>
-        <article class="seller">
+        <article className="seller">
           <h1 className="p-4 text-2xl">Tabla de vendedores</h1>
           <div className="flex flex-col gap-5">
             {sellers &&
@@ -311,16 +367,16 @@ function Admin() {
               >
                 Eliminar
               </button>
-              <button
+              {/* <button
                 className="border-2 bg-gray-400 rounded p-1 justify-center"
                 onClick={onClickEdit}
               >
                 Editar
-              </button>
+              </button> */}
             </div>
           </div>
         </article>
-        <article class="create-seller  bg-gray-700 py-5">
+        <article className="create-seller  bg-gray-700 py-5">
           <div className="w-min mx-auto bg-gray-300 px-20 rounded py-10 my-10">
             <h1 className="mb-6 text-2xl">Crear Vendedor</h1>
             <form
@@ -351,8 +407,7 @@ function Admin() {
                 <label className="flex flex-col justify-between">
                   Email:
                   <input
-                    className="border-b-2 border-black rounded-md outline-none"
-                    Style="text-transform:lowercase"
+                    className="border-b-2 border-black lowercase rounded-md outline-none"
                     type="text"
                     name="email"
                     value={seller.email}

@@ -81,7 +81,7 @@ router.get('/seller/:sellerId', async (req,res) => {
     
     setTimeout(()=>{
         res.send(response)
-    }, 1000)
+    }, 3000)
 })
 
 

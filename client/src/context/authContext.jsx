@@ -6,6 +6,7 @@ import {
   signOut,
   GoogleAuthProvider,
   signInWithPopup,
+  sendPasswordResetEmail
 } from "firebase/auth";
 import { auth } from "../firebase";
 import { useEffect } from "react";
@@ -28,10 +29,18 @@ export function AuthProvider({ children }) {
   const signUp = async (email, password) =>
     await createUserWithEmailAndPassword(auth, email, password);
 
-  const logIn = async (email, password) => {
-      
-      await signInWithEmailAndPassword(auth, email, password);
+  const signUpTwo = async (email, password,emaildos) => {
+    await createUserWithEmailAndPassword(auth, email, password).then((res) =>
+      logOut()
+    ).then(res=>logIn(emaildos,emaildos))
+  };
 
+  const resetPassword = (email) => {
+    sendPasswordResetEmail(auth,email)
+  }
+
+  const logIn = async (email, password) => {
+    await signInWithEmailAndPassword(auth, email, password);
   };
 
   const loginWithGoogle = () => {
@@ -51,7 +60,16 @@ export function AuthProvider({ children }) {
 
   return (
     <authContext.Provider
-      value={{ signUp, logIn, usuario, logOut, loading, loginWithGoogle }}
+      value={{
+        signUp,
+        logIn,
+        usuario,
+        logOut,
+        loading,
+        loginWithGoogle,
+        signUpTwo,
+        resetPassword
+      }}
     >
       {children}
     </authContext.Provider>

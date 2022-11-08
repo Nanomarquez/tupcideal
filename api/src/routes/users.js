@@ -1,7 +1,7 @@
 const { Router } = require("express");
 const router = Router();
 const { User, Favorite } = require("../db.js");
-const sendRegisterMail= require ('../funciones/sendRegisterMail')
+const sendRegisterMail = require("../funciones/sendRegisterMail");
 
 //------- Pedir usuario(individual) a la BD--------
 router.get("/:email", async (req, res) => {
@@ -9,7 +9,7 @@ router.get("/:email", async (req, res) => {
   try {
     let respuestabd;
     respuestabd = await User.findOne({
-      // include: { 
+      // include: {
       //   model: WareHouse,
       //   attributes: ["id"] },
       where: { email: email },
@@ -42,8 +42,6 @@ router.get("/", async (req, res) => {
   }
 });
 
-
-
 //------- Create User -------
 router.post("/", async (req, res) => {
   const { name, last_name, adress, email, phone_number } = req.body;
@@ -75,7 +73,7 @@ router.post("/", async (req, res) => {
 router.put("/:email", async (req, res) => {
   try {
     const { email } = req.params;
-    const { name, last_name, adress, phone_number, ban ,admin} = req.body;
+    const { name, last_name, adress, phone_number, ban, admin, img } = req.body;
     const editdUser = await User.update(
       {
         name: name,
@@ -83,14 +81,15 @@ router.put("/:email", async (req, res) => {
         adress: adress,
         phone_number: phone_number,
         isBanned: ban,
-        isAdmin:admin,
+        isAdmin: admin,
+        avatar: img,
       },
       { where: { email: email } }
     );
     res.json(editdUser);
   } catch (err) {
     res.status(500).send({
-      message: "User not found",
+      message: "el usuario no fue encontrado",
     });
   }
 });
@@ -102,10 +101,10 @@ router.delete("/:email", async (req, res) => {
     const { email } = req.params;
     const deleteuser = await User.findOne({ where: { email: email } });
     await deleteuser.destroy();
-    res.status(200).send({ message: "The user was deleted successfully" });
+    res.status(200).send({ message: "El usuario se borro exitosamente" });
   } catch (err) {
     res.status(500).send({
-      message: "The user can´t be deleted",
+      message: "el usuario no pudo ser borrado",
     });
   }
 });

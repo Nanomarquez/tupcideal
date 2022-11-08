@@ -55,7 +55,12 @@ function ProductosSearch() {
     if (!favs) {
       dispatch(addFavoritesList(product));
     }
+    
+    
+
   };
+  
+  console.log(productsFilterById);
   console.log(othersSeller);
   if (loading || productsFilterById.Seller === undefined) {
     return <Loading />;
@@ -158,7 +163,7 @@ function ProductosSearch() {
                 <img
                   src={e.Product.image}
                   alt={e.Product.name}
-                  className="object-cover h-20 w-20"
+                  className="object-contain h-20 w-20"
                 />
                 <p>Precio ${e.precio}</p>
 
