@@ -171,21 +171,21 @@ export default function Seller() {
               >
                 MEMORY CARD
               </button>
-            </div>
             <button
               className="border-2 bg-gray-400 rounded p-1 justify-center"
               onClick={() => dispatch(getFiltered2("InternalHardDrive"))}
             >
               INTERNAL HARD DRIVE
             </button>
-
-            <div className="flex flex-col">
               <button
                 className="border-2 bg-gray-400 rounded p-1 justify-center"
                 onClick={() => dispatch(getFiltered2("PowerSupply"))}
               >
                 POWER SUPPLY
               </button>
+            </div>
+
+            <div className="flex flex-col">
               <button
                 className="border-2 bg-gray-400 rounded p-1 justify-center"
                 onClick={() => dispatch(getFiltered2("VideoCard"))}
@@ -197,6 +197,24 @@ export default function Seller() {
                 onClick={() => dispatch(getFiltered2("Case"))}
               >
                 CASES
+              </button>
+              <button
+                className="border-2 bg-gray-400 rounded p-1 justify-center"
+                onClick={() => dispatch(getFiltered2("Keyboard"))}
+              >
+                KEYBOARD
+              </button>
+              <button
+                className="border-2 bg-gray-400 rounded p-1 justify-center"
+                onClick={() => dispatch(getFiltered2("Mouse"))}
+              >
+                MOUSE
+              </button>
+              <button
+                className="border-2 bg-gray-400 rounded p-1 justify-center"
+                onClick={() => dispatch(getFiltered2("Monitor"))}
+              >
+                MONITOR
               </button>
             </div>
           </div>
