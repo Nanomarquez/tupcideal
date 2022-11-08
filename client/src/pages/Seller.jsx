@@ -296,13 +296,13 @@ export default function Seller() {
           </h1>
           <h2 className="text-2xl">Categorias</h2>
           <div className="flex flex-col sm:flex-row">
-            <div className="flex flex-col">
               <button
                 className="border-2 bg-gray-400 rounded p-1 justify-center"
                 onClick={() => filterCategory("")}
               >
                 TODOS
               </button>
+            <div className="flex flex-col">
               <button
                 className="border-2 bg-gray-400 rounded p-1 justify-center"
                 onClick={() => filterCategory("CPU")}
@@ -321,14 +321,20 @@ export default function Seller() {
               >
                 MEMORY CARD
               </button>
-            </div>
-            <div className="flex flex-col">
+              <button
+                className="border-2 bg-gray-400 rounded p-1 justify-center"
+                onClick={() => filterCategory("Keyboard")}
+              >
+                KEYBOARD
+              </button>
               <button
                 className="border-2 bg-gray-400 rounded p-1 justify-center"
                 onClick={() => filterCategory("PowerSupply")}
               >
                 POWER SUPPLY
               </button>
+            </div>
+            <div className="flex flex-col">
               <button
                 className="border-2 bg-gray-400 rounded p-1 justify-center"
                 onClick={() => filterCategory("InternalHardDrive")}
@@ -346,6 +352,18 @@ export default function Seller() {
                 onClick={() => filterCategory("VideoCard")}
               >
                 VIDEO CARD
+              </button>
+              <button
+                className="border-2 bg-gray-400 rounded p-1 justify-center"
+                onClick={() => filterCategory("Mouse")}
+              >
+                MOUSE
+              </button>
+              <button
+                className="border-2 bg-gray-400 rounded p-1 justify-center"
+                onClick={() => filterCategory("Monitor")}
+              >
+                MONITOR
               </button>
             </div>
           </div>
