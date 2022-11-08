@@ -191,17 +191,18 @@ router.post("/", async (req, res) => {
   try {
     const [product, created] = await WareHouse.findOrCreate({
       where: {
-        precio: precio,
-        cantidad: cantidad,
         SellerId: id_vendedor,
         ProductId: id_producto,
       },
     });
     if (created) {
       console.log("Product created successfully");
+      product.cantidad = cantidad;
+      product.precio = precio;
+      product.save()
       res.status(200).json(product);
     } else {
-      res.status(200).json([{ error: "The product can't be created" }]);
+      res.status(500).json([{ error: "Producto existente" }]);
     }
   } catch (err) {
     res.status(500).json({ error: err.message });

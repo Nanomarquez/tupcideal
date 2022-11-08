@@ -68,12 +68,14 @@ export default function Seller() {
   };
 
   let onSubmit = async (e) => {
+    e.preventDefault()
     try {
       await axios.post("/warehouse", product).then((res) => console.log(res));
       swal("Ok!", "Nuevo producto a la venta!", "success");
       setProduct({ ...product, precio: "", cantidad: "" });
+      setTimeout(() =>window.location.reload(), 1500) 
     } catch (error) {
-      console.log(error);
+      if(error.response.data[0].error == 'Producto existente') alert(`Error: El producto ya existe, ve a la sección de modificar producto`);
     }
   };
 
