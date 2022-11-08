@@ -15,6 +15,8 @@ import Superadmin from './pages/Superadmin'
 import CustomPc from './pages/CustomPc'
 import Seller from "./pages/Seller";
 import AboutUs from "./pages/AboutUs";
+import PcArmada from "./pages/PcArmada";
+
 function App() {
 
   return (
@@ -24,6 +26,7 @@ function App() {
       <Routes>
         <Route exact path="/" element={<Home />} />
         <Route exact path="/armatupc" element={<ArmaTuPc />} />
+        <Route exact path="/Armatupc/:gama" element={< PcArmada />} />
         <Route exact path="/login" element={<Login />} />
         <Route exact path="/register" element={<Register />} />
         <Route exact path="/productos" element={<Productos />} />

@@ -55,7 +55,12 @@ function ProductosSearch() {
     if (!favs) {
       dispatch(addFavoritesList(product));
     }
+    
+    
+
   };
+  
+  console.log(productsFilterById);
   console.log(othersSeller);
   if (loading || productsFilterById.Seller === undefined) {
     return <Loading />;
