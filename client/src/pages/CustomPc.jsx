@@ -155,12 +155,12 @@ function CustomPc() {
               componentes básicos: mother, fuente, gabinete, ram, procesador y
               disco. Tené en cuenta que el resto de componentes que estén en el
               pedido pero fuera del configurador no son considerados para el
-              armado de tu PC.
+              armado de tu PC y podras omitirlos.
             </div>
             <h1 className="py-10">Elije tu marca</h1>
             <div className="py-10 flex flex-col sm:flex-row items-center justify-center gap-24">
               <button
-                className="hover:shadow-xl shadow-black"
+                className="hover:shadow-2xl shadow-black duration-500"
                 onClick={() => getBrand("Intel")}
               >
                 {" "}
@@ -171,7 +171,7 @@ function CustomPc() {
                 />{" "}
               </button>
               <button
-                className="hover:shadow-xl shadow-black"
+                className="hover:shadow-2xl shadow-black duration-500"
                 onClick={() => getBrand("AMD")}
               >
                 {" "}
