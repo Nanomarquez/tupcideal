@@ -203,7 +203,7 @@ function User() {
                 <p>Realizada el dia {e.createdAt.split("").splice(0, 10)}</p>
                 <p>
                   Estado de la compra:{" "}
-                  {e.status === "Paid" ? "Pagado" : "Pendiente"}
+                  {e.status}
                 </p>
                 <p>Total: ${e.totalprice}</p>
               </div>
