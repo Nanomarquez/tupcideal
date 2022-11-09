@@ -1,6 +1,6 @@
 const { Router } = require("express");
 const router = Router();
-const { Seller, Product, WareHouse, Review, User } = require("../db.js");
+const { Seller, Product, WareHouse, Review, User, Case, CPU, InternalHardDrive, Memory, Motherboard, PowerSupply, VideoCard, Op } = require("../db.js");
 const getComponentData = require('../funciones/getComponentData.js')
 const ratingProm = require("../funciones/ratingProm.js");
 
@@ -17,6 +17,22 @@ router.get("/", async (req, res) => {
           attributes: ["store_name", "adress", "id", "email", "adress"],
         },
         { model: Product,
+          include:[
+            {model: Case,
+              attributes: ['name', 'type', 'color', 'power_supply', 'side_panel_window']},
+            {model: CPU,
+              attributes: ['name', 'core_count', 'core_clock', 'boost_clock', 'tdp', 'integrated_graphics', 'smt', 'socket']},
+            {model: InternalHardDrive,
+              attributes: ['name', 'capacity', 'type', 'cache', 'form_factor', 'interface']},
+            {model: Memory,
+              attributes: ['name', 'speed', 'modules', 'color', 'first_word_latency', 'cas_latency']},
+            {model: Motherboard,
+              attributes: ['name', 'socket_/_cpu', 'form_factor', 'memory_max', 'memory_slots', 'color']},
+            {model: PowerSupply,
+              attributes: ['name', 'form_factor', 'efficiency_rating', 'wattage', 'modular', 'color']},
+            {model: VideoCard,
+              attributes: ['name', 'chipset', 'memory', 'core_clock', 'boost_clock', 'color', 'length']}
+          ],
           attributes: [ "id", "categories", "name", "image", "id_table"],
         },
         { model: Review,
@@ -227,6 +243,56 @@ router.put("/:id", async (req, res) => {
       message: err.message,
     });
   }
+});
+
+router.get('/Motherboard/:socket', async (req, res) => {
+  const { socket } = req.params;
+  
+  const products = await WareHouse.findAll({
+    include: [{
+      model: Product,
+      where: {
+        categories: "Motherboard",
+      },
+      attributes: ["id", "categories", "name", "image", "id_table"],
+      include: {
+        model: Motherboard,
+        where: {"socket_/_cpu" : socket},
+        attributes: ['name', 'socket_/_cpu', 'form_factor', 'memory_max', 'memory_slots', 'color'],
+      }
+    },
+    {
+      model: Seller,
+    }]
+  });
+
+  res.send(products)
+});
+
+router.get('/Memory/:socket', async (req, res) => {
+  const { socket } = req.params;
+  const memoryType = (socket == "AM3+" || socket == "LGA1150" || socket == "LGA1155") ? 'DDR3': 'DDR4';
+  const response = await WareHouse.findAll({
+    include: [{
+      model: Product,
+      where: {
+        categories: "Memory",
+      },
+      attributes: ["id", "categories", "name", "image", "id_table"],
+      include: {
+        model: Memory,
+        where: {speed: {
+          [Op.iLike]: `${memoryType}%`
+        }},
+        attributes: ['name', 'speed', 'modules', 'color', 'first_word_latency', 'cas_latency'],
+      }
+    },
+    {
+      model: Seller,
+    }]
+  })
+
+  res.send(response);
 });
 
 module.exports = router;
