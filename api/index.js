@@ -47,6 +47,9 @@ const bulkReviews = require("./src/data/Reviews.json");
 conn.sync({ force: setter }).then(() => {
   server.listen(process.env.PORT, async () => {
     if (setter === true) {
+      await Product.bulkCreate(bulkProducts);
+      console.log("✓ Se llenó la tabla Products");
+
       await CPU.bulkCreate(bulkCPU);
       console.log("✓ Se llenó la tabla CPU con la data del json");
       await Memory.bulkCreate(bulkMemory);
@@ -61,9 +64,6 @@ conn.sync({ force: setter }).then(() => {
       console.log("✓ Se llenó la tabla InternalHardDrive con la data del json");
       await VideoCard.bulkCreate(bulkGPU);
       console.log("✓ Se llenó la tabla VideoCard con la data del json");
-
-      await Product.bulkCreate(bulkProducts);
-      console.log("✓ Se llenó la tabla Products");
 
       await Seller.bulkCreate(bulkSellers);
       console.log("✓ Se llenó la tabla Seller con la data del json");
