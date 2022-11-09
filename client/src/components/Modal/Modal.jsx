@@ -111,7 +111,8 @@ function Modal({ handleClose }) {
             </div>
           </div>
         ) : null}
-        {productsCart.length && usuario !== null ? (
+        {(productsCart.length) ? (
+          (usuario !== null) ? (
           <Link to="/mp">
             <button
               onClick={handleClose}
@@ -120,7 +121,7 @@ function Modal({ handleClose }) {
               Comprar
             </button>
           </Link>
-        ) : (
+          ) : (
           <Link to="/login">
             <button
               onClick={handleClose}
@@ -129,6 +130,14 @@ function Modal({ handleClose }) {
               Logeate para comprar
             </button>
           </Link>
+          )
+        ) : (
+          <button
+            onClick={() => {}}
+            className="p-5 bg-gray-400 text-3xl rounded-md shadow-md shadow-black mb-5 text-white"
+          >
+            Añadí productos al carrito para comprar
+          </button>
         )}
       </motion.div>
     </Backdrop>
