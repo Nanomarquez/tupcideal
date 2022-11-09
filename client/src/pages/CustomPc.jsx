@@ -1125,12 +1125,6 @@ function CustomPc() {
                 >
                   {" "}
                   <div className="flex items-center justify-center">
-                    <div
-                      className="text-white duration-500 rounded bg-gray-700/50 text-2xl flex hover:opacity-100 cursor-pointer opacity-0 justify-center items-center z-50 h-36 w-36 absolute text-center"
-                      onClick={() => mouse(e)}
-                    >
-                      Elejir producto
-                    </div>
                     <img
                       src={
                         e.Product.image !== null
