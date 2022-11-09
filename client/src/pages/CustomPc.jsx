@@ -32,14 +32,16 @@ function CustomPc() {
   const cpu = (e) => {
     setArray([e]);
     setStep(step + 1);
+    //console.log(e.Product[e.Product.categories].socket)
     axios
-      .get(`/warehouse?category=Motherboard`)
+      .get(`/warehouse/Motherboard/${e.Product[e.Product.categories].socket}`)
       .then((res) => setStep2(res.data));
   };
   const mother = (e) => {
+    console.log(e.Product[e.Product.categories]['socket_/_cpu'])
     setArray([...array, e]);
     setStep(step + 1);
-    axios.get(`/warehouse?category=Memory`).then((res) => setStep3(res.data));
+    axios.get(`/warehouse/Memory/${e.Product[e.Product.categories]['socket_/_cpu']}`).then((res) => setStep3(res.data));
   };
   const memory = (e) => {
     setArray([...array, e]);
