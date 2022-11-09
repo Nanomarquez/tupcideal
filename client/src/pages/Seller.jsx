@@ -68,12 +68,14 @@ export default function Seller() {
   };
 
   let onSubmit = async (e) => {
+    e.preventDefault()
     try {
       await axios.post("/warehouse", product).then((res) => console.log(res));
       swal("Ok!", "Nuevo producto a la venta!", "success");
       setProduct({ ...product, precio: "", cantidad: "" });
+      setTimeout(() =>window.location.reload(), 1500) 
     } catch (error) {
-      console.log(error);
+      if(error.response.data[0].error == 'Producto existente') alert(`Error: El producto ya existe, ve a la sección de modificar producto`);
     }
   };
 
@@ -171,21 +173,21 @@ export default function Seller() {
               >
                 MEMORY CARD
               </button>
-            </div>
             <button
               className="border-2 bg-gray-400 rounded p-1 justify-center"
               onClick={() => dispatch(getFiltered2("InternalHardDrive"))}
             >
               INTERNAL HARD DRIVE
             </button>
-
-            <div className="flex flex-col">
               <button
                 className="border-2 bg-gray-400 rounded p-1 justify-center"
                 onClick={() => dispatch(getFiltered2("PowerSupply"))}
               >
                 POWER SUPPLY
               </button>
+            </div>
+
+            <div className="flex flex-col">
               <button
                 className="border-2 bg-gray-400 rounded p-1 justify-center"
                 onClick={() => dispatch(getFiltered2("VideoCard"))}
@@ -197,6 +199,24 @@ export default function Seller() {
                 onClick={() => dispatch(getFiltered2("Case"))}
               >
                 CASES
+              </button>
+              <button
+                className="border-2 bg-gray-400 rounded p-1 justify-center"
+                onClick={() => dispatch(getFiltered2("Keyboard"))}
+              >
+                KEYBOARD
+              </button>
+              <button
+                className="border-2 bg-gray-400 rounded p-1 justify-center"
+                onClick={() => dispatch(getFiltered2("Mouse"))}
+              >
+                MOUSE
+              </button>
+              <button
+                className="border-2 bg-gray-400 rounded p-1 justify-center"
+                onClick={() => dispatch(getFiltered2("Monitor"))}
+              >
+                MONITOR
               </button>
             </div>
           </div>
@@ -278,13 +298,13 @@ export default function Seller() {
           </h1>
           <h2 className="text-2xl">Categorias</h2>
           <div className="flex flex-col sm:flex-row">
-            <div className="flex flex-col">
               <button
                 className="border-2 bg-gray-400 rounded p-1 justify-center"
                 onClick={() => filterCategory("")}
               >
                 TODOS
               </button>
+            <div className="flex flex-col">
               <button
                 className="border-2 bg-gray-400 rounded p-1 justify-center"
                 onClick={() => filterCategory("CPU")}
@@ -303,14 +323,20 @@ export default function Seller() {
               >
                 MEMORY CARD
               </button>
-            </div>
-            <div className="flex flex-col">
+              <button
+                className="border-2 bg-gray-400 rounded p-1 justify-center"
+                onClick={() => filterCategory("Keyboard")}
+              >
+                KEYBOARD
+              </button>
               <button
                 className="border-2 bg-gray-400 rounded p-1 justify-center"
                 onClick={() => filterCategory("PowerSupply")}
               >
                 POWER SUPPLY
               </button>
+            </div>
+            <div className="flex flex-col">
               <button
                 className="border-2 bg-gray-400 rounded p-1 justify-center"
                 onClick={() => filterCategory("InternalHardDrive")}
@@ -328,6 +354,18 @@ export default function Seller() {
                 onClick={() => filterCategory("VideoCard")}
               >
                 VIDEO CARD
+              </button>
+              <button
+                className="border-2 bg-gray-400 rounded p-1 justify-center"
+                onClick={() => filterCategory("Mouse")}
+              >
+                MOUSE
+              </button>
+              <button
+                className="border-2 bg-gray-400 rounded p-1 justify-center"
+                onClick={() => filterCategory("Monitor")}
+              >
+                MONITOR
               </button>
             </div>
           </div>
