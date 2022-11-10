@@ -35,8 +35,12 @@ router.get('/user/:id', async (req, res) => {
     try {
         const userPurchases = await Purchase.findAll({
             where: {
-                UserId: [id]
-            }
+                UserId: [id],
+            },
+            include: {
+                model: WareHouse,
+                attributes: ['id']
+        }
         });
         res.send(userPurchases);
     } catch (err) {
