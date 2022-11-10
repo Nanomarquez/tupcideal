@@ -3,6 +3,8 @@ import Backdrop from "./Backdrop";
 import { useAuth } from "../../context/authContext";
 import { useEffect, useState } from 'react';
 import axios from "axios";
+import swal from "sweetalert";
+import { useNavigate } from "react-router-dom";
 const dropIn = {
   hidden: {
     y: "-100vh",
@@ -25,18 +27,30 @@ const dropIn = {
 function ModalReview({ handleClose, ProductId }) {
   const { usuario } = useAuth();
   const [userId, setUserId] = useState("")
+  const [user, setUser] = useState([])
 
+  async function getUser(){
+    return await axios.get(`/users/${usuario.email}`).then(res=>setUser(res.data))
+  }
   async function getUserId (){
     return await axios.get(`/users/${usuario.email}`).then(res=>setUserId(res.data.id))
   }
 
   useEffect(() => {
-    getUserId()
-    setReviewUser({
-      ...reviewUser,
-      UserId: userId
-    })
+    if(usuario){
+      getUserId()
+      setReviewUser({
+        ...reviewUser,
+        UserId: userId
+      })
+    }
   }, [userId])
+  
+  useEffect(() => {
+    if(usuario){
+      getUser()
+    }
+  }, [usuario])
   
 
   const [reviewUser, setReviewUser] = useState({
@@ -46,6 +60,7 @@ function ModalReview({ handleClose, ProductId }) {
     rating: 0,
   })
 
+  console.log(user)
 
   let handleChange = (e) => {
     setReviewUser({
@@ -58,6 +73,16 @@ function ModalReview({ handleClose, ProductId }) {
   let handleSubmit = (e) => {
     e.preventDefault();
     axios.post(`/review`,reviewUser)
+  }
+
+  if(!usuario){
+    swal("Denegado", `Deberas logearte para poder comentar`, "warning");
+    handleClose()
+  }
+
+  if(user.isBanned){
+    swal("Denegado", `Estas baneado no podes comentar`, "warning");
+    handleClose()
   }
 
   return (

@@ -30,7 +30,7 @@ function CustomPc() {
       .then((res) => setStep1(res.data));
   }
   const cpu = (e) => {
-    setArray([e]);
+    setArray([...array,e]);
     setStep(step + 1);
     axios
       .get(`/warehouse?category=Motherboard`)
@@ -136,11 +136,21 @@ function CustomPc() {
     }
   };
 
+  const handleBack = () => {
+    if(step === 0) return;
+    const arrAux = array;
+    arrAux.pop()
+    setArray([...arrAux])
+    setStep(step-1)
+  }
+
   return (
     <div className="">
       <div className="text-center text-3xl flex flex-col gap-5 pt-5">
         <h1>Armemos tu pc en 11 pasos</h1>
         <p>Paso {step} de 11</p>
+        {step > 1 && <button className="px-4 mb-7 py-2 mt-4 duration-300 mx-auto rounded-md bg-gray-300 hover:bg-gray-400 hover:text-white" onClick={handleBack}>Volver atras</button>}
+        
       </div>
       <section>
         {step === 0 && (

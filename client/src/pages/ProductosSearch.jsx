@@ -80,6 +80,7 @@ function ProductosSearch() {
  
   };
 
+
   let handleReview = () => {
     swal("Ups!", "Podras escribir una reseña cuando compres el producto", "warning");
     }  
@@ -202,7 +203,7 @@ function ProductosSearch() {
         </h1>
         <div className="flex gap-5 items-center h-full justify-center overflow-x-scroll">
           {othersSeller?.map((e, i) => (
-            <Link to={`/productos/search/${e.id}`} className="flex flex-col items-center justify-center border-2 px-4 rounded-md">
+            <Link key={i} to={`/productos/search/${e.id}`} className="flex flex-col items-center justify-center border-2 px-4 rounded-md">
                 <h2>{e.Seller.store_name}</h2>
                 <p>{e.Product.name}</p>
                 <img
