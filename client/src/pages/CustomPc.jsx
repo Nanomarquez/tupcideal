@@ -196,7 +196,7 @@ function CustomPc() {
         )}
         {step === 1 && (
           <div className="flex flex-col items-center justify-center">
-            <div className="text-base flex-col sm:flex-row gap-5 flex text-left w-[300px] sm:w-[600px] p-5 border-2 border-yellow-300 rounded-md font-bold">
+            <div className="text-base flex-col sm:flex-row gap-5 items-center flex text-left w-[300px] sm:w-[600px] p-5 border-2 border-yellow-300 rounded-md font-bold">
               <img
                 src="https://www.venex.com.ar/images/configurador_pc/micro.png"
                 alt="icono"

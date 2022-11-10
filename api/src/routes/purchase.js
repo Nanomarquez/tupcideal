@@ -31,6 +31,7 @@ router.get('/:id', async (req, res) => {
 // Una ruta para ver todas las compras de un usuario
 router.get('/user/:id', async (req, res) => {
     const {id} = req.params;
+    const {status} = req.query;
 
     try {
         const userPurchases = await Purchase.findAll({
@@ -42,7 +43,22 @@ router.get('/user/:id', async (req, res) => {
                 attributes: ['id']
         }
         });
-        res.send(userPurchases);
+        let response = userPurchases
+        if(status)
+        {response = userPurchases.filter(p => p.status == status)
+        let array=[];
+        for(let i = 0; i < response.length ; i++){
+           for(let z = 0; z < response[i].WareHouses.length; z++)
+            array.push(response[i].WareHouses[z].id)
+         }
+        response = array;
+         console.log(array);       
+        } 
+       
+       
+        else{null} 
+        res.send(response);
+        console.log(status);
     } catch (err) {
         res.send({error: err.message})
     };
