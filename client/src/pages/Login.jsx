@@ -2,8 +2,6 @@ import React, { useState } from "react";
 import { Link, Navigate, useNavigate } from "react-router-dom";
 import { useAuth } from "../context/authContext";
 import swal from "sweetalert";
-import axios from "axios";
-
 function Login() {
   const { logIn, loginWithGoogle, usuario, resetPassword } = useAuth();
   const navigate = useNavigate();
