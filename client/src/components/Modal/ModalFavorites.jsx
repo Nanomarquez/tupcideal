@@ -50,7 +50,7 @@ function ModalFavorites({ handleClose }) {
           X
         </button>
         {usuario && (
-          <h1 className="text-center text-2xl">
+          <h1 className="text-center text-2xl mt-8">
             Welcome {usuario.displayName ? usuario.displayName : usuario.email}
           </h1>
         )}
@@ -61,7 +61,7 @@ function ModalFavorites({ handleClose }) {
           productsFavorites.map((p, i) => (
             <div
               key={i}
-              className="flex p-5 gap-5 justify-center items-center border-2 m-5 text-center shadow-md rounded-lg"
+              className="flex p-5 gap-5 justify-center flex-col sm:flex-row items-center border-2 m-5 text-center shadow-md rounded-lg"
             >
               <img
                 className="object-contain h-36 w-36"
@@ -76,13 +76,13 @@ function ModalFavorites({ handleClose }) {
               >
                 Eliminar
               </button>
-              <button className="bg-gray-300 px-3 py-1  rounded-md shadow-md shadow-black"
+              <button className="bg-gray-300 flex items-center justify-center rounded-md shadow-md shadow-black"
                 onClick={() => dispatch(addProductToShoppingCart(p))}
               >
                  <img
               src={Carrito}
               alt="carrito"
-              className="object-cover h-12 p-1.5  "
+              className="object-cover w-10 py-1"
             />
               </button>
               </div>
