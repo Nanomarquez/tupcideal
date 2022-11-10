@@ -199,7 +199,7 @@
   },
   {
     "id": "12378de6-0dcb-4927-8e14-faf9589b94c8",
-    "precio": 7010,
+    "precio": 1600,
     "cantidad": 16,
     "quantity": 1,
     "ratingProm": 0,
@@ -208,7 +208,7 @@
   },
   {
     "id": "143bd20e-0162-4ff4-8e38-28f591cdb800",
-    "precio": 7840,
+    "precio": 280,
     "cantidad": 5,
     "quantity": 1,
     "ratingProm": 0,
@@ -235,7 +235,7 @@
   },
   {
     "id": "162e3f09-2613-4435-acc3-47b8ac5b2ee5",
-    "precio": 8190,
+    "precio": 700,
     "cantidad": 63,
     "quantity": 1,
     "ratingProm": 0,
@@ -361,7 +361,7 @@
   },
   {
     "id": "2000e695-feb1-408e-9cfe-2c502469eae2",
-    "precio": 2610,
+    "precio": 3100,
     "cantidad": 59,
     "quantity": 1,
     "ratingProm": 0,
@@ -424,7 +424,7 @@
   },
   {
     "id": "24919c04-9830-4e31-ba94-e4984bae13d3",
-    "precio": 6150,
+    "precio": 600,
     "cantidad": 43,
     "quantity": 1,
     "ratingProm": 0,
@@ -748,7 +748,7 @@
   },
   {
     "id": "42a219b1-39c7-45dd-b546-6bee282a94bb",
-    "precio": 4400,
+    "precio": 500,
     "cantidad": 88,
     "quantity": 1,
     "ratingProm": 0,
@@ -757,7 +757,7 @@
   },
   {
     "id": "46957a11-abb4-41fa-b7ce-55f30385c8c3",
-    "precio": 9830,
+    "precio": 800,
     "cantidad": 80,
     "quantity": 1,
     "ratingProm": 0,
@@ -964,7 +964,7 @@
   },
   {
     "id": "571de52b-d8ae-48a4-ab87-20402a16081c",
-    "precio": 4140,
+    "precio": 2500,
     "cantidad": 6,
     "quantity": 1,
     "ratingProm": 0,
@@ -1045,7 +1045,7 @@
   },
   {
     "id": "5c7ff807-446b-4fb0-9f89-2e80cd33d5fd",
-    "precio": 9300,
+    "precio": 1200,
     "cantidad": 77,
     "quantity": 1,
     "ratingProm": 0,
@@ -1198,7 +1198,7 @@
   },
   {
     "id": "67631cf1-de12-400e-8850-0fe118698be9",
-    "precio": 9190,
+    "precio": 800,
     "cantidad": 14,
     "quantity": 1,
     "ratingProm": 0,
@@ -1450,7 +1450,7 @@
   },
   {
     "id": "80a00c88-eddf-496c-88eb-6b8234abf6c7",
-    "precio": 9890,
+    "precio": 3500,
     "cantidad": 95,
     "quantity": 1,
     "ratingProm": 0,
@@ -1459,7 +1459,7 @@
   },
   {
     "id": "81319ab1-9411-4477-8428-6dee1d38abb8",
-    "precio": 910,
+    "precio": 2000,
     "cantidad": 57,
     "quantity": 1,
     "ratingProm": 0,
@@ -1567,7 +1567,7 @@
   },
   {
     "id": "8d41266a-f34c-42d0-9e9a-8bfa859c34ba",
-    "precio": 6150,
+    "precio": 300,
     "cantidad": 99,
     "quantity": 1,
     "ratingProm": 0,
@@ -1594,7 +1594,7 @@
   },
   {
     "id": "8fb8ccf8-d06e-4a58-8c05-dceb25b12ef3",
-    "precio": 1180,
+    "precio": 1200,
     "cantidad": 7,
     "quantity": 1,
     "ratingProm": 0,
@@ -1828,7 +1828,7 @@
   },
   {
     "id": "a966ef75-2b5e-438a-9ec6-296307f92675",
-    "precio": 1820,
+    "precio": 2600,
     "cantidad": 12,
     "quantity": 1,
     "ratingProm": 0,
@@ -2170,7 +2170,7 @@
   },
   {
     "id": "cad49911-5812-4d8e-bdfd-d833c7dcd9fd",
-    "precio": 1670,
+    "precio": 2000,
     "cantidad": 83,
     "quantity": 1,
     "ratingProm": 0,
@@ -2494,7 +2494,7 @@
   },
   {
     "id": "e5d8e18b-e0ae-49ff-ac5d-12c2b77fd1ce",
-    "precio": 5310,
+    "precio": 400,
     "cantidad": 19,
     "quantity": 1,
     "ratingProm": 0,
@@ -2539,7 +2539,7 @@
   },
   {
     "id": "e95e03a3-7cf6-4efd-8db3-382192fc4d8a",
-    "precio": 9800,
+    "precio": 300,
     "cantidad": 33,
     "quantity": 1,
     "ratingProm": 0,
@@ -2575,7 +2575,7 @@
   },
   {
     "id": "eca15553-b780-4323-81b0-5bcd7ac1f157",
-    "precio": 830,
+    "precio": 1100,
     "cantidad": 73,
     "quantity": 1,
     "ratingProm": 0,
@@ -2674,7 +2674,7 @@
   },
   {
     "id": "f3f89035-dc8f-4d4f-be5d-c6a348424c92",
-    "precio": 1100,
+    "precio": 1400,
     "cantidad": 18,
     "quantity": 1,
     "ratingProm": 0,
@@ -2755,7 +2755,7 @@
   },
   {
     "id": "f7e5c50a-96a5-4738-b75b-9ca1bef82555",
-    "precio": 3600,
+    "precio": 400,
     "cantidad": 18,
     "quantity": 1,
     "ratingProm": 0,
