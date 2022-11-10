@@ -11,12 +11,20 @@ import {
 import axios from "axios";
 import { motion, AnimatePresence } from "framer-motion";
 import ModalReview from "../components/Modal/ModalReview";
+import { useAuth } from "../context/authContext";
+import swal from "sweetalert";
+
 function ProductosSearch() {
   const { favorites } = useSelector((state) => state.products);
   const [modalOpen, setModalOpen] = useState(false);
   const close = () => setModalOpen(false);
   const open = () => setModalOpen(true);
   const { id } = useParams();
+  
+  const {usuario} = useAuth();
+  const [user, setUser] = useState({});
+  const [bought, setBought] = useState([]);
+
   const [loading, setLoading] = useState(true);
   const dispatch = useDispatch();
   const { productsFilterById } = useSelector((state) => state.products);
@@ -44,8 +52,22 @@ function ProductosSearch() {
   let othersSeller = Sellers.filter(
     (e) => e.Seller.store_name !== productsFilterById.Seller.store_name
   );
+  useEffect(() => {
+    if (usuario) {
+      axios.get(`/users/${usuario.email}`).then((res) => {
+        setUser(res.data)})}},[usuario])
 
   useEffect(() => {
+    if (user) {
+       axios.get(`/purchase/user/${user.id}?status=Paid`).then((res) => {
+       setBought(res.data)
+              
+        })}},[user])   
+ 
+     
+ 
+ 
+        useEffect(() => {
     if (productsFilterById.hasOwnProperty("Product")) {
       getOtherSellers();
     }
@@ -55,13 +77,26 @@ function ProductosSearch() {
     if (!favs) {
       dispatch(addFavoritesList(product));
     }
-    
-    
-
+ 
   };
-  
-  console.log(productsFilterById);
-  console.log(othersSeller);
+
+  let handleReview = () => {
+    swal("Ups!", "Podras escribir una reseña cuando compres el producto", "warning");
+    }  
+
+
+  let finder;
+  let setter = false
+ 
+  if(bought.length){
+   finder = bought.find(b => b === productsFilterById.id)
+}
+ if(finder){
+  setter = true
+ }
+
+
+
   if (loading || productsFilterById.Seller === undefined) {
     return <Loading />;
   }
@@ -138,16 +173,26 @@ function ProductosSearch() {
             >
               Agregar al carrito
             </button>
-            <motion.button
+           { setter? <motion.button
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
               onClick={() => {
-                modalOpen ? close() : open();
+               modalOpen ? close() : open();
               }}
               className="bg-gray-300 text-black rounded-md text-2xl p-2 shadow-lg hover:text-white hover:bg-gray- 500 duration-500"
             >
               Agregar comentario
-            </motion.button>
+            </motion.button> : <motion.button
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+              
+              onClick={() => handleReview()}
+              className="bg-gray-300 text-black rounded-md text-2xl p-2 shadow-lg hover:text-white hover:bg-gray- 500 duration-500"
+            >
+              Agregar comentario
+            </motion.button> 
+            
+           }
           </section>
         </div>
       )}

@@ -3,8 +3,8 @@ import foto2 from "../aboutUs/franco.jpg"
 import foto3 from "../aboutUs/fedehuertas.jpg"
 import foto4 from "../aboutUs/nanomarquez.jpg"
 import foto5 from "../aboutUs/robert.jpg"
-import foto6 from "../aboutUs/yo.jpg"
-import foto7 from "../aboutUs/yo.jpg"
+import foto6 from "../aboutUs/luis.jpg"
+import foto7 from "../aboutUs/dionicio.jpg"
 
 export const data =
 
@@ -46,7 +46,7 @@ github:"https://github.com/Lualbaldassari"
 {name: "Dionicio Hurtado",
 stack : "Full Stack Developer",
 image: foto7,
-linkedin:"",
+linkedin:"linkedin.com/in/dionicio-hurtado",
 github:"https://github.com/hurtado82"
 }
 
