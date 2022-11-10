@@ -52,7 +52,7 @@ function Modal({ handleClose }) {
           X
         </button>
         {usuario && (
-          <h1 className="text-center text-2xl">
+          <h1 className="text-center text-2xl mt-8">
             Welcome {usuario.displayName ? usuario.displayName : usuario.email}
           </h1>
         )}
@@ -63,7 +63,7 @@ function Modal({ handleClose }) {
           productsCart.map((p, i) => (
             <div
               key={i}
-              className="flex p-5 gap-5 justify-center items-center border-2 m-5 text-center shadow-md rounded-lg"
+              className="flex p-5 flex-col sm:flex-row gap-5 justify-center items-center border-2 m-5 text-center shadow-md rounded-lg"
             >
               {" "}
               <div className="flex items-center justify-center" onClick={handleClose}>
@@ -105,7 +105,7 @@ function Modal({ handleClose }) {
           ))
         )}
         {productsCart.length ? (
-          <div className="container text-right block">
+          <div className="container text-center">
             <div className="font-bold text-2xl">
               Total: <span>{totalPrice}</span>{" "}
             </div>
