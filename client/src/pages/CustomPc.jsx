@@ -30,7 +30,7 @@ function CustomPc() {
       .then((res) => setStep1(res.data));
   }
   const cpu = (e) => {
-    setArray([e]);
+    setArray([...array, e]);
     setStep(step + 1);
     //console.log(e.Product[e.Product.categories].socket)
     axios
@@ -38,7 +38,7 @@ function CustomPc() {
       .then((res) => setStep2(res.data));
   };
   const mother = (e) => {
-    console.log(e.Product[e.Product.categories]['socket_/_cpu'])
+    //console.log(e.Product[e.Product.categories]['socket_/_cpu'])
     setArray([...array, e]);
     setStep(step + 1);
     axios.get(`/warehouse/Memory/${e.Product[e.Product.categories]['socket_/_cpu']}`).then((res) => setStep3(res.data));
@@ -138,12 +138,21 @@ function CustomPc() {
     }
   };
 
+  const handleBack = () => {
+    if(step === 0) return;
+    const arrAux = array;
+    arrAux.pop()
+    setArray([...arrAux])
+    setStep(step-1)
+  }
+
   return (
     <div className="">
       <div className="text-center text-3xl flex flex-col gap-5 pt-5">
         <h1>Armemos tu pc en 11 pasos</h1>
         <p>Paso {step} de 11</p>
       </div>
+      <button onClick={handleBack}>Atras</button>
       <section>
         {step === 0 && (
           <div className="text-center text-5xl mt-5 flex flex-col justify-center items-center">
@@ -214,7 +223,7 @@ function CustomPc() {
                       className="text-white duration-500 rounded bg-gray-700/50 text-2xl flex hover:opacity-100 cursor-pointer opacity-0 justify-center items-center z-50 h-36 w-36 absolute text-center"
                       onClick={() => cpu(e)}
                     >
-                      Elejir producto
+                      Elegir producto
                     </div>
                     <img
                       src={
@@ -302,7 +311,7 @@ function CustomPc() {
                       className="text-white duration-500 rounded bg-gray-700/50 text-2xl flex hover:opacity-100 cursor-pointer opacity-0 justify-center items-center z-50 h-36 w-36 absolute text-center"
                       onClick={() => mother(e)}
                     >
-                      Elejir producto
+                      Elegir producto
                     </div>
                     <img
                       src={
@@ -392,7 +401,7 @@ function CustomPc() {
                       className="text-white duration-500 rounded bg-gray-700/50 text-2xl flex hover:opacity-100 cursor-pointer opacity-0 justify-center items-center z-50 h-36 w-36 absolute text-center"
                       onClick={() => memory(e)}
                     >
-                      Elejir producto
+                      Elegir producto
                     </div>
                     <img
                       src={
@@ -488,7 +497,7 @@ function CustomPc() {
                       className="text-white duration-500 rounded bg-gray-700/50 text-2xl flex hover:opacity-100 cursor-pointer opacity-0 justify-center items-center z-50 h-36 w-36 absolute text-center"
                       onClick={() => internal(e)}
                     >
-                      Elejir producto
+                      Elegir producto
                     </div>
                     <img
                       src={
@@ -583,7 +592,7 @@ function CustomPc() {
                       className="text-white duration-500 rounded bg-gray-700/50 text-2xl flex hover:opacity-100 cursor-pointer opacity-0 justify-center items-center z-50 h-36 w-36 absolute text-center"
                       onClick={() => gpu(e)}
                     >
-                      Elejir producto
+                      Elegir producto
                     </div>
                     <img
                       src={
@@ -673,7 +682,7 @@ function CustomPc() {
                       className="text-white duration-500 rounded bg-gray-700/50 text-2xl flex hover:opacity-100 cursor-pointer opacity-0 justify-center items-center z-50 h-36 w-36 absolute text-center"
                       onClick={() => powerSupply(e)}
                     >
-                      Elejir producto
+                      Elegir producto
                     </div>
                     <img
                       src={
@@ -762,7 +771,7 @@ function CustomPc() {
                       className="text-white duration-500 rounded bg-gray-700/50 text-2xl flex hover:opacity-100 cursor-pointer opacity-0 justify-center items-center z-50 h-36 w-36 absolute text-center"
                       onClick={() => eCase(e)}
                     >
-                      Elejir producto
+                      Elegir producto
                     </div>
                     <img
                       src={
@@ -857,7 +866,7 @@ function CustomPc() {
                       className="text-white duration-500 rounded bg-gray-700/50 text-2xl flex hover:opacity-100 cursor-pointer opacity-0 justify-center items-center z-50 h-36 w-36 absolute text-center"
                       onClick={() => monitor(e)}
                     >
-                      Elejir producto
+                      Elegir producto
                     </div>
                     <img
                       src={
@@ -951,7 +960,7 @@ function CustomPc() {
                       className="text-white duration-500 rounded bg-gray-700/50 text-2xl flex hover:opacity-100 cursor-pointer opacity-0 justify-center items-center z-50 h-36 w-36 absolute text-center"
                       onClick={() => keyboard(e)}
                     >
-                      Elejir producto
+                      Elegir producto
                     </div>
                     <img
                       src={
@@ -1046,7 +1055,7 @@ function CustomPc() {
                       className="text-white duration-500 rounded bg-gray-700/50 text-2xl flex hover:opacity-100 cursor-pointer opacity-0 justify-center items-center z-50 h-36 w-36 absolute text-center"
                       onClick={() => mouse(e)}
                     >
-                      Elejir producto
+                      Elegir producto
                     </div>
                     <img
                       src={
@@ -1131,7 +1140,7 @@ function CustomPc() {
                       className="text-white duration-500 rounded bg-gray-700/50 text-2xl flex hover:opacity-100 cursor-pointer opacity-0 justify-center items-center z-50 h-36 w-36 absolute text-center"
                       onClick={() => mouse(e)}
                     >
-                      Elejir producto
+                      Elegir producto
                     </div>
                     <img
                       src={
