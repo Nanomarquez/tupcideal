@@ -144,9 +144,7 @@ export default function Seller() {
   ) {
     disabledPut = false;
   }
-
-  console.log(sales);
-
+  
   return (
     <section className="flex flex-col bg-gray-300 w-full gap-5">
       <div className="flex flex-col sm:flex-row">

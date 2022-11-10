@@ -51,7 +51,7 @@ function Mp() {
   let totalPrice = 0;
   cart?.map((e) => (totalPrice = totalPrice + e.precio * e.quantity));
   return (
-    <div className="flex sm:flex-row flex-col">
+    <div className="flex sm:flex-row flex-col min-h-screen items-center">
       <section className="w-full flex-col gap-5 sm:w-1/2 flex items-center justify-center">
         <h1 className="text-3xl">Direccion de envio</h1>
         <form className="flex flex-col gap-5" onSubmit={handleSubmit}>
@@ -142,24 +142,24 @@ function Mp() {
           <h1>Productos: {cartSum}</h1>
           <h1>Total: {totalPrice}</h1>
         </div>
-        <div className="overflow-y-scroll w-full h-[400px] border mt-2">
+        <div className="overflow-y-scroll h-[400px] border mt-2">
           {cart?.map((e, i) => (
             <div
               key={i}
               className="flex flex-col p-5 gap-5 justify-center items-center border-2 m-5 text-center shadow-md rounded-lg"
             >
               {" "}
-              <div className="flex items-center justify-center">
-                <Link to={`/productos/search/${e.id}`}>
-                  <div className="text-white duration-500 rounded bg-gray-700/50 text-2xl flex hover:opacity-100 cursor-pointer opacity-0 justify-center items-center z-50 h-24 w-36 -translate-y-12 translate-x-2 absolute text-center">
-                    Ver más
-                  </div>
-                </Link>
+              <div className="flex flex-col items-center justify-center">
                 <img
                   className="object-contain h-36 w-36"
                   src={e.Product.image}
                   alt={e.Product.name}
                 />
+                <Link to={`/productos/search/${e.id}`}>
+                  <div className="bg-gray-300 px-4 py-2 rounded-md hover:text-white duration-300">
+                    Ver más
+                  </div>
+                </Link>
               </div>
               <h3 className="text-2xl">Name {e.Product.name}</h3>
               <span className="text-center text-xl">Precio ${e.precio}</span>
