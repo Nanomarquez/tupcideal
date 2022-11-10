@@ -182,7 +182,7 @@ function ProductosSearch() {
               }}
               className="bg-gray-300 text-black rounded-md text-2xl p-2 shadow-lg hover:text-white hover:bg-gray- 500 duration-500"
             >
-              Agregar comentario
+              Dejar tu reseña
             </motion.button> : <motion.button
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
@@ -190,7 +190,7 @@ function ProductosSearch() {
               onClick={() => handleReview()}
               className="bg-gray-300 text-black rounded-md text-2xl p-2 shadow-lg hover:text-white hover:bg-gray- 500 duration-500"
             >
-              Agregar comentario
+              Dejar tu reseña
             </motion.button> 
             
            }
