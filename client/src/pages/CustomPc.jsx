@@ -167,7 +167,7 @@ function CustomPc() {
               pedido pero fuera del configurador no son considerados para el
               armado de tu PC y podras omitirlos.
             </div>
-            <h1 className="py-10">Elije tu marca</h1>
+            <h1 className="py-10">Elige tu marca</h1>
             <div className="py-10 flex flex-col sm:flex-row items-center justify-center gap-24">
               <button
                 className="hover:shadow-2xl shadow-black duration-500"
@@ -207,7 +207,7 @@ function CustomPc() {
               requisitos que recomiende el creador de las aplicaciones, juegos
               y/o programas que más te gusten
             </div>
-            <h1 className="text-2xl py-5">Elije tu Microprocesador</h1>
+            <h1 className="text-2xl py-5">Elige tu Microprocesador</h1>
             <div className="flex flex-col gap-5">
               {step1?.map((e, i) => (
                 <div
@@ -222,7 +222,7 @@ function CustomPc() {
                       className="text-white duration-500 rounded bg-gray-700/50 text-2xl flex hover:opacity-100 cursor-pointer opacity-0 justify-center items-center z-50 h-36 w-36 absolute text-center"
                       onClick={() => cpu(e)}
                     >
-                      Elejir producto
+                      Eligir producto
                     </div>
                     <img
                       src={
@@ -295,7 +295,7 @@ function CustomPc() {
               o consultar la lista de procesadores compatibles en la página web
               del fabricante.
             </div>
-            <h1 className="text-2xl py-5">Elije tu mother</h1>
+            <h1 className="text-2xl py-5">Elige tu mother</h1>
             <div className="flex flex-col gap-5">
               {step2?.map((e, i) => (
                 <div
@@ -310,7 +310,7 @@ function CustomPc() {
                       className="text-white duration-500 rounded bg-gray-700/50 text-2xl flex hover:opacity-100 cursor-pointer opacity-0 justify-center items-center z-50 h-36 w-36 absolute text-center"
                       onClick={() => mother(e)}
                     >
-                      Elejir producto
+                      Eligir producto
                     </div>
                     <img
                       src={
@@ -385,7 +385,7 @@ function CustomPc() {
               tecnología DualChannel. Para un uso doméstico, los módulos únicos
               de 8GB son una buena opción.
             </div>
-            <h1 className="text-2xl py-5">Elije tu memoria ram</h1>
+            <h1 className="text-2xl py-5">Elige tu memoria ram</h1>
             <div className="flex flex-col gap-5">
               {step3?.map((e, i) => (
                 <div
@@ -400,7 +400,7 @@ function CustomPc() {
                       className="text-white duration-500 rounded bg-gray-700/50 text-2xl flex hover:opacity-100 cursor-pointer opacity-0 justify-center items-center z-50 h-36 w-36 absolute text-center"
                       onClick={() => memory(e)}
                     >
-                      Elejir producto
+                      Eligir producto
                     </div>
                     <img
                       src={
@@ -461,7 +461,7 @@ function CustomPc() {
         )}
         {step === 4 && (
           <div className="flex flex-col items-center justify-center">
-            <h1 className="text-2xl py-5">Elije tu almacenamiento</h1>
+            <h1 className="text-2xl py-5">Elige tu almacenamiento</h1>
 
             <div className="text-base flex-col sm:flex-row items-center gap-5 flex text-left w-[300px] sm:w-[600px] p-5 border-2 border-yellow-300 rounded-md font-bold">
               <img
@@ -496,7 +496,7 @@ function CustomPc() {
                       className="text-white duration-500 rounded bg-gray-700/50 text-2xl flex hover:opacity-100 cursor-pointer opacity-0 justify-center items-center z-50 h-36 w-36 absolute text-center"
                       onClick={() => internal(e)}
                     >
-                      Elejir producto
+                      Eligir producto
                     </div>
                     <img
                       src={
@@ -557,7 +557,7 @@ function CustomPc() {
         )}
         {step === 5 && (
           <div className="flex flex-col items-center justify-center">
-            <h1 className="text-2xl py-5">Elije tu Placa de Video</h1>
+            <h1 className="text-2xl py-5">Elige tu Placa de Video</h1>
             <div className="text-base flex-col sm:flex-row items-center gap-5 flex text-left w-[300px] sm:w-[600px] p-5 border-2 border-yellow-300 rounded-md font-bold">
               <img
                 src="https://www.venex.com.ar/images/configurador_pc/gpu.png"
@@ -591,7 +591,7 @@ function CustomPc() {
                       className="text-white duration-500 rounded bg-gray-700/50 text-2xl flex hover:opacity-100 cursor-pointer opacity-0 justify-center items-center z-50 h-36 w-36 absolute text-center"
                       onClick={() => gpu(e)}
                     >
-                      Elejir producto
+                      Eligir producto
                     </div>
                     <img
                       src={
@@ -652,7 +652,7 @@ function CustomPc() {
         )}
         {step === 6 && (
           <div className="flex flex-col items-center justify-center">
-            <h1 className="text-2xl py-5">Elije tu Fuente</h1>
+            <h1 className="text-2xl py-5">Elige tu Fuente</h1>
             <div className="text-base flex-col sm:flex-row items-center gap-5 flex text-left w-[300px] sm:w-[600px] p-5 border-2 border-yellow-300 rounded-md font-bold">
               <img
                 src="https://www.venex.com.ar/images/configurador_pc/fuente.png"
@@ -681,7 +681,7 @@ function CustomPc() {
                       className="text-white duration-500 rounded bg-gray-700/50 text-2xl flex hover:opacity-100 cursor-pointer opacity-0 justify-center items-center z-50 h-36 w-36 absolute text-center"
                       onClick={() => powerSupply(e)}
                     >
-                      Elejir producto
+                      Eligir producto
                     </div>
                     <img
                       src={
@@ -742,7 +742,7 @@ function CustomPc() {
         )}
         {step === 7 && (
           <div className="flex flex-col items-center justify-center">
-            <h1 className="text-2xl py-5">Elije tu Gabinete</h1>
+            <h1 className="text-2xl py-5">Elige tu Gabinete</h1>
             <div className="text-base flex-col sm:flex-row items-center gap-5 flex text-left w-[300px] sm:w-[600px] p-5 border-2 border-yellow-300 rounded-md font-bold">
               <img
                 src="https://www.venex.com.ar/images/configurador_pc/gabinete.png"
@@ -770,7 +770,7 @@ function CustomPc() {
                       className="text-white duration-500 rounded bg-gray-700/50 text-2xl flex hover:opacity-100 cursor-pointer opacity-0 justify-center items-center z-50 h-36 w-36 absolute text-center"
                       onClick={() => eCase(e)}
                     >
-                      Elejir producto
+                      Eligir producto
                     </div>
                     <img
                       src={
@@ -831,7 +831,7 @@ function CustomPc() {
         )}
         {step === 8 && (
           <div className="flex flex-col items-center justify-center">
-            <h1 className="text-2xl py-5">Elije tu Monitor</h1>
+            <h1 className="text-2xl py-5">Elige tu Monitor</h1>
             <div className="text-base flex-col sm:flex-row items-center gap-5 flex text-left w-[300px] sm:w-[600px] p-5 border-2 border-yellow-300 rounded-md font-bold">
               <img
                 src="https://www.venex.com.ar/images/configurador_pc/monitor.png"
@@ -865,7 +865,7 @@ function CustomPc() {
                       className="text-white duration-500 rounded bg-gray-700/50 text-2xl flex hover:opacity-100 cursor-pointer opacity-0 justify-center items-center z-50 h-36 w-36 absolute text-center"
                       onClick={() => monitor(e)}
                     >
-                      Elejir producto
+                      Eligir producto
                     </div>
                     <img
                       src={
@@ -926,7 +926,7 @@ function CustomPc() {
         )}
         {step === 9 && (
           <div className="flex flex-col items-center justify-center">
-            <h1 className="text-2xl py-5">Elije tu Teclado</h1>
+            <h1 className="text-2xl py-5">Elige tu Teclado</h1>
             <div className="text-base flex-col sm:flex-row items-center gap-5 flex text-left w-[300px] sm:w-[600px] p-5 border-2 border-yellow-300 rounded-md font-bold">
               <img
                 src="https://www.venex.com.ar/images/configurador_pc/keyboard.png"
@@ -959,7 +959,7 @@ function CustomPc() {
                       className="text-white duration-500 rounded bg-gray-700/50 text-2xl flex hover:opacity-100 cursor-pointer opacity-0 justify-center items-center z-50 h-36 w-36 absolute text-center"
                       onClick={() => keyboard(e)}
                     >
-                      Elejir producto
+                      Eligir producto
                     </div>
                     <img
                       src={
@@ -1020,7 +1020,7 @@ function CustomPc() {
         )}
         {step === 10 && (
           <div className="flex flex-col items-center justify-center">
-            <h1 className="text-2xl py-5">Elije tu Mouse</h1>
+            <h1 className="text-2xl py-5">Elige tu Mouse</h1>
             <div className="text-base flex-col sm:flex-row items-center gap-5 flex text-left w-[300px] sm:w-[600px] p-5 border-2 border-yellow-300 rounded-md font-bold">
               <img
                 src="https://www.venex.com.ar/images/configurador_pc/mouse.png"
@@ -1054,7 +1054,7 @@ function CustomPc() {
                       className="text-white duration-500 rounded bg-gray-700/50 text-2xl flex hover:opacity-100 cursor-pointer opacity-0 justify-center items-center z-50 h-36 w-36 absolute text-center"
                       onClick={() => mouse(e)}
                     >
-                      Elejir producto
+                      Eligir producto
                     </div>
                     <img
                       src={

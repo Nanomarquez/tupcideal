@@ -35,19 +35,13 @@ router.post("/", async (req, res) => {
   console.log(req.body);
 
   try {
-    const { categories, name, price_usd, rating, rating_count, image } =
+    const { categories, name, image } =
       req.body;
-    console.log(Number(price_usd));
-    let usd_price = Number(price_usd);
-    console.log(typeof usd_price);
 
     const [product, created] = await Product.findOrCreate({
       where: {
         categories: categories,
         name: name,
-        price_usd: Number(price_usd),
-        rating: Number(rating),
-        rating_count: Number(rating_count),
         image: image,
       },
     });

@@ -24,10 +24,8 @@ function Home() {
   useEffect(() => {
     if(usuario !== null){
       axios.get(`/sellers/${usuario.email}`).then(res=>{
-        console.log(res);
         if(res.data === `Dont found matches with the email: ${usuario.email}`){
           axios.get(`/users/${usuario.email}`).then(res=>{
-            console.log(res)
             if(res.data === "Usuario no encontrado"){
               navigate('/completarform')
             }else if(res.data !== "Usuario no encontrado"){

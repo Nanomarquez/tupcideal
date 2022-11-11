@@ -1,19 +1,29 @@
 import axios from "axios";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useAuth } from "../context/authContext";
 import { useSelector } from "react-redux";
-import { Link } from "react-router-dom";
-
+import { Link, useNavigate } from "react-router-dom";
+import swal from "sweetalert";
 function Mp() {
   const { cart } = useSelector((state) => state.products);
-
+  const navigate = useNavigate()
   const { usuario } = useAuth();
 
   if (usuario) {
     usuario.cart = cart;
   }
 
-  console.log(cart);
+  useEffect(() => {
+    if(usuario){
+      axios.get(`/sellers/${usuario.email}`).then(res=>{
+        if(res.data !== `Dont found matches with the email: ${usuario.email}`){
+          swal("Denegado", `Deberas ser un usuario para poder comprar`, "warning");
+          navigate('/')
+        }
+      })
+    }
+  }, [usuario])
+  
 
   let cartSum = 0;
   cart.map((c) => {
