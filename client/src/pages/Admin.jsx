@@ -6,10 +6,11 @@ import { useAuth } from "../context/authContext";
 import swal from 'sweetalert';
 import "../components/NavBar/Signin.css"
 import { useNavigate } from "react-router-dom";
-
+import UploadWidgetProduct from "../components/UploadWidgetProduct";
 function Admin() {
   const dispatch = useDispatch();
   const filtered = useSelector((state) => state.products.productsFiltered2);
+  const {allProducts} = useSelector(state=>state.products)
   const { signUpTwo , usuario } = useAuth();
   const [users, setUsers] = useState([]);
   const [sellers, setSellers] = useState([]);
@@ -24,6 +25,10 @@ function Admin() {
       }) 
   }
 
+  const setCategory = new Set();
+  allProducts?.map((e) => setCategory.add(e.Product.categories))
+
+
   useEffect(()=>{
     if(!usuario){
       navigate('/')
@@ -31,14 +36,11 @@ function Admin() {
       isAdmin()
     }
   },[usuario])
-
+  const [image,setImage] = useState("");
   const [product, setProduct] = useState({
     name: "",
-    categories: "",
-    price_usd: "",
-    rating: "",
-    rating_count: "",
-    image: "",
+    categories: "PowerSupply",
+    image
   });
 
   const [seller, setSeller] = useState({
@@ -128,7 +130,6 @@ function Admin() {
     const value2 = { ...seller, [e.target.name]: e.target.value };
     setSeller(value2);
   };
-
   let onClickDel = async (e) => {
     const answer= await axios.delete(`/products/${component.id}`);
     if(answer.data.resp===1){
@@ -146,15 +147,24 @@ function Admin() {
   
   const onSubmit = async (e) => {
     e.preventDefault();
-    const resp= await axios.post("/products", product);
-    console.log(resp);
+    const resp = await axios.post("/products", product);
     if(resp.data.resp===0){
-      swal("Great",resp.data.message,"error");
+      swal("Warning",resp.data.message,"error");
+      setProduct({
+        name: "",
+        categories: "",
+        image: "",
+      })
     }else{
       swal("Great","The product was created successfully","success");
+      setProduct({
+        name: "",
+        categories: "",
+        image: "",
+      })
     }
-    axion();
   };
+
   const onSubmitSeller = async (e) => {
     e.preventDefault();
     setError("");
@@ -200,11 +210,16 @@ function Admin() {
       setDisable(true);
     }
   }, [seller]);
-
   useEffect(() => {
     axion();
     axionSellers();
   }, []);
+  useEffect(() => {
+    setProduct({...product,image})
+  }, [image])
+  
+  console.log(image);
+  console.log(product);
   return (
     <div className="min-h-[100vh] bg-gray-700 flex flex-col gap-10">
       <section className="bg-gray-300 text-center shadow-lg shadow-white flex flex-col mt-10 rounded-md gap-10 mx-auto p-10">
@@ -285,64 +300,13 @@ function Admin() {
         <article className="edit-delete-componente flex flex-col my-10">
           <div className="justify-center">
             <h1 className="p-4 text-2xl">Editar o Eliminar Componente </h1>
-            <div className="grid gap-3 grid-cols-2">
-              <div>
-                <button
-                  className="border-2 border-stone-400 bg-gray-200 hover:bg-zinc-400 rounded p-1 justify-center"
-                  onClick={() => dispatch(getFiltered2("CPU"))}
-                >
-                  CPU
-                </button>
-              </div>
-              <div>
-                <button
-                  className="border-2 border-stone-400 bg-gray-200 hover:bg-zinc-400 rounded p-1 justify-center"
-                  onClick={() => dispatch(getFiltered2("Case"))}
-                >
-                  CASES
-                </button>
-              </div>
-              <div>
-                <button
-                  className="border-2 border-stone-400 bg-gray-200 hover:bg-zinc-400 rounded p-1 justify-center"
-                  onClick={() => dispatch(getFiltered2("VideoCard"))}
-                >
-                  VIDEO CARD
-                </button>
-              </div>
-              <div>
-                <button
-                  className="border-2 border-stone-400 bg-gray-200 hover:bg-zinc-400 rounded p-1 justify-center"
-                  onClick={() => dispatch(getFiltered2("Motherboard"))}
-                >
-                  MOTHER BOARD
-                </button>
-              </div>
-
-              <div>
-                <button
-                  className="border-2 border-stone-400 bg-gray-200 hover:bg-zinc-400 rounded p-1 justify-center"
-                  onClick={() => dispatch(getFiltered2("Memory"))}
-                >
-                  MEMORY CARD
-                </button>
-              </div>
-              <div>
-                <button
-                  className="border-2 border-stone-400 bg-gray-200 hover:bg-zinc-400 rounded p-1 justify-center"
-                  onClick={() => dispatch(getFiltered2("PowerSupply"))}
-                >
-                  POWER SUPPLY
-                </button>
-              </div>
-              <div>
-                <button
-                  className="border-2 border-stone-400 bg-gray-200 hover:bg-zinc-400 rounded p-1 justify-center"
-                  onClick={() => dispatch(getFiltered2("InternalHardDrive"))}
-                >
-                  INTERNAL HARD DRIVE
-                </button>
-              </div>
+            <div className="grid gap-3 grid-cols-1 sm:grid-cols-2">
+                {Array.from(setCategory).map((item,key)=>(
+                  <button key={key} className="border-2 border-stone-400 bg-gray-200 hover:bg-zinc-400 rounded p-1 justify-center"
+                  onClick={() => dispatch(getFiltered2(item))}>
+                    {item}
+                  </button>
+                ))}
             </div>
             <div className="m-4 border-3">
               <select className="w-min" name="" id="" onChange={handleSelect}>
@@ -428,7 +392,7 @@ function Admin() {
                   Password:
                   <input
                     className="border-b-2 border-black rounded-md outline-none"
-                    type="text"
+                    type="password"
                     name="password"
                     value={seller.password}
                     onChange={sellerHandlerChange}
@@ -455,9 +419,9 @@ function Admin() {
         <article className="py-5">
           <div className="w-min mx-auto bg-gray-700 px-20 rounded py-10 my-10">
             <h1 className="p-4 text-2xl text-white">Crear producto</h1>
-            <form className="flex flex-col" onSubmit={onSubmit}>
+            <form className="flex flex-col">
               <div className="flex flex-col">
-                <label className="text-white">
+                <label className="">
                   <span>Name:</span>
                   <input
                     className="border-b-2 border-black rounded-md outline-none"
@@ -467,64 +431,29 @@ function Admin() {
                     onChange={productHandlerChange}
                   />
                 </label>
-                <label className="text-white">
+                <label className="">
                   Categories:
-                  <input
-                    className="border-b-2 border-black rounded-md outline-none"
-                    type="text"
-                    name="categories"
-                    value={product.categories}
-                    onChange={productHandlerChange}
-                  />
+                  <select name="categories" className="text-center  border-b-2 border-black rounded-md outline-none" onChange={productHandlerChange}>
+                    {Array.from(setCategory).map((item,key)=>(
+                      <option key={key} value={item}>{item}</option>
+                    ))}
+                  </select>
                 </label>
-                <label className="text-white">
-                  Price_USD:
-                  <input
-                    className="border-b-2 border-black rounded-md outline-none"
-                    type="text"
-                    name="price_usd"
-                    value={product.price_usd}
-                    onChange={productHandlerChange}
-                  />
-                </label>
-                <label className="text-white">
-                  Rating:
-                  <input
-                    className="border-b-2 border-black rounded-md outline-none"
-                    type="text"
-                    name="rating"
-                    value={product.rating}
-                    onChange={productHandlerChange}
-                  />
-                </label>
-                <label className="text-white">
-                  Rating Count:
-                  <input
-                    className="border-b-2 border-black rounded-md outline-none"
-                    type="text"
-                    name="rating_count"
-                    value={product.rating_count}
-                    onChange={productHandlerChange}
-                  />
-                </label>
-                <label className="text-white">
-                  Image:
-                  <input
-                    className="border-b-2 border-black rounded-md outline-none"
-                    type="text"
-                    name="image"
-                    value={product.image}
-                    onChange={productHandlerChange}
-                  />
-                </label>
+                <div className="flex justify-center items-center">
+
+                <img src={image} className="w-20" />
+
+                </div>
+              </div>
+            </form><div className="flex flex-col">
+                  <UploadWidgetProduct setImage={setImage}/>
                 <input
                   className="border-b-2 cursor-pointer border-black bg-black text-white rounded-md outline-none mt-10"
                   type="submit"
                   value="Submit"
                   onClick={onSubmit}
-                />
-              </div>
-            </form>
+                  />
+            </div>
           </div>
         </article>
       </section>
