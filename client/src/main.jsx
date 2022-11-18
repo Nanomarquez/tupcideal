@@ -12,7 +12,7 @@ if(import.meta.env.MODE === 'development'){
   axios.defaults.baseURL = 'http://localhost:3001';
 }
 if(import.meta.env.MODE === 'production'){
-  axios.defaults.baseURL = 'https://tupcideal-production-5005.up.railway.app/'
+  axios.defaults.baseURL = 'https://tupcideal-production.up.railway.app/'
 }
 
 ReactDOM.createRoot(document.getElementById("root")).render(
